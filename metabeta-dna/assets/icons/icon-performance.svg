@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-2{clip-path:url(#clip-path)}.cls-3{stroke:#99a3b1;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+        <clipPath id="clip-path">
+            <path d="M0 0h16v16H0z" class="cls-1"/>
+        </clipPath>
+    </defs>
+    <g id="icon_.icon-performance" class="cls-2" data-name="icon / .icon-performance">
+        <path id="Path_533" d="M.5 15.5h15" class="cls-3" data-name="Path 533"/>
+        <path id="Path_534" d="M4 11.5H2a.5.5 0 0 0-.5.5v3.5h3V12a.5.5 0 0 0-.5-.5z" class="cls-3" data-name="Path 534"/>
+        <path id="Path_535" d="M9 6.5H7a.5.5 0 0 0-.5.5v8.5h3V7a.5.5 0 0 0-.5-.5z" class="cls-3" data-name="Path 535"/>
+        <path id="Path_536" d="M14 8.5h-2a.5.5 0 0 0-.5.5v6.5h3V9a.5.5 0 0 0-.5-.5z" class="cls-3" data-name="Path 536"/>
+        <path id="Path_537" d="M15.5 3.5v-3h-3" class="cls-3" data-name="Path 537"/>
+        <path id="Path_538" d="M15.5.5l-3.367 3.367a1.5 1.5 0 0 1-1.491.376L6.836 3.225a1.5 1.5 0 0 0-1.448.389L1.5 7.5" class="cls-3" data-name="Path 538"/>
+    </g>
+</svg>

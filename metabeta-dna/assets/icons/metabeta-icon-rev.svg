@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-metabeta-rev</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon-metabeta-rev" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Metabeta-symbol" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M64,128 C28.653776,128 0,99.346224 0,64 C0,28.653776 28.653776,0 64,0 C99.346224,0 128,28.653776 128,64 C128,99.346224 99.346224,128 64,128 Z M64,116 C92.718807,116 116,92.718807 116,64 C116,35.281193 92.718807,12 64,12 C35.281193,12 12,35.281193 12,64 C12,92.718807 35.281193,116 64,116 Z" id="Combined-Shape"></path>
+            <path d="M64,51.5550769 L90.7825018,32 L96,92 L84.1096077,92 L83.043062,79.7349767 L64,65.8308035 L44.956938,79.7349767 L43.8903923,92 L32,92 L37.2174982,32 L64,51.5550769 Z M74,59.1507937 L82,65 L81.0447761,54 L74,59.1507937 Z M54,59.1507937 L46.9552239,54 L46,65 L54,59.1507937 Z" id="M"></path>
+        </g>
+    </g>
+</svg>

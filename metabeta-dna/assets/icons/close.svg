@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-close</title>
+    <g id="icon-close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0.50000025,15.5000078 L15.5000078,0.50000025" id="path" stroke="#000000"></path>
+        <path d="M15.5000078,15.5000078 L0.50000025,0.50000025" id="path" stroke="#000000"></path>
+    </g>
+</svg>

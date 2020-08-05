@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-2{clip-path:url(#clip-path)}.cls-3{stroke:#99a3b1;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+        <clipPath id="clip-path">
+            <path d="M0 0h16v16H0z" class="cls-1"/>
+        </clipPath>
+    </defs>
+    <g id="icon_.icon-picture" class="cls-2" data-name="icon / .icon-picture">
+        <path id="Path_197" d="M1.5 15.5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1z" class="cls-3" data-name="Path 197"/>
+        <path id="Path_198" d="M3.5 11.5l2.308-3.077a1 1 0 0 1 1.507-.107L8 9l2.2-2.933a1 1 0 0 1 1.6 0l1.78 2.373" class="cls-3" data-name="Path 198"/>
+        <path id="Path_199" d="M5.134 3.366a1.25 1.25 0 1 1-1.768 0 1.25 1.25 0 0 1 1.768 0" class="cls-3" data-name="Path 199"/>
+        <path id="Path_200" d="M.5 11.5h15" class="cls-3" data-name="Path 200"/>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-2{clip-path:url(#clip-path)}.cls-3{stroke:#99a3b1;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+        <clipPath id="clip-path">
+            <path d="M0 0h16v16H0z" class="cls-1"/>
+        </clipPath>
+    </defs>
+    <g id="icon_.icon-chat" class="cls-2" data-name="icon / .icon-chat">
+        <path id="Path_674" d="M14.5 12.5h-7l-4 3v-3h-2a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1z" class="cls-3" data-name="Path 674"/>
+        <path id="Path_675" d="M5 6.253" class="cls-3" data-name="Path 675"/>
+        <path id="Path_676" d="M5 6.25a.25.25 0 1 0 .25.25.25.25 0 0 0-.25-.25" class="cls-3" data-name="Path 676"/>
+        <path id="Path_677" d="M8 6.253" class="cls-3" data-name="Path 677"/>
+        <path id="Path_678" d="M8 6.25a.25.25 0 1 0 .25.25.25.25 0 0 0-.25-.25" class="cls-3" data-name="Path 678"/>
+        <path id="Path_679" d="M11 6.253" class="cls-3" data-name="Path 679"/>
+        <path id="Path_680" d="M11 6.25a.25.25 0 1 0 .25.25.25.25 0 0 0-.25-.25" class="cls-3" data-name="Path 680"/>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-2{clip-path:url(#clip-path)}.cls-3{stroke:#99a3b1;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+        <clipPath id="clip-path">
+            <path d="M0 0h16v16H0z" class="cls-1"/>
+        </clipPath>
+    </defs>
+    <g id="icon_.icon-mentors" class="cls-2" data-name="icon / .icon-mentors">
+        <path id="Path_461" d="M4.914 8.086a2 2 0 1 1-2.828 0 2 2 0 0 1 2.828 0" class="cls-3" data-name="Path 461"/>
+        <path id="Path_462" d="M6.5 15.5a3 3 0 1 0-6 0" class="cls-3" data-name="Path 462"/>
+        <path id="Path_463" d="M13.914 8.086a2 2 0 1 1-2.828 0 2 2 0 0 1 2.828 0" class="cls-3" data-name="Path 463"/>
+        <path id="Path_464" d="M15.5 15.5a3 3 0 1 0-6 0" class="cls-3" data-name="Path 464"/>
+        <path id="Path_470" d="M11 9.538l-4.5 1.853 4.5 1.647 4.5-1.647z" class="cls-3" data-name="Path 470" transform="translate(-3 -9.038)"/>
+        <path id="Path_471" d="M6.5 11.38v2.513" class="cls-3" data-name="Path 471" transform="translate(-3 -9.038)"/>
+        <path id="Path_472" d="M8.5 12.123V14.2a.5.5 0 0 0 .314.467l2 .8a.5.5 0 0 0 .371 0l2-.8a.5.5 0 0 0 .315-.467v-2.077" class="cls-3" data-name="Path 472" transform="translate(-3 -9.038)"/>
+    </g>
+</svg>

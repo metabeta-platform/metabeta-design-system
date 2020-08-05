@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-2{clip-path:url(#clip-path)}.cls-3{stroke:#99a3b1;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+        <clipPath id="clip-path">
+            <path d="M0 0h16v16H0z" class="cls-1"/>
+        </clipPath>
+    </defs>
+    <g id="icon_.icon-calendar" class="cls-2" data-name="icon / .icon-calendar">
+        <path id="Path_14" d="M1.5 2.5h13a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-13a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1z" class="cls-3" data-name="Path 14"/>
+        <path id="Path_15" d="M.5 6.5h15" class="cls-3" data-name="Path 15"/>
+        <path id="Path_16" d="M4.5 4V.5" class="cls-3" data-name="Path 16"/>
+        <path id="Path_17" d="M11.5 4V.5" class="cls-3" data-name="Path 17"/>
+        <path id="Path_18" d="M3.75 9" class="cls-3" data-name="Path 18"/>
+        <path id="Path_19" d="M3.75 9a.25.25 0 1 0 .25.25.25.25 0 0 0-.25-.25" class="cls-3" data-name="Path 19"/>
+        <path id="Path_20" d="M3.75 12.5" class="cls-3" data-name="Path 20"/>
+        <path id="Path_21" d="M3.75 12.5a.25.25 0 1 0 .25.25.25.25 0 0 0-.25-.25" class="cls-3" data-name="Path 21"/>
+        <path id="Path_22" d="M8 9" class="cls-3" data-name="Path 22"/>
+        <path id="Path_23" d="M8 9a.25.25 0 1 0 .25.25A.25.25 0 0 0 8 9" class="cls-3" data-name="Path 23"/>
+        <path id="Path_24" d="M8 12.5" class="cls-3" data-name="Path 24"/>
+        <path id="Path_25" d="M8 12.5a.25.25 0 1 0 .25.25.25.25 0 0 0-.25-.25" class="cls-3" data-name="Path 25"/>
+        <path id="Path_26" d="M12.25 9" class="cls-3" data-name="Path 26"/>
+        <path id="Path_27" d="M12.25 9a.25.25 0 1 0 .25.25.25.25 0 0 0-.25-.25" class="cls-3" data-name="Path 27"/>
+        <path id="Path_28" d="M12.25 12.5" class="cls-3" data-name="Path 28"/>
+        <path id="Path_29" d="M12.25 12.5a.25.25 0 1 0 .25.25.25.25 0 0 0-.25-.25" class="cls-3" data-name="Path 29"/>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-profile</title>
+    <g id="icon-profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1.57142907,15.5000077 C0.979700224,15.5000077 0.5,14.9834075 0.5,14.3461611 L0.5,1.65384744 C0.5,1.01660099 0.979700224,0.50000075 1.57142907,0.50000075 L14.4285779,0.50000075 C15.0203068,0.50000075 15.500007,1.01660099 15.500007,1.65384744 L15.500007,14.3461611 C15.500007,14.9834075 15.0203068,15.5000077 14.4285779,15.5000077 L1.57142907,15.5000077 Z" id="path" stroke="#000000"></path>
+        <path d="M1.0000005,3.50000225 L15.0000075,3.50000225" id="path" stroke="#000000"></path>
+        <path d="M7.5,5.50000525 L13.5,5.50000525" id="path" stroke="#000000"></path>
+        <path d="M7.5,7.50000525 L13.5,7.50000525" id="path" stroke="#000000"></path>
+        <path d="M7.5,13.5000053 L13.5,13.5000053" id="path" stroke="#000000"></path>
+        <path d="M2.5,9.50000525 L5.5,9.50000525" id="path" stroke="#000000"></path>
+        <path d="M2.5,13.5000053 L5.5,13.5000053" id="path" stroke="#000000"></path>
+        <rect id="path" stroke="#000000" x="7.5" y="9.5" width="6" height="2"></rect>
+        <rect id="path" stroke="#000000" x="2.5" y="5.5" width="3" height="2"></rect>
+    </g>
+</svg>

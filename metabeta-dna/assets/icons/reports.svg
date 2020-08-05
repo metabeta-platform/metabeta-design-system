@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-reports</title>
+    <g id="icon-reports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0.5,9.5 L15.5,9.5" id="path" stroke="#000000"></path>
+        <path d="M0.5,12.5 L15.5,12.5" id="path" stroke="#000000"></path>
+        <path d="M1.5,15.5 C0.94772,15.5 0.5,15.05228 0.5,14.5 L0.5,1.5 C0.5,0.94772 0.94772,0.5 1.5,0.5 L14.5,0.5 C15.05228,0.5 15.5,0.94772 15.5,1.5 L15.5,14.5 C15.5,15.05228 15.05228,15.5 14.5,15.5 L1.5,15.5 Z" id="path" stroke="#000000"></path>
+        <polyline id="path" stroke="#000000" points="0.5 8.5 5.5 4.5 10.5 6.4996097 15.5000411 2.5"></polyline>
+        <path d="M5.5,4.5 L5.5,15.5" id="path" stroke="#000000"></path>
+        <path d="M10.5,6.5 L10.5,15.5" id="path" stroke="#000000"></path>
+    </g>
+</svg>

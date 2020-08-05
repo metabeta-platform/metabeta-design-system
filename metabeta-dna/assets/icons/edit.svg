@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-edit</title>
+    <g id="icon-edit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7946741,1.20933394 L14.7946741,1.20933399 C13.8470136,0.266346856 12.3143329,0.270133525 11.3713457,1.21779587 C11.3664341,1.22273185 11.3615438,1.227689 11.3566749,1.23266721 L1.71333678,10.8733387 L0.50000284,15.5000077 L5.12800515,14.2873404 L14.7713433,4.64666891 L14.7713432,4.64666898 C15.7269171,3.71327518 15.7448971,2.18196775 14.8115046,1.22639393 C14.8059235,1.22068021 14.8003141,1.2149942 14.7946767,1.20933599 L14.7946741,1.20933394 Z" id="path" stroke="#000000"></path>
+        <path d="M11.0800055,1.50666742 L14.4933406,4.92000246" id="path" stroke="#000000"></path>
+        <path d="M9.68667151,2.90000145 L13.1000065,6.31333649" id="path" stroke="#000000"></path>
+        <polyline id="path" stroke="#000000" points="1.71333419 10.8733388 4.10666872 11.8946726 5.13066923 14.2840071"></polyline>
+        <path d="M11.393339,4.60666897 L4.10666872,11.8933393" id="path" stroke="#000000"></path>
+    </g>
+</svg>

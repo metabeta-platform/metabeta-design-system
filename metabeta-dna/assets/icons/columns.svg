@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-columns</title>
+    <g id="icon-columns" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1.5,0.5 L7.5,0.5 L7.5,14.5 C7.5,15.0522847 7.05228475,15.5 6.5,15.5 L1.5,15.5 C0.94771525,15.5 0.5,15.0522847 0.5,14.5 L0.5,1.5 C0.5,0.94771525 0.94771525,0.5 1.5,0.5 Z" id="path" stroke="#000000"></path>
+        <path d="M7.5,0.5 L13.5,0.5 C14.0522847,0.5 14.5,0.94771525 14.5,1.5 L14.5,11.5 C14.5,12.0522847 14.0522847,12.5 13.5,12.5 L7.5,12.5 L7.5,0.5 Z" id="path" stroke="#000000"></path>
+        <path d="M0.5000075,3.5 L14.5,3.5" id="path" stroke="#000000"></path>
+        <path d="M0.5000075,9.5 L14.5,9.5" id="path" stroke="#000000"></path>
+        <path d="M0.5000075,6.5 L14.5,6.5" id="path" stroke="#000000"></path>
+        <path d="M0.5000075,12.5 L7.5,12.5" id="path" stroke="#000000"></path>
+    </g>
+</svg>

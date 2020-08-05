@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-work</title>
+    <g id="icon-work" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <polyline id="path" stroke="#000000" points="0.5000005 15.5000078 0.5000005 5.50000275 6.5000035 5.50000275 6.5000035 15.5000078"></polyline>
+        <path d="M2.5000015,15.5000078 L2.5000015,7.50000375" id="path" stroke="#000000"></path>
+        <path d="M4.5000025,15.5000078 L4.5000025,7.50000375" id="path" stroke="#000000"></path>
+        <polyline id="path" stroke="#000000" points="0.5000005 5.50000275 3.500002 2.000001 6.5000035 5.50000275"></polyline>
+        <path d="M3.500002,0.50000025 L3.500002,2.000001" id="path" stroke="#000000"></path>
+        <polyline id="path" stroke="#000000" points="8.5 15.5000078 8.5 6.5 14.5 2.5 14.5 15.5000078"></polyline>
+        <path d="M10.5,14.5 L12.5,14.5" id="path" stroke="#000000"></path>
+        <path d="M10.5,12.5 L12.5,12.5" id="path" stroke="#000000"></path>
+        <path d="M10.5,10.5 L12.5,10.5" id="path" stroke="#000000"></path>
+        <path d="M10.5,8.5 L12.5,8.5" id="path" stroke="#000000"></path>
+        <path d="M11.5,6.5 L12.5,6.5" id="path" stroke="#000000"></path>
+    </g>
+</svg>

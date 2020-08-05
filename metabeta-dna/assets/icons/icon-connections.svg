@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-2{clip-path:url(#clip-path)}.cls-3{stroke:#99a3b1;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+        <clipPath id="clip-path">
+            <path d="M0 0h16v16H0z" class="cls-1"/>
+        </clipPath>
+    </defs>
+    <g id="icon_.icon-connections" class="cls-2" data-name="icon / .icon-connections">
+        <path id="Path_424" d="M2.5 12.5V9.818a.333.333 0 0 1 .346-.318h11.306a.333.333 0 0 1 .347.318V12.5" class="cls-3" data-name="Path 424" transform="translate(-.499)"/>
+        <path id="Path_425" d="M8 7.5v5" class="cls-3" data-name="Path 425"/>
+        <path id="Path_426" d="M3.56 12.939a1.5 1.5 0 1 1-2.121 0 1.5 1.5 0 0 1 2.121 0" class="cls-3" data-name="Path 426" transform="translate(-.499)"/>
+        <path id="Path_427" d="M9.06 12.939a1.5 1.5 0 1 1-2.121 0 1.5 1.5 0 0 1 2.121 0" class="cls-3" data-name="Path 427" transform="translate(.001)"/>
+        <path id="Path_428" d="M14.56 12.939a1.5 1.5 0 1 1-2.121 0 1.5 1.5 0 0 1 2.121 0" class="cls-3" data-name="Path 428" transform="translate(.501)"/>
+        <path id="Path_429" d="M9.414 1.086a2 2 0 1 1-2.828 0 2 2 0 0 1 2.828 0" class="cls-3" data-name="Path 429" transform="translate(.001)"/>
+        <path id="Path_430" d="M10.9 7.5a3.269 3.269 0 0 0-3-2.5 3.269 3.269 0 0 0-3 2.5" class="cls-3" data-name="Path 430" transform="translate(.103)"/>
+    </g>
+</svg>

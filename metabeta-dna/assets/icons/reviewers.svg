@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="16" height="16" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="multiple-actions-star" clip-path="url(#clip-path)">
+    <path id="Path_73" data-name="Path 73" d="M34.477,30.287l1.027,2.19H37.49a.488.488,0,0,1,.509.465.482.482,0,0,1-.163.381l-1.721,1.69.961,2.186h0a.517.517,0,0,1-.283.678.529.529,0,0,1-.463-.03l-2.324-1.294-2.324,1.294h0a.527.527,0,0,1-.716-.19.514.514,0,0,1-.03-.458l.963-2.184-1.733-1.69h0a.481.481,0,0,1-.046-.683.492.492,0,0,1,.385-.165h2l1.029-2.192h0a.536.536,0,0,1,.721-.219.53.53,0,0,1,.222.221Z" transform="translate(-22.499 -22.417)" fill="none" stroke="#99a3b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_74" data-name="Path 74" d="M9.387,25.8h0A4.025,4.025,0,0,0,6,24H6a3.986,3.986,0,0,0-4,3.463" transform="translate(-1.5 -17.898)" fill="none" stroke="#99a3b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_75" data-name="Path 75" d="M12.841,2.652a2.21,2.21,0,0,1,0,3.148,2.267,2.267,0,0,1-3.182,0,2.21,2.21,0,0,1,0-3.148,2.267,2.267,0,0,1,3.182,0" transform="translate(-6.75 -1.34)" fill="none" stroke="#99a3b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_76" data-name="Path 76" d="M39.987,2.507a1.719,1.719,0,0,1,0,2.449,1.763,1.763,0,0,1-2.475,0,1.719,1.719,0,0,1,0-2.449,1.763,1.763,0,0,1,2.475,0" transform="translate(-27.751 -1.34)" fill="none" stroke="#99a3b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_77" data-name="Path 77" d="M39.832,19.486h0a3.016,3.016,0,0,0-4.856-.468" transform="translate(-26.233 -13.384)" fill="none" stroke="#99a3b1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

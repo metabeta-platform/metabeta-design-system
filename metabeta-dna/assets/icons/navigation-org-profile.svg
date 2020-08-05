@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 1.75C1 1.33579 1.33579 1 1.75 1H14.25C14.6642 1 15 1.33579 15 1.75V2.25C15 2.66421 14.6642 3 14.25 3H1.75C1.33579 3 1 2.66421 1 2.25V1.75Z" stroke="#808C9D" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 3H14V12H2V3Z" stroke="#808C9D" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 14.3333V12" stroke="#808C9D" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 12H15" stroke="#808C9D" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 6H12" stroke="#808C9D" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 8H12" stroke="#808C9D" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 9C7.10457 9 8 8.10457 8 7C8 5.89543 7.10457 5 6 5C4.89543 5 4 5.89543 4 7C4 8.10457 4.89543 9 6 9Z" stroke="#808C9D" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 15C9 14.6313 8.552 14.3333 8 14.3333C7.448 14.3333 7 14.6313 7 15" stroke="#808C9D" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

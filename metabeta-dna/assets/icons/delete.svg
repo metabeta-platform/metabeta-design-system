@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-delete</title>
+    <g id="icon-delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.5,2.5 L13.5,2.5 L12.5710233,14.5766965 C12.5309466,15.0976937 12.0965052,15.5 11.5739689,15.5 L3.42603114,15.5 C2.90349483,15.5 2.46905336,15.0976937 2.42897665,14.5766965 L1.5,2.5 L4.5,2.5 L4.5,1.5 C4.5,0.94771525 4.94771525,0.5 5.5,0.5 L9.5,0.5 C10.0522847,0.5 10.5,0.94771525 10.5,1.5 L10.5,2.5 Z" id="path" stroke="#000000"></path>
+        <path d="M0.5,2.5 L14.5,2.5" id="path" stroke="#000000"></path>
+        <path d="M4.5,5.5 L4.75,12.5 L4.5,5.5 Z" id="path" stroke="#000000"></path>
+        <path d="M7.5,5.5 L7.5,12.5 L7.5,5.5 Z" id="path" stroke="#000000"></path>
+        <path d="M10.5,5.5 L10.25,12.5 L10.5,5.5 Z" id="path" stroke="#000000"></path>
+    </g>
+</svg>

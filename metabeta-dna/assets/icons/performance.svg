@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-performance</title>
+    <g id="icon-performance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.5,15.5 L14.5,10 C14.5,9.72385763 14.2761424,9.5 14,9.5 L12,9.5 C11.7238576,9.5 11.5,9.72385763 11.5,10 L11.5,15.5 L0.5,15.5 L1.5,15.5 L1.5,13 C1.5,12.7238576 1.72385763,12.5 2,12.5 L4,12.5 C4.27614237,12.5 4.5,12.7238576 4.5,13 L4.5,15.5 L6.5,15.5 L6.5,8 C6.5,7.72385763 6.72385763,7.5 7,7.5 L9,7.5 C9.27614237,7.5 9.5,7.72385763 9.5,8 L9.5,15.5 L15.5,15.5 L14.5,15.5 Z" id="path" stroke="#000000"></path>
+        <polyline id="path" stroke="#000000" points="15.5 2.5 15.5 0.5 13.5 0.5"></polyline>
+        <polyline id="path" stroke="#000000" points="15.5 0.5 11.5 4.5 6.5 3.5 0.5 8.5"></polyline>
+    </g>
+</svg>

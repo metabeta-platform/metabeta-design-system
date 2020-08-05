@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-rows</title>
+    <g id="icon-rows" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1.57143607,15.4980075 C0.9797075,15.4980075 0.5000075,15.0183075 0.5000075,14.4265789 L0.5000075,1.56943607 C0.5000075,0.977707499 0.9797075,0.498007499 1.57143607,0.498007499 L14.4285789,0.498007499 C15.0203075,0.498007499 15.5000075,0.977707499 15.5000075,1.56943607 L15.5000075,14.4265789 C15.5000075,15.0183075 15.0203075,15.4980075 14.4285789,15.4980075 L1.57143607,15.4980075 Z" id="path" stroke="#000000"></path>
+        <path d="M0.5000075,3.5 L15.5000075,3.5" id="path" stroke="#000000"></path>
+        <path d="M0.5000075,7.5 L15.5000075,7.5" id="path" stroke="#000000"></path>
+        <path d="M0.5000075,11.5 L15.5000075,11.5" id="path" stroke="#000000"></path>
+        <path d="M6.5000005,5.5 L10.5,5.5" id="path" stroke="#000000"></path>
+        <path d="M6.5000005,9.5 L10.5,9.5" id="path" stroke="#000000"></path>
+        <path d="M6.5000005,13.5 L10.5,13.5" id="path" stroke="#000000"></path>
+        <path d="M2.5000005,5.5 L4.50000025,5.5" id="path" stroke="#000000"></path>
+        <path d="M2.5000005,9.5 L4.50000025,9.5" id="path" stroke="#000000"></path>
+        <path d="M2.5000005,13.5 L4.50000025,13.5" id="path" stroke="#000000"></path>
+    </g>
+</svg>
