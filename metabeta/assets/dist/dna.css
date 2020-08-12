@@ -20,7 +20,8 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  box-sizing: border-box; }
 
 /* make sure to set some focus styles for accessibility */
 :focus {
@@ -10378,13 +10379,13 @@ textarea {
 .mb-flex-row {
   display: flex;
   flex-wrap: wrap;
-  margin: -3rem; }
+  margin: -1.5rem; }
   @media only screen and (max-width: 568px) {
     .mb-flex-row {
-      margin: -1rem; } }
+      margin: -0.5rem; } }
   @media only screen and (min-width: 569px) and (max-width: 767px) {
     .mb-flex-row {
-      margin: -2rem; } }
+      margin: -0.75rem; } }
   @media only screen and (min-width: 768px) and (max-width: 1366px) {
     .mb-flex-row {
       margin: -1rem; } }
@@ -56239,6 +56240,19 @@ textarea {
     background-color: #7e64c5; }
   .interaction_purple:disabled {
     background-color: rgba(103, 73, 186, 0.48); }
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap; }
+
+.align-center {
+  align-items: center; }
+
+.align-end {
+  align-items: flex-end; }
+
+.align-start {
+  align-items: flex-start; }
 
 .bg-blue-100 {
   background-color: #adccfa;

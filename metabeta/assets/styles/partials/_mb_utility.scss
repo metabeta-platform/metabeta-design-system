@@ -14,3 +14,17 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.align-end{
+    align-items: flex-end;
+}
+.align-start{
+    align-items: flex-start;
+}
