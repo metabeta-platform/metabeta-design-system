@@ -16,69 +16,6 @@ $space-list : (0: 0, xxs : $space-xxs, xs : $space-xxs, s: $space-s, m: $space-m
 
 /* VARIABLE LIST IN CASE NEEDED END */
 
-/* PADDING & MARGIN CLASSES START */
-
-@each $vertical,
-$vValue in $space-list {
-
-  @each $horizontal,
-  $hValue in $space-list {
-    .padding-#{$vertical}-#{$horizontal} {
-      padding: $vValue $hValue;
-    }
-  }
-}
-
-@each $vertical,
-$vValue in $space-list {
-
-  @each $horizontal,
-  $hValue in $space-list {
-    .margin-#{$vertical}-#{$horizontal} {
-      padding: $vValue $hValue;
-    }
-  }
-}
-
-@each $top,
-$tValue in $space-list {
-
-  @each $right,
-  $rValue in $space-list {
-
-    @each $bottom,
-    $bValue in $space-list {
-
-      @each $left,
-      $lValue in $space-list {
-        .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          padding: $tValue $rValue $bValue $lValue;
-        }
-      }
-    }
-  }
-}
-
-@each $top,
-$tValue in $space-list {
-
-  @each $right,
-  $rValue in $space-list {
-
-    @each $bottom,
-    $bValue in $space-list {
-
-      @each $left,
-      $lValue in $space-list {
-        .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          padding: $tValue $rValue $bValue $lValue;
-        }
-      }
-    }
-  }
-}
-
-/* PADDING & MARGIN CLASSES END */
 
 $touch-base : 40px;
 $touch-min : $space-xl;
@@ -388,3 +325,68 @@ $grid-columns : 4;
 }
 
 /* SHADOW MIXIN ENDD */
+
+
+/* PADDING & MARGIN CLASSES START */
+
+@each $vertical,
+$vValue in $space-list {
+
+  @each $horizontal,
+  $hValue in $space-list {
+    .padding-#{$vertical}-#{$horizontal} {
+      padding: $vValue $hValue;
+    }
+  }
+}
+
+@each $vertical,
+$vValue in $space-list {
+
+  @each $horizontal,
+  $hValue in $space-list {
+    .margin-#{$vertical}-#{$horizontal} {
+      padding: $vValue $hValue;
+    }
+  }
+}
+
+@each $top,
+$tValue in $space-list {
+
+  @each $right,
+  $rValue in $space-list {
+
+    @each $bottom,
+    $bValue in $space-list {
+
+      @each $left,
+      $lValue in $space-list {
+        .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
+          padding: $tValue $rValue $bValue $lValue;
+        }
+      }
+    }
+  }
+}
+
+@each $top,
+$tValue in $space-list {
+
+  @each $right,
+  $rValue in $space-list {
+
+    @each $bottom,
+    $bValue in $space-list {
+
+      @each $left,
+      $lValue in $space-list {
+        .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
+          padding: $tValue $rValue $bValue $lValue;
+        }
+      }
+    }
+  }
+}
+
+/* PADDING & MARGIN CLASSES END */
