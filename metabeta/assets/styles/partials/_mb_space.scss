@@ -308,7 +308,7 @@ $grid-columns : 4;
 
 /* SHADOW MIXIN START */
 
-@mixin shadow($elevation:0, $direction: "bottom", $color: $color-gray-1) {
+@mixin shadow($elevation:0, $direction: "bottom", $color: $color-gray-100) {
   @if $direction=="left" {
     box-shadow: -$elevation/2 0 $elevation rgba($color, $opacity-xs), 0 0 1px rgba($color, $opacity-xs)
   }
