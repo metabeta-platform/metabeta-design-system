@@ -16026,56 +16026,56 @@ textarea {
 /* DEFINE FONTS LOCALLY START */
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url("../../fonts/IBMPlexSans-MediumItalic.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSans-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url("../../fonts/IBMPlexSans.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSans.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url("../../fonts/IBMPlexSans-Medium.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url("../../fonts/IBMPlexSans-Italic.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSans-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url("../../fonts/IBMPlexSans-MediumItalic.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSans-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
   font-display: swap; }
 
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url("../../fonts/IBMPlexSans.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSans.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url("../../fonts/IBMPlexSans-Medium.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'IBM Plex Sans';
-  src: url("../../fonts/IBMPlexSans-Italic.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSans-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
   font-display: swap; }
@@ -16091,47 +16091,47 @@ textarea {
 /* LINE HEIGHT END */
 /* TEXT OVERFLOW MIXIN START */
 /* TEXT OVERFLOW MIXIN END */
-.headings {
+.heading {
   color: #212629;
   font-weight: 500;
   font-size: 1.25rem; }
-  .headings-xxxl {
+  .heading-xxxl {
     color: #212629;
     font-size: 2.5rem;
     line-height: 3rem; }
-  .headings-xxl {
+  .heading-xxl {
     color: #212629;
     font-size: 2rem;
     line-height: 2.5rem; }
-  .headings-xl {
+  .heading-xl {
     color: #212629;
     font-size: 2rem;
     line-height: 2.5rem; }
-  .headings-xl {
+  .heading-xl {
     color: #212629;
     font-size: 1.5rem;
     line-height: 2rem; }
-  .headings-l {
+  .heading-l {
     color: #212629;
     font-size: 1.25rem;
     line-height: 1.75rem; }
-  .headings-l {
+  .heading-l {
     color: #212629;
     font-size: 1.25rem;
     line-height: 1.75rem; }
-  .headings-md {
+  .heading-md {
     color: #212629;
     font-size: 1rem;
     line-height: 1.5rem; }
-  .headings-sm {
+  .heading-sm {
     color: #212629;
     font-size: 0.875rem;
     line-height: 1.25rem; }
-  .headings-xs {
+  .heading-xs {
     color: #212629;
     font-size: 0.75rem;
     line-height: 1rem; }
-  .headings-xxs {
+  .heading-xxs {
     color: #212629;
     font-size: 0.625rem;
     line-height: 0.75rem; }
