@@ -190,14 +190,14 @@ $display-media-breakpoints: 'none',
 .mb-flex-row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -$space-l;
+  margin: 0 -$space-xxl;
 
   @include media(phone) {
-    margin: 0 -$space-xs;
+    margin: 0 -$space-m;
   }
 
   @include media(tablet) {
-    margin: 0 -$space-s;
+    margin: 0 -$space-xl;
   }
 
   @include media(laptop) {
