@@ -192,14 +192,14 @@ inline-block;
 .mb-flex-row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -$space-xxl;
+  margin: 0 -$space-l;
 
   @include media(phone) {
-    margin: 0 -$space-m;
+    margin: 0 -$space-xs;
   }
 
   @include media(tablet) {
-    margin: 0 -$space-xl;
+    margin: 0 -$space-s;
   }
 
   @include media(laptop) {
