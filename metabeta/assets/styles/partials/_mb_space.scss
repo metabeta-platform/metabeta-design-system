@@ -8,6 +8,8 @@ $space-xl : 2rem;
 $space-xxl : 3rem;
 $space-xxxl : 4rem;
 
+$max-window-width : 1600px;
+
 /* MOBILE INTERFACE TOUCH SCREEEN VARIABLES START */
 
 /* VARIABLE LIST IN CASE NEEDED START */
@@ -192,7 +194,7 @@ inline-block;
 .mb-flex-row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -$space-l;
+  margin: 0 #{-$space-l};
 
   @include media(phone) {
     margin: 0 -$space-xs;
