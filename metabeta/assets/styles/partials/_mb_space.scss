@@ -1,4 +1,4 @@
-$space-xxxs : .125rem; // used exceptionally for finetuning.
+$space-xxxs : .125rem;
 $space-xxs : .25rem;
 $space-xs : .5rem;
 $space-s : .75rem;
@@ -9,6 +9,32 @@ $space-xxl : 3rem;
 $space-xxxl : 4rem;
 
 /* MOBILE INTERFACE TOUCH SCREEEN VARIABLES START */
+
+/* VARIABLE LIST IN CASE NEEDED START */
+
+$space-list : (xxs : $space-xxs, xs : $space-xxs,s: $space-s,m: $space-m,l: $space-l,xl: $space-xl,xxl: $space-xxl,xxxl: $space-xxxl);
+
+/* VARIABLE LIST IN CASE NEEDED END */
+
+/* PADDING & MARGIN CLASSES START */
+
+@each $vertical, $vValue in $space-list{
+  @each $horizontal, $hValue in $space-list{
+    .padding-#{$vertical}-#{$horizontal}{
+      padding: $vValue $hValue;
+    }
+  }
+}
+
+@each $vertical, $vValue in $space-list{
+  @each $horizontal, $hValue in $space-list{
+    .margin-#{$vertical}-#{$horizontal}{
+      padding: $vValue $hValue;
+    }
+  }
+}
+
+/* PADDING & MARGIN CLASSES END */
 
 $touch-base : 40px;
 $touch-min : $space-xl;
@@ -211,6 +237,9 @@ $grid-columns : 4;
 
 /* change the value above to your need it works based on how many pieces you'd like to seperate your grid */
 
+
+
+
 @for $i from 1 through $grid-columns {
   @for $k from 1 through $grid-columns {
     @for $l from 1 through $grid-columns {
@@ -220,24 +249,24 @@ $grid-columns : 4;
           width: 100%;
           flex: 0 0 get-col-percent($i);
           max-width: get-col-percent($i);
-          padding: 0 -$space-l;
+          padding: 0 $space-l;
 
           @include media(phone) {
             flex: 0 0 get-col-percent($m);
             max-width: get-col-percent($m);
-            padding: 0 -$space-xs;
+            padding: 0 $space-xs;
           }
 
           @include media(tablet) {
             flex: 0 0 get-col-percent($l);
             max-width: get-col-percent($l);
-            padding: 0 -$space-s;
+            padding: 0 $space-s;
           }
 
           @include media(laptop) {
             flex: 0 0 get-col-percent($k);
             max-width: get-col-percent($k);
-            padding: 0 -$space-m;
+            padding: 0 $space-m;
           }
         }
       }
