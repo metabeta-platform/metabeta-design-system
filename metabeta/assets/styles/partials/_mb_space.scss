@@ -166,18 +166,17 @@ $display-media-breakpoints: 'none',
 
 .mb-flex-container {
   margin: auto;
-  max-width: calc($max-window-width - (2*$space-xl));
-
+  max-width: calc(#{$max-window-width} - #{$space-xxxl});
   @include media(phone) {
-    max-width: calc($mobile-breakpoint - (2*$space-xs));
+    max-width: calc(#{$mobile-breakpoint} - #{$space-m});
   }
 
   @include media(tablet) {
-    max-width: calc($tablet-breakpoint - (2*$space-m));
+    max-width: calc(#{$tablet-breakpoint} - #{$space-xl});
   }
 
   @include media(laptop) {
-    max-width: calc($laptop-breakpoint - (2*$space-l));
+    max-width: calc(#{$laptop-breakpoint} - #{$space-xxl});
   }
 }
 
