@@ -1,0 +1,27 @@
+{
+  "name": "metabeta-design-system",
+  "version": "1.0.0",
+  "description": "\"Metabeta Design System\"",
+  "main": "./assets/dist/dna.css",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "node-sass metabeta/assets/styles/dna.scss metabeta/assets/dist/dna.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metabeta-platform/metabeta-design-system.git"
+  },
+  "keywords": [
+    "scss",
+    "design",
+    "metabeta",
+    "scss"
+  ],
+  "author": "oS- Metabeta Frontend Team with",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metabeta-platform/metabeta-design-system/issues"
+  },
+  "homepage": "https://github.com/metabeta-platform/metabeta-design-system#readme"
+}

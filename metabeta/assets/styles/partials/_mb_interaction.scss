@@ -1,5 +1,5 @@
 .interaction{
-  @include motion;
+  @include motion('default');
   color: white;
   &_red{
     background-color: $color-red-500;
@@ -35,18 +35,6 @@
     }
     &:disabled{
       background-color: rgba($color-yellow-500, 0.48);
-    }
-  }
-  &_lime{
-    background-color: $color-lime-500;
-    &:hover{
-      background-color: $color-lime-400;
-    }
-    &:active{
-      background-color: $color-lime-400;
-    }
-    &:disabled{
-      background-color: rgba($color-lime-500, 0.48);
     }
   }
   &_green{
