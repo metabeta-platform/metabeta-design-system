@@ -12,7 +12,7 @@ $space-xxxl : 4rem;
 
 /* VARIABLE LIST IN CASE NEEDED START */
 
-$space-list : (xxs : $space-xxs, xs : $space-xxs,s: $space-s,m: $space-m,l: $space-l,xl: $space-xl,xxl: $space-xxl,xxxl: $space-xxxl);
+$space-list : (0: 0, xxs : $space-xxs, xs : $space-xxs,s: $space-s,m: $space-m,l: $space-l,xl: $space-xl,xxl: $space-xxl,xxxl: $space-xxxl);
 
 /* VARIABLE LIST IN CASE NEEDED END */
 
@@ -30,6 +30,25 @@ $space-list : (xxs : $space-xxs, xs : $space-xxs,s: $space-s,m: $space-m,l: $spa
   @each $horizontal, $hValue in $space-list{
     .margin-#{$vertical}-#{$horizontal}{
       padding: $vValue $hValue;
+    }
+  }
+}
+
+@each $top, $tValue in $space-list{
+  @each $right, $rValue in $space-list{
+    @each $bottom, $bValue in $space-list{
+      @each $left, $lValue in $space-list{
+    .padding-#{$top}-#{$right}-#{$bottom}-#{$left}{
+      padding: $tValue $rValue, $bValue, $lValue;
+    }
+  }
+}
+@each $top, $tValue in $space-list{
+  @each $right, $rValue in $space-list{
+    @each $bottom, $bValue in $space-list{
+      @each $left, $lValue in $space-list{
+    .margin-#{$top}-#{$right}-#{$bottom}-#{$left}{
+      padding: $tValue $rValue, $bValue, $lValue;
     }
   }
 }
