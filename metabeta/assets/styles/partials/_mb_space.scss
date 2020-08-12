@@ -350,7 +350,7 @@ $vValue in $space-list {
   @each $horizontal,
   $hValue in $space-list {
     .margin-#{$vertical}-#{$horizontal} {
-      padding: $vValue $hValue;
+      margin: $vValue $hValue;
     }
   }
 }
@@ -386,7 +386,7 @@ $tValue in $space-list {
       @each $left,
       $lValue in $space-list {
         .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          padding: $tValue $rValue $bValue $lValue;
+          margin: $tValue $rValue $bValue $lValue;
         }
       }
     }
