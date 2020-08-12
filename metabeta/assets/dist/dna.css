@@ -16091,6 +16091,176 @@ textarea {
 /* LINE HEIGHT END */
 /* TEXT OVERFLOW MIXIN START */
 /* TEXT OVERFLOW MIXIN END */
+.headings {
+  color: #212629;
+  font-weight: 500; }
+  .headings-xxxl {
+    font-size: 2.5rem;
+    line-height: 3rem; }
+  .headings-xxl {
+    font-size: 2rem;
+    line-height: 2.5rem; }
+  .headings-xl {
+    font-size: 2rem;
+    line-height: 2.5rem; }
+  .headings-xl {
+    font-size: 1.5rem;
+    line-height: 2rem; }
+  .headings-l {
+    font-size: 1.25rem;
+    line-height: 1.75rem; }
+  .headings-l {
+    font-size: 1.25rem;
+    line-height: 1.75rem; }
+  .headings-md {
+    font-size: 1rem;
+    line-height: 1.5rem; }
+  .headings-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem; }
+  .headings-xs {
+    font-size: 0.75rem;
+    line-height: 1rem; }
+  .headings-xxs {
+    font-size: 0.625rem;
+    line-height: 0.75rem; }
+
+.text {
+  color: #343d40;
+  font-weight: 400; }
+  .text-xxxl {
+    font-size: 2.5rem;
+    line-height: 3rem; }
+  .text-xxl {
+    font-size: 2rem;
+    line-height: 2.5rem; }
+  .text-xl {
+    font-size: 2rem;
+    line-height: 2.5rem; }
+  .text-xl {
+    font-size: 1.5rem;
+    line-height: 2rem; }
+  .text-l {
+    font-size: 1.25rem;
+    line-height: 1.75rem; }
+  .text-l {
+    font-size: 1.25rem;
+    line-height: 1.75rem; }
+  .text-md {
+    font-size: 1rem;
+    line-height: 1.5rem; }
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem; }
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem; }
+  .text-xxs {
+    font-size: 0.625rem;
+    line-height: 0.75rem; }
+
+.text {
+  color: #343d40;
+  font-weight: 400; }
+  .text-xxxl {
+    font-size: 2.5rem;
+    line-height: 3rem; }
+  .text-xxl {
+    font-size: 2rem;
+    line-height: 2.5rem; }
+  .text-xl {
+    font-size: 2rem;
+    line-height: 2.5rem; }
+  .text-xl {
+    font-size: 1.5rem;
+    line-height: 2rem; }
+  .text-l {
+    font-size: 1.25rem;
+    line-height: 1.75rem; }
+  .text-l {
+    font-size: 1.25rem;
+    line-height: 1.75rem; }
+  .text-md {
+    font-size: 1rem;
+    line-height: 1.5rem; }
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem; }
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem; }
+  .text-xxs {
+    font-size: 0.625rem;
+    line-height: 0.75rem; }
+
+.caption {
+  color: #343d40;
+  font-weight: 500; }
+  .caption-xxxl {
+    font-size: 2.5rem;
+    line-height: 2.75rem; }
+  .caption-xxl {
+    font-size: 2rem;
+    line-height: 2.25rem; }
+  .caption-xl {
+    font-size: 2rem;
+    line-height: 2.25rem; }
+  .caption-xl {
+    font-size: 1.5rem;
+    line-height: 1.75rem; }
+  .caption-l {
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+  .caption-l {
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+  .caption-md {
+    font-size: 1rem;
+    line-height: 1.25rem; }
+  .caption-sm {
+    font-size: 0.875rem;
+    line-height: 1rem; }
+  .caption-xs {
+    font-size: 0.75rem;
+    line-height: 0.75rem; }
+  .caption-xxs {
+    font-size: 0.625rem;
+    line-height: 0.5rem; }
+
+.desc {
+  color: #494f57;
+  font-weight: 400; }
+  .desc-xxxl {
+    font-size: 2.5rem;
+    line-height: 2.75rem; }
+  .desc-xxl {
+    font-size: 2rem;
+    line-height: 2.25rem; }
+  .desc-xl {
+    font-size: 2rem;
+    line-height: 2.25rem; }
+  .desc-xl {
+    font-size: 1.5rem;
+    line-height: 1.75rem; }
+  .desc-l {
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+  .desc-l {
+    font-size: 1.25rem;
+    line-height: 1.5rem; }
+  .desc-md {
+    font-size: 1rem;
+    line-height: 1.25rem; }
+  .desc-sm {
+    font-size: 0.875rem;
+    line-height: 1rem; }
+  .desc-xs {
+    font-size: 0.75rem;
+    line-height: 0.75rem; }
+  .desc-xxs {
+    font-size: 0.625rem;
+    line-height: 0.5rem; }
+
 .interaction {
   transition: 0.4s, ease-in-out;
   color: white; }

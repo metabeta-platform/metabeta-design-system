@@ -145,43 +145,54 @@ $line-height-xxxl-compact      : 2.75rem;
 .headings{
   color: $color-gray-900;
   font-weight: $font-weight-bold;
+  font-size: $font-size-l;
   &-xxxl{
+    color: $color-gray-900;
     font-size: $font-size-xxxl;
     line-height: $line-height-xxxl;
   }
   &-xxl{
+    color: $color-gray-900;
     font-size: $font-size-xxl;
     line-height: $line-height-xxl;
   }
   &-xl{
+    color: $color-gray-900;
     font-size: $font-size-xxl;
     line-height: $line-height-xxl;
   }
   &-xl{
+    color: $color-gray-900;
     font-size: $font-size-xl;
     line-height: $line-height-xl;
   }
   &-l{
+    color: $color-gray-900;
     font-size: $font-size-l;
     line-height: $line-height-l;
   }
   &-l{
+    color: $color-gray-900;
     font-size: $font-size-l;
     line-height: $line-height-l;
   }
   &-md{
+    color: $color-gray-900;
     font-size: $font-size-m;
     line-height: $line-height-m;
   }
   &-sm{
+    color: $color-gray-900;
     font-size: $font-size-s;
     line-height: $line-height-s;
   }
   &-xs{
+    color: $color-gray-900;
     font-size: $font-size-xs;
     line-height: $line-height-xs;
   }
   &-xxs{
+    color: $color-gray-900;
     font-size: $font-size-xxs;
     line-height: $line-height-xxs;
   }
@@ -190,88 +201,54 @@ $line-height-xxxl-compact      : 2.75rem;
 .text{
   color: $color-gray-800;
   font-weight: $font-weight-normal;
+  font-size: $font-size-m;
   &-xxxl{
+    color: $color-gray-800;
     font-size: $font-size-xxxl;
     line-height: $line-height-xxxl;
   }
   &-xxl{
+    color: $color-gray-800;
     font-size: $font-size-xxl;
     line-height: $line-height-xxl;
   }
   &-xl{
+    color: $color-gray-800;
     font-size: $font-size-xxl;
     line-height: $line-height-xxl;
   }
   &-xl{
+    color: $color-gray-800;
     font-size: $font-size-xl;
     line-height: $line-height-xl;
   }
   &-l{
+    color: $color-gray-800;
     font-size: $font-size-l;
     line-height: $line-height-l;
   }
   &-l{
+    color: $color-gray-800;
     font-size: $font-size-l;
     line-height: $line-height-l;
   }
   &-md{
+    color: $color-gray-800;
     font-size: $font-size-m;
     line-height: $line-height-m;
   }
   &-sm{
+    color: $color-gray-800;
     font-size: $font-size-s;
     line-height: $line-height-s;
   }
   &-xs{
+    color: $color-gray-800;
     font-size: $font-size-xs;
     line-height: $line-height-xs;
   }
   &-xxs{
-    font-size: $font-size-xxs;
-    line-height: $line-height-xxs;
-  }
-}
-
-.text{
-  color: $color-gray-800;
-  font-weight: $font-weight-normal;
-  &-xxxl{
-    font-size: $font-size-xxxl;
-    line-height: $line-height-xxxl;
-  }
-  &-xxl{
-    font-size: $font-size-xxl;
-    line-height: $line-height-xxl;
-  }
-  &-xl{
-    font-size: $font-size-xxl;
-    line-height: $line-height-xxl;
-  }
-  &-xl{
-    font-size: $font-size-xl;
-    line-height: $line-height-xl;
-  }
-  &-l{
-    font-size: $font-size-l;
-    line-height: $line-height-l;
-  }
-  &-l{
-    font-size: $font-size-l;
-    line-height: $line-height-l;
-  }
-  &-md{
-    font-size: $font-size-m;
-    line-height: $line-height-m;
-  }
-  &-sm{
-    font-size: $font-size-s;
-    line-height: $line-height-s;
-  }
-  &-xs{
-    font-size: $font-size-xs;
-    line-height: $line-height-xs;
-  }
-  &-xxs{
+    color: $color-gray-800;
     font-size: $font-size-xxs;
     line-height: $line-height-xxs;
   }
@@ -280,43 +257,49 @@ $line-height-xxxl-compact      : 2.75rem;
 .caption{
   color: $color-gray-800;
   font-weight: $font-weight-bold;
+  font-size: $font-size-l;
   &-xxxl{
+    color: $color-gray-800;
     font-size: $font-size-xxxl;
     line-height: $line-height-xxxl-compact;
   }
   &-xxl{
+    color: $color-gray-800;
     font-size: $font-size-xxl;
     line-height: $line-height-xxl-compact;
   }
   &-xl{
+    color: $color-gray-800;
     font-size: $font-size-xxl;
     line-height: $line-height-xxl-compact;
   }
   &-xl{
+    color: $color-gray-800;
     font-size: $font-size-xl;
     line-height: $line-height-xl-compact;
   }
   &-l{
+    color: $color-gray-800;
     font-size: $font-size-l;
     line-height: $line-height-l-compact;
   }
-  &-l{
+  &-l{color: $color-gray-800;
     font-size: $font-size-l;
     line-height: $line-height-l-compact;
   }
-  &-md{
+  &-md{color: $color-gray-800;
     font-size: $font-size-m;
     line-height: $line-height-m-compact;
   }
-  &-sm{
+  &-sm{color: $color-gray-800;
     font-size: $font-size-s;
     line-height: $line-height-s-compact;
   }
-  &-xs{
+  &-xs{color: $color-gray-800;
     font-size: $font-size-xs;
     line-height: $line-height-xs-compact;
   }
-  &-xxs{
+  &-xxs{color: $color-gray-800;
     font-size: $font-size-xxs;
     line-height: $line-height-xxs-compact;
   }
@@ -325,43 +308,54 @@ $line-height-xxxl-compact      : 2.75rem;
 .desc{
   color: $color-gray-700;
   font-weight: $font-weight-normal;
+  font-size: $font-size-m;
   &-xxxl{
+    color: $color-gray-700;
     font-size: $font-size-xxxl;
     line-height: $line-height-xxxl-compact;
   }
   &-xxl{
+    color: $color-gray-700;
     font-size: $font-size-xxl;
     line-height: $line-height-xxl-compact;
   }
   &-xl{
+    color: $color-gray-700;
     font-size: $font-size-xxl;
     line-height: $line-height-xxl-compact;
   }
   &-xl{
+    color: $color-gray-700;
     font-size: $font-size-xl;
     line-height: $line-height-xl-compact;
   }
   &-l{
+    color: $color-gray-700;
     font-size: $font-size-l;
     line-height: $line-height-l-compact;
   }
   &-l{
+    color: $color-gray-700;
     font-size: $font-size-l;
     line-height: $line-height-l-compact;
   }
   &-md{
+    color: $color-gray-700;
     font-size: $font-size-m;
     line-height: $line-height-m-compact;
   }
   &-sm{
+    color: $color-gray-700;
     font-size: $font-size-s;
     line-height: $line-height-s-compact;
   }
   &-xs{
+    color: $color-gray-700;
     font-size: $font-size-xs;
     line-height: $line-height-xs-compact;
   }
   &-xxs{
+    color: $color-gray-700;
     font-size: $font-size-xxs;
     line-height: $line-height-xxs-compact;
   }
