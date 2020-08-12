@@ -171,19 +171,21 @@ $display-media-breakpoints: 'none',
 /* GRID STARTS */
 
 .mb-flex-container {
-  margin: auto;
   max-width: calc(#{$max-window-width} - #{$space-xxxl});
-
+  padding: 0 $space-l;
   @include media(phone) {
     max-width: calc(#{$mobile-breakpoint} - #{$space-m});
+    padding: 0 $space-xs;
   }
 
   @include media(tablet) {
     max-width: calc(#{$tablet-breakpoint} - #{$space-xl});
+    padding: 0 $space-s;
   }
 
   @include media(laptop) {
     max-width: calc(#{$laptop-breakpoint} - #{$space-xxl});
+    padding: 0 $space-m;
   }
 }
 
