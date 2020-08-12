@@ -52,7 +52,7 @@ $tValue in $space-list {
       @each $left,
       $lValue in $space-list {
         .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          padding: $tValue $rValue, $bValue, $lValue;
+          padding: $tValue $rValue $bValue $lValue;
         }
       }
     }
@@ -71,7 +71,7 @@ $tValue in $space-list {
       @each $left,
       $lValue in $space-list {
         .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          padding: $tValue $rValue, $bValue, $lValue;
+          padding: $tValue $rValue $bValue $lValue;
         }
       }
     }
