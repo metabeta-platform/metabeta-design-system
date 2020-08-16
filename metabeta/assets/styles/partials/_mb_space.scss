@@ -266,10 +266,13 @@ $grid-columns : 4;
 }
 @function repeater($n, $character){
   $c: "";
-  @for $i from 1 through $n{
-    $c: $c + " " + $character + ",";
+  @if $n >= 1 {
+    @for $i from 1 through $n{
+      $c: $c + " " + $character;
+    }
+    @return unquote($c)
   }
-  @return unquote($c)
+  @return unquote($c);
 }
 
 @mixin grid-mixin($grid-number, $col-or-row, $grid-min-max : false, $grid-min-max-value : 250px, $grid-min-max-direction : 'start') {
@@ -278,36 +281,32 @@ $grid-columns : 4;
   @if $grid-min-max {
     @if $col-or-row=='col' {
       @if $grid-min-max-direction=='end' {
-        grid-template-columns: minmax(repeater($grid-number - 2 , 1fr) 1fr, $grid-min-max-value);
-        margin: 0 auto;
+        grid-template-columns:repeater($grid-number - 1, 1fr) minmax($grid-min-max-value ,1fr);
       }
 
       @else {
-        grid-template-columns: minmax($grid-min-max-value, repeater($grid-number - 2 , 1fr) 1fr);
-        margin: 0 auto;
+        grid-template-columns: minmax($grid-min-max-value, 1fr) repeater($grid-number - 1, 1fr);
       }
     }
 
     @else {
       @if $grid-min-max-direction=='end' {
-        grid-template-rows: minmax(repeater($grid-number - 2 , 1fr) 1fr, $grid-min-max-value);
-        margin: 0 auto;
+        grid-template-rows: repeater($grid-number - 1, 1fr) minmax(1fr, $grid-min-max-value);
       }
 
       @else {
-        grid-template-rows: minmax($grid-min-max-value, repeater($grid-number - 2 , 1fr) 1fr);
-        margin: 0 auto;
+        grid-template-rows: minmax($grid-min-max-value, 1fr) repeater($grid-number - 1 , 1fr);
       }
     }
   }
 
   @else {
     @if $col-or-row=='col' {
-      grid-template-columns: repeater($grid-number - 1 , 1fr) 1fr;
+      grid-template-columns: repeater($grid-number , 1fr);
     }
 
     @else {
-      grid-template-rows: repeater($grid-number - 1 , 1fr) 1fr;
+      grid-template-rows: repeater($grid-number, 1fr);
     }
   }
 }
