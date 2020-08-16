@@ -264,6 +264,13 @@ $grid-columns : 4;
     }
   }
 }
+@function repeater($n, $character){
+  $c: "";
+  @for $i from 1 through $n{
+    $c: $c + " " + $character + ",";
+  }
+  @return unquote($c)
+}
 
 @mixin grid-mixin($grid-number, $col-or-row, $grid-min-max : false, $grid-min-max-value : 250px, $grid-min-max-direction : 'start') {
   display: grid;
@@ -271,24 +278,24 @@ $grid-columns : 4;
   @if $grid-min-max {
     @if $col-or-row=='col' {
       @if $grid-min-max-direction=='end' {
-        grid-template-columns: minmax(#{1fr} * $grid-number, $grid-min-max-value);
+        grid-template-columns: minmax(repeater($grid-number - 2 , 1fr) 1fr, $grid-min-max-value);
         margin: 0 auto;
       }
 
       @else {
-        grid-template-columns: minmax($grid-min-max-value, #{1fr} * ($grid-number - 1));
+        grid-template-columns: minmax($grid-min-max-value, repeater($grid-number - 2 , 1fr) 1fr);
         margin: 0 auto;
       }
     }
 
     @else {
       @if $grid-min-max-direction=='end' {
-        grid-template-rows: minmax(#{1fr} * $grid-number, $grid-min-max-value);
+        grid-template-rows: minmax(repeater($grid-number - 2 , 1fr) 1fr, $grid-min-max-value);
         margin: 0 auto;
       }
 
       @else {
-        grid-template-rows: minmax($grid-min-max-value, #{1fr} * ($grid-number - 1));
+        grid-template-rows: minmax($grid-min-max-value, repeater($grid-number - 2 , 1fr) 1fr);
         margin: 0 auto;
       }
     }
@@ -296,11 +303,11 @@ $grid-columns : 4;
 
   @else {
     @if $col-or-row=='col' {
-      grid-template-columns: #{1fr} * $grid-number;
+      grid-template-columns: repeater($grid-number - 1 , 1fr) 1fr;
     }
 
     @else {
-      grid-template-rows: #{1fr} * $grid-number;
+      grid-template-rows: repeater($grid-number - 1 , 1fr) 1fr;
     }
   }
 }
