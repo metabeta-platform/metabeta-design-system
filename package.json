@@ -1,6 +1,6 @@
 {
   "name": "metabeta-design-system",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "\"Metabeta Design System\"",
   "main": "./assets/dist/dna.css",
   "dependencies": {},
