@@ -277,7 +277,7 @@ $grid-columns : 4;
 
 @mixin grid-mixin($grid-number, $col-or-row, $grid-min-max : false, $grid-min-max-value : 250px, $grid-min-max-direction : 'start') {
   display: grid;
-
+  
   @if $grid-min-max {
     @if $col-or-row=='col' {
       @if $grid-min-max-direction=='end' {
