@@ -42,3 +42,9 @@
 .text-end{
     text-align: right;
 }
+@mixin absolute($top, $left){
+    position: absolute;
+    top: $top * 1%;
+    left: $left * 1%;
+    transform: translate(-$left * 1%, -$top * 1%);
+}

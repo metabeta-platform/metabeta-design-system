@@ -43,7 +43,7 @@ inline-block;
 
 @mixin aspect-ratio($ratio, $width) {
   width: $width;
-
+  object-fit: cover;
   @if $ratio==square {
     height: $width;
   }
