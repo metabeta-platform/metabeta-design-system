@@ -14,6 +14,7 @@ $mb-space-xxxl           : 4rem;
 
 /* PADDING & MARGIN CLASSES START — DEPRECATED*/
 
+
 $mb-space-list : (0: 0, xxs : $mb-space-xxs, xs : $mb-space-xxs, s: $mb-space-s, m: $mb-space-m, l: $mb-space-l, xl: $mb-space-xl, xxl: $mb-space-xxl, xxxl: $mb-space-xxxl);
 
 // Simple padding
@@ -26,7 +27,6 @@ $vertical-space in $space-list {
     }
   }
 }
-
 // Simple margin
 @each $vertical,
 $vertical-space in $space-list {
@@ -48,7 +48,6 @@ $top-space in $space-list {
 
     @each $bottom,
     $bottom-space in $space-list {
-
       @each $left,
       $left-space in $space-list {
         .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
@@ -68,7 +67,7 @@ $top-space in $space-list {
 
     @each $bottom,
     $bottom-space in $space-list {
-
+      
       @each $left,
       $left-space in $space-list {
         .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
@@ -317,7 +316,6 @@ $mb-grid-columns : 12; // Can be changed to whatever value you want
     }
   }
 }
-
 /* GRID ENDS */
 
 /* ELEVATION MIXIN START */
@@ -346,4 +344,3 @@ $mb-grid-columns : 12; // Can be changed to whatever value you want
 }
 
 /* SHADOW MIXIN ENDD */
-
