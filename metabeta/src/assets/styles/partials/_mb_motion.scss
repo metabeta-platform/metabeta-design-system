@@ -1,0 +1,54 @@
+/* MOTION VARIABLES START */
+
+$mb-ease-base         : cubic-bezier(0.4,0.14,0.3,1);
+$mb-ease-intro        : cubic-bezier(0.4,0.14,0.3,1);
+$mb-ease-outro        : cubic-bezier(0.4,0.14,0.3,1);
+$mb-ease-bounce       : cubic-bezier(0.4,0.14,1.1,1);
+
+$mb-speed-faster    : .1s; // 6 frames, use for micro-interactions such as buttons, toggles
+$mb-speed-fast      : .2s; // 12 frames, use for micro-interactions, fades
+$mb-speed-slow      : .4s; // 24 frames, use for modal/drawer expansions, system notifications
+$mb-speed-slower    : .6s; // 32 frames, use for background dimming
+
+/* MOTION VARIABLES END */
+
+/* ANIMATION MIXINS START */
+
+@keyframes fade-in {
+  0% {
+    opacity: $opacity-transparent;
+  }
+  100% {
+    opacity: $opacity-full;
+  }
+}
+
+// We must add other animations for various elements here, one a need-per basis:
+// 1. slide-in-left and slide-out-right for drawers
+// 2. fade-in-right and fade-out-right for toast notifications
+// 3. fade-in-down and fade-out-up for menus
+// 4. fade-in-up fade-out-down for popovers
+// 5. shake for disabled or not allowed element - see shake here: https://webkul.github.io/micron/
+// 6. etc.
+
+/* ANIMATION MIXINS END */
+
+/* TRANSITION MIXINS START */
+
+@mixin mb-transition-smooth($speed: $mb-speed-fast, $easing: $mb-ease-intro, $delay: 0) {
+  transition: all $speed $easing $delay;
+}
+
+/* TRANSITION MIXINS END */
+
+/* MOTION MIXINS START */
+
+@mixin mb-motion-fade-in($speed: $mb-speed-fast, $easing: $mb-ease-intro, $delay: 0) {
+  animation-name: fade-in;
+  animation-duration: $speed;
+  animation-timing-function: $easing;
+  animation-delay: $delay
+}
+
+/* MOTION MIXINS END */
+
