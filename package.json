@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "compile:sass": "node-sass metabeta/assets/styles/dna.scss metabeta/assets/dist/dna.css"
+    "compile:sass": "node-sass metabeta/src/assets/styles/dna.scss metabeta/src/assets/dist/dna.css"
   },
   "repository": {
     "type": "git",
