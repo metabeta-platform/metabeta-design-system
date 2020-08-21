@@ -1,38 +1,42 @@
 /* BASIC SPACING VARIABLES START */
 
-$mb-space-xxxs           : .125rem;
-$mb-space-xxs            : .25rem;
-$mb-space-xs             : .5rem;
-$mb-space-s              : .75rem;
-$mb-space-m              : 1rem;
-$mb-space-l              : 1.5rem;
-$mb-space-xl             : 2rem;
-$mb-space-xxl            : 3rem;
-$mb-space-xxxl           : 4rem;
+$mb-space-xxxs: 0.125rem;
+$mb-space-xxs: 0.25rem;
+$mb-space-xs: 0.5rem;
+$mb-space-s: 0.75rem;
+$mb-space-m: 1rem;
+$mb-space-l: 1.5rem;
+$mb-space-xl: 2rem;
+$mb-space-xxl: 3rem;
+$mb-space-xxxl: 4rem;
 
 /* BASIC SPACING VARIABLES END */
 
 /* PADDING & MARGIN CLASSES START — DEPRECATED*/
 
-
-$mb-space-list : (0: 0, xxs : $mb-space-xxs, xs : $mb-space-xxs, s: $mb-space-s, m: $mb-space-m, l: $mb-space-l, xl: $mb-space-xl, xxl: $mb-space-xxl, xxxl: $mb-space-xxxl);
+$mb-space-list: (
+  0: 0,
+  xxs: $mb-space-xxs,
+  xs: $mb-space-xxs,
+  s: $mb-space-s,
+  m: $mb-space-m,
+  l: $mb-space-l,
+  xl: $mb-space-xl,
+  xxl: $mb-space-xxl,
+  xxxl: $mb-space-xxxl,
+);
 
 // Simple padding
-@each $vertical,
-$vertical-space in $space-list {
-  @each $horizontal,
-  $horizontal-space in $space-list {
+@each $vertical, $vertical-space in $mb-space-list {
+  @each $horizontal, $horizontal-space in $mb-space-list {
     .padding-#{$vertical}-#{$horizontal} {
       padding: $vertical-space $horizontal-space;
     }
   }
 }
 // Simple margin
-@each $vertical,
-$vertical-space in $space-list {
-
-  @each $horizontal,
-  $horizontal-space in $space-list {
+@each $vertical, $vertical-space in $mb-space-list {
+  @each $horizontal, $horizontal-space in $mb-space-list {
     .margin-#{$vertical}-#{$horizontal} {
       margin: $vertical-space $horizontal-space;
     }
@@ -40,16 +44,10 @@ $vertical-space in $space-list {
 }
 
 // Full padding
-@each $top,
-$top-space in $space-list {
-
-  @each $right,
-  $right-space in $space-list {
-
-    @each $bottom,
-    $bottom-space in $space-list {
-      @each $left,
-      $left-space in $space-list {
+@each $top, $top-space in $mb-space-list {
+  @each $right, $right-space in $mb-space-list {
+    @each $bottom, $bottom-space in $mb-space-list {
+      @each $left, $left-space in $mb-space-list {
         .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
           padding: $top-space $right-space $bottom-space $left-space;
         }
@@ -59,17 +57,10 @@ $top-space in $space-list {
 }
 
 // Full margin
-@each $top,
-$top-space in $space-list {
-
-  @each $right,
-  $right-space in $space-list {
-
-    @each $bottom,
-    $bottom-space in $space-list {
-      
-      @each $left,
-      $left-space in $space-list {
+@each $top, $top-space in $mb-space-list {
+  @each $right, $right-space in $mb-space-list {
+    @each $bottom, $bottom-space in $mb-space-list {
+      @each $left, $left-space in $mb-space-list {
         .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
           margin: $top-space $right-space $bottom-space $left-space;
         }
@@ -87,17 +78,13 @@ $top-space in $space-list {
   width: $width;
   @if $mb-ratio==square {
     height: $width;
-  }
-  @else if $ratio==golden {
+  } @else if $ratio==golden {
     height: $width * 0.618;
-  }
-  @else if $ratio==landscape {
+  } @else if $ratio==landscape {
     height: $width * 2 / 3;
-  }
-  @else if $ratio==portrait {
+  } @else if $ratio==portrait {
     height: $width * 3 / 2;
-  }
-  @else if $ratio==video {
+  } @else if $ratio==video {
     height: $width * 9 / 16;
   }
 }
@@ -109,17 +96,13 @@ $top-space in $space-list {
 @mixin mb-border-radius($radius) {
   @if $radius==xs {
     border-radius: $mb-space-xxxs;
-  }
-  @else if $radius==s {
+  } @else if $radius==s {
     border-radius: $mb-space-xxxs * 2;
-  }
-  @else if $radius==m {
+  } @else if $radius==m {
     border-radius: $mb-space-xxxs * 3;
-  }
-  @else if $radius==l {
+  } @else if $radius==l {
     border-radius: $mb-space-xxxs * 4;
-  }
-  @else if $radius==circle {
+  } @else if $radius==circle {
     border-radius: 50%;
   }
 }
@@ -128,13 +111,13 @@ $top-space in $space-list {
 
 /* MEDIA VARIABLES START */
 
-$mb-phone-breakpoint     : 568px;
-$mb-tablet-breakpoint    : 768px;
-$mb-laptop-breakpoint    : 1367px;
-$mb-desktop-breakpoint   : 1600px; // Limits width for very large desktop displays
+$mb-phone-breakpoint: 568px;
+$mb-tablet-breakpoint: 768px;
+$mb-laptop-breakpoint: 1367px;
+$mb-desktop-breakpoint: 1600px; // Limits width for very large desktop displays
 
-$mb-touch-base           : 48px; // Optimal size for interactive elements on touch interfaces
-$mb-touch-min            : 40px; // Minimal usable size
+$mb-touch-base: 48px; // Optimal size for interactive elements on touch interfaces
+$mb-touch-min: 40px; // Minimal usable size
 
 /* MEDIA VARIABLES END */
 
@@ -145,42 +128,35 @@ $mb-touch-min            : 40px; // Minimal usable size
     @media only screen and (min-width: $mb-laptop-breakpoint + 1) {
       @content;
     }
-  }
-  @else if $media-type==laptop {
+  } @else if $media-type==laptop {
     @media only screen and (max-width: $mb-laptop-breakpoint) {
       @content;
     }
-  }
-  @else if $media-type==laptop-only {
+  } @else if $media-type==laptop-only {
     @media only screen and (min-width: $mb-tablet-breakpoint + 1) and (max-width: $mb-laptop-breakpoint) {
       @content;
     }
-  }
-  @else if $media-type==tablet {
+  } @else if $media-type==tablet {
     @media only screen and (max-width: $mb-tablet-breakpoint) {
       @content;
     }
-  }
-  @else if $media-type==tablet-only {
+  } @else if $media-type==tablet-only {
     @media only screen and (min-width: $mb-phone-breakpoint + 1) and (max-width: $mb-tablet-breakpoint) {
       @content;
     }
-  }
-  @else if $media-type==phone {
+  } @else if $media-type==phone {
     @media only screen and (max-width: $mb-phone-breakpoint) {
       @content;
     }
-  @else if $media-type==phone-only {
+  } @else if $media-type==phone-only {
     @media only screen and (max-width: $mb-phone-breakpoint) {
       @content;
     }
-  }
-  @else if $media-type==print {
+  } @else if $media-type==print {
     @media only print {
       @content;
     }
-  }
-  @else {
+  } @else {
     @content;
   }
 }
@@ -218,7 +194,10 @@ $mb-display: none, flex, block, grid, inline-block;
 
 /* GRID STARTS */
 
-$mb-grid-columns : 12; // Can be changed to whatever value you want
+$mb-desktop-columns: 12; // Can be changed to whatever value you want
+$mb-laptop-columns: 12;
+$mb-tablet-columns: 8;
+$mb-phone-columns: 4;
 
 .mb-flex {
   padding: 0 $mb-space-m;
@@ -241,33 +220,33 @@ $mb-grid-columns : 12; // Can be changed to whatever value you want
   flex-shrink: 0;
 }
 
-@function mb-column-width($columns) {
-  @return 100% / $mb-grid-columns * $columns;
+@function mb-column-width($grid-count-in-size, $columns) {
+  @return 100% / $grid-count-in-size * $columns;
 }
 
-@for $i from 1 through $mb-grid-columns {
-  @for $k from 1 through $mb-grid-columns {
-    @for $l from 1 through $mb-grid-columns {
-      @for $m from 1 through $mb-grid-columns {
+@for $i from 1 through $mb-desktop-columns {
+  @for $k from 1 through $mb-laptop-columns {
+    @for $l from 1 through $mb-tablet-columns {
+      @for $m from 1 through $mb-phone-columns {
         .mb-col-#{$i}-#{$k}-#{$l}-#{$m} {
           position: relative;
           width: 100%;
-          flex: 0 0 mb-column-width($i);
-          max-width: mb-column-width($i);
+          flex: 0 0 mb-column-width($mb-desktop-columns, $i);
+          max-width: mb-column-width($mb-desktop-columns, $i);
           padding: 0 $mb-space-m;
           @include mb-media(laptop) {
-            flex: 0 0 mb-column-width($k);
-            max-width: mb-column-width($k);
-            padding: 0 $mb-space-m
+            flex: 0 0 mb-column-width($mb-laptop-columns, $k);
+            max-width: mb-column-width($mb-laptop-columns, $k);
+            padding: 0 $mb-space-m;
           }
           @include mb-media(tablet) {
-            flex: 0 0 mb-column-width($l);
-            max-width: mb-column-width($l);
+            flex: 0 0 mb-column-width($mb-tablet-columns, $l);
+            max-width: mb-column-width($mb-tablet-columns, $l);
             padding: 0 $mb-space-m;
           }
           @include mb-media(phone) {
-            flex: 0 0 mb-column-width($m);
-            max-width: mb-column-width($m);
+            flex: 0 0 mb-column-width($mb-phone-columns, $m);
+            max-width: mb-column-width($mb-phone-columns, $m);
             padding: 0 $mb-space-s;
           }
         }
@@ -282,36 +261,49 @@ $mb-grid-columns : 12; // Can be changed to whatever value you want
     @for $i from 1 through $count {
       $repeated-text: $repeated-text + " " + $string;
     }
-    @return unquote($repeated-text)
+    @return unquote($repeated-text);
   }
   @return unquote($repeated-text);
 }
 
-@mixin mb-grid-mixin($grid-count, $grid-template, $grid-min-max : false, $grid-min-max-value, $grid-min-max-direction : 'start') {
+@mixin mb-grid-mixin(
+  $grid-count,
+  $grid-template,
+  $grid-min-max-value,
+  $grid-min-max: false,
+  $grid-min-max-direction: "start"
+) {
   display: grid;
   @if $grid-min-max {
-    @if $grid-template=='col' {
-      @if $grid-min-max-direction=='end' {
-        grid-template-columns:mb-repeater($grid-count - 1, 1fr) minmax($grid-min-max-value ,1fr);
+    @if $grid-template== "col" {
+      @if $grid-min-max-direction== "end" {
+        grid-template-columns: mb-repeater($grid-count - 1, 1fr) minmax(
+            $grid-min-max-value,
+            1fr
+          );
+      } @else {
+        grid-template-columns: minmax($grid-min-max-value, 1fr) mb-repeater(
+            $grid-count - 1,
+            1fr
+          );
       }
-      @else {
-        grid-template-columns: minmax($grid-min-max-value, 1fr) mb-repeater($grid-count - 1, 1fr);
+    } @else {
+      @if $grid-min-max-direction== "end" {
+        grid-template-rows: mb-repeater($grid-count - 1, 1fr) minmax(
+            1fr,
+            $grid-min-max-value
+          );
+      } @else {
+        grid-template-rows: minmax($grid-min-max-value, 1fr) mb-repeater(
+            $grid-count - 1,
+            1fr
+          );
       }
     }
-    @else {
-      @if $grid-min-max-direction=='end' {
-        grid-template-rows: mb-repeater($grid-count - 1, 1fr) minmax(1fr, $grid-min-max-value);
-      }
-      @else {
-        grid-template-rows: minmax($grid-min-max-value, 1fr) mb-repeater($grid-count - 1 , 1fr);
-      }
-    }
-  }
-  @else {
-    @if $grid-template=='col' {
-      grid-template-columns: mb-repeater($grid-count , 1fr);
-    }
-    @else {
+  } @else {
+    @if $grid-template== "col" {
+      grid-template-columns: mb-repeater($grid-count, 1fr);
+    } @else {
       grid-template-rows: mb-repeater($grid-count, 1fr);
     }
   }
@@ -321,25 +313,33 @@ $mb-grid-columns : 12; // Can be changed to whatever value you want
 /* ELEVATION MIXIN START */
 
 @mixin mb-elevation($elevation) {
-  z-index: $elevation * 100; // Use integer values 0, 1, 2, 3, 4, 8, 16, 24, 32 for absolute elevation and float values for relative 
+  z-index: $elevation * 100; // Use integer values 0, 1, 2, 3, 4, 8, 16, 24, 32 for absolute elevation and float values for relative
 }
 
 /* ELEVATION MIXIN END */
 
 /* SHADOW MIXIN START */
 
-@mixin mb-shadow($elevation:0, $direction: "bottom", $color: $color-gray-100, $opacity: $mb-opacity-m) {
-  @if $direction=="left" {
-    box-shadow: -$elevation/2 0 $elevation rgba($color, $opacity), 0 0 1px rgba($color, $opacity)
+@mixin mb-shadow(
+  $elevation: 0,
+  $direction: "bottom",
+  $color: $color-gray-100,
+  $opacity: $mb-opacity-m
+) {
+  @if $direction== "left" {
+    box-shadow: -$elevation/2 0 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
   }
-  @if $direction=="right" {
-    box-shadow: $elevation/2 0 $elevation rgba($color, $opacity), 0 0 1px rgba($color, $opacity)
+  @if $direction== "right" {
+    box-shadow: $elevation/2 0 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
   }
-  @if $direction=="top" {
-    box-shadow: 0 -$elevation/2 $elevation rgba($color, $opacity), 0 0 1px rgba($color, $opacity)
-  }
-  @else {
-    box-shadow: 0 $elevation/2 $elevation rgba($color, $opacity), 0 0 1px rgba($color, $opacity)
+  @if $direction== "top" {
+    box-shadow: 0 -$elevation/2 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
+  } @else {
+    box-shadow: 0 $elevation/2 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
   }
 }
 
