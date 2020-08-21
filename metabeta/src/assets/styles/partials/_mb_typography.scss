@@ -1,5 +1,6 @@
-/* FONT SIZES START */
+/* FONT VARIABLES START */
 
+// Font sizes
 $font-size-xxs            : 0.625rem;
 $font-size-xs             : 0.75rem;
 $font-size-s              : 0.875rem;
@@ -9,97 +10,91 @@ $font-size-xl             : 1.5rem;
 $font-size-xxl            : 2rem;
 $font-size-xxxl           : 2.5rem;
 
-/* FONT SIZES END */
-
-/* FONT WEIGHT START */
-
+// Font weights
 $font-weight-normal       : 400;
 $font-weight-bold         : 500;
 
-/* FONT WEIGHT END */
-
-/* LETTER SPACING START */
-
+// Letter spacing
 $letter-spacing-tighter   : -0.2em;
 $letter-spacing-tight     : -0.1em;
 $letter-spacing-normal    : 0em;
 $letter-spacing-loose     : 0.1em;
 $letter-spacing-looser    : 0.2em;
 
-/* LETTER SPACING END */
-
-/* LINE HEIGHT START */
-
+// Line heights
 $line-height-xxs          : 0.75rem;
 $line-height-xxs-compact  : 0.5rem;
-
 $line-height-xs           : 1rem;
 $line-height-xs-compact   : 0.75rem;
-
 $line-height-s            : 1.25rem;
 $line-height-s-compact    : 1rem;
-
 $line-height-m            : 1.5rem;
 $line-height-m-compact    : 1.25rem;
-
 $line-height-l            : 1.75rem;
 $line-height-l-compact    : 1.5rem;
-
 $line-height-xl           : 2rem;
 $line-height-xl-compact   : 1.75rem;
-
 $line-height-xxl          : 2.5rem;
 $line-height-xxl-compact  : 2.25rem;
-
 $line-height-xxxl         : 3rem;
 $line-height-xxxl-compact : 2.75rem;
 
-/* LINE HEIGHT END */
+/* FONT VARIABLES END */
 
-/* DEFINE FONTS LOCALLY START */
-
-@font-face {
-  font-family: "IBM Plex Sans";
-  src: url("../fonts/IBMPlexSans-MediumItalic.ttf") format("truetype");
-  font-weight: $font-weight-bold;
-  font-style: italic;
-}
+/* FONT FAMILIES START */
 
 @font-face {
   font-family: "IBM Plex Sans";
-  src: url("../fonts/IBMPlexSans.ttf") format("truetype");
+  src: local("?"),
+       url("../fonts/IBMPlexSans.ttf") format("truetype");
   font-weight: $font-weight-normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "IBM Plex Sans";
-  src: url("../fonts/IBMPlexSans-Medium.ttf") format("truetype");
+  src: local("?"),
+       url("../fonts/IBMPlexSans-Italic.ttf") format("truetype");
+  font-weight: $font-weight-normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: local("?"),
+       url("../fonts/IBMPlexSans-Medium.ttf") format("truetype");
   font-weight: $font-weight-bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "IBM Plex Sans";
-  src: url("../fonts/IBMPlexSans-Italic.ttf") format("truetype");
-  font-weight: $font-weight-normal;
+  src: local("?"),
+       url("../fonts/IBMPlexSans-MediumItalic.ttf") format("truetype");
+  font-weight: $font-weight-bold;
   font-style: italic;
 }
 
-/* DEFINE FONTS LOCALLY END */
+$font-family-headings   : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+$font-family-body       : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+$font-family-monospace  : "IBM Plex Sans Mono", "Lucida Console", "Courier Pro", monospace;
 
-/* TEXT OVERFLOW MIXIN START */
+/* FONT FAMILIES END */
 
+/* TYPOGRAPHY MIXINS START*/
+
+// Text overflow behavior
 @mixin wrap-text($wrap-text: false) {
   @if $wrap-text {
     overflow: visible;
     text-overflow: initial;
     white-space: normal;
-  } @else {
+  }
+  @else {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 }
 
-/* TEXT OVERFLOW MIXIN END */
+/* TYPOGRAPHY MIXINS END */
