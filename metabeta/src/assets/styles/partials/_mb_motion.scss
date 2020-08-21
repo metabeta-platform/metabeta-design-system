@@ -23,6 +23,17 @@ $mb-speed-slower    : .6s; // 32 frames, use for background dimming
   }
 }
 
+@keyframes fade-in-up {
+  0% {
+    opacity: $opacity-transparent;
+    transform: translate(0,-$space-xxxl);
+  }
+  100% {
+    opacity: $opacity-full;
+    transform: translate(0,0);
+  }
+}
+
 // We must add other animations for various elements here, one a need-per basis:
 // 1. slide-in-left and slide-out-right for drawers
 // 2. fade-in-right and fade-out-right for toast notifications
@@ -43,11 +54,14 @@ $mb-speed-slower    : .6s; // 32 frames, use for background dimming
 
 /* MOTION MIXINS START */
 
-@mixin mb-motion-fade-in($speed: $mb-speed-fast, $easing: $mb-ease-intro, $delay: 0) {
-  animation-name: fade-in;
-  animation-duration: $speed;
-  animation-timing-function: $easing;
-  animation-delay: $delay
+@mixin mb-motion-fade-in-up(
+  $speed: $mb-speed-fast,
+  $easing: $mb-ease-intro,
+  $delay: 0) {
+    animation-name: fade-in-up;
+    animation-duration: $speed;
+    animation-timing-function: $easing;
+    animation-delay: $delay
 }
 
 /* MOTION MIXINS END */
