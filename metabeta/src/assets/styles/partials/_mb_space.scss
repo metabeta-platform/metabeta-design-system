@@ -162,6 +162,32 @@ $mb-touch-min: 40px; // Minimal usable size
 
 /* MEDIA QUERIES END */
 
+/* NEW GRID MIXINS START */
+
+// Define number of grid columns.
+$mb-grid-columns: 12;
+$mb-grid-column-width: 1/$mb-grid-columns;
+
+// Mixin for defining grid column width
+@mixin mb-columns($desktop, $laptop: $desktop, $tablet: $laptop, $phone: $tablet) {
+  width: $desktop * $mb-grid-column-width;
+  @include mb-media(desktop) {
+    width: $desktop * $mb-grid-column-width;
+  }
+  @include mb-media(laptop) {
+    width: $laptop * $mb-grid-column-width;
+  }
+  @include mb-media(tablet) {
+    width: $tablet * $mb-grid-column-width;
+  }
+  @include mb-media(phone) {
+    width: $phone * $mb-grid-column-width;
+  }
+}
+
+
+/* NEW GRID MIXINS END */
+
 /* CLEAR DISPLAY CLASS START */
 // $mb-display: none, flex, block, grid, inline-block;
 
@@ -190,7 +216,7 @@ $mb-touch-min: 40px; // Minimal usable size
 
 /* CLEAR DISPLAY CLASS END */
 
-/* GRID STARTS */
+/* OLD GRID STARTS */
 
 $mb-desktop-columns: 12; // Can be changed to whatever value you want
 $mb-laptop-columns: 12;
@@ -308,18 +334,18 @@ $mb-phone-columns: 4;
 }
 /* GRID ENDS */
 
-/* ELEVATION MIXIN START */
+/* DEPTH MIXINS START */
 
+// Elevation mixins
+// Use integers for absolute elevation: 0, 1, 2, 3, 4, 8, 16, 24, 32
+// Use float for relative elevation: 0.1, 4.2 etc.
 @mixin mb-elevation($elevation) {
-  z-index: $elevation * 100; // Use integer values 0, 1, 2, 3, 4, 8, 16, 24, 32 for absolute elevation and float values for relative
+  z-index: $elevation * 100; 
 }
 
-/* ELEVATION MIXIN END */
-
-/* SHADOW MIXIN START */
-
+// Shadow mixes elevation and (optional), direction, color, opacity
 @mixin mb-shadow(
-  $elevation: 0,
+  $elevation: 1,
   $direction: "bottom",
   $color: $color-gray-100,
   $opacity: $mb-opacity-m
@@ -341,7 +367,7 @@ $mb-phone-columns: 4;
   }
 }
 
-/* SHADOW MIXIN ENDD */
+/* DEPTH MIXIN ENDD */
 
 // @mixin flex-center-center {
 //   display: flex;
