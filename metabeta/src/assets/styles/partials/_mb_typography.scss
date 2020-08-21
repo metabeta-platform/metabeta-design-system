@@ -1,43 +1,43 @@
 /* FONT VARIABLES START */
 
 // Font sizes
-$font-size-xxs            : 0.625rem;
-$font-size-xs             : 0.75rem;
-$font-size-s              : 0.875rem;
-$font-size-m              : 1rem;
-$font-size-l              : 1.25rem;
-$font-size-xl             : 1.5rem;
-$font-size-xxl            : 2rem;
-$font-size-xxxl           : 2.5rem;
+$mb-font-size-xxs            : 0.625rem;
+$mb-font-size-xs             : 0.75rem;
+$mb-font-size-s              : 0.875rem;
+$mb-font-size-m              : 1rem;
+$mb-font-size-l              : 1.25rem;
+$mb-font-size-xl             : 1.5rem;
+$mb-font-size-xxl            : 2rem;
+$mb-font-size-xxxl           : 2.5rem;
 
 // Font weights
-$font-weight-normal       : 400;
-$font-weight-bold         : 500;
+$mb-font-weight-normal       : 400;
+$mb-font-weight-bold         : 500;
 
 // Letter spacing
-$letter-spacing-tighter   : -0.2em;
-$letter-spacing-tight     : -0.1em;
-$letter-spacing-normal    : 0em;
-$letter-spacing-loose     : 0.1em;
-$letter-spacing-looser    : 0.2em;
+$mb-letter-spacing-tighter   : -0.2em;
+$mb-letter-spacing-tight     : -0.1em;
+$mb-letter-spacing-normal    : 0em;
+$mb-letter-spacing-loose     : 0.1em;
+$mb-letter-spacing-looser    : 0.2em;
 
 // Line heights
-$line-height-xxs          : 0.75rem;
-$line-height-xxs-compact  : 0.5rem;
-$line-height-xs           : 1rem;
-$line-height-xs-compact   : 0.75rem;
-$line-height-s            : 1.25rem;
-$line-height-s-compact    : 1rem;
-$line-height-m            : 1.5rem;
-$line-height-m-compact    : 1.25rem;
-$line-height-l            : 1.75rem;
-$line-height-l-compact    : 1.5rem;
-$line-height-xl           : 2rem;
-$line-height-xl-compact   : 1.75rem;
-$line-height-xxl          : 2.5rem;
-$line-height-xxl-compact  : 2.25rem;
-$line-height-xxxl         : 3rem;
-$line-height-xxxl-compact : 2.75rem;
+$mb-line-height-xxs          : 0.75rem;
+$mb-line-height-xxs-compact  : 0.5rem;
+$mb-line-height-xs           : 1rem;
+$mb-line-height-xs-compact   : 0.75rem;
+$mb-line-height-s            : 1.25rem;
+$mb-line-height-s-compact    : 1rem;
+$mb-line-height-m            : 1.5rem;
+$mb-line-height-m-compact    : 1.25rem;
+$mb-line-height-l            : 1.75rem;
+$mb-line-height-l-compact    : 1.5rem;
+$mb-line-height-xl           : 2rem;
+$mb-line-height-xl-compact   : 1.75rem;
+$mb-line-height-xxl          : 2.5rem;
+$mb-line-height-xxl-compact  : 2.25rem;
+$mb-line-height-xxxl         : 3rem;
+$mb-line-height-xxxl-compact : 2.75rem;
 
 /* FONT VARIABLES END */
 
@@ -47,7 +47,7 @@ $line-height-xxxl-compact : 2.75rem;
   font-family: "IBM Plex Sans";
   src: local("?"),
        url("../fonts/IBMPlexSans.ttf") format("truetype");
-  font-weight: $font-weight-normal;
+  font-weight: $mb-font-weight-normal;
   font-style: normal;
 }
 
@@ -55,7 +55,7 @@ $line-height-xxxl-compact : 2.75rem;
   font-family: "IBM Plex Sans";
   src: local("?"),
        url("../fonts/IBMPlexSans-Italic.ttf") format("truetype");
-  font-weight: $font-weight-normal;
+  font-weight: $mb-font-weight-normal;
   font-style: italic;
 }
 
@@ -63,7 +63,7 @@ $line-height-xxxl-compact : 2.75rem;
   font-family: "IBM Plex Sans";
   src: local("?"),
        url("../fonts/IBMPlexSans-Medium.ttf") format("truetype");
-  font-weight: $font-weight-bold;
+  font-weight: $mb-font-weight-bold;
   font-style: normal;
 }
 
@@ -71,20 +71,20 @@ $line-height-xxxl-compact : 2.75rem;
   font-family: "IBM Plex Sans";
   src: local("?"),
        url("../fonts/IBMPlexSans-MediumItalic.ttf") format("truetype");
-  font-weight: $font-weight-bold;
+  font-weight: $mb-font-weight-bold;
   font-style: italic;
 }
 
-$font-family-headings   : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-$font-family-body       : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-$font-family-monospace  : "IBM Plex Sans Mono", "Lucida Console", "Courier Pro", monospace;
+$mb-font-family-headings   : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+$mb-font-family-body       : "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+$mb-font-family-monospace  : "IBM Plex Sans Mono", "Lucida Console", "Courier Pro", monospace;
 
 /* FONT FAMILIES END */
 
 /* TYPOGRAPHY MIXINS START*/
 
 // Text overflow behavior
-@mixin wrap-text($wrap-text: false) {
+@mixin mb-wrap-text($wrap-text: false) {
   @if $wrap-text {
     overflow: visible;
     text-overflow: initial;

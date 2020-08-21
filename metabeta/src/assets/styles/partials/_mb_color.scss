@@ -1,243 +1,243 @@
 /* OPACITY START */
 
-$opacity-transparent        : 0;
-$opacity-xxs                : 0.02;
-$opacity-xs                 : 0.04;
-$opacity-s                  : 0.08;
-$opacity-m                  : 0.48;
-$opacity-l                  : 0.64;
-$opacity-xl                 : 0.80;
-$opacity-full               : 1;
+$mb-opacity-transparent        : 0;
+$mb-opacity-xxs                : 0.02;
+$mb-opacity-xs                 : 0.04;
+$mb-opacity-s                  : 0.08;
+$mb-opacity-m                  : 0.48;
+$mb-opacity-l                  : 0.64;
+$mb-opacity-xl                 : 0.80;
+$mb-opacity-full               : 1;
 
 /* OPACITY END */
 
 /* THEME PALETTE START */
 
-$color-blue-100             : #adccfa;
-$color-blue-200             : #8ab4f9;
-$color-blue-300             : #669cf7;
-$color-blue-400             : #4786f6;
-$color-blue-500             : #2b71f4;
-$color-blue-600             : #245fcf;
-$color-blue-700             : #1c4da7;
-$color-blue-800             : #153d7f;
-$color-blue-900             : #0e2a56;
-$color-blue                 : $color-blue-500;
-$color-blue-highlight       : rgba($color-blue,$opacity-xs);
+$mb-color-blue-100             : #adccfa;
+$mb-color-blue-200             : #8ab4f9;
+$mb-color-blue-300             : #669cf7;
+$mb-color-blue-400             : #4786f6;
+$mb-color-blue-500             : #2b71f4;
+$mb-color-blue-600             : #245fcf;
+$mb-color-blue-700             : #1c4da7;
+$mb-color-blue-800             : #153d7f;
+$mb-color-blue-900             : #0e2a56;
+$mb-color-blue                 : $mb-color-blue-500;
+$mb-color-blue-highlight       : rgba($mb-color-blue,$mb-opacity-xs);
 
-$color-indigo-100           : #c2acf6;
-$color-indigo-200           : #a689f2;
-$color-indigo-300           : #8d65ef;
-$color-indigo-400           : #7343ec;
-$color-indigo-500           : #5c2ce9;
-$color-indigo-600           : #4d24c4;
-$color-indigo-700           : #3d1c9d;
-$color-indigo-800           : #2d1678;
-$color-indigo-900           : #1f0e54;
-$color-indigo               : $color-indigo-500;
-$color-indigo-highlight     : rgba($color-indigo,$opacity-xs);
+$mb-color-indigo-100           : #c2acf6;
+$mb-color-indigo-200           : #a689f2;
+$mb-color-indigo-300           : #8d65ef;
+$mb-color-indigo-400           : #7343ec;
+$mb-color-indigo-500           : #5c2ce9;
+$mb-color-indigo-600           : #4d24c4;
+$mb-color-indigo-700           : #3d1c9d;
+$mb-color-indigo-800           : #2d1678;
+$mb-color-indigo-900           : #1f0e54;
+$mb-color-indigo               : $mb-color-indigo-500;
+$mb-color-indigo-highlight     : rgba($mb-color-indigo,$mb-opacity-xs);
 
-$color-purple-100           : #c6bee7;
-$color-purple-200           : #af9fdb;
-$color-purple-300           : #9682d0;
-$color-purple-400           : #7e64c5;
-$color-purple-500           : #6749ba;
-$color-purple-600           : #563d9d;
-$color-purple-700           : #45317f;
-$color-purple-800           : #362760;
-$color-purple-900           : #241c42;
-$color-purple               : $color-purple-500;
-$color-purple-highlight     : rgba($color-purple,$opacity-xs);
+$mb-color-purple-100           : #c6bee7;
+$mb-color-purple-200           : #af9fdb;
+$mb-color-purple-300           : #9682d0;
+$mb-color-purple-400           : #7e64c5;
+$mb-color-purple-500           : #6749ba;
+$mb-color-purple-600           : #563d9d;
+$mb-color-purple-700           : #45317f;
+$mb-color-purple-800           : #362760;
+$mb-color-purple-900           : #241c42;
+$mb-color-purple               : $mb-color-purple-500;
+$mb-color-purple-highlight     : rgba($mb-color-purple,$mb-opacity-xs);
 
-$color-pink-100             : #e6bad3;
-$color-pink-200             : #df9bbe;
-$color-pink-300             : #d47aaa;
-$color-pink-400             : #ce5e97;
-$color-pink-500             : #c44581;
-$color-pink-600             : #a63a6d;
-$color-pink-700             : #862f59;
-$color-pink-800             : #652444;
-$color-pink-900             : #46192f;
-$color-pink                 : $color-pink-500;
-$color-pink-highlight       : rgba($color-pink,$opacity-xs);
+$mb-color-pink-100             : #e6bad3;
+$mb-color-pink-200             : #df9bbe;
+$mb-color-pink-300             : #d47aaa;
+$mb-color-pink-400             : #ce5e97;
+$mb-color-pink-500             : #c44581;
+$mb-color-pink-600             : #a63a6d;
+$mb-color-pink-700             : #862f59;
+$mb-color-pink-800             : #652444;
+$mb-color-pink-900             : #46192f;
+$mb-color-pink                 : $mb-color-pink-500;
+$mb-color-pink-highlight       : rgba($mb-color-pink,$mb-opacity-xs);
 
-$color-red-100              : #e9b9be;
-$color-red-200              : #e19a9f;
-$color-red-300              : #d87c83;
-$color-red-400              : #d25e65;
-$color-red-500              : #cc454b;
-$color-red-600              : #aa3a3e;
-$color-red-700              : #8a3033;
-$color-red-800              : #682428;
-$color-red-900              : #481a1d;
-$color-red                  : $color-red-500;
-$color-red-highlight        : rgba($color-red,$opacity-xs);
+$mb-color-red-100              : #e9b9be;
+$mb-color-red-200              : #e19a9f;
+$mb-color-red-300              : #d87c83;
+$mb-color-red-400              : #d25e65;
+$mb-color-red-500              : #cc454b;
+$mb-color-red-600              : #aa3a3e;
+$mb-color-red-700              : #8a3033;
+$mb-color-red-800              : #682428;
+$mb-color-red-900              : #481a1d;
+$mb-color-red                  : $mb-color-red-500;
+$mb-color-red-highlight        : rgba($mb-color-red,$mb-opacity-xs);
 
-$color-orange-100           : #f6d4b0;
-$color-orange-200           : #f3bf8c;
-$color-orange-300           : #f2aa6d;
-$color-orange-400           : #f0984e;
-$color-orange-500           : #ed8338;
-$color-orange-600           : #c76f2e;
-$color-orange-700           : #a05b25;
-$color-orange-800           : #7a461d;
-$color-orange-900           : #543011;
-$color-orange               : $color-orange-500;
-$color-orange-highlight     : rgba($color-orange,$opacity-xs);
+$mb-color-orange-100           : #f6d4b0;
+$mb-color-orange-200           : #f3bf8c;
+$mb-color-orange-300           : #f2aa6d;
+$mb-color-orange-400           : #f0984e;
+$mb-color-orange-500           : #ed8338;
+$mb-color-orange-600           : #c76f2e;
+$mb-color-orange-700           : #a05b25;
+$mb-color-orange-800           : #7a461d;
+$mb-color-orange-900           : #543011;
+$mb-color-orange               : $mb-color-orange-500;
+$mb-color-orange-highlight     : rgba($mb-color-orange,$mb-opacity-xs);
 
-$color-yellow-100           : #faeaae;
-$color-yellow-200           : #fadf8d;
-$color-yellow-300           : #f7d66c;
-$color-yellow-400           : #f6cc53;
-$color-yellow-500           : #f5c244;
-$color-yellow-600           : #cea338;
-$color-yellow-700           : #a6852d;
-$color-yellow-800           : #806522;
-$color-yellow-900           : #574614;
-$color-yellow               : $color-yellow-500;
-$color-yellow-highlight     : rgba($color-yellow,$opacity-xs);
+$mb-color-yellow-100           : #faeaae;
+$mb-color-yellow-200           : #fadf8d;
+$mb-color-yellow-300           : #f7d66c;
+$mb-color-yellow-400           : #f6cc53;
+$mb-color-yellow-500           : #f5c244;
+$mb-color-yellow-600           : #cea338;
+$mb-color-yellow-700           : #a6852d;
+$mb-color-yellow-800           : #806522;
+$mb-color-yellow-900           : #574614;
+$mb-color-yellow               : $mb-color-yellow-500;
+$mb-color-yellow-highlight     : rgba($mb-color-yellow,$mb-opacity-xs);
 
-$color-lime-100             : #f0f4c3;
-$color-lime-200             : #e6ee9c;
-$color-lime-300             : #dce775;
-$color-lime-400             : #d4e157;
-$color-lime-500             : #cdcc39;
-$color-lime-600             : #c0ca33;
-$color-lime-700             : #afb42b;
-$color-lime-800             : #9e9e24;
-$color-lime-900             : #827717;
-$color-lime                 : $color-lime-500;
-$color-lime-highlight       : rgba($color-lime,$opacity-xs);
+$mb-color-lime-100             : #f0f4c3;
+$mb-color-lime-200             : #e6ee9c;
+$mb-color-lime-300             : #dce775;
+$mb-color-lime-400             : #d4e157;
+$mb-color-lime-500             : #cdcc39;
+$mb-color-lime-600             : #c0ca33;
+$mb-color-lime-700             : #afb42b;
+$mb-color-lime-800             : #9e9e24;
+$mb-color-lime-900             : #827717;
+$mb-color-lime                 : $mb-color-lime-500;
+$mb-color-lime-highlight       : rgba($mb-color-lime,$mb-opacity-xs);
 
-$color-green-100            : #badfbf;
-$color-green-200            : #9bd9a3;
-$color-green-300            : #80c187;
-$color-green-400            : #65b24b;
-$color-green-500            : #50a553;
-$color-green-600            : #438a45;
-$color-green-700            : #367037;
-$color-green-800            : #29572d;
-$color-green-900            : #1a3c1f;
-$color-green                : $color-green-500;
-$color-green-highlight      : rgba($color-green,$opacity-xs);
+$mb-color-green-100            : #badfbf;
+$mb-color-green-200            : #9bd9a3;
+$mb-color-green-300            : #80c187;
+$mb-color-green-400            : #65b24b;
+$mb-color-green-500            : #50a553;
+$mb-color-green-600            : #438a45;
+$mb-color-green-700            : #367037;
+$mb-color-green-800            : #29572d;
+$mb-color-green-900            : #1a3c1f;
+$mb-color-green                : $mb-color-green-500;
+$mb-color-green-highlight      : rgba($mb-color-green,$mb-opacity-xs);
 
-$color-teal-100             : #baebdb;
-$color-teal-200             : #9ce1cb;
-$color-teal-300             : #82d8bc;
-$color-teal-400             : #6ecfab;
-$color-teal-500             : #5bc69a;
-$color-teal-600             : #4ca782;
-$color-teal-700             : #3d8768;
-$color-teal-800             : #2f6850;
-$color-teal-900             : #1e4738;
-$color-teal                 : $color-teal-500;
-$color-teal-highlight       : rgba($color-teal,$opacity-xs);
+$mb-color-teal-100             : #baebdb;
+$mb-color-teal-200             : #9ce1cb;
+$mb-color-teal-300             : #82d8bc;
+$mb-color-teal-400             : #6ecfab;
+$mb-color-teal-500             : #5bc69a;
+$mb-color-teal-600             : #4ca782;
+$mb-color-teal-700             : #3d8768;
+$mb-color-teal-800             : #2f6850;
+$mb-color-teal-900             : #1e4738;
+$mb-color-teal                 : $mb-color-teal-500;
+$mb-color-teal-highlight       : rgba($mb-color-teal,$mb-opacity-xs);
 
-$color-cyan-100             : #b3dee4;
-$color-cyan-200             : #94ceda;
-$color-cyan-300             : #76bfcd;
-$color-cyan-400             : #5bb1c1;
-$color-cyan-500             : #47a1b6;
-$color-cyan-600             : #3c8799;
-$color-cyan-700             : #2f6d7b;
-$color-cyan-800             : #23555f;
-$color-cyan-900             : #163c40;
-$color-cyan                 : $color-cyan-500;
-$color-cyan-highlight       : rgba($color-cyan,$opacity-xs);
+$mb-color-cyan-100             : #b3dee4;
+$mb-color-cyan-200             : #94ceda;
+$mb-color-cyan-300             : #76bfcd;
+$mb-color-cyan-400             : #5bb1c1;
+$mb-color-cyan-500             : #47a1b6;
+$mb-color-cyan-600             : #3c8799;
+$mb-color-cyan-700             : #2f6d7b;
+$mb-color-cyan-800             : #23555f;
+$mb-color-cyan-900             : #163c40;
+$mb-color-cyan                 : $mb-color-cyan-500;
+$mb-color-cyan-highlight       : rgba($mb-color-cyan,$mb-opacity-xs);
 
-$color-gray-100             : #f6fafb;
-$color-gray-200             : #e8ecef;
-$color-gray-300             : #dde2e5;
-$color-gray-400             : #cdd5d9;
-$color-gray-500             : #adb6bd;
-$color-gray-600             : #6d767c;
-$color-gray-700             : #494f57;
-$color-gray-800             : #343d40;
-$color-gray-900             : #212629;
-$color-gray                 : $color-gray-500;
-$color-gray-highlight       : rgba($color-gray-900,$opacity-xs);
+$mb-color-gray-100             : #f6fafb;
+$mb-color-gray-200             : #e8ecef;
+$mb-color-gray-300             : #dde2e5;
+$mb-color-gray-400             : #cdd5d9;
+$mb-color-gray-500             : #adb6bd;
+$mb-color-gray-600             : #6d767c;
+$mb-color-gray-700             : #494f57;
+$mb-color-gray-800             : #343d40;
+$mb-color-gray-900             : #212629;
+$mb-color-gray                 : $mb-color-gray-500;
+$mb-color-gray-highlight       : rgba($mb-color-gray-900,$mb-opacity-xs);
 
-$color-white                : #ffffff;
-$color-transparent          : rgba($color-white,0.0001); // Fixes bug in IE for background colors
-$mb-color-black             : $color-gray-900;
+$mb-color-white                : #ffffff;
+$mb-color-transparent          : rgba($mb-color-white,0.0001); // Fixes bug in IE for background colors
+$mb-color-black                : $mb-color-gray-900;
 
 /* THEME PALETTE END */
 
 /* UTILITY COLORS START */
 
 // Text colors
-$color-headings             : $color-gray-900;
-$color-text-dark            : $color-gray-700;
-$color-text-medium          : $color-gray-500;
-$color-text-light           : $color-gray-400;
+$mb-color-headings             : $mb-color-gray-900;
+$mb-color-text-dark            : $mb-color-gray-700;
+$mb-color-text-medium          : $mb-color-gray-500;
+$mb-color-text-light           : $mb-color-gray-400;
 
 // Border colors
-$color-border-dark          : $color-gray-300;
-$color-border-medium        : $color-gray-200;
-$color-border-light         : $color-gray-100;
+$mb-color-border-dark          : $mb-color-gray-300;
+$mb-color-border-medium        : $mb-color-gray-200;
+$mb-color-border-light         : $mb-color-gray-100;
 
 // Link colors
-$color-link                 : $color-blue-600;
-$color-link-hover           : $color-purple-500;
-$color-link-visited         : $color-purple-700;
+$mb-color-link                 : $mb-color-blue-600;
+$mb-color-link-hover           : $mb-color-purple-500;
+$mb-color-link-visited         : $mb-color-purple-700;
 
 // Primary interaction colors
-$color-primary              : $color-blue-500;
-$color-primary-hover        : $color-blue-600;
-$color-primary-active       : $color-blue-400;
-$color-primary-border       : $color-blue-500;
-$color-primary-text         : $color-white;
-$color-primary-highlight    : $color-blue-highlight;
+$mb-color-primary              : $mb-color-blue-500;
+$mb-color-primary-hover        : $mb-color-blue-600;
+$mb-color-primary-active       : $mb-color-blue-400;
+$mb-color-primary-border       : $mb-color-blue-500;
+$mb-color-primary-text         : $mb-color-white;
+$mb-color-primary-highlight    : $mb-color-blue-highlight;
 
 // Secondary interaction colors
-$color-secondary            : $color-white;
-$color-secondary-hover      : $color-gray-200;
-$color-secondary-active     : $color-gray-100;
-$color-secondary-border     : $color-gray-300;
-$color-secondary-text       : $color-text-medium;
-$color-secondary-highlight  : $color-gray-highlight;
+$mb-color-secondary            : $mb-color-white;
+$mb-color-secondary-hover      : $mb-color-gray-200;
+$mb-color-secondary-active     : $mb-color-gray-100;
+$mb-color-secondary-border     : $mb-color-gray-300;
+$mb-color-secondary-text       : $mb-color-text-medium;
+$mb-color-secondary-highlight  : $mb-color-gray-highlight;
 
 // Base interaction colors
-$color-base                 : $color-white;
-$color-base-hover           : $color-gray-200;
-$color-base-active          : $color-blue-100;
-$color-base-border          : $color-transparent;
-$color-base-text            : $color-text-medium;
-$color-base-highlight       : $color-gray-highlight;
+$mb-color-base                 : $mb-color-white;
+$mb-color-base-hover           : $mb-color-gray-200;
+$mb-color-base-active          : $mb-color-blue-100;
+$mb-color-base-border          : $mb-color-transparent;
+$mb-color-base-text            : $mb-color-text-medium;
+$mb-color-base-highlight       : $mb-color-gray-highlight;
 
 // Danger/error colors
-$color-danger               : $color-red-500;
-$color-danger-hover         : $color-red-600;
-$color-danger-active        : $color-red-400;
-$color-danger-border        : $color-red-500;
-$color-danger-highlight     : $color-red-highlight;
+$mb-color-danger               : $mb-color-red-500;
+$mb-color-danger-hover         : $mb-color-red-600;
+$mb-color-danger-active        : $mb-color-red-400;
+$mb-color-danger-border        : $mb-color-red-500;
+$mb-color-danger-highlight     : $mb-color-red-highlight;
 
 // Success/confirmation colors
-$color-success              : $color-green-500;
-$color-success-hover        : $color-green-600;
-$color-success-active       : $color-green-400;
-$color-success-border       : $color-green-500;
-$color-success-highlight    : $color-green-highlight;
+$mb-color-success              : $mb-color-green-500;
+$mb-color-success-hover        : $mb-color-green-600;
+$mb-color-success-active       : $mb-color-green-400;
+$mb-color-success-border       : $mb-color-green-500;
+$mb-color-success-highlight    : $mb-color-green-highlight;
 
 // Warning error colors
-$color-warning              : $color-orange-500;
-$color-warning-hover        : $color-orange-600;
-$color-warning-active       : $color-orange-400;
-$color-warning-border       : $color-orange-500;
-$color-warning-highlight    : $color-orange-highlight;
+$mb-color-warning              : $mb-color-orange-500;
+$mb-color-warning-hover        : $mb-color-orange-600;
+$mb-color-warning-active       : $mb-color-orange-400;
+$mb-color-warning-border       : $mb-color-orange-500;
+$mb-color-warning-highlight    : $mb-color-orange-highlight;
 
 // Information alert colors
-$color-info                 : $color-cyan-500;
-$color-info-hover           : $color-cyan-600;
-$color-info-active          : $color-cyan-400;
-$color-info-border          : $color-cyan-500;
-$color-info-highlight       : $color-cyan-highlight;
+$mb-color-info                 : $mb-color-cyan-500;
+$mb-color-info-hover           : $mb-color-cyan-600;
+$mb-color-info-active          : $mb-color-cyan-400;
+$mb-color-info-border          : $mb-color-cyan-500;
+$mb-color-info-highlight       : $mb-color-cyan-highlight;
 
 // Notes color
-$color-note                 : $color-yellow-500;
-$color-note-hover           : $color-yellow-600;
-$color-note-active          : $color-yellow-400;
-$color-note-border          : $color-yellow-500;
-$color-note-highlight       : $color-yellow-highlight;
+$mb-color-note                 : $mb-color-yellow-500;
+$mb-color-note-hover           : $mb-color-yellow-600;
+$mb-color-note-active          : $mb-color-yellow-400;
+$mb-color-note-border          : $mb-color-yellow-500;
+$mb-color-note-highlight       : $mb-color-yellow-highlight;
 
 /* UTILITY COLORS END */
