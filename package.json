@@ -2,11 +2,13 @@
   "name": "metabeta-design-system",
   "version": "1.0.30",
   "description": "\"Metabeta Design System\"",
-  "main": "./assets/dist/dna.css",
-  "dependencies": {},
+  "main": "./metabeta/src/assets/css/dna.css",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
   "devDependencies": {},
   "scripts": {
-    "compile:sass": "node-sass metabeta/src/assets/styles/dna.scss metabeta/src/assets/dist/dna.css"
+    "compile:sass": "node-sass metabeta/src/assets/styles/dna.scss metabeta/src/assets/css/dna.css"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,7 @@
     "metabeta",
     "scss"
   ],
-  "author": "oS- Metabeta Frontend Team with",
+  "author": "oS- Metabeta Frontend Team with <3",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/metabeta-platform/metabeta-design-system/issues"

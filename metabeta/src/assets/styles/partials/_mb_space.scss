@@ -1,55 +1,82 @@
-$space-xxxs: 0.125rem;
-$space-xxs: 0.25rem;
-$space-xs: 0.5rem;
-$space-s: 0.75rem;
-$space-m: 1rem;
-$space-l: 1.5rem;
-$space-xl: 2rem;
-$space-xxl: 3rem;
-$space-xxxl: 4rem;
+/* BASIC SPACING VARIABLES START */
 
-$max-window-width: 1600px;
+$mb-space-xxxs: 0.125rem;
+$mb-space-xxs: 0.25rem;
+$mb-space-xs: 0.5rem;
+$mb-space-s: 0.75rem;
+$mb-space-m: 1rem;
+$mb-space-l: 1.5rem;
+$mb-space-xl: 2rem;
+$mb-space-xxl: 3rem;
+$mb-space-xxxl: 4rem;
 
-/* MOBILE INTERFACE TOUCH SCREEEN VARIABLES START */
+/* BASIC SPACING VARIABLES END */
 
-/* VARIABLE LIST IN CASE NEEDED START */
+/* PADDING & MARGIN CLASSES START — DEPRECATED*/
 
-$space-list: (
+$mb-space-list: (
   0: 0,
-  xxs: $space-xxs,
-  xs: $space-xxs,
-  s: $space-s,
-  m: $space-m,
-  l: $space-l,
-  xl: $space-xl,
-  xxl: $space-xxl,
-  xxxl: $space-xxxl,
+  xxs: $mb-space-xxs,
+  xs: $mb-space-xxs,
+  s: $mb-space-s,
+  m: $mb-space-m,
+  l: $mb-space-l,
+  xl: $mb-space-xl,
+  xxl: $mb-space-xxl,
+  xxxl: $mb-space-xxxl,
 );
 
-/* VARIABLE LIST IN CASE NEEDED END */
+// Simple padding
+@each $vertical, $vertical-space in $mb-space-list {
+  @each $horizontal, $horizontal-space in $mb-space-list {
+    .padding-#{$vertical}-#{$horizontal} {
+      padding: $vertical-space $horizontal-space;
+    }
+  }
+}
+// Simple margin
+@each $vertical, $vertical-space in $mb-space-list {
+  @each $horizontal, $horizontal-space in $mb-space-list {
+    .margin-#{$vertical}-#{$horizontal} {
+      margin: $vertical-space $horizontal-space;
+    }
+  }
+}
 
-$touch-base: 40px;
-$touch-min: $space-xl;
-$touch-max: $space-xxxl;
+// Full padding
+@each $top, $top-space in $mb-space-list {
+  @each $right, $right-space in $mb-space-list {
+    @each $bottom, $bottom-space in $mb-space-list {
+      @each $left, $left-space in $mb-space-list {
+        .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
+          padding: $top-space $right-space $bottom-space $left-space;
+        }
+      }
+    }
+  }
+}
 
-/* MOBILE INTERFACE TOUCH SCREEEN VARIABLES END */
+// Full margin
+@each $top, $top-space in $mb-space-list {
+  @each $right, $right-space in $mb-space-list {
+    @each $bottom, $bottom-space in $mb-space-list {
+      @each $left, $left-space in $mb-space-list {
+        .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
+          margin: $top-space $right-space $bottom-space $left-space;
+        }
+      }
+    }
+  }
+}
 
-/* BREAKPOINT VARIABLES START */
-
-$mobile-breakpoint: 568px;
-$tablet-breakpoint: 768px;
-$laptop-breakpoint: 1367px;
-
-$display-media-breakpoints: none, flex, block, grid, inline-block;
-
-/* BREAKPOINT VARIABLES END */
+/* PADDING & MARGIN CLASSES END */
 
 /* ASPECT RATIO MIXIN START */
 
-@mixin aspect-ratio($ratio, $width) {
-  width: $width;
+@mixin mb-aspect-ratio($width, $ratio) {
   object-fit: cover;
-  @if $ratio==square {
+  width: $width;
+  @if $mb-ratio==square {
     height: $width;
   } @else if $ratio==golden {
     height: $width * 0.618;
@@ -64,87 +91,98 @@ $display-media-breakpoints: none, flex, block, grid, inline-block;
 
 /* ASPECT RATIO MIXIN END */
 
-/* BORDER RADIUS START */
+/* BORDER RADIUS MIXIN START */
 
-@mixin border-radius($radius) {
+@mixin mb-border-radius($radius) {
   @if $radius==xs {
-    border-radius: $space-xxxs;
+    border-radius: $mb-space-xxxs;
   } @else if $radius==s {
-    border-radius: $space-xxxs * 2;
+    border-radius: $mb-space-xxxs * 2;
   } @else if $radius==m {
-    border-radius: $space-xxxs * 3;
+    border-radius: $mb-space-xxxs * 3;
   } @else if $radius==l {
-    border-radius: $space-xxxs * 4;
+    border-radius: $mb-space-xxxs * 4;
   } @else if $radius==circle {
     border-radius: 50%;
   }
 }
 
-/* BORDER RADIUS END */
+/* BORDER RADIUS MIXIN END */
 
-/* BREAKPOINTS START */
+/* MEDIA VARIABLES START */
 
-@mixin media($media) {
-  @if $media==phone {
-    @media only screen and (max-width: $mobile-breakpoint) {
+$mb-phone-breakpoint: 568px;
+$mb-tablet-breakpoint: 768px;
+$mb-laptop-breakpoint: 1367px;
+$mb-desktop-breakpoint: 1600px; // Limits width for very large desktop displays
+
+$mb-touch-base: 48px; // Optimal size for interactive elements on touch interfaces
+$mb-touch-min: 40px; // Minimal usable size
+
+/* MEDIA VARIABLES END */
+
+/* MEDIA QUERIES START */
+
+@mixin mb-media($media-type) {
+  @if $media-type==desktop-only {
+    @media only screen and (min-width: $mb-laptop-breakpoint + 1) {
       @content;
     }
-  } @else if $media==tablet {
-    @media only screen and (min-width: $mobile-breakpoint + 1) and (max-width: $tablet-breakpoint - 1) {
+  } @else if $media-type==laptop {
+    @media only screen and (max-width: $mb-laptop-breakpoint) {
       @content;
     }
-  } @else if $media==laptop {
-    @media only screen and (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint - 1) {
+  } @else if $media-type==laptop-only {
+    @media only screen and (min-width: $mb-tablet-breakpoint + 1) and (max-width: $mb-laptop-breakpoint) {
       @content;
     }
-  } @else if $media==desktop {
-    @media only screen and (min-width: $laptop-breakpoint) {
+  } @else if $media-type==tablet {
+    @media only screen and (max-width: $mb-tablet-breakpoint) {
       @content;
     }
-  } @else if $media==print {
+  } @else if $media-type==tablet-only {
+    @media only screen and (min-width: $mb-phone-breakpoint + 1) and (max-width: $mb-tablet-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==phone {
+    @media only screen and (max-width: $mb-phone-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==phone-only {
+    @media only screen and (max-width: $mb-phone-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==print {
     @media only print {
-      button,
-      input {
-        display: none;
-      }
-
       @content;
     }
   } @else {
-    @media only screen and (min-width: $laptop-breakpoint) {
-      @content;
-    }
+    @content;
   }
 }
-.h-100 {
-  height: 100%;
-}
-.w-100 {
-  width: 100%;
-}
 
-/* BREAKPOINTS END */
+/* MEDIA QUERIES END */
 
 /* CLEAR DISPLAY CLASS START */
-@each $display-mobile in $display-media-breakpoints {
-  @each $display-tablet in $display-media-breakpoints {
-    @each $display-laptop in $display-media-breakpoints {
-      @each $display-desktop in $display-media-breakpoints {
-        .display-#{$display-desktop}-#{$display-laptop}-#{$display-tablet}-#{$display-mobile} {
-          @include media(desktop) {
-            display: $display-desktop;
-          }
 
-          @include media(laptop) {
-            display: $display-laptop;
-          }
+$mb-display: none, flex, block, grid, inline-block;
 
-          @include media(tablet) {
-            display: $display-tablet;
+@each $i in $mb-display {
+  @each $j in $mb-display {
+    @each $k in $mb-display {
+      @each $l in $mb-display {
+        .display-#{$l}-#{$k}-#{$j}-#{$i} {
+          @include mb-media(desktop) {
+            display: $l;
           }
-
-          @include media(desktop) {
-            display: $display-mobile;
+          @include mb-media(laptop) {
+            display: $k;
+          }
+          @include mb-media(tablet) {
+            display: $j;
+          }
+          @include mb-media(phone) {
+            display: $i;
           }
         }
       }
@@ -156,220 +194,153 @@ $display-media-breakpoints: none, flex, block, grid, inline-block;
 
 /* GRID STARTS */
 
-.mb-flex-container {
-  max-width: calc(#{$max-window-width} - #{$space-xxxl});
-  padding: 0 $space-l;
-  @include media(phone) {
-    max-width: calc(#{$mobile-breakpoint} - #{$space-m});
-    padding: 0 $space-xs;
-  }
+$mb-desktop-columns: 12; // Can be changed to whatever value you want
+$mb-laptop-columns: 12;
+$mb-tablet-columns: 8;
+$mb-phone-columns: 4;
 
-  @include media(tablet) {
-    max-width: calc(#{$tablet-breakpoint} - #{$space-xl});
-    padding: 0 $space-s;
-  }
-
-  @include media(laptop) {
-    max-width: calc(#{$laptop-breakpoint} - #{$space-xxl});
-    padding: 0 $space-m;
+.mb-flex {
+  padding: 0 $mb-space-m;
+  @include mb-media(phone) {
+    padding: 0 $mb-space-s;
   }
 }
 
 .mb-flex-row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 #{-$space-l};
-
-  @include media(phone) {
-    margin: 0 -$space-xs;
-  }
-
-  @include media(tablet) {
-    margin: 0 -$space-s;
-  }
-
-  @include media(laptop) {
-    margin: 0 -$space-m;
+  margin: 0 #{-$mb-space-m};
+  @include mb-media(phone) {
+    margin: 0 -$mb-space-s;
   }
 }
 
-@mixin fixed-flex($value) {
+@mixin mb-flex-fixed($value) {
   flex-grow: $value;
   flex-shrink: 0;
 }
 
-@function get-col-percent($column-num) {
-  @return 100% / $column-num;
+@function mb-column-width($grid-count-in-size, $columns) {
+  @return 100% / $grid-count-in-size * $columns;
 }
 
-$grid-columns: 12;
-
-/* change the value above to your need it works based on how many pieces you'd like to seperate your grid */
-
-@for $i from 1 through $grid-columns {
-  @for $k from 1 through $grid-columns {
-    @for $l from 1 through $grid-columns {
-      @for $m from 1 through $grid-columns {
+@for $i from 1 through $mb-desktop-columns {
+  @for $k from 1 through $mb-laptop-columns {
+    @for $l from 1 through $mb-tablet-columns {
+      @for $m from 1 through $mb-phone-columns {
         .mb-col-#{$i}-#{$k}-#{$l}-#{$m} {
           position: relative;
           width: 100%;
-          flex: 0 0 get-col-percent($i);
-          max-width: get-col-percent($i);
-          padding: 0 $space-l;
-
-          @include media(phone) {
-            flex: 0 0 get-col-percent($m);
-            max-width: get-col-percent($m);
-            padding: 0 $space-xs;
+          flex: 0 0 mb-column-width($mb-desktop-columns, $i);
+          max-width: mb-column-width($mb-desktop-columns, $i);
+          padding: 0 $mb-space-m;
+          @include mb-media(laptop) {
+            flex: 0 0 mb-column-width($mb-laptop-columns, $k);
+            max-width: mb-column-width($mb-laptop-columns, $k);
+            padding: 0 $mb-space-m;
           }
-
-          @include media(tablet) {
-            flex: 0 0 get-col-percent($l);
-            max-width: get-col-percent($l);
-            padding: 0 $space-s;
+          @include mb-media(tablet) {
+            flex: 0 0 mb-column-width($mb-tablet-columns, $l);
+            max-width: mb-column-width($mb-tablet-columns, $l);
+            padding: 0 $mb-space-m;
           }
-
-          @include media(laptop) {
-            flex: 0 0 get-col-percent($k);
-            max-width: get-col-percent($k);
-            padding: 0 $space-m;
+          @include mb-media(phone) {
+            flex: 0 0 mb-column-width($mb-phone-columns, $m);
+            max-width: mb-column-width($mb-phone-columns, $m);
+            padding: 0 $mb-space-s;
           }
         }
       }
     }
   }
 }
-@function repeater($n, $character) {
-  $c: "";
-  @if $n >= 1 {
-    @for $i from 1 through $n {
-      $c: $c + " " + $character;
+
+@function mb-repeater($count, $string) {
+  $repeated-text: "";
+  @if $count >= 1 {
+    @for $i from 1 through $count {
+      $repeated-text: $repeated-text + " " + $string;
     }
-    @return unquote($c);
+    @return unquote($repeated-text);
   }
-  @return unquote($c);
+  @return unquote($repeated-text);
 }
 
-@mixin grid-mixin(
-  $grid-number,
-  $col-or-row,
+@mixin mb-grid-mixin(
+  $grid-count,
+  $grid-template,
+  $grid-min-max-value,
   $grid-min-max: false,
-  $grid-min-max-value: 250px,
   $grid-min-max-direction: "start"
 ) {
   display: grid;
-
   @if $grid-min-max {
-    @if $col-or-row== "col" {
+    @if $grid-template== "col" {
       @if $grid-min-max-direction== "end" {
-        grid-template-columns: repeater($grid-number - 1, 1fr) minmax(
+        grid-template-columns: mb-repeater($grid-count - 1, 1fr) minmax(
             $grid-min-max-value,
             1fr
           );
       } @else {
-        grid-template-columns: minmax($grid-min-max-value, 1fr) repeater(
-            $grid-number - 1,
+        grid-template-columns: minmax($grid-min-max-value, 1fr) mb-repeater(
+            $grid-count - 1,
             1fr
           );
       }
     } @else {
       @if $grid-min-max-direction== "end" {
-        grid-template-rows: repeater($grid-number - 1, 1fr) minmax(
+        grid-template-rows: mb-repeater($grid-count - 1, 1fr) minmax(
             1fr,
             $grid-min-max-value
           );
       } @else {
-        grid-template-rows: minmax($grid-min-max-value, 1fr) repeater(
-            $grid-number - 1,
+        grid-template-rows: minmax($grid-min-max-value, 1fr) mb-repeater(
+            $grid-count - 1,
             1fr
           );
       }
     }
   } @else {
-    @if $col-or-row== "col" {
-      grid-template-columns: repeater($grid-number, 1fr);
+    @if $grid-template== "col" {
+      grid-template-columns: mb-repeater($grid-count, 1fr);
     } @else {
-      grid-template-rows: repeater($grid-number, 1fr);
+      grid-template-rows: mb-repeater($grid-count, 1fr);
     }
   }
 }
-
-/* approach here is desktop first also why not trolling the letter "j" for a change :p */
-
 /* GRID ENDS */
 
 /* ELEVATION MIXIN START */
 
-@mixin elevation($value) {
-  z-index: $value * 100;
+@mixin mb-elevation($elevation) {
+  z-index: $elevation * 100; // Use integer values 0, 1, 2, 3, 4, 8, 16, 24, 32 for absolute elevation and float values for relative
 }
 
 /* ELEVATION MIXIN END */
 
 /* SHADOW MIXIN START */
 
-@mixin shadow($elevation: 0, $direction: "bottom", $color: $color-gray-100) {
+@mixin mb-shadow(
+  $elevation: 0,
+  $direction: "bottom",
+  $color: $color-gray-100,
+  $opacity: $mb-opacity-m
+) {
   @if $direction== "left" {
-    box-shadow: -$elevation/2 0 $elevation rgba($color, $opacity-m),
-      0 0 1px rgba($color, $opacity-m);
+    box-shadow: -$elevation/2 0 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
   }
-
   @if $direction== "right" {
-    box-shadow: $elevation/2 0 $elevation rgba($color, $opacity-m),
-      0 0 1px rgba($color, $opacity-m);
+    box-shadow: $elevation/2 0 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
   }
-
   @if $direction== "top" {
-    box-shadow: 0 -$elevation/2 $elevation rgba($color, $opacity-m),
-      0 0 1px rgba($color, $opacity-m);
+    box-shadow: 0 -$elevation/2 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
   } @else {
-    box-shadow: 0 $elevation/2 $elevation rgba($color, $opacity-m),
-      0 0 1px rgba($color, $opacity-m);
+    box-shadow: 0 $elevation/2 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
   }
 }
 
 /* SHADOW MIXIN ENDD */
-
-/* PADDING & MARGIN CLASSES START */
-
-@each $vertical, $vValue in $space-list {
-  @each $horizontal, $hValue in $space-list {
-    .padding-#{$vertical}-#{$horizontal} {
-      padding: $vValue $hValue;
-    }
-  }
-}
-
-@each $vertical, $vValue in $space-list {
-  @each $horizontal, $hValue in $space-list {
-    .margin-#{$vertical}-#{$horizontal} {
-      margin: $vValue $hValue;
-    }
-  }
-}
-
-@each $top, $tValue in $space-list {
-  @each $right, $rValue in $space-list {
-    @each $bottom, $bValue in $space-list {
-      @each $left, $lValue in $space-list {
-        .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          padding: $tValue $rValue $bValue $lValue;
-        }
-      }
-    }
-  }
-}
-
-@each $top, $tValue in $space-list {
-  @each $right, $rValue in $space-list {
-    @each $bottom, $bValue in $space-list {
-      @each $left, $lValue in $space-list {
-        .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          margin: $tValue $rValue $bValue $lValue;
-        }
-      }
-    }
-  }
-}
-
-/* PADDING & MARGIN CLASSES END */
