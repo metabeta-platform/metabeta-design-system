@@ -1,5 +1,6 @@
-/* BASIC SPACING VARIABLES START */
+/* BASIC SPACE VARIABLES START */
 
+// Spacing variables
 $mb-space-xxxs: 0.125rem;
 $mb-space-xxs: 0.25rem;
 $mb-space-xs: 0.5rem;
@@ -10,69 +11,71 @@ $mb-space-xl: 2rem;
 $mb-space-xxl: 3rem;
 $mb-space-xxxl: 4rem;
 
+// Border sizes
+$mb-border-thin: 1px;
+$mb-border-base: 2px;
+$mb-border-thick: 4px;
+
 /* BASIC SPACING VARIABLES END */
 
-/* PADDING & MARGIN CLASSES START — DEPRECATED*/
+/* PADDING & MARGIN MIXINS START */
+// Define space list map
+// $mb-space-list: (
+//   0: 0,
+//   xxs: $mb-space-xxs,
+//   xs: $mb-space-xxs,
+//   s: $mb-space-s,
+//   m: $mb-space-m,
+//   l: $mb-space-l,
+//   xl: $mb-space-xl,
+//   xxl: $mb-space-xxl,
+//   xxxl: $mb-space-xxxl,
+// );
+// @each $vertical, $vertical-space in $mb-space-list {
+//   @each $horizontal, $horizontal-space in $mb-space-list {
+//     .padding-#{$vertical}-#{$horizontal} {
+//       padding: $vertical-space $horizontal-space;
+//     }
+//   }
+// }
+// // Simple margin
+// @each $vertical, $vertical-space in $mb-space-list {
+//   @each $horizontal, $horizontal-space in $mb-space-list {
+//     .margin-#{$vertical}-#{$horizontal} {
+//       margin: $vertical-space $horizontal-space;
+//     }
+//   }
+// }
 
-$mb-space-list: (
-  0: 0,
-  xxs: $mb-space-xxs,
-  xs: $mb-space-xxs,
-  s: $mb-space-s,
-  m: $mb-space-m,
-  l: $mb-space-l,
-  xl: $mb-space-xl,
-  xxl: $mb-space-xxl,
-  xxxl: $mb-space-xxxl,
-);
+// // Full padding
+// @each $top, $top-space in $mb-space-list {
+//   @each $right, $right-space in $mb-space-list {
+//     @each $bottom, $bottom-space in $mb-space-list {
+//       @each $left, $left-space in $mb-space-list {
+//         .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
+//           padding: $top-space $right-space $bottom-space $left-space;
+//         }
+//       }
+//     }
+//   }
+// }
+// // Full margin
+// @each $top, $top-space in $mb-space-list {
+//   @each $right, $right-space in $mb-space-list {
+//     @each $bottom, $bottom-space in $mb-space-list {
+//       @each $left, $left-space in $mb-space-list {
+//         .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
+//           margin: $top-space $right-space $bottom-space $left-space;
+//         }
+//       }
+//     }
+//   }
+// }
+/* PADDING & MARGIN MIXINS END */
 
-// Simple padding
-@each $vertical, $vertical-space in $mb-space-list {
-  @each $horizontal, $horizontal-space in $mb-space-list {
-    .padding-#{$vertical}-#{$horizontal} {
-      padding: $vertical-space $horizontal-space;
-    }
-  }
-}
-// Simple margin
-@each $vertical, $vertical-space in $mb-space-list {
-  @each $horizontal, $horizontal-space in $mb-space-list {
-    .margin-#{$vertical}-#{$horizontal} {
-      margin: $vertical-space $horizontal-space;
-    }
-  }
-}
+/* SPACE MIXINS START */
 
-// Full padding
-@each $top, $top-space in $mb-space-list {
-  @each $right, $right-space in $mb-space-list {
-    @each $bottom, $bottom-space in $mb-space-list {
-      @each $left, $left-space in $mb-space-list {
-        .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          padding: $top-space $right-space $bottom-space $left-space;
-        }
-      }
-    }
-  }
-}
-
-// Full margin
-@each $top, $top-space in $mb-space-list {
-  @each $right, $right-space in $mb-space-list {
-    @each $bottom, $bottom-space in $mb-space-list {
-      @each $left, $left-space in $mb-space-list {
-        .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
-          margin: $top-space $right-space $bottom-space $left-space;
-        }
-      }
-    }
-  }
-}
-
-/* PADDING & MARGIN CLASSES END */
-
-/* ASPECT RATIO MIXIN START */
-
+// Aspect ratio mixin
 @mixin mb-aspect-ratio($width, $ratio) {
   object-fit: cover;
   width: $width;
@@ -89,10 +92,7 @@ $mb-space-list: (
   }
 }
 
-/* ASPECT RATIO MIXIN END */
-
-/* BORDER RADIUS MIXIN START */
-
+// Border radius mixin
 @mixin mb-border-radius($radius) {
   @if $radius==xs {
     border-radius: $mb-space-xxxs;
@@ -107,22 +107,21 @@ $mb-space-list: (
   }
 }
 
-/* BORDER RADIUS MIXIN END */
+/* SPACE UTILITY MIXIN END */
 
-/* MEDIA VARIABLES START */
+/* MEDIA QUERIES START */
 
+// Media breakpoints
 $mb-phone-breakpoint: 568px;
 $mb-tablet-breakpoint: 768px;
 $mb-laptop-breakpoint: 1367px;
 $mb-desktop-breakpoint: 1600px; // Limits width for very large desktop displays
 
+// Touch sizes for screens
 $mb-touch-base: 48px; // Optimal size for interactive elements on touch interfaces
 $mb-touch-min: 40px; // Minimal usable size
 
-/* MEDIA VARIABLES END */
-
-/* MEDIA QUERIES START */
-
+// Media mixin (desktop-first approach)
 @mixin mb-media($media-type) {
   @if $media-type==desktop-only {
     @media only screen and (min-width: $mb-laptop-breakpoint + 1) {
@@ -164,31 +163,30 @@ $mb-touch-min: 40px; // Minimal usable size
 /* MEDIA QUERIES END */
 
 /* CLEAR DISPLAY CLASS START */
+// $mb-display: none, flex, block, grid, inline-block;
 
-$mb-display: none, flex, block, grid, inline-block;
-
-@each $i in $mb-display {
-  @each $j in $mb-display {
-    @each $k in $mb-display {
-      @each $l in $mb-display {
-        .display-#{$l}-#{$k}-#{$j}-#{$i} {
-          @include mb-media(desktop) {
-            display: $l;
-          }
-          @include mb-media(laptop) {
-            display: $k;
-          }
-          @include mb-media(tablet) {
-            display: $j;
-          }
-          @include mb-media(phone) {
-            display: $i;
-          }
-        }
-      }
-    }
-  }
-}
+// @each $i in $mb-display {
+//   @each $j in $mb-display {
+//     @each $k in $mb-display {
+//       @each $l in $mb-display {
+//         .display-#{$l}-#{$k}-#{$j}-#{$i} {
+//           @include mb-media(desktop) {
+//             display: $l;
+//           }
+//           @include mb-media(laptop) {
+//             display: $k;
+//           }
+//           @include mb-media(tablet) {
+//             display: $j;
+//           }
+//           @include mb-media(phone) {
+//             display: $i;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 /* CLEAR DISPLAY CLASS END */
 
