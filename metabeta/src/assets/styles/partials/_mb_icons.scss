@@ -1,0 +1,18 @@
+// Generic icon mixin
+@mixin mb-icon($icon-name, $size, $position: before) {
+  @if $position==before {
+  	&::before {
+  		display: inline-block;
+  		content: "/assets/icons/#{$icon-name}.svg";
+  		width: $size;
+  		height: $size;
+  	}
+  @else if $position==after {
+  	&::after {
+  		display: inline-block;
+  		content: "/assets/icons/#{$icon-name}.svg";
+  		width: $size;
+  		height: $size;
+  	}
+  }
+}
