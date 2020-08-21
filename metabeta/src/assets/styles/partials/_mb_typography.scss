@@ -93,22 +93,28 @@ $mb-font-family-monospace  : "IBM Plex Sans Mono", "Lucida Console", "Courier Pr
 // Example: @include mb-font(headings, normal, italic, s, s-compact, normal, )
 @mixin mb-font(
   $family: body,
-  $weight: normal,
-  $style: normal,
   $size: m,
-  $line-height: m-compact,
-  $letter-spacing: normal) {
+  $line-height: m,
+  $weight,
+  $style,
+  $letter-spacing) {
     font-family: $mb-font-family-#{$family};
-    font-weight: $mb-font-weight-#{$weight};
-    font-style: $style;
     font-size: $mb-font-size-#{$size};
     line-height: $mb-font-size-#{$line-height};
-    letter-spacing: $mb-letter-spacing-#{$size};
+    @if variable-exists($weight) {
+      font-weight: $mb-font-weight-#($weight);
+    }
+    @if variable-exists($style) {
+      font-style: $style;
+    }
+    @if variable-exists($letter-spacing) {
+      font-weight: $mb-letter-spacing-#{$letter-spacing};
+    }
 }
 
 // Mixin for headings
 @mixin mb-heading($size) {
-  @include mb-font(headings, bold, normal, #{$size}, #{$size});
+  @include mb-font(headings, #{$size}, #{$size}, bold, normal);
   color: $mb-color-headings;
   @if $size==xxs {
     letter-spacing: $mb-letter-spacing-looser;
@@ -138,19 +144,19 @@ $mb-font-family-monospace  : "IBM Plex Sans Mono", "Lucida Console", "Courier Pr
 
 // Mixin for text
 @mixin mb-text($size) {
-  @include mb-font(body, normal, normal, #{$size}, #{$size});
+  @include mb-font(body, #{$size}, #{$size});
   color: $mb-color-text-dark;
 }
 
 // Mixin for labels
 @mixin mb-label($size) {
-  @include mb-font(body, bold, normal, #{$size}, #{$size}-compact);
+  @include mb-font(body, #{$size}, #{$size}-compact, bold);
   color: $mb-color-headings;
 }
 
 // Mixin for captions
 @mixin mb-label($size) {
-  @include mb-font(body, normal, normal, #{$size}, #{$size}-compact);
+  @include mb-font(body, #{$size}, #{$size}-compact);
   color: $mb-color-text-medium;
 }
 

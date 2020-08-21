@@ -1,3 +1,244 @@
+/* LAYOUT CONTAINERS START */
+
+body {
+  padding: $mb-space-m;
+  background-color: $mb-color-gray-200;
+  @include mb-text(m);
+}
+
+div {
+  @include mb-text(m);
+}
+
+nav {}
+header {}
+footer {}
+main {}
+article {}
+section {}
+aside {}
+menu {}
+
+
+/* LAYOUT CONTAINERS END */
+
+/* TEXT CONTAINERS START */
+
+h1 {
+  @include mb-heading(xxl);
+  margin: $mb-space-m 0 $mb-space-l;
+}
+
+h2 {
+  @include mb-heading(xl);
+  margin: $mb-space-m 0 $mb-space-m;
+}
+
+h3 {
+  @include mb-heading(l);
+  margin: $mb-space-m 0 $mb-space-s;
+}
+
+h4 {
+  @include mb-heading(m);
+  margin: $mb-space-s 0 $mb-space-s;
+}
+
+h5 {
+  @include mb-heading(s);
+  text-transform: uppercase;
+  margin: $mb-space-s 0 $mb-space-xs;
+}
+
+h6 {
+  @include mb-heading(xs);
+  margin: $mb-space-s 0 $mb-space-xxs;
+}
+
+p {
+  @include mb-text(m);
+  margin: 0 0 .5em;
+}
+
+li {
+  @include mb-text(m);
+  margin: 0 0 .5em;
+}
+// Use <blockquote cite="source"></blockquote>
+// Add author in footer
+blockquote {
+  @include mb-text(l);
+  padding-left: $mb-space-xl;
+  border-left: $mb-border-thick solid $mb-color-cyan-500;
+  color: $mb-color-headings;
+  footer {
+    @include mb-caption(s);
+  }
+}
+
+pre {}
+
+article {
+  p {
+    font-size: $mb-font-size-l;
+    line-height: $mb-line-height-l;
+  }
+  li {
+    font-size: $mb-font-size-l;
+    line-height: $mb-line-height-l;
+    &::before {
+      display: inline-block;
+      width: $mb-space-l;
+      margin-left: -$mb-space-xl;
+      text-align: right;
+      direction: rtl;
+      color: $mb-color-cyan;
+    }
+  }
+  ul {
+    padding-left: $mb-space-xl;
+    &li::before {
+      content: "\2022";
+    }
+  }
+  ol {
+    padding-left: $mb-space-xl;
+    counter-reset: li; // This allows colored numbers in list
+    &li::before {
+      content: counter(li);
+      counter-increment: li; 
+    }
+  }
+  dl {}
+  dt {}
+  dd {}
+}
+
+/* TEXT CONTAINERS END */
+
+/* MEDIA START */
+
+figcaption {}
+figure {}
+img {}
+audio {}
+video {}
+embed {}
+iframe{}
+
+
+/* MEDIA END */
+
+/* TABLES START */
+table {
+  caption {}
+  colgroup {
+    col {}
+  }
+  thead {
+    tr {
+      th {}
+    }
+  }
+  tbody {
+    tr {
+      td {}
+    }
+  }
+  tfoot {
+    tr {
+      td {}
+    }
+  }
+}
+
+/* TABLES END */
+
+/* BUTTONS START */
+
+button {}
+
+
+/* BUTTONS END */
+
+/* FORMS START */
+
+form {}
+
+fieldset {}
+
+legend {}
+
+label {}
+
+input {}
+
+textarea {}
+
+select {}
+
+// Input with autocomplete
+datalist {}
+
+option {}
+
+optgroup {}
+
+output {}
+
+meter {}
+
+progress {}
+
+
+/* FORMS END */
+
+/* INLINE ELEMENTS START */
+
+a {
+  color: $mb-color-link;
+  &:hover {
+    color: $mb-color-link-hover;
+  }
+  &:focus {
+    outline-color: $mb-color-link;
+  }
+  &:active {
+    color: $mb-color-link;
+  }
+  &:visited {
+    color: $mb-color-link-visited;
+  }
+}
+strong, b {}
+em, i {}
+mark{}
+del {}
+ins {}
+small {}
+span {}
+code {}
+sub {}
+sup {}
+
+// Short quotations
+q {}
+
+
+/* INLINE ELEMENTS END */
+
+/* MISC ELEMENTS START */
+
+hr {}
+
+// Text selection color:
+
+::selection,
+::-moz-selection {
+  background: $color-primary-highlight;
+  text-shadow: none;
+}
+
 // body {
 //   font-family: "IBM Plex Sans", sans-serif;
 //   line-height: 1;
@@ -464,436 +705,7 @@
 //   background-color: $mb-color-green-900;
 //   color: $mb-color-white;
 // }
-
-blockquote {
-  border-left: $mb-space-xxxs solid $mb-color-cyan-500;
-  padding-left: 2em;
-}
-
-a {
-  color: $mb-color-cyan-500;
-  &:hover {
-    color: $mb-color-cyan-400;
-  }
-  &:visited {
-    color: $mb-color-purple-300;
-  }
-}
-
-p,
-li,
-div {
-  color: $mb-color-gray-800;
-  font-size: $mb-font-size-l;
-  line-height: $mb-line-height-l;
-}
-
-h1 {
-  color: $mb-color-gray-900;
-  font-size: $mb-font-size-xxxl;
-  line-height: $mb-line-height-xxxl;
-}
-
-h2 {
-  color: $mb-color-gray-900;
-  font-size: $mb-font-size-xxl;
-  line-height: $mb-line-height-xxl;
-}
-
-h3 {
-  color: $mb-color-gray-900;
-  font-size: $mb-font-size-xl;
-  line-height: $mb-line-height-xl;
-}
-
-h4 {
-  color: $mb-color-gray-900;
-  font-size: $mb-font-size-l;
-  line-height: $mb-line-height-l;
-}
-
-h5 {
-  color: $mb-color-gray-900;
-  font-size: $mb-font-size-m;
-  line-height: $mb-line-height-l;
-}
-
-h6 {
-  color: $mb-color-gray-900;
-  font-size: $mb-font-size-s;
-  line-height: $mb-line-height-s;
-}
-
-fieldset {
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-}
-
-.heading {
-  color: $mb-color-gray-900;
-  font-weight: $mb-font-weight-bold;
-  font-size: $mb-font-size-l;
-  &-xxxl {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-xxxl;
-    line-height: $mb-line-height-xxxl;
-  }
-  &-xxl {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-xxl;
-    line-height: $mb-line-height-xxl;
-  }
-  &-xl {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-xxl;
-    line-height: $mb-line-height-xxl;
-  }
-  &-xl {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-xl;
-    line-height: $mb-line-height-xl;
-  }
-  &-l {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l;
-  }
-  &-l {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l;
-  }
-  &-md {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-m;
-    line-height: $mb-line-height-m;
-  }
-  &-sm {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-s;
-    line-height: $mb-line-height-s;
-  }
-  &-xs {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-xs;
-    line-height: $mb-line-height-xs;
-  }
-  &-xxs {
-    color: $mb-color-gray-900;
-    font-size: $mb-font-size-xxs;
-    line-height: $mb-line-height-xxs;
-  }
-}
-
-.text {
-  color: $mb-color-gray-800;
-  font-weight: $mb-font-weight-normal;
-  font-size: $mb-font-size-m;
-  &-xxxl {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xxxl;
-    line-height: $mb-line-height-xxxl;
-  }
-  &-xxl {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xxl;
-    line-height: $mb-line-height-xxl;
-  }
-  &-xl {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xl;
-    line-height: $mb-line-height-xl;
-  }
-  &-l {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l;
-  }
-  &-l {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l;
-  }
-  &-md {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-m;
-    line-height: $mb-line-height-m;
-  }
-  &-sm {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-s;
-    line-height: $mb-line-height-s;
-  }
-  &-xs {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xs;
-    line-height: $mb-line-height-xs;
-  }
-  &-xxs {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xxs;
-    line-height: $mb-line-height-xxs;
-  }
-}
-
-.caption {
-  color: $mb-color-gray-800;
-  font-weight: $mb-font-weight-bold;
-  font-size: $mb-font-size-l;
-  &-xxxl {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xxxl;
-    line-height: $mb-line-height-xxxl-compact;
-  }
-  &-xxl {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xxl;
-    line-height: $mb-line-height-xxl-compact;
-  }
-  &-xl {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xxl;
-    line-height: $mb-line-height-xxl-compact;
-  }
-  &-xl {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xl;
-    line-height: $mb-line-height-xl-compact;
-  }
-  &-l {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l-compact;
-  }
-  &-l {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l-compact;
-  }
-  &-md {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-m;
-    line-height: $mb-line-height-m-compact;
-  }
-  &-sm {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-s;
-    line-height: $mb-line-height-s-compact;
-  }
-  &-xs {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xs;
-    line-height: $mb-line-height-xs-compact;
-  }
-  &-xxs {
-    color: $mb-color-gray-800;
-    font-size: $mb-font-size-xxs;
-    line-height: $mb-line-height-xxs-compact;
-  }
-}
-
-.label {
-  color: $mb-color-gray-700;
-  font-weight: $mb-font-weight-normal;
-  font-size: $mb-font-size-m;
-  &-xxxl {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-xxxl;
-    line-height: $mb-line-height-xxxl-compact;
-  }
-  &-xxl {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-xxl;
-    line-height: $mb-line-height-xxl-compact;
-  }
-  &-xl {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-xxl;
-    line-height: $mb-line-height-xxl-compact;
-  }
-  &-xl {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-xl;
-    line-height: $mb-line-height-xl-compact;
-  }
-  &-l {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l-compact;
-  }
-  &-l {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l-compact;
-  }
-  &-md {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-m;
-    line-height: $mb-line-height-m-compact;
-  }
-  &-sm {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-s;
-    line-height: $mb-line-height-s-compact;
-  }
-  &-xs {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-xs;
-    line-height: $mb-line-height-xs-compact;
-  }
-  &-xxs {
-    color: $mb-color-gray-700;
-    font-size: $mb-font-size-xxs;
-    line-height: $mb-line-height-xxs-compact;
-  }
-}
-
-ul {
-  // list-style: none; - already in reset
-  li {
-    &::before {
-      content: "\2022";
-      color: $mb-color-cyan-500;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-  }
-}
-
-// To be addressed:
 // 
 // 
-// a
-// abbr
-// acronym
-// address
-// applet
-// area
-// article
-// aside
-// audio
-// b
-// base
-// basefont
-// bdi
-// bdo
-// big
-// blockquote
-// body
-// br
-// button
-// canvas
-// caption
-// center
-// cite
-// code
-// col
-// colgroup
-// datalist
-// dd
-// del
-// details
-// dfn
-// dir
-// div
-// dl
-// dt
-// em
-// embed
-// fieldset
-// figcaption
-// figure
-// font
-// footer
-// form
-// frame
-// frameset
-// h1
-// head
-// header
-// hgroup
-// hr
-// html
-// i
-// iframe
-// img
-// input
-// ins
-// kbd
-// keygen
-// label
-// legend
-// li
-// link
-// map
-// mark
-// menu
-// meta
-// meter
-// nav
-// noframes
-// noscript
-// object
-// ol
-// optgroup
-// option
-// output
-// p
-// param
-// pre
-// progress
-// q
-// rp
-// rt
-// ruby
-// s
-// samp
-// script
-// section
-// select
-// small
-// source
-// span
-// strike
-// strong
-// style
-// sub
-// summary
-// sup
-// table
-// tbody
-// td
-// textarea
-// tfoot
-// th
-// thead
-// time
-// title
-// tr
-// tt
-// u
-// ul
-// var
-// video
-// wbr
-
-// Moved here from reset:
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-.chromeframe {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+//
+//
