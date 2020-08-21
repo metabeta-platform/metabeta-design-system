@@ -158,65 +158,86 @@ $color-gray                 : $color-gray-500;
 $color-gray-highlight       : rgba($color-gray-900,$opacity-xs);
 
 $color-white                : #ffffff;
-$color-transparent          : rgba($color-white,$opacity-transparent);
-$mb-color-black             : #000;
+$color-transparent          : rgba($color-white,0.0001); // Fixes bug in IE for background colors
+$mb-color-black             : $color-gray-900;
 
 /* THEME PALETTE END */
 
 /* UTILITY COLORS START */
 
+// Text colors
+$color-headings             : $color-gray-900;
+$color-text-dark            : $color-gray-700;
+$color-text-medium          : $color-gray-500;
+$color-text-light           : $color-gray-400;
 
+// Border colors
+$color-border-dark          : $color-gray-300;
+$color-border-medium        : $color-gray-200;
+$color-border-light         : $color-gray-100;
+
+// Link colors
+$color-link                 : $color-blue-600;
+$color-link-hover           : $color-purple-500;
+$color-link-visited         : $color-purple-700;
+
+// Primary interaction colors
 $color-primary              : $color-blue-500;
 $color-primary-hover        : $color-blue-600;
 $color-primary-active       : $color-blue-400;
 $color-primary-border       : $color-blue-500;
+$color-primary-text         : $color-white;
 $color-primary-highlight    : $color-blue-highlight;
 
-
+// Secondary interaction colors
 $color-secondary            : $color-white;
 $color-secondary-hover      : $color-gray-200;
 $color-secondary-active     : $color-gray-100;
 $color-secondary-border     : $color-gray-300;
+$color-secondary-text       : $color-text-medium;
 $color-secondary-highlight  : $color-gray-highlight;
 
+// Base interaction colors
 $color-base                 : $color-white;
 $color-base-hover           : $color-gray-200;
 $color-base-active          : $color-blue-100;
 $color-base-border          : $color-transparent;
+$color-base-text            : $color-text-medium;
 $color-base-highlight       : $color-gray-highlight;
 
+// Danger/error colors
 $color-danger               : $color-red-500;
 $color-danger-hover         : $color-red-600;
 $color-danger-active        : $color-red-400;
 $color-danger-border        : $color-red-500;
 $color-danger-highlight     : $color-red-highlight;
 
+// Success/confirmation colors
 $color-success              : $color-green-500;
 $color-success-hover        : $color-green-600;
 $color-success-active       : $color-green-400;
 $color-success-border       : $color-green-500;
 $color-success-highlight    : $color-green-highlight;
 
+// Warning error colors
 $color-warning              : $color-orange-500;
 $color-warning-hover        : $color-orange-600;
 $color-warning-active       : $color-orange-400;
 $color-warning-border       : $color-orange-500;
 $color-warning-highlight    : $color-orange-highlight;
 
+// Information alert colors
 $color-info                 : $color-cyan-500;
 $color-info-hover           : $color-cyan-600;
 $color-info-active          : $color-cyan-400;
 $color-info-border          : $color-cyan-500;
 $color-info-highlight       : $color-cyan-highlight;
 
-$color-note                 : $color-indigo-500;
-$color-note-hover           : $color-indigo-600;
-$color-note-active          : $color-indigo-400;
-$color-note-border          : $color-indigo-500;
-$color-note-highlight       : $color-indigo-highlight;
-
-$color-border-light         : $color-gray-100;
-$color-border-medium        : $color-gray-200;
-$color-border-dark          : $color-gray-300;
+// Notes color
+$color-note                 : $color-yellow-500;
+$color-note-hover           : $color-yellow-600;
+$color-note-active          : $color-yellow-400;
+$color-note-border          : $color-yellow-500;
+$color-note-highlight       : $color-yellow-highlight;
 
 /* UTILITY COLORS END */
