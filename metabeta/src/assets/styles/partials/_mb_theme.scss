@@ -467,6 +467,7 @@ body {
 
 blockquote {
   border-left: $space-xxxs solid $color-cyan-500;
+  padding-left: 2em;
 }
 
 a {
@@ -745,5 +746,19 @@ fieldset {
     color: $color-gray-700;
     font-size: $font-size-xxs;
     line-height: $line-height-xxs-compact;
+  }
+}
+
+ul {
+  list-style: none;
+  li {
+    &::before {
+      content: "\2022";
+      color: $color-cyan-500;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
   }
 }
