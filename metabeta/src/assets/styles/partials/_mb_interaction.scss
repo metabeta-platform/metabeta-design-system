@@ -1,132 +1,179 @@
-.interaction {
-  &_red {
-    color: white;
-    background-color: $color-red-500;
-    &:hover {
-      background-color: $color-red-400;
+.primary {
+  background-color: $color-primary;
+  color: $color-white;
+  border: none;
+  svg {
+    .svg-fill {
+      fill: $color-white;
     }
-    &:active {
-      background-color: $color-red-400;
-    }
-    &:disabled {
-      background-color: rgba($color-red-500, 0.48);
-    }
+    .svg-stroke {
+      stroke: $color-white;
+    } // style for icons
   }
-  &_orange {
-    color: white;
-    background-color: $color-orange-500;
-    &:hover {
-      background-color: $color-orange-400;
-    }
-    &:active {
-      background-color: $color-orange-400;
-    }
-    &:disabled {
-      background-color: rgba($color-orange-500, 0.48);
-    }
+  &:hover {
+    background-color: $color-primary-hover;
   }
-  &_yellow {
-    color: white;
-    background-color: $color-yellow-500;
-    &:hover {
-      background-color: $color-yellow-400;
-    }
-    &:active {
-      background-color: $color-yellow-400;
-    }
-    &:disabled {
-      background-color: rgba($color-yellow-500, 0.48);
-    }
+  &:active {
+    background-color: $color-primary-active;
   }
-  &_green {
-    color: white;
-    background-color: $color-green-500;
-    &:hover {
-      background-color: $color-green-400;
-    }
-    &:active {
-      background-color: $color-green-400;
-    }
-    &:disabled {
-      background-color: rgba($color-green-500, 0.48);
-    }
-  }
-  &_cyan {
-    color: white;
-    background-color: $color-cyan-500;
-    &:hover {
-      background-color: $color-cyan-400;
-    }
-    &:active {
-      background-color: $color-cyan-400;
-    }
-    &:disabled {
-      background-color: rgba($color-cyan-500, 0.48);
-    }
-  }
-  &_blue {
-    color: white;
-    background-color: $color-blue-500;
-    &:hover {
-      background-color: $color-blue-400;
-    }
-    &:active {
-      background-color: $color-blue-400;
-    }
-    &:disabled {
-      background-color: rgba($color-blue-500, 0.48);
-    }
-  }
-  &_indigo {
-    color: white;
-    background-color: $color-indigo-500;
-    &:hover {
-      background-color: $color-indigo-400;
-    }
-    &:active {
-      background-color: $color-indigo-400;
-    }
-    &:disabled {
-      background-color: rgba($color-indigo-500, 0.48);
-    }
-  }
-  &_pink {
-    color: white;
-    background-color: $color-pink-500;
-    &:hover {
-      background-color: $color-pink-400;
-    }
-    &:active {
-      background-color: $color-pink-400;
-    }
-    &:disabled {
-      background-color: rgba($color-pink-500, 0.48);
-    }
-  }
-  &_teal {
-    color: white;
-    background-color: $color-teal-500;
-    &:hover {
-      background-color: $color-teal-400;
-    }
-    &:active {
-      background-color: $color-teal-400;
-    }
-    &:disabled {
-      background-color: rgba($color-teal-500, 0.48);
-    }
-  }
-  &_purple {
-    color: white;
-    background-color: $color-purple-500;
-    &:hover {
-      background-color: $color-purple-400;
-    }
-    &:active {
-      background-color: $color-purple-400;
-    }
-    &:disabled {
-      background-color: rgba($color-purple-500, 0.48);
+  &:disabled,
+  &.disabled {
+    background-color: fade-out(desaturate($color-primary-disabled, 48%),48%); // TBD
+    color: fade-out($color-white,24%);
+    svg {
+      .svg-fill {
+        fill: fade-out(desaturate($color-primary-disabled, 48%),48%);
+      }
+      .svg-stroke {
+        stroke: fade-out($color-white,24%);
+      } // style for icons
     }
   }
 }
+
+// Needs finalization by @CristianBurac, then replication for
+// - secondary
+// - base 
+
+// Additional classes will be used for, to override properties.
+// Attention - primary-secondary-base represents hierarchy while danger-success-warning-info represents operation type (destructive, etc)
+// - danger
+// - success
+// - warning
+// - info
+// - note
+
+
+
+// .interaction {
+//   &_red {
+//     color: white;
+//     background-color: $color-red-500;
+//     &:hover {
+//       background-color: $color-red-400;
+//     }
+//     &:active {
+//       background-color: $color-red-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-red-500, 0.48);
+//     }
+//   }
+//   &_orange {
+//     color: white;
+//     background-color: $color-orange-500;
+//     &:hover {
+//       background-color: $color-orange-400;
+//     }
+//     &:active {
+//       background-color: $color-orange-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-orange-500, 0.48);
+//     }
+//   }
+//   &_yellow {
+//     color: white;
+//     background-color: $color-yellow-500;
+//     &:hover {
+//       background-color: $color-yellow-400;
+//     }
+//     &:active {
+//       background-color: $color-yellow-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-yellow-500, 0.48);
+//     }
+//   }
+//   &_green {
+//     color: white;
+//     background-color: $color-green-500;
+//     &:hover {
+//       background-color: $color-green-400;
+//     }
+//     &:active {
+//       background-color: $color-green-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-green-500, 0.48);
+//     }
+//   }
+//   &_cyan {
+//     color: white;
+//     background-color: $color-cyan-500;
+//     &:hover {
+//       background-color: $color-cyan-400;
+//     }
+//     &:active {
+//       background-color: $color-cyan-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-cyan-500, 0.48);
+//     }
+//   }
+//   &_blue {
+//     color: white;
+//     background-color: $color-blue-500;
+//     &:hover {
+//       background-color: $color-blue-400;
+//     }
+//     &:active {
+//       background-color: $color-blue-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-blue-500, 0.48);
+//     }
+//   }
+//   &_indigo {
+//     color: white;
+//     background-color: $color-indigo-500;
+//     &:hover {
+//       background-color: $color-indigo-400;
+//     }
+//     &:active {
+//       background-color: $color-indigo-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-indigo-500, 0.48);
+//     }
+//   }
+//   &_pink {
+//     color: white;
+//     background-color: $color-pink-500;
+//     &:hover {
+//       background-color: $color-pink-400;
+//     }
+//     &:active {
+//       background-color: $color-pink-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-pink-500, 0.48);
+//     }
+//   }
+//   &_teal {
+//     color: white;
+//     background-color: $color-teal-500;
+//     &:hover {
+//       background-color: $color-teal-400;
+//     }
+//     &:active {
+//       background-color: $color-teal-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-teal-500, 0.48);
+//     }
+//   }
+//   &_purple {
+//     color: white;
+//     background-color: $color-purple-500;
+//     &:hover {
+//       background-color: $color-purple-400;
+//     }
+//     &:active {
+//       background-color: $color-purple-400;
+//     }
+//     &:disabled {
+//       background-color: rgba($color-purple-500, 0.48);
+//     }
+//   }
+// }
