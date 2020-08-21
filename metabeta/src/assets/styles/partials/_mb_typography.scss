@@ -83,6 +83,77 @@ $mb-font-family-monospace  : "IBM Plex Sans Mono", "Lucida Console", "Courier Pr
 
 /* TYPOGRAPHY MIXINS START*/
 
+// Font mixin for easier specification of typographic properties
+// $family: headings, body, monospace
+// $weight: normal, bold,
+// $style: normal, italic,
+// $size: xxs, xs, s, m, l, xl, xxl xxxl
+// $line-height: normal, compact
+// $letter-spacing: normal, tight, tighter, loose, looser
+// Example: @include mb-font(headings, normal, italic, s, s-compact, normal, )
+@mixin mb-font(
+  $family: body,
+  $weight: normal,
+  $style: normal,
+  $size: m,
+  $line-height: m-compact,
+  $letter-spacing: normal) {
+    font-family: $mb-font-family-#{$family};
+    font-weight: $mb-font-weight-#{$weight};
+    font-style: $style;
+    font-size: $mb-font-size-#{$size};
+    line-height: $mb-font-size-#{$line-height};
+    letter-spacing: $mb-letter-spacing-#{$size};
+}
+
+// Mixin for headings
+@mixin mb-heading($size) {
+  @include mb-font(headings, bold, normal, #{$size}, #{$size});
+  color: $mb-color-headings;
+  @if $size==xxs {
+    letter-spacing: $mb-letter-spacing-looser;
+  }
+  @if $size==xs {
+    letter-spacing: $mb-letter-spacing-loose;
+  }
+  @if $size==s {
+    letter-spacing: $mb-letter-spacing-loose;
+  }
+  @if $size==m {
+    letter-spacing: $mb-letter-spacing-normal;
+  }
+  @if $size==l {
+    letter-spacing: $mb-letter-spacing-normal;
+  }
+  @if $size==xl {
+    letter-spacing: $mb-letter-spacing-tight;
+  }
+  @if $size==xxl {
+    letter-spacing: $mb-letter-spacing-tighter;
+  }
+  @if $size==xxxl {
+    letter-spacing: $mb-letter-spacing-tighter;
+  }
+}
+
+// Mixin for text
+@mixin mb-text($size) {
+  @include mb-font(body, normal, normal, #{$size}, #{$size});
+  color: $mb-color-text-dark;
+}
+
+// Mixin for labels
+@mixin mb-label($size) {
+  @include mb-font(body, bold, normal, #{$size}, #{$size}-compact);
+  color: $mb-color-headings;
+}
+
+// Mixin for captions
+@mixin mb-label($size) {
+  @include mb-font(body, normal, normal, #{$size}, #{$size}-compact);
+  color: $mb-color-text-medium;
+}
+
 // Text overflow behavior
 @mixin mb-wrap-text($wrap-text: false) {
   @if $wrap-text {
