@@ -4,6 +4,7 @@ $mb-ease-base         : cubic-bezier(0.4,0.14,0.3,1);
 $mb-ease-intro        : cubic-bezier(0.4,0.14,0.3,1);
 $mb-ease-outro        : cubic-bezier(0.4,0.14,0.3,1);
 $mb-ease-bounce       : cubic-bezier(0.4,0.14,1.1,1);
+$mb-ease-inout        : cubic-bezier(0.65, 0, 0.35, 1);
 
 $mb-speed-faster    : .1s; // 6 frames, use for micro-interactions such as buttons, toggles
 $mb-speed-fast      : .2s; // 12 frames, use for micro-interactions, fades

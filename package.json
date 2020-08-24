@@ -2,13 +2,13 @@
   "name": "metabeta-design-system",
   "version": "1.0.30",
   "description": "\"Metabeta Design System\"",
-  "main": "./metabeta/src/assets/css/dna.css",
+  "main": "./src/assets/css/dna.css",
   "dependencies": {
     "node-sass": "^4.14.1"
   },
   "devDependencies": {},
   "scripts": {
-    "compile:sass": "node-sass metabeta/src/assets/styles/dna.scss metabeta/src/assets/css/dna.css"
+    "compile:sass": "node-sass src/assets/styles/dna.scss src/assets/css/dna.css"
   },
   "repository": {
     "type": "git",
