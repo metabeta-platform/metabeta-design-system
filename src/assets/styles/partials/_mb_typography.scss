@@ -229,7 +229,7 @@ monospace;
     font-weight: $mb-font-weight-bold;
   }
 
-  @else if(($weight !==bold)) {
+  @else if($weight != bold) {
     font-weight: $mb-font-weight-normal;
   }
 
