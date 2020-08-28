@@ -1,4 +1,7 @@
 /* LAYOUT CONTAINERS START */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   padding: $mb-space-m;
@@ -10,38 +13,61 @@ div {
   @include mb-text(m);
 }
 
-nav {
-  display: block;
-  ul {
-    padding-inline-start: 0;
-  }
-}
-header,
-footer,
-main,
-article,
-section,
-aside,
-menu {
-  display: block;
-  font-family: inherit;
-  font-size: inherit;
-  margin: 0;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: inherit;
-  outline: none 0;
-  border: none;
-  text-size-adjust: 100%;
-  appearance: none;
-  transition: @include mb-transition-smooth($mb-speed-faster, $mb-ease-inout);
-  box-sizing: inherit;
-}
+// nav {}
+// header {}
+// footer {}
+// main {}
+// section {}
+// aside {}
+// menu {}
+// @Cristian needs specifications for this;
 
 /* LAYOUT CONTAINERS END */
 
 /* TEXT CONTAINERS START */
+
+/* to be deleted & refactor after the icons & interations will be fixed*/
+.mb-btn-s {
+  @include mb-text(s);
+  color: $mb-color-text-medium;
+  padding: $mb-space-xs $mb-space-s;
+  border: 0.0625rem solid rgba($mb-color-gray-highlight, $mb-opacity-xxs);
+  @include mb-border-radius(s);
+  background-color: $mb-color-gray-highlight;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: none;
+  cursor: pointer;
+  &:hover {
+    color: $mb-color-headings;
+    background-color: $mb-color-primary-highlight;
+    border: 0.0625rem solid rgba($mb-color-primary-highlight, $mb-opacity-xxs);
+  }
+  &:active {
+    color: $mb-color-primary;
+    background-color: $mb-color-primary-highlight;
+    border: 0.0625rem solid rgba($mb-color-primary-highlight, $mb-opacity-xxs);
+  }
+}
+.mb-btn-primary-s {
+  @extend .mb-btn-s;
+  color: $mb-color-white;
+  background-color: $mb-color-primary;
+  border: 0.0625rem solid $mb-color-primary;
+  &:hover {
+    color: $mb-color-white;
+    background-color: $mb-color-primary-hover;
+    border: 0.0625rem solid $mb-color-primary;
+  }
+  &:active {
+    color: $mb-color-white;
+    background-color: $mb-color-primary-active;
+    border: 0.0625rem solid $mb-color-primary;
+  }
+}
+
+/* to be deleted end*/
 
 h1 {
   @include mb-heading(xxl);
@@ -85,14 +111,26 @@ li {
 }
 // Use <blockquote cite="source"></blockquote>
 // Add author in footer
+
 blockquote {
   @include mb-text(l);
-  padding-left: $mb-space-xl;
+  padding-left: $mb-space-l;
   border-left: $mb-border-thick solid $mb-color-cyan-500;
+  font-style: italic;
+  margin: 0 0 0.5em;
   color: $mb-color-headings;
   footer {
     @include mb-caption(s);
+    margin-top: $mb-space-xs;
+    &::before {
+      content: "\2014";
+    }
   }
+}
+
+pre {
+  @include mb-text(m);
+  margin: 0 0 0.5em;
 }
 
 article {
@@ -107,30 +145,38 @@ article {
       display: inline-block;
       width: $mb-space-l;
       margin-left: -$mb-space-xl;
-      text-align: right;
+      text-align: center;
       direction: rtl;
       color: $mb-color-cyan;
     }
   }
   ul {
     padding-left: $mb-space-xl;
-    &li::before {
+    li::before {
       content: "\2022";
+      font-size: $mb-font-size-m;
     }
   }
   ol {
     padding-left: $mb-space-xl;
-    counter-reset: li; // This allows colored numbers in list
-    &li::before {
-      content: counter(li);
+    list-style: none;
+    counter-reset: li;
+    li {
       counter-increment: li;
+    }
+    li::before {
+      content: counter(li);
     }
   }
   dl {
   }
   dt {
+    @include mb-label(l);
+    margin: $mb-space-m 0 $mb-space-s;
   }
   dd {
+    @include mb-text(l);
+    margin: 0 0 0.5em;
   }
 }
 
@@ -139,35 +185,35 @@ article {
 /* MEDIA START */
 
 figcaption {
-  background-color: inherit;
-  box-sizing: inherit;
 }
 figure {
-  background-color: inherit;
-  box-sizing: inherit;
 }
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  width: 100%;
+  height: 100%;
 }
 audio {
-  // troll Marius? :p
 }
 video {
   display: block;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
-
+embed {
+  width: 100%;
+  height: 100%;
+}
 iframe {
   width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* MEDIA END */
 
 /* TABLES START */
 table {
+  width: 100%;
   caption {
   }
   colgroup {
@@ -176,19 +222,37 @@ table {
   }
   thead {
     tr {
+      border-bottom: 0.0625rem solid $mb-color-border-dark;
       th {
+        @include mb-heading(s);
+        text-transform: uppercase;
+        text-align: left;
+        color: $mb-color-text-medium;
+        padding: $mb-space-m;
       }
     }
   }
   tbody {
     tr {
+      vertical-align: middle;
+      border-bottom: 0.0625rem solid $mb-color-border-medium;
       td {
+        text-align: left;
+        padding: $mb-space-m;
+      }
+      &:hover {
+        color: $mb-color-headings;
+        background-color: $mb-color-gray-highlight;
       }
     }
   }
   tfoot {
     tr {
+      vertical-align: middle;
       td {
+        text-align: left;
+        color: $mb-color-headings;
+        padding: $mb-space-m;
       }
     }
   }
@@ -199,7 +263,7 @@ table {
 /* BUTTONS START */
 
 button {
-  cursor: pointer;
+  @extend .mb-btn-s;
 }
 
 /* BUTTONS END */
@@ -207,58 +271,493 @@ button {
 /* FORMS START */
 
 form {
-  width: 100%;
-  display: block;
 }
 
 fieldset {
-  // I edited this on reset.
+}
+
+legend {
+  @include mb-text(m);
+  color: $mb-color-headings;
 }
 
 label {
-  @include mb-label(m);
+  @include mb-label(s);
+  margin: $mb-space-m 0 $mb-space-xs;
+  display: block;
 }
 
 input {
-  &:focus {
+  @include mb-caption(s);
+  border: 0.0625rem solid $mb-color-border-medium;
+  padding: $mb-space-xs $mb-space-s;
+  @include mb-border-radius(s);
+  &[type="text"],
+  &[type="email"],
+  &[type="password"],
+  &[type="search"],
+  &[type="tel"],
+  &[type="url"] {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  &[type="color"] {
+    -webkit-appearance: none;
+    padding: 0;
     border: none;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
-    padding: $mb-space-xxs $mb-space-xs;
+    width: 2rem;
+    height: 2rem;
+  }
+  &[type="range"] {
+    width: 100%;
+    padding: 0;
+  }
+  &[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    @include mb-border-radius(s);
+  }
+  &[type="color"]::-webkit-color-swatch {
+    border: none;
+    @include mb-border-radius(s);
+  }
+  &[type="reset"] {
+    @extend .mb-btn-s;
+  }
+  &[type="submit"],
+  &[type="button"] {
+    // @include mb-primary;
+    @extend .mb-btn-primary-s;
+  }
+  &:focus {
+    border-color: $mb-color-primary;
+    box-shadow: inset 0 0 0 $mb-color-primary;
+  }
+  &::placeholder {
+    @include mb-caption(s);
+    color: $mb-color-text-light;
+  }
+  &:disabled {
+    background-color: $mb-color-gray-highlight;
   }
 }
 
-textarea {
-  display: block;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 0.0625rem solid $mb-color-primary;
+  height: 2rem;
+  width: 2rem;
+  @include mb-border-radius(cicle);
+  background-color: $mb-color-primary;
+  cursor: pointer;
+  margin-top: -$mb-space-xxs;
+}
+
+input[type="range"]::-moz-range-thumb {
+  box-shadow: none;
+  border: 0.0625rem solid $mb-color-primary;
+  height: 2rem;
+  width: 2rem;
+  @include mb-border-radius(cicle);
+  background-color: $mb-color-primary;
+  cursor: pointer;
+  margin-top: -$mb-space-xxs;
+}
+
+input[type="range"]::-ms-thumb {
+  box-shadow: none;
+  border: 0.0625rem solid $mb-color-primary;
+  height: 1rem;
+  width: 1rem;
+  @include mb-border-radius(cicle);
+  background-color: $mb-color-primary;
+  cursor: pointer;
+  margin-top: -$mb-space-xxs;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
-  padding: $mb-space-xxs $mb-space-xs;
-  border: none;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  resize: vertical;
+  height: 0.5rem;
+  cursor: pointer;
+  box-shadow: none;
+  background-color: $mb-color-primary;
+  @include mb-border-radius(s);
+  border: 0.0625rem solid $mb-color-primary;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background-color: $mb-color-primary-hover;
+}
+
+input[type="checkbox"] {
+  display: none;
+  margin: 0.2rem;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\2714";
+  border: 0.0625rem solid $mb-color-border-medium;
+  @include mb-border-radius(s);
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding-left: $mb-space-xxs;
+  padding-bottom: $mb-space-xxs;
+  margin-right: $mb-space-xs;
+  vertical-align: bottom;
+  color: transparent;
+}
+input[type="checkbox"]:hover + label:before {
+  border: 0.0625rem solid $mb-color-border-dark;
+  background-color: $mb-color-gray-highlight;
+  cursor: pointer;
+}
+input[type="checkbox"] + label {
+  padding: $mb-space-xs 0 0 0;
+  margin-top: $mb-space-xs;
+  @include mb-caption(s);
+  color: $mb-color-text-medium;
+}
+input[type="checkbox"]:hover + label {
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label:before {
+  background-color: $mb-color-primary;
+  color: $mb-color-white;
+  border: 0.0625rem solid $mb-color-primary;
+}
+input[type="checkbox"]:checked + label {
+  color: $mb-color-headings;
+}
+input[type="checkbox"]:disabled + label:before {
+  border-color: $mb-color-border-medium;
+  background-color: $mb-color-gray-highlight;
+}
+input[type="checkbox"]:disabled + label {
+  color: rgba($mb-color-gray, $mb-opacity-l);
+}
+input[type="checkbox"]:disabled:checked + label:before {
+  background-color: rgba($mb-color-gray, $mb-opacity-l);
+  color: $mb-color-white;
+  border: 0.0625rem solid rgba($mb-color-gray, $mb-opacity-s);
+}
+input[type="checkbox"]:disabled:checked + label {
+  color: rgba($mb-color-gray, $mb-opacity-l);
+}
+
+input[type="checkbox"]:disabled:checked:hover + label,
+input[type="checkbox"]:disabled:checked:hover + label:before,
+input[type="checkbox"]:disabled:hover + label:before,
+input[type="checkbox"]:disabled:hover + label {
+  cursor: not-allowed;
+}
+input[type="checkbox"]:checked:focus + label:before {
+  border: 1px solid $mb-color-primary;
+}
+input[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px solid $mb-color-primary;
+}
+
+input[type="radio"] {
+  display: none;
+  margin: 0.2rem;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  border: 0.0625rem solid $mb-color-border-medium;
+  @include mb-border-radius(circle);
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding-left: $mb-space-xxs;
+  padding-bottom: $mb-space-xxs;
+  margin-right: $mb-space-xs;
+  vertical-align: bottom;
+  color: transparent;
+}
+input[type="radio"]:hover + label:before {
+  border: 0.0625rem solid $mb-color-border-dark;
+  background-color: $mb-color-gray-highlight;
+  cursor: pointer;
+}
+input[type="radio"] + label {
+  padding: $mb-space-xs 0 0 0;
+  @include mb-caption(s);
+  color: $mb-color-text-medium;
+}
+input[type="radio"]:hover + label {
+  cursor: pointer;
+}
+input[type="radio"]:checked + label:before {
+  background-color: $mb-color-primary;
+  color: $mb-color-primary;
+  box-shadow: inset 0 0 0 $mb-space-xxs $mb-color-white;
+  border: 0.0625rem solid $mb-color-primary;
+}
+input[type="radio"]:checked + label {
+  color: $mb-color-headings;
+}
+input[type="radio"]:disabled + label:before {
+  border-color: $mb-color-border-medium;
+  background-color: $mb-color-gray-highlight;
+}
+input[type="cradio"]:disabled + label {
+  color: rgba($mb-color-gray, $mb-opacity-l);
+}
+input[type="radio"]:disabled:checked + label:before {
+  background-color: rgba($mb-color-gray, $mb-opacity-l);
+  color: $mb-color-white;
+  border: 0.0625rem solid rgba($mb-color-gray, $mb-opacity-s);
+}
+input[type="radio"]:disabled:checked + label {
+  color: rgba($mb-color-gray, $mb-opacity-l);
+}
+
+input[type="radio"]:disabled:checked:hover + label,
+input[type="radio"]:disabled:checked:hover + label:before,
+input[type="radiox"]:disabled:hover + label:before,
+input[type="radio"]:disabled:hover + label {
+  cursor: not-allowed;
+}
+input[type="radio"]:checked:focus + label:before {
+  border: 1px solid $mb-color-primary;
+}
+input[type="radio"]:not(:checked):focus + label:before {
+  border: 1px solid $mb-color-primary;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="month"]::-webkit-calendar-picker-indicator,
+input[type="week"]::-webkit-calendar-picker-indicator {
+  content: url(../../src/assets/icons/icon-calendar.svg);
+  position: relative;
+  height: 1rem;
+  width: 1rem;
+  background: none;
+  cursor: pointer;
+}
+
+//Cristian didn't succeed to add ::after and ::before icons directly to the inputs
+.input-password {
+  input[type="password"] {
+    padding-right: $mb-space-xl;
+    padding-left: $mb-space-xl;
+  }
+  &::after {
+    content: url(../../src/assets/icons/icon-key.svg);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    float: left;
+    margin-right: -$mb-space-l;
+    top: 0.6rem;
+    left: $mb-space-xs;
+    position: relative;
+  }
+  &::before {
+    content: url(../../src/assets/icons/view-icon.svg);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    float: right;
+    margin-left: -$mb-space-l;
+    top: $mb-space-xs;
+    right: $mb-space-xs;
+    position: relative;
+  }
+}
+.input-email {
+  input[type="email"] {
+    padding-left: $mb-space-xl;
+  }
+  &::after {
+    content: url(../../src/assets/icons/email.svg);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    float: left;
+    margin-right: -$mb-space-l;
+    top: $mb-space-xs;
+    left: $mb-space-xs;
+    position: relative;
+  }
+}
+.input-search {
+  input[type="search"] {
+    padding-left: $mb-space-xl;
+  }
+  &::after {
+    content: url(../../src/assets/icons/icon-search.svg);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    float: left;
+    margin-right: -$mb-space-l;
+    top: $mb-space-xs;
+    left: $mb-space-xs;
+    position: relative;
+  }
+}
+.input-phone {
+  input[type="tel"] {
+    padding-left: $mb-space-xl;
+  }
+  &::after {
+    content: url(../../src/assets/icons/phone-call.svg);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    float: left;
+    margin-right: -$mb-space-l;
+    top: $mb-space-xs;
+    left: $mb-space-xs;
+    position: relative;
+  }
+}
+.input-url {
+  input[type="url"] {
+    padding-left: $mb-space-xl;
+  }
+  &::after {
+    content: url(../../src/assets/icons/link.svg);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    float: left;
+    margin-right: -$mb-space-l;
+    top: $mb-space-xs;
+    left: $mb-space-xs;
+    position: relative;
+  }
+}
+// end input icons
+label + input:after {
+  width: 66%;
+}
+
+textarea {
+  @include mb-text(m);
+  border: 0.0625rem solid $mb-color-border-medium;
+  padding: $mb-space-xs $mb-space-s;
+  width: 100%;
+  @include mb-border-radius(s);
+  box-sizing: border-box;
+  &:focus {
+    border-color: $mb-color-primary;
+    box-shadow: inset 0 0 0 $mb-color-primary;
+  }
+  &::placeholder {
+    @include mb-caption(s);
+    color: $mb-color-text-light;
+  }
+  &:disabled {
+    background-color: $mb-color-gray-highlight;
+  }
 }
 
 select {
-  // we wont use default html select I'll do Vue component for it with divs, this is single most annoying thing to deal with in Windows with HTML :).
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: $mb-space-l;
+  -moz-padding-end: $mb-space-l;
+  -webkit-padding-start: $mb-space-xs;
+  -moz-padding-start: $mb-space-xs;
+  @include mb-text(m);
+  padding: $mb-space-xs $mb-space-s;
+  border: 0.0625rem solid $mb-color-border-medium;
+  @include mb-border-radius(s);
+  box-shadow: none;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  &:focus {
+    border-color: $mb-color-primary;
+    box-shadow: inset 0 0 0 $mb-color-primary;
+  }
+  &::placeholder {
+    @include mb-caption(s);
+    color: $mb-color-text-light;
+  }
+  &:disabled {
+    background-color: $mb-color-gray-highlight;
+  }
 }
 
 // Input with autocomplete
 datalist {
 }
 
-option {
+optgroup {
+  @include mb-heading(s);
+  text-transform: uppercase;
+  color: $mb-color-text-light;
+  option {
+    text-transform: none;
+    padding-left: 0;
+    margin-left: -20px;
+  }
 }
 
-optgroup {
+option {
+  @include mb-text(m);
+  padding: $mb-space-xs $mb-space-s;
+  &:hover {
+    color: $mb-color-headings;
+    background-color: $mb-color-gray-highlight;
+  }
+  &:active {
+    color: $mb-color-primary;
+    background-color: $mb-color-primary-highlight;
+  }
 }
 
 output {
 }
 
 meter {
+  @include mb-border-radius(s);
+  width: 100%;
+  height: 1.5rem;
+}
+meter::-webkit-meter-bar {
+  box-shadow: 0 0 0 0 rgba($mb-color-gray, $mb-opacity-m) inset;
+  background-color: rgba($mb-color-gray, $mb-opacity-m);
+  @include mb-border-radius(ms);
+}
+meter::-moz-meter-bar {
+  background-color: rgba($mb-color-gray, $mb-opacity-m);
+  @include mb-border-radius(ms);
+}
+meter::-webkit-meter-optimum-value {
+  background-color: $mb-color-primary;
+  border-radius: $mb-space-xxs 0 0 $mb-space-xxs;
 }
 
 progress {
+  @include mb-border-radius(s);
+  width: 100%;
+  height: 1.5rem;
+}
+progress::-webkit-progress-bar {
+  background-color: rgba($mb-color-gray, $mb-opacity-m);
+  @include mb-border-radius(s);
+}
+progress::-moz-progress-bar {
+  background-color: rgba($mb-color-gray, $mb-opacity-m);
+  @include mb-border-radius(ms);
+}
+
+progress::-webkit-progress-value {
+  background-color: $mb-color-primary;
+  border-radius: $mb-space-xxs 0 0 $mb-space-xxs;
 }
 
 /* FORMS END */
@@ -266,14 +765,15 @@ progress {
 /* INLINE ELEMENTS START */
 
 a {
-  vertical-align: baseline;
-  cursor: pointer;
   color: $mb-color-link;
+  text-decoration: none;
+  cursor: pointer;
   &:hover {
     color: $mb-color-link-hover;
   }
   &:focus {
     outline-color: $mb-color-link;
+    border: none;
   }
   &:active {
     color: $mb-color-link;
@@ -288,32 +788,50 @@ b {
 }
 em,
 i {
-  @include mb-font(
-    $size: m,
-    $line-height: m,
-    $weight: $mb-font-weight-normal,
-    $style: italic
-  );
+  font-style: italic;
 }
 mark {
+  color: $mb-color-headings;
+  background-color: $mb-color-primary-highlight;
 }
 del {
+  color: $mb-color-text-light;
 }
 ins {
+  background-color: $mb-color-primary-highlight;
 }
 small {
+  @include mb-caption(xs);
+  color: $mb-color-text-light;
 }
-span {
-}
+//span {} // Cristian: I don't think we need to add style to span;
 code {
+  @include mb-border-radius(s);
+  padding: $mb-space-xs;
+  font-family: $mb-font-family-monospace;
+  background-color: $mb-color-gray-highlight;
 }
 sub {
+  vertical-align: sub;
+  @include mb-caption(xs);
 }
 sup {
+  vertical-align: super;
+  @include mb-caption(xs);
 }
 
 // Short quotations
 q {
+  font-style: italic;
+  color: $mb-color-headings;
+  &::before {
+    content: "❞";
+    color: $mb-color-cyan;
+  }
+  &::after {
+    content: "❝";
+    color: $mb-color-cyan;
+  }
 }
 
 /* INLINE ELEMENTS END */
@@ -321,14 +839,58 @@ q {
 /* MISC ELEMENTS START */
 
 hr {
+  border-top: 0.0625rem solid $mb-color-border-light;
 }
 
 // Text selection color:
 
-::selection,
+::selection {
+  color: $mb-color-headings;
+  background-color: $mb-color-primary-highlight;
+}
 ::-moz-selection {
-  background: $color-primary-highlight;
-  text-shadow: none;
+  color: $mb-color-headings;
+  background-color: $mb-color-primary-highlight;
+}
+
+// Scroll bar:
+
+::-webkit-scrollbar {
+  @include mb-border-radius(m);
+  width: 0.5rem;
+  height: 0.5rem;
+  overflow: overlay;
+  padding-right: 0.25rem;
+  margin-right: 0.25rem;
+}
+::-webkit-scrollbar-button {
+  width: 0rem;
+  height: 0rem;
+}
+::-webkit-scrollbar-thumb {
+  @include mb-border-radius(m);
+  background: rgba($mb-color-gray, $mb-opacity-m);
+  border: 0px none $mb-color-white;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($mb-color-gray, $mb-opacity-l);
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgba($mb-color-gray, $mb-opacity-m);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none $mb-color-white;
+  @include mb-border-radius(l);
+}
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 // body {

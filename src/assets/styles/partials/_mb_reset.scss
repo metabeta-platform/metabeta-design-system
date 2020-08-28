@@ -13,7 +13,46 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+header,
+main,
+section,
+aside,
+menu {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: inherit;
+  outline: none 0;
+  border: none;
+  text-size-adjust: 100%;
+  appearance: none;
+  box-sizing: inherit;
+}
+
+video {
+  min-height: 400px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+embed {
+  width: 100%;
+  height: 100%;
+}
+iframe {
+  min-height: 400px;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+form {
+  width: 100%;
   display: block;
 }
 
@@ -158,9 +197,11 @@ ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
-  &:before, &:after {
+  &:before,
+  &:after {
     content: "";
     content: none;
   }
@@ -183,7 +224,7 @@ legend {
 audio,
 canvas,
 video {
-  display: inline-block;  
+  display: inline-block;
   *display: inline;
   *zoom: 1;
   max-width: 100%;
@@ -206,6 +247,11 @@ textarea {
   margin: 0; /* 2 */
   vertical-align: baseline; /* 3 */
   *vertical-align: middle; /* 3 */
+  &:focus {
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 // Address Firefox 3+ setting `line-height` on `input` using `!important` in the UA stylesheet.
@@ -234,6 +280,12 @@ input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
   *overflow: visible; /* 4 */
+}
+
+::selection,
+::-moz-selection {
+  background: rgba(43, 113, 244, 0.04);
+  text-shadow: none;
 }
 
 // Re-set default cursor for disabled elements.
@@ -280,7 +332,6 @@ textarea {
   overflow: auto; // Remove default vertical scrollbar in IE 6/7/8/9.
   vertical-align: top; // Improve readability and alignment in all browsers
   resize: vertical;
-
 }
 
 table {
