@@ -15,11 +15,11 @@ $mb-font-weight-normal   : 400;
 $mb-font-weight-bold     : 500;
 
 // Letter spacing
-$mb-letter-spacing-tighter    : -0.2em;
-$mb-letter-spacing-tight      : -0.1em;
+$mb-letter-spacing-tighter    : -0.02em;
+$mb-letter-spacing-tight      : -0.01em;
 $mb-letter-spacing-normal     : 0em;
-$mb-letter-spacing-loose      : 0.1em;
-$mb-letter-spacing-looser     : 0.2em;
+$mb-letter-spacing-loose      : 0.01em;
+$mb-letter-spacing-looser     : 0.02em;
 
 // Line heights
 $mb-line-height-xxs           : 0.75rem;
@@ -130,7 +130,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-xxs-normal;
+      line-height: $mb-line-height-xxs;
     }
   }
 
@@ -143,7 +143,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-xs-normal;
+      line-height: $mb-line-height-xs;
     }
   }
 
@@ -156,7 +156,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-s-normal;
+      line-height: $mb-line-height-s;
     }
   }
 
@@ -169,7 +169,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-m-normal;
+      line-height: $mb-line-height-m;
     }
   }
 
@@ -182,7 +182,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-l-normal;
+      line-height: $mb-line-height-l;
     }
   }
 
@@ -195,7 +195,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-xl-normal;
+      line-height: $mb-line-height-xl;
     }
   }
 
@@ -208,7 +208,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-xxl-normal;
+      line-height: $mb-line-height-xxl;
     }
   }
 
@@ -221,7 +221,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-xxxl-normal;
+      line-height: $mb-line-height-xxxl;
     }
   }
 
@@ -307,7 +307,7 @@ monospace;
 }
 
 // Mixin for captions
-@mixin mb-label($size) {
+@mixin mb-caption($size) {
   @include mb-font(body, #{$size}, #{$size}-compact);
   color: $mb-color-text-medium;
 }
