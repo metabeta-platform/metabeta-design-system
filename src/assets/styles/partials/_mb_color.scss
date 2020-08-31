@@ -159,7 +159,7 @@ $mb-color-gray-highlight       : rgba($mb-color-gray-900,$mb-opacity-xs);
 
 $mb-color-white                : #ffffff;
 $mb-color-transparent          : rgba($mb-color-white,0.0001); // Fixes bug in IE for background colors
-$mb-color-black                : $mb-color-gray-900;
+$mb-color-black                : #000000;
 
 /* THEME PALETTE END */
 
@@ -183,62 +183,43 @@ $mb-color-link-visited         : $mb-color-purple-700;
 
 // Primary interaction colors
 $mb-color-primary              : $mb-color-blue-500;
-$mb-color-primary-hover        : $mb-color-blue-600;
-$mb-color-primary-active       : $mb-color-blue-400;
-$mb-color-primary-border       : $mb-color-blue-500;
-$mb-color-primary-text         : $mb-color-white;
+$mb-color-primary-dark         : $mb-color-blue-600;
+$mb-color-primary-light        : $mb-color-blue-400;
 $mb-color-primary-highlight    : $mb-color-blue-highlight;
-$mb-color-primary-disabled     : $mb-color-blue-100;
-
-// Secondary interaction colors
-$mb-color-secondary            : $mb-color-white;
-$mb-color-secondary-hover      : $mb-color-gray-200;
-$mb-color-secondary-active     : $mb-color-gray-100;
-$mb-color-secondary-border     : $mb-color-gray-300;
-$mb-color-secondary-text       : $mb-color-text-medium;
-$mb-color-secondary-highlight  : $mb-color-gray-highlight;
-
-// Base interaction colors
-$mb-color-base                 : $mb-color-white;
-$mb-color-base-hover           : $mb-color-gray-200;
-$mb-color-base-active          : $mb-color-blue-100;
-$mb-color-base-border          : $mb-color-transparent;
-$mb-color-base-text            : $mb-color-text-medium;
-$mb-color-base-highlight       : $mb-color-gray-highlight;
 
 // Danger/error colors
 $mb-color-danger               : $mb-color-red-500;
-$mb-color-danger-hover         : $mb-color-red-600;
-$mb-color-danger-active        : $mb-color-red-400;
-$mb-color-danger-border        : $mb-color-red-500;
+$mb-color-danger-dark          : $mb-color-red-600;
+$mb-color-danger-light         : $mb-color-red-400;
 $mb-color-danger-highlight     : $mb-color-red-highlight;
+
 
 // Success/confirmation colors
 $mb-color-success              : $mb-color-green-500;
-$mb-color-success-hover        : $mb-color-green-600;
-$mb-color-success-active       : $mb-color-green-400;
-$mb-color-success-border       : $mb-color-green-500;
+$mb-color-success-dark         : $mb-color-green-600;
+$mb-color-success-light        : $mb-color-green-400;
 $mb-color-success-highlight    : $mb-color-green-highlight;
 
 // Warning error colors
 $mb-color-warning              : $mb-color-orange-500;
-$mb-color-warning-hover        : $mb-color-orange-600;
-$mb-color-warning-active       : $mb-color-orange-400;
-$mb-color-warning-border       : $mb-color-orange-500;
+$mb-color-warning-dark         : $mb-color-orange-600;
+$mb-color-warning-light        : $mb-color-orange-400;
 $mb-color-warning-highlight    : $mb-color-orange-highlight;
 
 // Information alert colors
 $mb-color-info                 : $mb-color-cyan-500;
-$mb-color-info-hover           : $mb-color-cyan-600;
-$mb-color-info-active          : $mb-color-cyan-400;
-$mb-color-info-border          : $mb-color-cyan-500;
+$mb-color-info-dark            : $mb-color-cyan-600;
+$mb-color-info-light           : $mb-color-cyan-400;
 $mb-color-info-highlight       : $mb-color-cyan-highlight;
 
 // Notes color
 $mb-color-note                 : $mb-color-yellow-500;
-$mb-color-note-hover           : $mb-color-yellow-600;
-$mb-color-note-active          : $mb-color-yellow-400;
-$mb-color-note-border          : $mb-color-yellow-500;
+$mb-color-note-dark            : $mb-color-yellow-600;
+$mb-color-note-light           : $mb-color-yellow-400;
 $mb-color-note-highlight       : $mb-color-yellow-highlight;
 
 /* UTILITY COLORS END */
+
+@mixin mb-color-disable($color) {
+	color.adjust($color, $saturation: -30%, $lightness: -10%);
+}
