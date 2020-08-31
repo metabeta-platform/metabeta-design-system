@@ -1,7 +1,7 @@
 .primary {
-  background-color: $mb-color-primary;
+  background-color: $mb-color-primary ;
   color: $mb-color-white;
-  border: none;
+  border: 0.0625rem solid $mb-color-primary;
   svg {
     .svg-fill {
       fill: $mb-color-white;
@@ -11,34 +11,115 @@
     } // style for icons
   }
   &:hover {
-    background-color: $mb-color-primary-hover;
+    color: $mb-color-white;
+    background-color: $mb-color-primary-dark;
+    border: 0.0625rem solid $mb-color-primary-dark;
   }
   &:active {
-    background-color: $mb-color-primary-active;
+    color: $mb-color-white;
+    background-color: $mb-color-primary-light;
+    border: 0.0625rem solid $mb-color-primary-light;
   }
   &:disabled,
   &.disabled {
-    background-color: fade-out(
-      desaturate($mb-color-primary-disabled, 0.48),
-      0.48
-    ); // TBD
-    color: fade-out($mb-color-white, 0.24);
+    background-color: fade-out(desaturate($mb-color-primary, 0.48), 0.52);
+    color: fade-out($mb-color-white,0.24);
+    border: 0.0625rem solid fade-out(desaturate($mb-color-primary, 0.24),0.9998);
     svg {
       .svg-fill {
-        fill: fade-out(desaturate($mb-color-primary-disabled, 0.48), 0.48);
+        fill: fade-out(desaturate($mb-color-primary, 0.48),0.48);
       }
       .svg-stroke {
-        stroke: fade-out($mb-color-white, 0.24);
+        stroke: fade-out($mb-color-white,0.24);
       } // style for icons
     }
   }
 }
 
-// Marius please add for other interactions
+.secondary {
+  background-color: $mb-color-white;
+  color: $mb-color-text-medium;
+  border: 0.0625rem solid $mb-color-border-medium;
+  svg {
+    .svg-fill {
+      fill: $mb-color-text-medium;
+    }
+    .svg-stroke {
+      stroke: $mb-color-text-medium;
+    } // style for icons
+  }
+  &:hover {
+    color: $mb-color-headings;
+    background-color: $mb-color-gray-highlight;
+    border: 0.0625rem solid $mb-color-border-dark;
+  }
+  &:active {
+    color: $mb-color-primary;
+    background-color: $mb-color-primary-highlight;
+    border: 0.0625rem solid $mb-color-primary;
+  }
+  &:disabled,
+  &.disabled {
+    background-color: fade-out(desaturate($mb-color-gray, 0.48),0.76);
+    color: fade-out($mb-color-text-medium,0.76);
+    border: 0.0625rem solid fade-out(desaturate($mb-color-gray, 0.24),0.76);
+    svg {
+      .svg-fill {
+        fill: fade-out(desaturate($mb-color-text-medium, 0.48),0.76);
+      }
+      .svg-stroke {
+        stroke: fade-out($mb-color-text-medium,0.76);
+      } // style for icons
+    }
+  }
+}
+
+.base {
+  background-color: $mb-color-white;
+  color: $mb-color-text-medium;
+  border: 0.0625rem solid $mb-color-white;
+  svg {
+    .svg-fill {
+      fill: $mb-color-text-medium;
+    }
+    .svg-stroke {
+      stroke: $mb-color-text-medium;
+    } // style for icons
+  }
+  &:hover {
+    color: $mb-color-headings;
+    background-color: $mb-color-gray-highlight;
+    border: 0.0625rem solid $mb-color-white;
+  }
+  &:active {
+    color: $mb-color-primary;
+    background-color: $mb-color-primary-highlight;
+    border: 0.0625rem solid $mb-color-white;
+
+  }
+  &:disabled,
+  &.disabled {
+    background-color: fade-out(desaturate($mb-color-gray, 0.48),0.76);
+    color: fade-out($mb-color-text-medium,0.76);
+    border: 0.0625rem solid fade-out(desaturate($mb-color-gray, 0.24),0.9998);
+    svg {
+      .svg-fill {
+        fill: fade-out(desaturate($mb-color-text-medium, 0.48),0.76);
+      }
+      .svg-stroke {
+        stroke: fade-out($mb-color-text-medium,0.76);
+      } // style for icons
+    }
+  }
+}
+
+
+
+
 
 // Needs finalization by @CristianBurac, then replication for
 // - secondary
-// - base
+// - base 
 
 // Additional classes will be used for, to override properties.
 // Attention - primary-secondary-base represents hierarchy while danger-success-warning-info represents operation type (destructive, etc)
@@ -47,6 +128,8 @@
 // - warning
 // - info
 // - note
+
+
 
 // .interaction {
 //   &_red {
