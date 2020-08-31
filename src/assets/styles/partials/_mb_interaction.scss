@@ -1,7 +1,7 @@
 .primary {
   background-color: $mb-color-primary ;
   color: $mb-color-white;
-  border: 0.0625rem solid $mb-color-primary;
+  border: $mb-border-thin solid $mb-color-primary;
   svg {
     .svg-fill {
       fill: $mb-color-white;
@@ -13,18 +13,18 @@
   &:hover {
     color: $mb-color-white;
     background-color: $mb-color-primary-dark;
-    border: 0.0625rem solid $mb-color-primary-dark;
+    border: $mb-border-thin solid $mb-color-primary-dark;
   }
   &:active {
     color: $mb-color-white;
     background-color: $mb-color-primary-light;
-    border: 0.0625rem solid $mb-color-primary-light;
+    border: $mb-border-thin solid $mb-color-primary-light;
   }
   &:disabled,
   &.disabled {
     background-color: fade-out(desaturate($mb-color-primary, 0.48), 0.52);
     color: fade-out($mb-color-white,0.24);
-    border: 0.0625rem solid fade-out(desaturate($mb-color-primary, 0.24),0.9998);
+    border: $mb-border-thin solid fade-out(desaturate($mb-color-primary, 0.24),0.9998);
     svg {
       .svg-fill {
         fill: fade-out(desaturate($mb-color-primary, 0.48),0.48);
@@ -39,7 +39,7 @@
 .secondary {
   background-color: $mb-color-white;
   color: $mb-color-text-medium;
-  border: 0.0625rem solid $mb-color-border-medium;
+  border: $mb-border-thin solid $mb-color-border-medium;
   svg {
     .svg-fill {
       fill: $mb-color-text-medium;
@@ -51,18 +51,18 @@
   &:hover {
     color: $mb-color-headings;
     background-color: $mb-color-gray-highlight;
-    border: 0.0625rem solid $mb-color-border-dark;
+    border: $mb-border-thin solid $mb-color-border-dark;
   }
   &:active {
     color: $mb-color-primary;
     background-color: $mb-color-primary-highlight;
-    border: 0.0625rem solid $mb-color-primary;
+    border: $mb-border-thin solid $mb-color-primary;
   }
   &:disabled,
   &.disabled {
     background-color: fade-out(desaturate($mb-color-gray, 0.48),0.76);
     color: fade-out($mb-color-text-medium,0.76);
-    border: 0.0625rem solid fade-out(desaturate($mb-color-gray, 0.24),0.76);
+    border: $mb-border-thin solid fade-out(desaturate($mb-color-gray, 0.24),0.76);
     svg {
       .svg-fill {
         fill: fade-out(desaturate($mb-color-text-medium, 0.48),0.76);
@@ -77,7 +77,7 @@
 .base {
   background-color: $mb-color-white;
   color: $mb-color-text-medium;
-  border: 0.0625rem solid $mb-color-white;
+  border: $mb-border-thin solid $mb-color-white;
   svg {
     .svg-fill {
       fill: $mb-color-text-medium;
@@ -89,19 +89,19 @@
   &:hover {
     color: $mb-color-headings;
     background-color: $mb-color-gray-highlight;
-    border: 0.0625rem solid $mb-color-white;
+    border: $mb-border-thin solid $mb-color-white;
   }
   &:active {
     color: $mb-color-primary;
     background-color: $mb-color-primary-highlight;
-    border: 0.0625rem solid $mb-color-white;
+    border: $mb-border-thin solid $mb-color-white;
 
   }
   &:disabled,
   &.disabled {
     background-color: fade-out(desaturate($mb-color-gray, 0.48),0.76);
     color: fade-out($mb-color-text-medium,0.76);
-    border: 0.0625rem solid fade-out(desaturate($mb-color-gray, 0.24),0.9998);
+    border: $mb-border-thin solid fade-out(desaturate($mb-color-gray, 0.24),0.9998);
     svg {
       .svg-fill {
         fill: fade-out(desaturate($mb-color-text-medium, 0.48),0.76);
