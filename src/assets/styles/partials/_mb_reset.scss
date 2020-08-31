@@ -2,60 +2,6 @@
    v2.0-modified | 20110126
    License: none (public domain) */
 
-// HTML5 display-role reset for older browsers
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-header,
-main,
-section,
-aside,
-menu {
-  display: block;
-  font-family: inherit;
-  font-size: inherit;
-  margin: 0;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: inherit;
-  outline: none 0;
-  border: none;
-  text-size-adjust: 100%;
-  appearance: none;
-  box-sizing: inherit;
-}
-
-video {
-  min-height: 400px;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-embed {
-  width: 100%;
-  height: 100%;
-}
-iframe {
-  min-height: 400px;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-form {
-  width: 100%;
-  display: block;
-}
-
 // Reset margins and padding for HTML elements
 a,
 abbr,
@@ -148,7 +94,8 @@ var,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: none;
+  outline: none 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -169,6 +116,31 @@ body {
   min-height: 100vh;
   // max-height: 100vh;
   overflow: auto;
+}
+
+// HTML5 display-role reset for older browsers
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+header,
+main,
+section,
+aside,
+menu {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: inherit;
+  text-size-adjust: 100%;
+  appearance: none;
 }
 
 // Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
@@ -221,6 +193,18 @@ legend {
   *margin-left: -7px; /* 3 */
 }
 
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+embed,
+object {
+  width: 100%;
+  height: 100%;
+}
+
 audio,
 canvas,
 video {
@@ -234,6 +218,11 @@ video {
 audio:not([controls]) {
   display: none;
   height: 0;
+}
+
+form {
+  width: 100%;
+  display: block;
 }
 
 // 1. Correct font size not being inherited in all browsers.

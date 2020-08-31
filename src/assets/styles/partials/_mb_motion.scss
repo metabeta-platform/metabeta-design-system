@@ -13,17 +13,23 @@ $mb-speed-slower: 0.6s; // 32 frames, use for background dimming
 
 /* TRANSITION MIXINS START */
 
-.mb-transition-drawer {
-  position: absolute;
-  &.mb-state-visible {
-    transition: all $mb-speed-slow $mb-ease-intro;
-    right: 0;
-  }
+@mixin mb-transition($type) {
+	@if $type==intro {
+		transition: all $mb-speed-slow $mb-ease-intro;
+	}
+	@else if $type==outro {
+		transition: all $mb-speed-fast $mb-ease-outro;
+	}
+	@else if $type==smooth {
+		transition: all $mb-speed-fast $mb-ease-base;
+	}
+	@else {
+		transition: none;
+	}
+}
 
-  &.mb-state-hidden {
-    transition: all $mb-speed-fast $mb-ease-outro;
-    right: -100%;
-  }
+@mixin mb-animation($type) {
+	// In progress
 }
 
 /* TRANSITION MIXIN END */
