@@ -2,4 +2,4 @@
 
 A design system and set of components created by the [Metabeta](www.metabeta.com) team and shared as an Open Source project. Please contribute and use!
 
-A little documentation is available : https://hrshp71.github.io/websitePreview/ => It's under progress.
+Sorry for inconvenience, this is under progress until it becomes a Vue components package, we depricated some of the scss provided in earlier versions.
