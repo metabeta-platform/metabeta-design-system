@@ -1,39 +1,44 @@
 .primary {
-  background-color: $color-primary;
-  color: $color-white;
+  background-color: $mb-color-primary;
+  color: $mb-color-white;
   border: none;
   svg {
     .svg-fill {
-      fill: $color-white;
+      fill: $mb-color-white;
     }
     .svg-stroke {
-      stroke: $color-white;
+      stroke: $mb-color-white;
     } // style for icons
   }
   &:hover {
-    background-color: $color-primary-hover;
+    background-color: $mb-color-primary-hover;
   }
   &:active {
-    background-color: $color-primary-active;
+    background-color: $mb-color-primary-active;
   }
   &:disabled,
   &.disabled {
-    background-color: fade-out(desaturate($color-primary-disabled, 48%),48%); // TBD
-    color: fade-out($color-white,24%);
+    background-color: fade-out(
+      desaturate($mb-color-primary-disabled, 0.48),
+      0.48
+    ); // TBD
+    color: fade-out($mb-color-white, 0.24);
     svg {
       .svg-fill {
-        fill: fade-out(desaturate($color-primary-disabled, 48%),48%);
+        fill: fade-out(desaturate($mb-color-primary-disabled, 0.48), 0.48);
       }
       .svg-stroke {
-        stroke: fade-out($color-white,24%);
+        stroke: fade-out($mb-color-white, 0.24);
       } // style for icons
     }
   }
 }
 
+// Marius please add for other interactions
+
 // Needs finalization by @CristianBurac, then replication for
 // - secondary
-// - base 
+// - base
 
 // Additional classes will be used for, to override properties.
 // Attention - primary-secondary-base represents hierarchy while danger-success-warning-info represents operation type (destructive, etc)
@@ -42,8 +47,6 @@
 // - warning
 // - info
 // - note
-
-
 
 // .interaction {
 //   &_red {
