@@ -15,11 +15,11 @@ $mb-font-weight-normal   : 400;
 $mb-font-weight-bold     : 500;
 
 // Letter spacing
-$mb-letter-spacing-tighter    : -0.2em;
-$mb-letter-spacing-tight      : -0.1em;
+$mb-letter-spacing-tighter    : -0.02em;
+$mb-letter-spacing-tight      : -0.01em;
 $mb-letter-spacing-normal     : 0em;
-$mb-letter-spacing-loose      : 0.1em;
-$mb-letter-spacing-looser     : 0.2em;
+$mb-letter-spacing-loose      : 0.01em;
+$mb-letter-spacing-looser     : 0.02em;
 
 // Line heights
 $mb-line-height-xxs           : 0.75rem;
@@ -130,7 +130,7 @@ monospace;
     }
 
     @else {
-      line-height: $mb-line-height-xxs-normal;
+      line-height: $mb-line-height-xxs;
     }
   }
 
@@ -307,7 +307,7 @@ monospace;
 }
 
 // Mixin for captions
-@mixin mb-label($size) {
+@mixin mb-caption($size) {
   @include mb-font(body, #{$size}, #{$size}-compact);
   color: $mb-color-text-medium;
 }
