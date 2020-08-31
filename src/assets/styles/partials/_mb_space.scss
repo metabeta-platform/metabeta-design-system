@@ -1,4 +1,4 @@
-/* BASIC SPACE VARIABLES START */
+/* SPACE VARIABLES START */
 
 // Spacing variables
 $mb-space-xxxs: 0.125rem;
@@ -16,62 +16,7 @@ $mb-border-thin: 1px;
 $mb-border-base: 2px;
 $mb-border-thick: 4px;
 
-/* BASIC SPACING VARIABLES END */
-
-/* PADDING & MARGIN MIXINS START */
-// Define space list map
-// $mb-space-list: (
-//   0: 0,
-//   xxs: $mb-space-xxs,
-//   xs: $mb-space-xxs,
-//   s: $mb-space-s,
-//   m: $mb-space-m,
-//   l: $mb-space-l,
-//   xl: $mb-space-xl,
-//   xxl: $mb-space-xxl,
-//   xxxl: $mb-space-xxxl,
-// );
-// @each $vertical, $vertical-space in $mb-space-list {
-//   @each $horizontal, $horizontal-space in $mb-space-list {
-//     .padding-#{$vertical}-#{$horizontal} {
-//       padding: $vertical-space $horizontal-space;
-//     }
-//   }
-// }
-// // Simple margin
-// @each $vertical, $vertical-space in $mb-space-list {
-//   @each $horizontal, $horizontal-space in $mb-space-list {
-//     .margin-#{$vertical}-#{$horizontal} {
-//       margin: $vertical-space $horizontal-space;
-//     }
-//   }
-// }
-
-// // Full padding
-// @each $top, $top-space in $mb-space-list {
-//   @each $right, $right-space in $mb-space-list {
-//     @each $bottom, $bottom-space in $mb-space-list {
-//       @each $left, $left-space in $mb-space-list {
-//         .padding-#{$top}-#{$right}-#{$bottom}-#{$left} {
-//           padding: $top-space $right-space $bottom-space $left-space;
-//         }
-//       }
-//     }
-//   }
-// }
-// // Full margin
-// @each $top, $top-space in $mb-space-list {
-//   @each $right, $right-space in $mb-space-list {
-//     @each $bottom, $bottom-space in $mb-space-list {
-//       @each $left, $left-space in $mb-space-list {
-//         .margin-#{$top}-#{$right}-#{$bottom}-#{$left} {
-//           margin: $top-space $right-space $bottom-space $left-space;
-//         }
-//       }
-//     }
-//   }
-// }
-/* PADDING & MARGIN MIXINS END */
+/* SPACE VARIABLES END */
 
 /* SPACE MIXINS START */
 
@@ -107,7 +52,7 @@ $mb-border-thick: 4px;
   }
 }
 
-/* SPACE UTILITY MIXIN END */
+/* SPACE MIXINS END */
 
 /* MEDIA QUERIES START */
 
@@ -162,176 +107,14 @@ $mb-touch-min: 40px; // Minimal usable size
 
 /* MEDIA QUERIES END */
 
-/* NEW GRID MIXINS START */
+/* GRID MIXINS START */
 
 // Define number of grid columns.
 $mb-grid-columns: 12;
-$mb-grid-column-width: 1/$mb-grid-columns;
+$mb-grid-gutter: $mb-space-m;
 
-// Mixin for defining grid column width
-@mixin mb-columns($desktop, $laptop: $desktop, $tablet: $laptop, $phone: $tablet) {
-  width: $desktop * $mb-grid-column-width;
-  @include mb-media(desktop) {
-    width: $desktop * $mb-grid-column-width;
-  }
-  @include mb-media(laptop) {
-    width: $laptop * $mb-grid-column-width;
-  }
-  @include mb-media(tablet) {
-    width: $tablet * $mb-grid-column-width;
-  }
-  @include mb-media(phone) {
-    width: $phone * $mb-grid-column-width;
-  }
-}
+// Grid mixin to be added
 
-
-/* NEW GRID MIXINS END */
-
-/* CLEAR DISPLAY CLASS START */
-// $mb-display: none, flex, block, grid, inline-block;
-
-// @each $i in $mb-display {
-//   @each $j in $mb-display {
-//     @each $k in $mb-display {
-//       @each $l in $mb-display {
-//         .display-#{$l}-#{$k}-#{$j}-#{$i} {
-//           @include mb-media(desktop) {
-//             display: $l;
-//           }
-//           @include mb-media(laptop) {
-//             display: $k;
-//           }
-//           @include mb-media(tablet) {
-//             display: $j;
-//           }
-//           @include mb-media(phone) {
-//             display: $i;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-/* CLEAR DISPLAY CLASS END */
-
-/* OLD GRID STARTS */
-
-$mb-desktop-columns: 12; // Can be changed to whatever value you want
-$mb-laptop-columns: 12;
-$mb-tablet-columns: 8;
-$mb-phone-columns: 4;
-
-.mb-flex {
-  padding: 0 $mb-space-m;
-  @include mb-media(phone) {
-    padding: 0 $mb-space-s;
-  }
-}
-
-.mb-flex-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 #{-$mb-space-m};
-  @include mb-media(phone) {
-    margin: 0 -$mb-space-s;
-  }
-}
-
-@mixin mb-flex-fixed($value) {
-  flex-grow: $value;
-  flex-shrink: 0;
-}
-
-@function mb-column-width($grid-count-in-size, $columns) {
-  @return 100% / $grid-count-in-size * $columns;
-}
-
-@for $i from 1 through $mb-desktop-columns {
-  @for $k from 1 through $mb-laptop-columns {
-    @for $l from 1 through $mb-tablet-columns {
-      @for $m from 1 through $mb-phone-columns {
-        .mb-col-#{$i}-#{$k}-#{$l}-#{$m} {
-          position: relative;
-          width: 100%;
-          flex: 0 0 mb-column-width($mb-desktop-columns, $i);
-          max-width: mb-column-width($mb-desktop-columns, $i);
-          padding: 0 $mb-space-m;
-          @include mb-media(laptop) {
-            flex: 0 0 mb-column-width($mb-laptop-columns, $k);
-            max-width: mb-column-width($mb-laptop-columns, $k);
-            padding: 0 $mb-space-m;
-          }
-          @include mb-media(tablet) {
-            flex: 0 0 mb-column-width($mb-tablet-columns, $l);
-            max-width: mb-column-width($mb-tablet-columns, $l);
-            padding: 0 $mb-space-m;
-          }
-          @include mb-media(phone) {
-            flex: 0 0 mb-column-width($mb-phone-columns, $m);
-            max-width: mb-column-width($mb-phone-columns, $m);
-            padding: 0 $mb-space-s;
-          }
-        }
-      }
-    }
-  }
-}
-
-@function mb-repeater($count, $string) {
-  $repeated-text: "";
-  @if $count >= 1 {
-    @for $i from 1 through $count {
-      $repeated-text: $repeated-text + " " + $string;
-    }
-    @return unquote($repeated-text);
-  }
-  @return unquote($repeated-text);
-}
-
-@mixin mb-grid-mixin(
-  $grid-count,
-  $grid-template,
-  $grid-min-max-value,
-  $grid-min-max: false,
-  $grid-min-max-direction: "start"
-) {
-  display: grid;
-  @if $grid-min-max {
-    @if $grid-template== "col" {
-      @if $grid-min-max-direction== "end" {
-        grid-template-columns: mb-repeater($grid-count - 1, 1fr) minmax(
-            $grid-min-max-value,
-            1fr
-          );
-      } @else {
-        grid-template-columns: minmax($grid-min-max-value, 1fr) mb-repeater(
-            $grid-count - 1,
-            1fr
-          );
-      }
-    } @else {
-      @if $grid-min-max-direction== "end" {
-        grid-template-rows: mb-repeater($grid-count - 1, 1fr) minmax(
-            1fr,
-            $grid-min-max-value
-          );
-      } @else {
-        grid-template-rows: minmax($grid-min-max-value, 1fr) mb-repeater(
-            $grid-count - 1,
-            1fr
-          );
-      }
-    }
-  } @else {
-    @if $grid-template== "col" {
-      grid-template-columns: mb-repeater($grid-count, 1fr);
-    } @else {
-      grid-template-rows: mb-repeater($grid-count, 1fr);
-    }
-  }
-}
 /* GRID ENDS */
 
 /* DEPTH MIXINS START */
@@ -368,69 +151,3 @@ $mb-phone-columns: 4;
 }
 
 /* DEPTH MIXIN ENDD */
-
-// @mixin flex-center-center {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-// @mixin flex-center-start {
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-// }
-// @mixin flex-center-end {
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-end;
-// }
-// @mixin flex-center-between {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
-
-// .flex-wrap {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-// .align-center {
-//   align-items: center;
-// }
-// .align-end {
-//   align-items: flex-end;
-// }
-// .align-start {
-//   align-items: flex-start;
-// }
-// .text-center {
-//   text-align: center;
-// }
-// .text-start {
-//   text-align: left;
-// }
-// .text-end {
-//   text-align: right;
-// }
-// @mixin absolute($top, $left) {
-//   position: absolute;
-//   top: $top * 1%;
-//   left: $left * 1%;
-//   transform: translate(-$left * 1%, -$top * 1%);
-// }
-
-// .image-fluid {
-//   max-width: 100%;
-//   height: auto;
-// }
-// /* This wont work IE12- */
-// .image-cover {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-// .image-contain {
-//   min-width: 100%;
-//   height: auto;
-//   object-fit: contain;
-// }
