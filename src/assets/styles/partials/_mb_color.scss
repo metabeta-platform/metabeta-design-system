@@ -220,6 +220,9 @@ $mb-color-note-highlight       : $mb-color-yellow-highlight;
 
 /* UTILITY COLORS END */
 
-@mixin mb-color-disable($color) {
-	color.adjust($color, $saturation: -30%, $lightness: -10%);
+@mixin mb-color-disable($color, $type) {
+  #{$type} :mb-color-adjust($color, -30%, -10%);
+}
+@function mb-color-adjust($mb-color, $mb-saturation, $mb-lightness){
+  @return adjust-color($color : $mb-color, $saturation: $mb-saturation, $lightness: $mb-lightness);
 }
