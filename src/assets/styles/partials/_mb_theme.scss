@@ -430,7 +430,6 @@ input {
     }
     &:disabled{
       cursor: not-allowed;
-      pointer-events: none;
       & + label{
         color: rgba($mb-color-gray, $mb-opacity-l);
         &::before{
