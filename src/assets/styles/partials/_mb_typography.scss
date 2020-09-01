@@ -224,7 +224,7 @@ $mb-font-family-monospace: "Lucida Console", "Courier Pro", monospace;
 
 // Mixin for headings
 @mixin mb-heading($size) {
-  @include mb-font(headings, #{$size}, #{$size}, bold, normal);
+  @include mb-font(headings, #{$size}, bold, normal);
   color: $mb-color-headings;
   @if $size==xxs {
     letter-spacing: $mb-letter-spacing-looser;

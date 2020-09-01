@@ -310,10 +310,6 @@ input {
     width: 2rem;
     height: 2rem;
   }
-  &[type="range"] {
-    width: 100%;
-    padding: 0;
-  }
   &[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
     @include mb-border-radius(s);
@@ -342,6 +338,8 @@ input {
     background-color: $mb-color-gray-highlight;
   }
   &[type="range"] {
+    width: 100%;
+    padding: 0;
     &::-webkit-slider-thumb{
       -webkit-appearance: none;
       box-shadow: none;
@@ -409,7 +407,7 @@ input {
       color: $mb-color-text-medium;
     }
     &:hover {
-      +label{
+      & +label{
         cursor: pointer;
         &::before{
           border: 0.0625rem solid $mb-color-border-dark;
@@ -461,23 +459,21 @@ input {
       display: none;
       margin: 0.2rem;
       &+ label{
-        + label {
-          padding: $mb-space-xs 0 0 0;
-          @include mb-caption(s);
-          color: $mb-color-text-medium;
-        }
+        padding: $mb-space-xs 0 0 0;
+        @include mb-caption(s);
+        color: $mb-color-text-medium;
         &::before{
           content: "";
-        border: 0.0625rem solid $mb-color-border-medium;
-        @include mb-border-radius(circle);
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        padding-left: $mb-space-xxs;
-        padding-bottom: $mb-space-xxs;
-        margin-right: $mb-space-xs;
-        vertical-align: bottom;
-        color: transparent;
+          border: 0.0625rem solid $mb-color-border-medium;
+          @include mb-border-radius(circle);
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          padding-left: $mb-space-xxs;
+          padding-bottom: $mb-space-xxs;
+          margin-right: $mb-space-xs;
+          vertical-align: bottom;
+          color: transparent;
         }
       }
       &:hover{
@@ -527,7 +523,7 @@ input {
       }
       &:checked{
         &:focus{
-          +label{
+          &+label{
             &::before{
               border: $mb-border-thin solid $mb-color-primary;
             }
@@ -536,7 +532,7 @@ input {
       }
       &:not(:checked){
         &:focus{
-          +label{
+          &+label{
             &::before{
               border: $mb-border-thin solid $mb-color-primary;
             }
