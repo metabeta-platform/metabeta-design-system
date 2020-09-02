@@ -103,8 +103,8 @@ $mb-font-family-monospace: "Lucida Console", "Courier Pro", monospace;
   $family: body,
   $size: m,
   $weight: normal,
-  $style: normal,
   $line-height: normal,
+  $style: normal,
   $letter-spacing: normal) {
   @if ($family==body) {
     font-family: $mb-font-family-body;
@@ -254,19 +254,19 @@ $mb-font-family-monospace: "Lucida Console", "Courier Pro", monospace;
 
 // Mixin for text
 @mixin mb-text($size) {
-  @include mb-font(body, #{$size}, #{$size});
+  @include mb-font(body, #{$size}, normal, normal);
   color: $mb-color-text-dark;
 }
 
 // Mixin for labels
 @mixin mb-label($size) {
-  @include mb-font(body, #{$size}, #{$size}-compact, bold);
+  @include mb-font(body, #{$size}, bold, compact);
   color: $mb-color-headings;
 }
 
 // Mixin for captions
 @mixin mb-caption($size) {
-  @include mb-font(body, #{$size}, #{$size}-compact);
+  @include mb-font(body, #{$size}, normal, compact);
   color: $mb-color-text-medium;
 }
 
@@ -284,5 +284,4 @@ $mb-font-family-monospace: "Lucida Console", "Courier Pro", monospace;
     white-space: nowrap;
   }
 }
-
 /* TYPOGRAPHY MIXINS END */
