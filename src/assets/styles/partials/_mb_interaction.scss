@@ -401,9 +401,11 @@
   color: $mb-color-text-medium;
   border: $mb-border-thin solid $mb-color-transparent;
   svg {
+    #svg-fill,
     .svg-fill {
       fill: $mb-color-text-light;
     }
+    #svg-stroke,
     .svg-stroke {
       stroke: $mb-color-text-light;
     } // style for icons
@@ -412,9 +414,11 @@
     color: $mb-color-headings;
     background-color: $mb-color-gray-highlight;
     svg {
+      #svg-fill,
       .svg-fill {
         fill: $mb-color-text-medium;
       }
+      #svg-stroke,
       .svg-stroke {
         stroke: $mb-color-text-medium;
       } // style for icons
@@ -424,9 +428,11 @@
     color: $mb-color-primary;
     background-color: $mb-color-primary-highlight;
     svg {
+      #svg-fill,
       .svg-fill {
         fill: $mb-color-primary;
       }
+      #svg-stroke,
       .svg-stroke {
         stroke: $mb-color-primary;
       } // style for icons
@@ -437,9 +443,11 @@
     background-color: fade-out(desaturate($mb-color-gray, $mb-opacity-m),0.9);
     color: fade-out($mb-color-text-medium, $mb-opacity-l);
     svg {
+      #svg-fill,
       .svg-fill {
         fill: fade-out(desaturate($mb-color-text-medium, $mb-opacity-m), $mb-opacity-xl);
       }
+      #svg-stroke,
       .svg-stroke {
         stroke: fade-out($mb-color-text-medium, $mb-opacity-xl);
       } // style for icons
@@ -448,9 +456,11 @@
   &.danger{
     color: $mb-color-danger;
     svg {
+      #svg-fill,
       .svg-fill {
         fill: $mb-color-danger;
       }
+      #svg-stroke,
       .svg-stroke {
         stroke: $mb-color-danger;
       } // style for icons
@@ -459,9 +469,11 @@
       color: $mb-color-danger-dark;
       background-color: $mb-color-danger-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-danger-dark;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-danger-dark;
         } // style for icons
@@ -471,9 +483,11 @@
       color: $mb-color-danger-light;
       background-color: $mb-color-danger-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-danger-light;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-danger-light;
         } // style for icons
@@ -484,9 +498,11 @@
       background-color: fade-out(desaturate($mb-color-danger, $mb-opacity-m),0.9);
       color: fade-out($mb-color-danger, $mb-opacity-l);
       svg {
+        #svg-fill,
         .svg-fill {
           fill: fade-out(desaturate($mb-color-danger, $mb-opacity-m),$mb-opacity-xl);
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: fade-out($mb-color-danger, $mb-opacity-xl);
         } // style for icons
@@ -496,9 +512,11 @@
   &.success{
     color: $mb-color-success;
     svg {
+      #svg-fill,
       .svg-fill {
         fill: $mb-color-success;
       }
+      #svg-stroke,
       .svg-stroke {
         stroke: $mb-color-success;
       } // style for icons
@@ -507,9 +525,11 @@
       color: $mb-color-success-dark;
       background-color: $mb-color-success-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-success-dark;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-success-dark;
         } // style for icons
@@ -519,9 +539,11 @@
       color: $mb-color-success-light;
       background-color: $mb-color-success-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-success-light;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-success-light;
         } // style for icons
@@ -532,9 +554,11 @@
       background-color: fade-out(desaturate($mb-color-success, $mb-opacity-m),0.9);
       color: fade-out($mb-color-success,$mb-opacity-l);
       svg {
+        #svg-fill,
         .svg-fill {
           fill: fade-out(desaturate($mb-color-success, $mb-opacity-m),$mb-opacity-xl);
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: fade-out($mb-color-success, $mb-opacity-xl);
         } // style for icons
@@ -544,9 +568,11 @@
   &.info{
     color: $mb-color-info;
     svg {
+      #svg-fill,
       .svg-fill {
         fill: $mb-color-info;
       }
+      #svg-stroke,
       .svg-stroke {
         stroke: $mb-color-info;
       } // style for icons
@@ -555,9 +581,11 @@
       color: $mb-color-info-dark;
       background-color: $mb-color-info-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-info-dark;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-info-dark;
         } // style for icons
@@ -567,9 +595,11 @@
       color: $mb-color-info-light;
       background-color: $mb-color-info-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-info-light;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-info-light;
         } // style for icons
@@ -580,9 +610,11 @@
       background-color: fade-out(desaturate($mb-color-info, $mb-opacity-m),0.9);
       color: fade-out($mb-color-info,$mb-opacity-l);
       svg {
+        #svg-fill,
         .svg-fill {
           fill: fade-out(desaturate($mb-color-info, $mb-opacity-m),$mb-opacity-xl);
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: fade-out($mb-color-info,$mb-opacity-xl);
         } // style for icons
@@ -592,9 +624,11 @@
   &.warning{
     color: $mb-color-warning;
     svg {
+      #svg-fill,
       .svg-fill {
         fill: $mb-color-warning;
       }
+      #svg-stroke,
       .svg-stroke {
         stroke: $mb-color-warning;
       } // style for icons
@@ -603,9 +637,11 @@
       color: $mb-color-warning-dark;
       background-color: $mb-color-warning-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-warning-dark;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-warning-dark;
         } // style for icons
@@ -615,9 +651,11 @@
       color: $mb-color-warning-light;
       background-color: $mb-color-warning-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-warning-light;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-warning-light;
         } // style for icons
@@ -628,9 +666,11 @@
       background-color: fade-out(desaturate($mb-color-warning, $mb-opacity-m),0.9);
       color: fade-out($mb-color-warning, $mb-opacity-l);
       svg {
+        #svg-fill,
         .svg-fill {
           fill: fade-out(desaturate($mb-color-warning, $mb-opacity-m),$mb-opacity-xl);
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: fade-out($mb-color-warning, $mb-opacity-xl);
         } // style for icons
@@ -640,9 +680,11 @@
   &.note{
     color: $mb-color-note;
     svg {
+      #svg-fill,
       .svg-fill {
         fill: $mb-color-note;
       }
+      #svg-stroke,
       .svg-stroke {
         stroke: $mb-color-note;
       } // style for icons
@@ -651,9 +693,11 @@
       color: $mb-color-note-dark;
       background-color: $mb-color-note-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-note-dark;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-note-dark;
         } // style for icons
@@ -663,9 +707,11 @@
       color: $mb-color-note-light;
       background-color: $mb-color-note-highlight;
       svg {
+        #svg-fill,
         .svg-fill {
           fill: $mb-color-note-light;
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: $mb-color-note-light;
         } // style for icons
@@ -676,9 +722,11 @@
       background-color: fade-out(desaturate($mb-color-note, $mb-opacity-m),0.9);
       color: fade-out($mb-color-note, $mb-opacity-l);
       svg {
+        #svg-fill,
         .svg-fill {
           fill: fade-out(desaturate($mb-color-note, $mb-opacity-m),$mb-opacity-xl);
         }
+        #svg-stroke,
         .svg-stroke {
           stroke: fade-out($mb-color-note,$mb-opacity-xl);
         } // style for icons
