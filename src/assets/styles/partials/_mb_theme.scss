@@ -39,27 +39,32 @@ div {
   display: inline-block;
   box-shadow: none;
   cursor: pointer;
+
   &:hover {
     color: $mb-color-headings;
     background-color: $mb-color-primary-highlight;
     border: $mb-border-thin solid rgba($mb-color-primary-highlight, $mb-opacity-xxs);
   }
+
   &:active {
     color: $mb-color-primary;
     background-color: $mb-color-primary-highlight;
     border: $mb-border-thin solid rgba($mb-color-primary-highlight, $mb-opacity-xxs);
   }
 }
+
 .mb-btn-primary-s {
   @extend .mb-btn-s;
   color: $mb-color-white;
   background-color: $mb-color-primary;
   border: $mb-border-thin solid $mb-color-primary;
+
   &:hover {
     color: $mb-color-white;
     background-color: $mb-color-primary-hover;
     border: $mb-border-thin solid $mb-color-primary;
   }
+
   &:active {
     color: $mb-color-white;
     background-color: $mb-color-primary-active;
@@ -109,6 +114,7 @@ li {
   @include mb-text(m);
   margin: 0 0 0.5em;
 }
+
 // Use <blockquote cite="source"></blockquote>
 // Add author in footer
 
@@ -119,9 +125,11 @@ blockquote {
   font-style: italic;
   margin: 0 0 0.5em;
   color: $mb-color-headings;
+
   footer {
     @include mb-caption(s);
     margin-top: $mb-space-xs;
+
     &::before {
       content: "\2014";
     }
@@ -138,9 +146,11 @@ article {
     font-size: $mb-font-size-l;
     line-height: $mb-line-height-l;
   }
+
   li {
     font-size: $mb-font-size-l;
     line-height: $mb-line-height-l;
+
     &::before {
       display: inline-block;
       width: $mb-space-l;
@@ -150,30 +160,37 @@ article {
       color: $mb-color-cyan;
     }
   }
+
   ul {
     padding-left: $mb-space-xl;
+
     li::before {
       content: "\2022";
       font-size: $mb-font-size-m;
     }
   }
+
   ol {
     padding-left: $mb-space-xl;
     list-style: none;
     counter-reset: li;
+
     li {
       counter-increment: li;
     }
+
     li::before {
       content: counter(li);
     }
   }
-  dl {
-  }
+
+  dl {}
+
   dt {
     @include mb-label(l);
     margin: $mb-space-m 0 $mb-space-s;
   }
+
   dd {
     @include mb-text(l);
     margin: 0 0 0.5em;
@@ -184,25 +201,28 @@ article {
 
 /* MEDIA START */
 
-figcaption {
-}
-figure {
-}
+figcaption {}
+
+figure {}
+
 img {
   width: 100%;
   height: 100%;
 }
-audio {
-}
+
+audio {}
+
 video {
   display: block;
   width: 100%;
   height: 100%;
 }
+
 embed {
   width: 100%;
   height: 100%;
 }
+
 iframe {
   width: 100%;
   height: 100%;
@@ -214,15 +234,17 @@ iframe {
 /* TABLES START */
 table {
   width: 100%;
-  caption {
-  }
+
+  caption {}
+
   colgroup {
-    col {
-    }
+    col {}
   }
+
   thead {
     tr {
       border-bottom: $mb-border-thin solid $mb-color-border-dark;
+
       th {
         @include mb-heading(s);
         text-transform: uppercase;
@@ -232,23 +254,28 @@ table {
       }
     }
   }
+
   tbody {
     tr {
       vertical-align: middle;
       border-bottom: $mb-border-thin solid $mb-color-border-medium;
+
       td {
         text-align: left;
         padding: $mb-space-m;
       }
+
       &:hover {
         color: $mb-color-headings;
         background-color: $mb-color-gray-highlight;
       }
     }
   }
+
   tfoot {
     tr {
       vertical-align: middle;
+
       td {
         text-align: left;
         color: $mb-color-headings;
@@ -270,11 +297,9 @@ button {
 
 /* FORMS START */
 
-form {
-}
+form {}
 
-fieldset {
-}
+fieldset {}
 
 legend {
   @include mb-text(m);
@@ -292,6 +317,7 @@ input {
   border: $mb-border-thin solid $mb-color-border-medium;
   padding: $mb-space-xs $mb-space-s;
   @include mb-border-radius(s);
+
   &[type="text"],
   &[type="email"],
   &[type="password"],
@@ -309,38 +335,45 @@ input {
     border: none;
     width: 2rem;
     height: 2rem;
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+      @include mb-border-radius(s);
+    }
+    ::-webkit-color-swatch {
+      border: none;
+      @include mb-border-radius(s);
+    }
   }
-  &[type="color"]::-webkit-color-swatch-wrapper {
-    padding: 0;
-    @include mb-border-radius(s);
-  }
-  &[type="color"]::-webkit-color-swatch {
-    border: none;
-    @include mb-border-radius(s);
-  }
+
   &[type="reset"] {
     @extend .mb-btn-s;
   }
+
   &[type="submit"],
   &[type="button"] {
     // @include mb-primary;
     @extend .mb-btn-primary-s;
   }
+
   &:focus {
     border-color: $mb-color-primary;
     box-shadow: inset 0 0 0 $mb-color-primary;
   }
+
   &::placeholder {
     @include mb-caption(s);
     color: $mb-color-text-light;
   }
+
   &:disabled {
     background-color: $mb-color-gray-highlight;
   }
+
   &[type="range"] {
     width: 100%;
     padding: 0;
-    &::-webkit-slider-thumb{
+
+    &::-webkit-slider-thumb {
       -webkit-appearance: none;
       box-shadow: none;
       border: $mb-border-thin solid $mb-color-primary;
@@ -351,6 +384,7 @@ input {
       cursor: pointer;
       margin-top: -$mb-space-xxs;
     }
+
     &::-moz-range-thumb {
       box-shadow: none;
       border: $mb-border-thin solid $mb-color-primary;
@@ -361,6 +395,7 @@ input {
       cursor: pointer;
       margin-top: -$mb-space-xxs;
     }
+
     &::-ms-thumb {
       box-shadow: none;
       border: $mb-border-thin solid $mb-color-primary;
@@ -371,6 +406,7 @@ input {
       cursor: pointer;
       margin-top: -$mb-space-xxs;
     }
+
     &::-webkit-slider-runnable-track {
       width: 100%;
       height: 0.5rem;
@@ -380,13 +416,16 @@ input {
       @include mb-border-radius(s);
       border: $mb-border-thin solid $mb-color-primary;
     }
+
     &:focus::-webkit-slider-runnable-track {
       background-color: $mb-color-primary-hover;
     }
   }
+
   &[type="checkbox"] {
     display: none;
     margin: 0.2rem;
+
     &+label:before {
       content: "\2714";
       border: $mb-border-thin solid $mb-color-border-medium;
@@ -400,149 +439,174 @@ input {
       vertical-align: bottom;
       color: transparent;
     }
+
     &+label {
       padding: $mb-space-xs 0 0 0;
       margin-top: $mb-space-xs;
       @include mb-caption(s);
       color: $mb-color-text-medium;
     }
+
     &:hover {
-      & +label{
+      &+label {
         cursor: pointer;
-        &::before{
+
+        &::before {
           border: $mb-border-thin solid $mb-color-border-dark;
           background-color: $mb-color-gray-highlight;
           cursor: pointer;
         }
-      } 
+      }
     }
-    &:checked{
-      & + label{
+
+    &:checked {
+      &+label {
         color: $mb-color-headings;
-        &::before{
+
+        &::before {
           background-color: $mb-color-primary;
           color: $mb-color-white;
           border: $mb-border-thin solid $mb-color-primary;
         }
       }
     }
-    &:disabled{
+
+    &:disabled {
       cursor: not-allowed;
-      & + label{
+
+      &+label {
         color: rgba($mb-color-gray, $mb-opacity-l);
-        &::before{
+
+        &::before {
           border-color: $mb-color-border-medium;
           background-color: $mb-color-gray-highlight;
         }
       }
     }
-    &:disabled,&:checked{
-      &+label{
+
+    &:disabled:checked {
+      &+label {
         color: rgba($mb-color-gray, $mb-opacity-l);
-        &::before{
+
+        &::before {
           background-color: rgba($mb-color-gray, $mb-opacity-l);
           color: $mb-color-white;
           border: $mb-border-thin solid rgba($mb-color-gray, $mb-opacity-s);
         }
       }
     }
-    &:not(:checked){
-      &:focus{
-        &+label{
-          &::before{
+
+    &:not(:checked) {
+      &:focus {
+        &+label {
+          &::before {
             border: $mb-border-thin solid $mb-color-primary;
           }
         }
       }
     }
   }
-    &[type="radio"] {
-      display: none;
-      margin: 0.2rem;
-      &+ label{
-        padding: $mb-space-xs 0 0 0;
-        @include mb-caption(s);
-        color: $mb-color-text-medium;
-        &::before{
-          content: "";
-          border: $mb-border-thin solid $mb-color-border-medium;
-          @include mb-border-radius(circle);
-          display: inline-block;
-          width: 1rem;
-          height: 1rem;
-          padding-left: $mb-space-xxs;
-          padding-bottom: $mb-space-xxs;
-          margin-right: $mb-space-xs;
-          vertical-align: bottom;
-          color: transparent;
-        }
+
+  &[type="radio"] {
+    display: none;
+    margin: 0.2rem;
+
+    &+label {
+      padding: $mb-space-xs 0 0 0;
+      @include mb-caption(s);
+      color: $mb-color-text-medium;
+
+      &::before {
+        content: "";
+        border: $mb-border-thin solid $mb-color-border-medium;
+        @include mb-border-radius(circle);
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        padding-left: $mb-space-xxs;
+        padding-bottom: $mb-space-xxs;
+        margin-right: $mb-space-xs;
+        vertical-align: bottom;
+        color: transparent;
       }
-      &:hover{
-        &+label{
+    }
+
+    &:hover {
+      &+label {
+        cursor: pointer;
+
+        &::before {
+          border: $mb-border-thin solid $mb-color-border-dark;
+          background-color: $mb-color-gray-highlight;
           cursor: pointer;
-          &::before{
-            border: $mb-border-thin solid $mb-color-border-dark;
-            background-color: $mb-color-gray-highlight;
-            cursor: pointer;
-          }
         }
       }
-      &:checked{
-        &+label{
-          color: $mb-color-headings;
-          &::before{
-            background-color: $mb-color-primary;
-            color: $mb-color-primary;
-            box-shadow: inset 0 0 0 $mb-space-xxs $mb-color-white;
+    }
+
+    &:checked {
+      &+label {
+        color: $mb-color-headings;
+
+        &::before {
+          background-color: $mb-color-primary;
+          color: $mb-color-primary;
+          box-shadow: inset 0 0 0 $mb-space-xxs $mb-color-white;
+          border: $mb-border-thin solid $mb-color-primary;
+        }
+      }
+    }
+
+    &:disabled {
+      &+label {
+        color: rgba($mb-color-gray, $mb-opacity-l);
+
+        &::before {
+          border-color: $mb-color-border-medium;
+          background-color: $mb-color-gray-highlight;
+        }
+      }
+    }
+
+    &:disabled:checked {
+      &+label {
+        color: rgba($mb-color-gray, $mb-opacity-l);
+        &::before {
+          background-color: rgba($mb-color-gray, $mb-opacity-l);
+          color: $mb-color-white;
+          border: $mb-border-thin solid rgba($mb-color-gray, $mb-opacity-s);
+        }
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &:checked {
+      &:focus {
+        &+label {
+          &::before {
             border: $mb-border-thin solid $mb-color-primary;
           }
         }
       }
-      &:disabled{
-        &+label{
-          color: rgba($mb-color-gray, $mb-opacity-l);
-          &::before{
-            border-color: $mb-color-border-medium;
-            background-color: $mb-color-gray-highlight;    
-          }
-        }
-      }
-      &:disabled,&:checked{
-        &+label{
-          color: rgba($mb-color-gray, $mb-opacity-l);
-          &::before{
-            background-color: rgba($mb-color-gray, $mb-opacity-l);
-            color: $mb-color-white;
-            border: $mb-border-thin solid rgba($mb-color-gray, $mb-opacity-s);
-          }
-        }
-      }
-      &:disabled{
-        cursor: not-allowed;
-      }
-      &:checked{
-        &:focus{
-          &+label{
-            &::before{
-              border: $mb-border-thin solid $mb-color-primary;
-            }
-          }
-        }
-      }
-      &:not(:checked){
-        &:focus{
-          &+label{
-            &::before{
-              border: $mb-border-thin solid $mb-color-primary;
-            }
+    }
+
+    &:not(:checked) {
+      &:focus {
+        &+label {
+          &::before {
+            border: $mb-border-thin solid $mb-color-primary;
           }
         }
       }
     }
-    &[type="date"],
-    &[type="datetime-local"],
-    &[type="month"],
-    &[type="week"]{
+  }
+  &[type="date"],
+  &[type="datetime-local"],
+  &[type="month"],
+  &[type="week"] {
+    &::-webkit-calendar-picker-indicator{
       content: url('../icons/icon-calendar.svg');
       position: relative;
       height: 1rem;
@@ -551,16 +615,18 @@ input {
       cursor: pointer;
     }
   }
+}
 
 
 //Cristian didn't succeed to add ::after and ::before icons directly to the inputs
 
-.input{
+.input {
   &-password {
     input[type="password"] {
       padding-right: $mb-space-xl;
       padding-left: $mb-space-xl;
       display: block;
+
       &::after {
         @include mb-icon(icon-key, $mb-space-m);
         float: left;
@@ -568,6 +634,7 @@ input {
         left: $mb-space-xs;
         position: relative;
       }
+
       &::before {
         @include mb-icon(view-icon, $mb-space-m);
         float: right;
@@ -577,10 +644,12 @@ input {
       }
     }
   }
+
   &-email {
     input[type="email"] {
       padding-left: $mb-space-xl;
     }
+
     &::after {
       content: url('../icons/email.svg');
       display: block;
@@ -593,10 +662,12 @@ input {
       position: relative;
     }
   }
+
   &-search {
     input[type="search"] {
       padding-left: $mb-space-xl;
     }
+
     &::after {
       content: url('../icons/icon-search.svg');
       display: block;
@@ -609,10 +680,12 @@ input {
       position: relative;
     }
   }
+
   &-phone {
     input[type="tel"] {
       padding-left: $mb-space-xl;
     }
+
     &::after {
       content: url('../icons/phone-call.svg');
       display: block;
@@ -625,10 +698,12 @@ input {
       position: relative;
     }
   }
-  &-url{
+
+  &-url {
     input[type="url"] {
       padding-left: $mb-space-xl;
     }
+
     &::after {
       content: url('../icons/link.svg');
       display: block;
@@ -642,10 +717,11 @@ input {
     }
   }
 }
+
 // end input icons
-label{
-  +input{
-    &::after{
+label {
+  +input {
+    &::after {
       width: 66%;
     }
   }
@@ -658,14 +734,17 @@ textarea {
   width: 100%;
   @include mb-border-radius(s);
   box-sizing: border-box;
+
   &:focus {
     border-color: $mb-color-primary;
     box-shadow: inset 0 0 0 $mb-color-primary;
   }
+
   &::placeholder {
     @include mb-caption(s);
     color: $mb-color-text-light;
   }
+
   &:disabled {
     background-color: $mb-color-gray-highlight;
   }
@@ -690,37 +769,42 @@ select {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
+
   &:focus {
     border-color: $mb-color-primary;
     box-shadow: inset 0 0 0 $mb-color-primary;
   }
+
   &::placeholder {
     @include mb-caption(s);
     color: $mb-color-text-light;
   }
+
   &:disabled {
     background-color: $mb-color-gray-highlight;
   }
 }
 
 // Input with autocomplete
-datalist {
-}
+datalist {}
 
 optgroup {
   @include mb-heading(s);
   text-transform: uppercase;
   color: $mb-color-text-light;
+
   option {
     text-transform: none;
     padding-left: 0;
     margin-left: -20px;
     @include mb-text(m);
     padding: $mb-space-xs $mb-space-s;
+
     &:hover {
       color: $mb-color-headings;
       background-color: $mb-color-gray-highlight;
     }
+
     &:active {
       color: $mb-color-primary;
       background-color: $mb-color-primary-highlight;
@@ -729,40 +813,45 @@ optgroup {
 }
 
 
-output {
-}
+output {}
 
 meter {
   @include mb-border-radius(s);
   width: 100%;
   height: 1.5rem;
+
   &::-webkit-meter-bar {
     box-shadow: 0 0 0 0 rgba($mb-color-gray, $mb-opacity-m) inset;
     background-color: rgba($mb-color-gray, $mb-opacity-m);
     @include mb-border-radius(ms);
   }
+
   &::-moz-meter-bar {
     background-color: rgba($mb-color-gray, $mb-opacity-m);
     @include mb-border-radius(ms);
   }
+
   &::-webkit-meter-optimum-value {
     background-color: $mb-color-primary;
     border-radius: $mb-space-xxs 0 0 $mb-space-xxs;
   }
 }
 
-progress{
+progress {
   @include mb-border-radius(s);
   width: 100%;
   height: 1.5rem;
-  &::-webkit-progress-bar{
+
+  &::-webkit-progress-bar {
     background-color: rgba($mb-color-gray, $mb-opacity-m);
     @include mb-border-radius(s);
   }
-  &::-moz-progress-bar{
+
+  &::-moz-progress-bar {
     background-color: rgba($mb-color-gray, $mb-opacity-m);
     @include mb-border-radius(ms);
   }
+
   &::-webkit-progress-value {
     background-color: $mb-color-primary;
     border-radius: $mb-space-xxs 0 0 $mb-space-xxs;
@@ -777,42 +866,53 @@ a {
   color: $mb-color-link;
   text-decoration: none;
   cursor: pointer;
+
   &:hover {
     color: $mb-color-link-hover;
   }
+
   &:focus {
     outline-color: $mb-color-link;
     border: none;
   }
+
   &:active {
     color: $mb-color-link;
   }
+
   &:visited {
     color: $mb-color-link-visited;
   }
 }
+
 strong,
 b {
   font-weight: $mb-font-weight-bold;
 }
+
 em,
 i {
   font-style: italic;
 }
+
 mark {
   color: $mb-color-headings;
   background-color: $mb-color-primary-highlight;
 }
+
 del {
   color: $mb-color-text-light;
 }
+
 ins {
   background-color: $mb-color-primary-highlight;
 }
+
 small {
   @include mb-caption(xs);
   color: $mb-color-text-light;
 }
+
 //span {} // Cristian: I don't think we need to add style to span;
 code {
   @include mb-border-radius(s);
@@ -820,10 +920,12 @@ code {
   font-family: $mb-font-family-monospace;
   background-color: $mb-color-gray-highlight;
 }
+
 sub {
   vertical-align: sub;
   @include mb-caption(xs);
 }
+
 sup {
   vertical-align: super;
   @include mb-caption(xs);
@@ -833,10 +935,12 @@ sup {
 q {
   font-style: italic;
   color: $mb-color-headings;
+
   &::before {
     content: "❞";
     color: $mb-color-cyan;
   }
+
   &::after {
     content: "❝";
     color: $mb-color-cyan;
@@ -857,6 +961,7 @@ hr {
   color: $mb-color-headings;
   background-color: $mb-color-primary-highlight;
 }
+
 ::-moz-selection {
   color: $mb-color-headings;
   background-color: $mb-color-primary-highlight;
@@ -872,32 +977,40 @@ hr {
   padding-right: 0.25rem;
   margin-right: 0.25rem;
 }
+
 ::-webkit-scrollbar-button {
   width: 0rem;
   height: 0rem;
 }
+
 ::-webkit-scrollbar-thumb {
   @include mb-border-radius(m);
   background: rgba($mb-color-gray, $mb-opacity-m);
   border: 0px none $mb-color-white;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba($mb-color-gray, $mb-opacity-l);
 }
+
 ::-webkit-scrollbar-thumb:active {
   background: rgba($mb-color-gray, $mb-opacity-m);
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
   border: 0px none $mb-color-white;
   @include mb-border-radius(l);
 }
+
 ::-webkit-scrollbar-track:hover {
   background: transparent;
 }
+
 ::-webkit-scrollbar-track:active {
   background: transparent;
 }
+
 ::-webkit-scrollbar-corner {
   background: transparent;
-}   
+}
