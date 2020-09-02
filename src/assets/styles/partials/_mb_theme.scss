@@ -20,59 +20,10 @@ div {
 // section {}
 // aside {}
 // menu {}
-// @Cristian needs specifications for this;
 
 /* LAYOUT CONTAINERS END */
 
 /* TEXT CONTAINERS START */
-
-/* to be deleted & refactor after the icons & interations will be fixed*/
-.mb-btn-s {
-  @include mb-text(s);
-  color: $mb-color-text-medium;
-  padding: $mb-space-xs $mb-space-s;
-  border: $mb-border-thin solid rgba($mb-color-gray-highlight, $mb-opacity-xxs);
-  @include mb-border-radius(s);
-  background-color: $mb-color-gray-highlight;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: none;
-  cursor: pointer;
-
-  &:hover {
-    color: $mb-color-headings;
-    background-color: $mb-color-primary-highlight;
-    border: $mb-border-thin solid rgba($mb-color-primary-highlight, $mb-opacity-xxs);
-  }
-
-  &:active {
-    color: $mb-color-primary;
-    background-color: $mb-color-primary-highlight;
-    border: $mb-border-thin solid rgba($mb-color-primary-highlight, $mb-opacity-xxs);
-  }
-}
-
-.mb-btn-primary-s {
-  @extend .mb-btn-s;
-  color: $mb-color-white;
-  background-color: $mb-color-primary;
-  border: $mb-border-thin solid $mb-color-primary;
-
-  &:hover {
-    color: $mb-color-white;
-    background-color: $mb-color-primary-dark;
-    border: $mb-border-thin solid $mb-color-primary;
-  }
-
-  &:active {
-    color: $mb-color-white;
-    background-color: $mb-color-primary-light;
-    border: $mb-border-thin solid $mb-color-primary;
-  }
-}
-
-/* to be deleted end*/
 
 h1 {
   @include mb-heading(xxl);
@@ -290,7 +241,36 @@ table {
 /* BUTTONS START */
 
 button {
-  @extend .mb-btn-s;
+  @include mb-text(s);
+  padding: $mb-space-xs $mb-space-s;
+  @include mb-border-radius(s);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: none;
+  background-color: $mb-color-white;
+  color: $mb-color-text-medium;
+  border: $mb-border-thin solid $mb-color-transparent;
+
+  &:hover {
+    color: $mb-color-headings;
+    background-color: $mb-color-gray-highlight;
+    border: $mb-border-thin solid $mb-color-transparent;
+  }
+  &:active {
+    color: $mb-color-primary;
+    background-color: $mb-color-primary-highlight;
+    border: $mb-border-thin solid $mb-color-transparent;
+  }
+  &:focus {
+    border: $mb-border-thin solid $mb-color-transparent;
+  }
+  &:disabled,
+  &.disabled {
+    background-color: fade-out(desaturate($mb-color-gray, $mb-opacity-m),0.9);
+    color: fade-out($mb-color-text-medium, $mb-opacity-l);
+    border: $mb-border-thin solid $mb-color-transparent;
+  }
 }
 
 /* BUTTONS END */
@@ -348,17 +328,16 @@ input {
   }
 
   &[type="reset"] {
-    @extend .mb-btn-s;
+    @extend button; 
   }
 
   &[type="submit"],
   &[type="button"] {
-    // @include mb-primary;
-    @extend .mb-btn-primary-s;
+    @extend .primary, button; 
   }
 
   &:focus {
-    border-color: $mb-color-primary;
+    border: $mb-border-thin solid $mb-color-primary;
     box-shadow: inset 0 0 0 $mb-color-primary;
   }
 
@@ -720,15 +699,8 @@ input {
     }
   }
 }
-
 // end input icons
-label {
-  +input {
-    &::after {
-      width: 66%;
-    }
-  }
-}
+
 
 textarea {
   @include mb-text(m);
@@ -739,7 +711,7 @@ textarea {
   box-sizing: border-box;
 
   &:focus {
-    border-color: $mb-color-primary;
+    border: $mb-border-thin solid $mb-color-primary;
     box-shadow: inset 0 0 0 $mb-color-primary;
   }
 
@@ -774,7 +746,7 @@ select {
   width: 100%;
 
   &:focus {
-    border-color: $mb-color-primary;
+    border: $mb-border-thin solid $mb-color-primary;
     box-shadow: inset 0 0 0 $mb-color-primary;
   }
 
