@@ -432,13 +432,10 @@ input {
       content: "\2714";
       border: $mb-border-thin solid $mb-color-border-medium;
       @include mb-border-radius(s);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      align-self: center;
       width: 1rem;
       height: 1rem;
-      padding-left: $mb-space-xxs;
-      padding-bottom: $mb-space-xxs;
+      padding: 0 $mb-space-xxs;
       margin-right: $mb-space-xs;
       vertical-align: bottom;
       color: transparent;
