@@ -1,0 +1,35 @@
+/* MOTION VARIABLES START */
+
+$mb-ease-base: cubic-bezier(0.4, 0.14, 0.3, 1);
+$mb-ease-intro: cubic-bezier(0.4, 0.14, 0.3, 1);
+$mb-ease-outro: cubic-bezier(0.4, 0.14, 0.3, 1);
+
+$mb-speed-faster: 0.1s; // 6 frames, use for micro-interactions such as buttons, toggles
+$mb-speed-fast: 0.2s; // 12 frames, use for micro-interactions, fades
+$mb-speed-slow: 0.4s; // 24 frames, use for modal/drawer expansions, system notifications
+$mb-speed-slower: 0.6s; // 32 frames, use for background dimming
+
+/* MOTION VARIABLES END */
+
+/* TRANSITION MIXINS START */
+
+@mixin mb-transition($type) {
+	@if $type==intro {
+		transition: all $mb-speed-slow $mb-ease-intro;
+	}
+	@else if $type==outro {
+		transition: all $mb-speed-fast $mb-ease-outro;
+	}
+	@else if $type==smooth {
+		transition: all $mb-speed-fast $mb-ease-base;
+	}
+	@else {
+		transition: none;
+	}
+}
+
+@mixin mb-animation($type) {
+	// In progress
+}
+
+/* TRANSITION MIXIN END */

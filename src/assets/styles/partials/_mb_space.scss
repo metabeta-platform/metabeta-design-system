@@ -1,0 +1,153 @@
+/* SPACE VARIABLES START */
+
+// Spacing variables
+$mb-space-xxxs: 0.125rem;
+$mb-space-xxs: 0.25rem;
+$mb-space-xs: 0.5rem;
+$mb-space-s: 0.75rem;
+$mb-space-m: 1rem;
+$mb-space-l: 1.5rem;
+$mb-space-xl: 2rem;
+$mb-space-xxl: 3rem;
+$mb-space-xxxl: 4rem;
+
+// Border sizes
+$mb-border-thin: 1px;
+$mb-border-base: 2px;
+$mb-border-thick: 4px;
+
+/* SPACE VARIABLES END */
+
+/* SPACE MIXINS START */
+
+// Aspect ratio mixin
+@mixin mb-aspect-ratio($width, $ratio) {
+  object-fit: cover;
+  width: $width;
+  @if $mb-ratio==square {
+    height: $width;
+  } @else if $ratio==golden {
+    height: $width * 0.618;
+  } @else if $ratio==landscape {
+    height: $width * 2 / 3;
+  } @else if $ratio==portrait {
+    height: $width * 3 / 2;
+  } @else if $ratio==video {
+    height: $width * 9 / 16;
+  }
+}
+
+// Border radius mixin
+@mixin mb-border-radius($radius) {
+  @if $radius==xs {
+    border-radius: $mb-space-xxxs;
+  } @else if $radius==s {
+    border-radius: $mb-space-xxxs * 2;
+  } @else if $radius==m {
+    border-radius: $mb-space-xxxs * 3;
+  } @else if $radius==l {
+    border-radius: $mb-space-xxxs * 4;
+  } @else if $radius==circle {
+    border-radius: 50%;
+  }
+}
+
+/* SPACE MIXINS END */
+
+/* MEDIA QUERIES START */
+
+// Media breakpoints
+$mb-phone-breakpoint: 568px;
+$mb-tablet-breakpoint: 768px;
+$mb-laptop-breakpoint: 1367px;
+$mb-desktop-breakpoint: 1600px; // Limits width for very large desktop displays
+
+// Touch sizes for screens
+$mb-touch-base: 48px; // Optimal size for interactive elements on touch interfaces
+$mb-touch-min: 40px; // Minimal usable size
+
+// Media mixin (desktop-first approach)
+@mixin mb-media($media-type) {
+  @if $media-type==desktop-only {
+    @media only screen and (min-width: $mb-laptop-breakpoint + 1) {
+      @content;
+    }
+  } @else if $media-type==laptop {
+    @media only screen and (max-width: $mb-laptop-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==laptop-only {
+    @media only screen and (min-width: $mb-tablet-breakpoint + 1) and (max-width: $mb-laptop-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==tablet {
+    @media only screen and (max-width: $mb-tablet-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==tablet-only {
+    @media only screen and (min-width: $mb-phone-breakpoint + 1) and (max-width: $mb-tablet-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==phone {
+    @media only screen and (max-width: $mb-phone-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==phone-only {
+    @media only screen and (max-width: $mb-phone-breakpoint) {
+      @content;
+    }
+  } @else if $media-type==print {
+    @media only print {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/* MEDIA QUERIES END */
+
+/* GRID MIXINS START */
+
+// Define number of grid columns.
+$mb-grid-columns: 12;
+$mb-grid-gutter: $mb-space-m;
+
+// Grid mixin to be added
+
+/* GRID ENDS */
+
+/* DEPTH MIXINS START */
+
+// Elevation mixins
+// Use integers for absolute elevation: 0, 1, 2, 3, 4, 8, 16, 24, 32
+// Use float for relative elevation: 0.1, 4.2 etc.
+@mixin mb-elevation($elevation) {
+  z-index: $elevation * 100; 
+}
+
+// Shadow mixes elevation and (optional), direction, color, opacity
+@mixin mb-shadow(
+  $elevation: 1,
+  $direction: "bottom",
+  $color: $color-gray-100,
+  $opacity: $mb-opacity-m
+) {
+  @if $direction== "left" {
+    box-shadow: -$elevation/2 0 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
+  }
+  @if $direction== "right" {
+    box-shadow: $elevation/2 0 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
+  }
+  @if $direction== "top" {
+    box-shadow: 0 -$elevation/2 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
+  } @else {
+    box-shadow: 0 $elevation/2 $elevation rgba($color, $opacity),
+      0 0 1px rgba($color, $opacity);
+  }
+}
+
+/* DEPTH MIXIN ENDD */

@@ -1,0 +1,55 @@
+// Generic icon mixin
+@mixin mb-icon($icon-name, $size, $position: before) {
+	position: relative;
+  @if $position==before {
+    &::before {
+      display: inline-block;
+			content: url("../icons/#{$icon-name}.svg");
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			@if($size == s){
+				width: $mb-space-s;
+				height:$mb-space-s;
+			}
+			@else if($size == m){
+				width: $mb-space-m;
+				height:$mb-space-m;
+			}
+			@else if($size == l){
+				width: $mb-space-l;
+				height:$mb-space-l;
+			}
+			@else{
+				width: $mb-space-s;
+				height:$mb-space-s;
+			}
+    }
+  } @else if $position==after {
+    &::after {
+      display: inline-block;
+			content: url("../icons/#{$icon-name}.svg");
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			@if($size == s){
+				width: $mb-space-s;
+				height:$mb-space-s;
+			}
+			@else if($size == m){
+				width: $mb-space-m;
+				height:$mb-space-m;
+			}
+			@else if($size == l){
+				width: $mb-space-l;
+				height:$mb-space-l;
+			}
+			@else{
+				width: $mb-space-s;
+				height:$mb-space-s;
+			}
+    }
+  }
+}
