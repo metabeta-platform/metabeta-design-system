@@ -12,7 +12,7 @@
      <main v-if="isLoading">
         <slot name="main-bar"></slot>
      </main>
-     <main v-else-if="isLoading">
+     <main v-else-if="!isLoading">
         <router-view :key="$route.fullPath"/>
      </main>
   </section>
