@@ -4,7 +4,7 @@
   @if $position==before {
     &::before {
       display: inline-block;
-			content: url("../icons/#{$icon-name}.svg");
+			content: url("~@/assets/icons/#{$icon-name}.svg");
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -29,7 +29,7 @@
   } @else if $position==after {
     &::after {
       display: inline-block;
-			content: url("../icons/#{$icon-name}.svg");
+			content: url("~@/assets/icons/#{$icon-name}.svg");
 			position: absolute;
 			top: 50%;
 			left: 50%;

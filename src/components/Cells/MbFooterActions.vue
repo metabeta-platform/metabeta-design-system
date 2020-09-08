@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: "MbFooterActions",
   props: {
     isVisible: {
       type: Boolean,

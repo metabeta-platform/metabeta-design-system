@@ -21,6 +21,7 @@
 import MbHeaderActions from './MbHeaderActions.vue';
 
 export default {
+  name: "MbPanel",
   components: {
     MbHeaderActions,
   },

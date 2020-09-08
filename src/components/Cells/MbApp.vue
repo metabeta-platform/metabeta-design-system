@@ -7,7 +7,7 @@
       <slot name="title-bar"></slot>
     </div>
     <div v-if="hasSectionBar">
-      <slot name="section-bar">
+      <slot name="section-bar"></slot>
     </div>
      <main v-if="isLoading">
         <slot name="main-bar"></slot>
@@ -21,6 +21,7 @@
 <script>
 
 export default {
+  name: "MbApp",
   props: {
     hasLeftBar: {
       type: Boolean,

@@ -1318,7 +1318,7 @@ input {
     input[type="radio"]:not(:checked):focus + label::before {
       border: 1px solid #2b71f4; }
   input[type="date"]::-webkit-calendar-picker-indicator, input[type="datetime-local"]::-webkit-calendar-picker-indicator, input[type="month"]::-webkit-calendar-picker-indicator, input[type="week"]::-webkit-calendar-picker-indicator {
-    content: url("../icons/icon-calendar.svg");
+    content: url("~@/assets/icons/icon-calendar.svg");
     position: relative;
     height: 1rem;
     width: 1rem;
@@ -1337,7 +1337,7 @@ input {
     position: relative; }
     .input-password input[type="password"]::after::before {
       display: inline-block;
-      content: url("../icons/icon-key.svg");
+      content: url("~@/assets/icons/icon-key.svg");
       position: absolute;
       top: 50%;
       left: 50%;
@@ -1352,7 +1352,7 @@ input {
     position: relative; }
     .input-password input[type="password"]::before::before {
       display: inline-block;
-      content: url("../icons/view-icon.svg");
+      content: url("~@/assets/icons/view-icon.svg");
       position: absolute;
       top: 50%;
       left: 50%;
@@ -1364,7 +1364,7 @@ input {
   padding-left: 2rem; }
 
 .input-email::after {
-  content: url("../icons/email.svg");
+  content: url("~@/assets/icons/email.svg");
   display: block;
   width: 1rem;
   height: 1rem;
@@ -1378,7 +1378,7 @@ input {
   padding-left: 2rem; }
 
 .input-search::after {
-  content: url("../icons/icon-search.svg");
+  content: url("~@/assets/icons/icon-search.svg");
   display: block;
   width: 1rem;
   height: 1rem;
@@ -1392,7 +1392,7 @@ input {
   padding-left: 2rem; }
 
 .input-phone::after {
-  content: url("../icons/phone-call.svg");
+  content: url("~@/assets/icons/phone-call.svg");
   display: block;
   width: 1rem;
   height: 1rem;
@@ -1406,7 +1406,7 @@ input {
   padding-left: 2rem; }
 
 .input-url::after {
-  content: url("../icons/link.svg");
+  content: url("~@/assets/icons/link.svg");
   display: block;
   width: 1rem;
   height: 1rem;

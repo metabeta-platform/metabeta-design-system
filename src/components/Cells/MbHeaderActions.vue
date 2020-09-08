@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: "MbHeaderActions",
   props: {
     isVisible: {
       type: Boolean,

@@ -5,10 +5,7 @@
     :is="componentType" @click="$emit('click', $event)"
     @mouseenter="$emit('mouseenter', $event)"
     @mouseleave="$emit('mouseleave', $event)"
-    :class="[type, priority, color, size, 'mtb-button', `display-${onDesktop === 'hidden' ? 'none' : 'flex'}
-                                                  -${onLaptop  === 'hidden' ? 'none' : 'flex'}
-                                                  -${onTablet  === 'hidden' ? 'none' : 'flex'}
-                                                  -${onPhone  === 'hidden' ? 'none' : 'flex'}`]"
+    :class="[type, priority, color, size, 'mtb-button', `display-${onDesktop === 'hidden' ? 'none' : 'flex'}-${onLaptop  === 'hidden' ? 'none' : 'flex'}-${onTablet  === 'hidden' ? 'none' : 'flex'}-${onPhone  === 'hidden' ? 'none' : 'flex'}`]"
     :disabled="isDisabled">
       <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'after'" :name="type === 'action' ? 'dropdown' : icon"></mb-icon>
       <label v-if="!responsiveIconOnly">{{label}}</label>
@@ -19,10 +16,19 @@
 
 <script>
 export default {
+  name: "MbButton",
+  data:() => ({
+    responsiveLabelOnly: '',
+    responsiveIconOnly: '',
+  }),
   props: {
     type: {
       type: String,
       default: 'button',
+    },
+    isDisabled:{
+      type: Boolean,
+      default: false,
     },
     priority: {
       type: String,
@@ -69,6 +75,9 @@ export default {
     componentType() {
       return this.type === 'link' ? 'a' : 'button';
     },
+  },
+  components: {
+    MbIcon: () => import('./MbIcon'),
   },
   created() {
     const windowWidth = window.innerWidth || document.documentElement.clientWidth;

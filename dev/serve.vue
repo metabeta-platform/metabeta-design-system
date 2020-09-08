@@ -1,17 +1,17 @@
 <script>
 import Vue from 'vue';
-import { MetabetaDesignSystemSample } from '@/entry';
+import { MbButton } from '@/entry';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
-    MetabetaDesignSystemSample,
+    MbButton,
   }
 });
 </script>
 
 <template>
   <div id="app">
-    <metabeta-design-system-sample />
+    <mb-button/>
   </div>
 </template>

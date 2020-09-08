@@ -1,11 +1,12 @@
 <template>
-  <div class="tooltip" :class="[isVisible : '_visible', position]">
+  <div class="tooltip" :class="[isVisible ? '_visible' : '', position]">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
+  name: "MbTooltip",
   props: {
     isVisible: {
       type: Boolean,
