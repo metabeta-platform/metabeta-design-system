@@ -12,6 +12,6 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <mb-button/>
+    <mb-button label='test'/>
   </div>
 </template>

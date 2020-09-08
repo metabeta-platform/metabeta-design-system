@@ -5,10 +5,10 @@
     :is="componentType" @click="$emit('click', $event)"
     @mouseenter="$emit('mouseenter', $event)"
     @mouseleave="$emit('mouseleave', $event)"
-    :class="[type, priority, color, size, 'mtb-button', `display-${onDesktop === 'hidden' ? 'none' : 'flex'}-${onLaptop  === 'hidden' ? 'none' : 'flex'}-${onTablet  === 'hidden' ? 'none' : 'flex'}-${onPhone  === 'hidden' ? 'none' : 'flex'}`]"
+    :class="['mtb-button', type, priority, color, size, `display-${onDesktop === 'hidden' ? 'none' : 'flex'}-${onLaptop  === 'hidden' ? 'none' : 'flex'}-${onTablet  === 'hidden' ? 'none' : 'flex'}-${onPhone  === 'hidden' ? 'none' : 'flex'}`]"
     :disabled="isDisabled">
       <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'after'" :name="type === 'action' ? 'dropdown' : icon"></mb-icon>
-      <label v-if="!responsiveIconOnly">{{label}}</label>
+      <label class="mtb-button-label" v-if="!responsiveIconOnly">{{label}}</label>
       <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'before'" :name="type === 'action' ? 'dropdown' : icon"></mb-icon>
   </component>
 </keep-alive>
@@ -109,5 +109,8 @@ export default {
   .mtb-button{
     align-items: center;
     justify-content: center;
+    .mtb-button-label{
+      margin: 0;
+    }
   }
 </style>
