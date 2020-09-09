@@ -1,8 +1,8 @@
 <template>
 <mb-fieldset>
-  <mb-icon @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconBefore" v-if="iconBefore.name.length > 0"></mb-icon>
-  <input class="mb-input" :class="{'has-icon' : iconName.length > 0}" :type="type" :name="name" v-model="value">
-  <mb-icon @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconAfter" v-if="iconAfter.name.length > 0"></mb-icon>
+  <mb-icon :class="{iconBefore : 'icon-before'}" @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconBefore" v-if="iconBefore.name.length > 0"></mb-icon>
+  <input class="mb-input" :class="[{'has-before-icon' : beforeIcon.name.length > 0}, {'has-after-icon' : afterIcon.name.length > 0}]" :type="type" :name="name" v-model="value">
+  <mb-icon :class="{iconAfter : 'icon-after'}" @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconAfter" v-if="iconAfter.name.length > 0"></mb-icon>
 </mb-fieldset>
 </template>
 
@@ -41,13 +41,22 @@ export default {
 
 <style lang="scss">
 .mb-input{
-  &+.has-icon{
+  &+.has-after-icon{
     padding-right: 50px;
     &.input-icon{
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       right: 10px;
+    }
+  }
+  &+.has-before-icon{
+    padding-left: 50px;
+    &.input-icon{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
     }
   }
 }
