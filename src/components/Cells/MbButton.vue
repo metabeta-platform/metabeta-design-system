@@ -7,9 +7,9 @@
     @mouseleave="$emit('mouseleave', $event)"
     :class="['mtb-button', type, priority, color, size, `display-${onDesktop === 'hidden' ? 'none' : 'flex'}-${onLaptop  === 'hidden' ? 'none' : 'flex'}-${onTablet  === 'hidden' ? 'none' : 'flex'}-${onPhone  === 'hidden' ? 'none' : 'flex'}`]"
     :disabled="isDisabled">
-      <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'after'" :name="type === 'action' ? 'dropdown' : iconName"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && isBefore" :name="type === 'action' ? 'dropdown' : iconName"></mb-icon>
       <label class="mtb-button-label" v-if="!responsiveIconOnly">{{label}}</label>
-      <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'before'" :name="type === 'action' ? 'dropdown' : iconName"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && isAfter" :name="type === 'action' ? 'dropdown' : iconName"></mb-icon>
   </component>
 </keep-alive>
 </template>
@@ -25,6 +25,14 @@ export default {
     type: {
       type: String,
       default: 'button',
+    },
+    isBefore:{
+      type: Boolean,
+      default: true,
+    },
+    isAfter:{
+      type:Boolean,
+      default: false,
     },
     isDisabled:{
       type: Boolean,
@@ -45,10 +53,6 @@ export default {
     iconName: {
       type: String,
       default: null,
-    },
-    iconPosition: {
-      type: String,
-      default: 'before',
     },
     label: {
       type: String,
@@ -80,6 +84,7 @@ export default {
     MbIcon: () => import('./MbIcon'),
   },
   created() {
+    this.isAfter ? this.isBefore = false : this.isBefore = true;
     const windowWidth = window.innerWidth || document.documentElement.clientWidth;
     switch (windowWidth) {
     case windowWidth > 1367:
