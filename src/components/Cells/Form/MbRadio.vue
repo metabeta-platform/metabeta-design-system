@@ -27,10 +27,10 @@ export default {
   },
   methods: {
     radioEvent() {
-      if(!this.radioState) 
-        {this.radioState = false; this.$emit('checked')} 
+      if(!this.checkState) 
+        {this.checkState = false; this.$emit('checked', this.name)}
       else 
-        {this.radioState = true; this.$emit('unchecked')};
+        {this.checkState = true; this.$emit('unchecked', this.name)};
     },
   },
   created () {
