@@ -27,9 +27,11 @@ export default {
   methods: {
     checkedEmit(checkedInput){
       this.checkedArr.push(checkedInput);
+      this.$emit('inputChanged', this.checkedArr);
     },
     uncheckedEmit(uncheckedInput){
       this.checkedArr.filter(checkedItem => this.checkedArr.includes(checkedItem));
+      this.$emit('inputChanged', this.checkedArr);
     }
   },
   components: {
