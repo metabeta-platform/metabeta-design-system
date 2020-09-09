@@ -1,8 +1,12 @@
 <template>
-  <header v-if="isVisible">
-    <slot name="header-title"></slot>
+  <header class="header" :class="alignment === '' || alignment === 'default' ? 'default' : 'reverse' " v-if="isVisible">
+    <section class="title">
+      <slot name="header-title"></slot>
+    </section>
     <aside class="actions">
-      <slot name="header-actions"></slot>
+      <slot name="header-actions">
+
+      </slot>
     </aside>
   </header>
 </template>
@@ -19,11 +23,23 @@ export default {
       type: String,
       default: 'right',
     },
+    alignment:{
+      type: String,
+      default: 'default',
+    }
   },
 };
 </script>
 
 <style lang="scss">
+  .header{
+  display: flex;
+  &.default{
+    flex-direction: column;
+  }
+  &.reverse{
+    flex-direction: column-reverse;
+  }
   .actions{
     display: flex;
     align-items: center;
@@ -32,5 +48,6 @@ export default {
     &+button{
       margin: 0 $mb-space-s;
     }
+  }
   }
 </style>
