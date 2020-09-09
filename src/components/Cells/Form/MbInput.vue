@@ -1,7 +1,8 @@
 <template>
 <mb-fieldset>
+  <mb-icon @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconBefore" v-if="iconBefore.name.length > 0"></mb-icon>
   <input class="mb-input" :class="{'has-icon' : iconName.length > 0}" :type="type" :name="name" v-model="value">
-  <mb-icon @click="emit('icon-clicked')" class="input-icon" :width="iconSize" :height="iconSize" v-if="iconName.length > 0" :name="iconName"></mb-icon>
+  <mb-icon @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconAfter" v-if="iconAfter.name.length > 0"></mb-icon>
 </mb-fieldset>
 </template>
 
@@ -17,13 +18,13 @@ export default {
       type: [String, Number],
       default: null,
     },
-    iconName:{
-      type: String,
-      default: '',
+    iconAfter: {
+      type: Object,
+      default: () => {},
     },
-    iconSize:{
-      type: Number,
-      default: 30,
+    iconBefore:{
+      type: Object,
+      default: () => {},
     }
   },
   components: {
