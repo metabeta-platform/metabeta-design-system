@@ -1,6 +1,6 @@
 <template>
   <div @click="checkEvent" class="checkbox">
-    <input type="checkbox" :name="name" :checked="checkState">
+    <input type="checkbox" :name="name" :is-checked="checkState">
     <label :for="name">{{labe}}</label>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
       type: String,
       default: '',
     },
-    checked:{
+    isChecked:{
       type: Boolean,
       default: false,
     }

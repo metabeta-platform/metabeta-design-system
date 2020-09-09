@@ -2,7 +2,7 @@
 <div class="mb-checkbox-group">
   <ul v-for="(checkboxIndex, i) in value" :key="checkboxIndex._id" :class="alignment">
     <li>
-      <mb-checkbox @unchecked="uncheckedEmit" @checked="checkedEmit" :name="checkboxIndex.name" :checked="checkedValue[i]" :label="checkboxIndex.label"></mb-checkbox>
+      <mb-checkbox @unchecked="uncheckedEmit" @checked="checkedEmit" :name="checkboxIndex.name" :is-checked="checkedValue[i]" :label="checkboxIndex.label"></mb-checkbox>
     </li>
   </ul>
 </div>

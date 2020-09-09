@@ -7,9 +7,9 @@
     @mouseleave="$emit('mouseleave', $event)"
     :class="['mtb-button', type, priority, color, size, `display-${onDesktop === 'hidden' ? 'none' : 'flex'}-${onLaptop  === 'hidden' ? 'none' : 'flex'}-${onTablet  === 'hidden' ? 'none' : 'flex'}-${onPhone  === 'hidden' ? 'none' : 'flex'}`]"
     :disabled="isDisabled">
-      <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'after'" :name="type === 'action' ? 'dropdown' : icon"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'after'" :name="type === 'action' ? 'dropdown' : iconName"></mb-icon>
       <label class="mtb-button-label" v-if="!responsiveIconOnly">{{label}}</label>
-      <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'before'" :name="type === 'action' ? 'dropdown' : icon"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && iconPosition !== 'before'" :name="type === 'action' ? 'dropdown' : iconName"></mb-icon>
   </component>
 </keep-alive>
 </template>
@@ -42,7 +42,7 @@ export default {
       type: String,
       default: 'm',
     },
-    icon: {
+    iconName: {
       type: String,
       default: null,
     },

@@ -1,6 +1,6 @@
 <template>
   <div @click="radioEvent" class="radiobox">
-    <input type="radio" :name="name" :checked="radioState" :value="name">
+    <input type="radio" :name="name" :is-checked="radioState" :value="name">
     <label :for="name">{{labe}}</label>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
       type: String,
       default: '',
     },
-    checked:{
+    isChecked:{
       type: Boolean,
       default: false,
     }
