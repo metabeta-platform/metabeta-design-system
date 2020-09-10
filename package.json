@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "compile:sass": "node-sass src/assets/styles/dna.scss src/assets/css/dna.css",
-    "serve": "vue-cli-service serve dev/serve.js",
+    "serve": "vue-cli-service serve docs/serve.js",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",

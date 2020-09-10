@@ -1,6 +1,6 @@
 <script>
 import Vue from 'vue';
-import { MbButton } from '@/entry';
+import { MbButton } from '../src/components/index';
 
 export default Vue.extend({
   name: 'ServeDev',

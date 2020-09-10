@@ -35,7 +35,7 @@ export default {
     }
   },
   components: {
-    MbRadio: () => import('../Cells/Form/MbRadio'),
+    MbRadio: () => import('../cells/form/MbRadio'),
   },
 }
 </script>

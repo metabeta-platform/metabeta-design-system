@@ -2,14 +2,15 @@
 <keep-alive>
   <component
     :type="type != 'link' ? type : null"
-    :is="componentType" @click="$emit('click', $event)"
+    :is="componentType" 
+    @click="$emit('click', $event)"
     @mouseenter="$emit('mouseenter', $event)"
     @mouseleave="$emit('mouseleave', $event)"
     :class="['mtb-button', type, priority, color, size, `display-${onDesktop === 'hidden' ? 'none' : 'flex'}-${onLaptop  === 'hidden' ? 'none' : 'flex'}-${onTablet  === 'hidden' ? 'none' : 'flex'}-${onPhone  === 'hidden' ? 'none' : 'flex'}`]"
     :disabled="isDisabled">
-      <mb-icon v-if="!responsiveLabelOnly && isBefore" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && isBefore.name" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
       <label class="mtb-button-label" v-if="!responsiveIconOnly">{{label}}</label>
-      <mb-icon v-if="!responsiveLabelOnly && isAfter" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && isAfter.name" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
   </component>
 </keep-alive>
 </template>

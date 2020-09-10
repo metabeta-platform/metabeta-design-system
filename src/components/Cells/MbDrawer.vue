@@ -1,6 +1,6 @@
 <template>
-  <section class="mb-transition-drawer" :class="drawerVisibility ? 'mb-state-visible' : 'mb-state-hiden'">
-    <mb-header-actions isVisible alignment="reverse">
+  <section class="mb-transition-drawer" :class="drawerVisibility ? 'mb-state-visible' : 'mb-state-hidden'">
+    <mb-header-actions is-visible alignment="reverse">
       <template slot="header-actions">
         <div class="button-group">
           <mb-button @click="drawerVisibility = false; $emit('on-close')" priority="base" :iconBefore="iconClose"></mb-button>

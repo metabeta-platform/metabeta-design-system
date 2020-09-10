@@ -35,7 +35,7 @@ export default {
     }
   },
   components: {
-    MbCheckbox: () => import('../Cells/Form/MbCheckbox'),
+    MbCheckbox: () => import('../cells/form/MbCheckbox'),
   },
 }
 </script>

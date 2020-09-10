@@ -28,7 +28,7 @@ export default {
     }
   },
   components: {
-    MbIcon: () => import('./MbIcon'),
+    MbIcon: () => import('../MbIcon'),
     MbFieldSet: () => import('./MbFieldset'),
   },
   watch: {
