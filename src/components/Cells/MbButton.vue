@@ -6,7 +6,8 @@
     @click="$emit('click', $event)"
     @mouseenter="$emit('mouseenter', $event)"
     @mouseleave="$emit('mouseleave', $event)"
-    :class="['mtb-button', type, priority, color, size, `display-${onDesktop === 'hidden' ? 'none' : 'flex'}-${onLaptop  === 'hidden' ? 'none' : 'flex'}-${onTablet  === 'hidden' ? 'none' : 'flex'}-${onPhone  === 'hidden' ? 'none' : 'flex'}`]"
+    :href="type === 'link' ? href : false"
+    :class="['mtb-button', `mtb-type-${type}`, `mtb-priority-${priority}`, color, `mtb-size-${size}`]"
     :disabled="isDisabled">
       <mb-icon v-if="!responsiveLabelOnly && isBefore.name" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
       <label class="mtb-button-label" v-if="!responsiveIconOnly">{{label}}</label>
@@ -26,6 +27,11 @@ export default {
     type: {
       type: String,
       default: 'button',
+    },
+    href:{
+      type: String,
+      default: '/',
+      required: false,
     },
     isBefore:{
       type: Boolean,

@@ -1,21 +1,17 @@
 <template>
-  <section>
-    <div v-if="hasLeftBar">
-      <slot name="left-bar"></slot>
+  <main :class="expanded ? 'is-expended' : 'is-collapsed'">
+    <slot name="left-bar"></slot>
+    <slot name="title-bar"></slot>
+    <slot name="content-bar"></slot>
+    <div v-if="isLoading">
+      <mb-loader></mb-loader>
     </div>
-    <div v-if="hasTitleBar">
-      <slot name="title-bar"></slot>
-    </div>
-    <div v-if="hasSectionBar">
-      <slot name="section-bar"></slot>
-    </div>
-     <main v-if="isLoading">
-        <slot name="main-bar"></slot>
-     </main>
-     <main v-else-if="!isLoading">
+    <div v-else>
+      <slot name="content-bar">
         <router-view :key="$route.fullPath"/>
-     </main>
-  </section>
+      </slot>
+    </div>
+  </main>
 </template>
 
 <script>
@@ -23,22 +19,13 @@
 export default {
   name: "MbApp",
   props: {
-    hasLeftBar: {
+    isLoading:{
       type: Boolean,
       default: true,
     },
-    hasTopBar: {
+    expanded:{
       type: Boolean,
-      default: true,
-    },
-    hasTitleBar: {
-      type: Boolean,
-      default: true,
-    },
-    hasSectionBar: {
-      type: Boolean,
-      default: true,
-    },
+    }
   },
 };
 
