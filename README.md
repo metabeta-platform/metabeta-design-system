@@ -4,6 +4,6 @@ A design system and set of components created by the [Metabeta](www.metabeta.com
 
 Sorry for inconvenience, this is under progress until it becomes a Vue components package, we depricated some of the scss provided in earlier versions.
 
-for feature/component branch use => download vue cli 3 https://vuejs.org/v2/guide/
-                                    npm i && npm run serve
-                                    to build npm run build
+for feature/component branch use => &nbsp; download vue cli 3 https://vuejs.org/v2/guide/ &nbsp;
+                                    npm i && npm run serve &nbsp;
+                                    *to build npm run build*
