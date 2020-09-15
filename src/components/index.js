@@ -2,7 +2,7 @@
 export  {default as MbRadioGroup } from './tissues/MbRadioGroup.vue';
 export  {default as MbCheckboxGroup } from './tissues/MbCheckboxGroup.vue';
 
-export  {default as MbApp } from './cells/MbApp.vue';
+export  {default as MbApp } from './cells/page/MbApp.vue';
 export  {default as MbButton } from './cells/MbButton.vue';
 export  {default as MbFooterActions } from './cells/MbFooterActions.vue';
 export  {default as MbHeaderActions } from './cells/MbHeaderActions.vue';
