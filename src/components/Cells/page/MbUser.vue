@@ -8,6 +8,7 @@
         </div>
       </div>
     </div>
+    <!-- Oz Fix this Tomorrow -->
     <ul class="user-menu-items menu-dropdown-list" :class="{ expanded: expanded }" style="right:0; top:57px; margin-right:24px">
       <section class="account-items menu-dropdown-list-section">
         <p class="user-role" v-if="getRole(currentWorkspaceRole) !== ''">{{profile.firstName}} {{profile.lastName}} &#8226; {{getRole(currentWorkspaceRole)}}</p>
