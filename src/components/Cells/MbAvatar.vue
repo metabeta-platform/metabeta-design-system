@@ -30,6 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/styles/partials/_mb_space.scss";
   .mb-avatar{
     display: flex;
     align-items: center;
@@ -41,9 +42,9 @@ export default {
     }
     .avatar-text{
       display: block;
-      margin-left: $space-m;
+      margin-left: $mb-space-m;
       &:not(.mb-label){
-        margin-top: $space-xs;
+        margin-top: $mb-space-xs;
       }
     }
   }

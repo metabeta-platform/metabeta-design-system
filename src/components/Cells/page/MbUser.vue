@@ -156,6 +156,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../assets/styles/partials/_mb_color.scss";
+@import "../../../assets/styles/partials/_mb_space.scss";
   ul, li {
   margin: 0;
   padding: 0;
@@ -180,7 +182,7 @@ export default {
 .menu-dropdown-list {
   min-width: 250px;
   position: absolute;
-  background: $white;
+  background: $mb-color-white;;
   @include mb-shadow(l);
   border-radius: .25rem;
   z-index: 350;
@@ -193,7 +195,7 @@ export default {
   }
   .menu-dropdown-list-section {
     padding: 8px;
-    border-top: 1px solid $gray5;
+    border-top: 1px solid $mb-color-gray-500;
     &:first-of-type {
       border-top: none;
     }
@@ -204,22 +206,22 @@ export default {
       padding-right: 8px;
       font-size: 11px;
       line-height: 12px;
-      color: $gray3;
+      color: $mb-color-gray-300;
       text-transform: uppercase;
     }
   }
   .menu-dropdown-list-item {
     height: 32px;
     padding: 8px;
-    color: $gray2;
+    color: $mb-color-gray-200;
     display: flex;
     align-items: center;
     border-radius: 3px;
     &:hover {
-      color: $gray1;
-      background: $gray7;
+      color: $mb-color-gray-100;
+      background: $mb-color-gray-700;
       .title {
-        color: $gray1;
+        color: $mb-color-gray-100;
       }
     }
 
@@ -227,7 +229,7 @@ export default {
       margin-right: 8px;
     }
     .title {
-      color: $gray2;
+      color: $mb-color-gray-200;
       font-size: 14px;
       line-height: 16px;
     }

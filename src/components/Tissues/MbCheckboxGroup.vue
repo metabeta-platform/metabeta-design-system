@@ -35,12 +35,13 @@ export default {
     }
   },
   components: {
-    MbCheckbox: () => import('../cells/form/MbCheckbox'),
+    MbCheckbox: () => import('../cells/form/MbCheckbox.vue'),
   },
 }
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/styles/partials/_mb_space.scss";
 .mb-checkbox-group{
   .horizontal{
     display: flex;

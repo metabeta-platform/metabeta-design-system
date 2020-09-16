@@ -92,7 +92,7 @@ export default {
     },
   },
   components: {
-    MbIcon: () => import('./MbIcon'),
+    MbIcon: () => import('MbIcon'),
   },
   created() {
     const windowWidth = window.innerWidth || document.documentElement.clientWidth;

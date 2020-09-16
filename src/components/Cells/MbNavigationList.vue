@@ -23,12 +23,14 @@ export default {
     }
   },
   components: {
-    MbAvatar : () => import('./MbAvatar'),
+    MbAvatar : () => import('MbAvatar'),
   },
 }
 </script>
 
 <style lang="scss">
+@import "../../assets/styles/partials/_mb_color.scss";
+@import "../../assets/styles/partials/_mb_space.scss";
   .mb-navigation-list{
     li{
       padding: $mb-space-l;

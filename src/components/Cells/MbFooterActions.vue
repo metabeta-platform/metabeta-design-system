@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../assets/styles/partials/_mb_space.scss";
   .actions{
     display: flex;
     align-items: center;
