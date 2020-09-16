@@ -107,28 +107,28 @@ export default {
       expanded: false,
     };
   },
-  computed: {
-    ...mapState({
-      profile: state => state.profileModule.myProfile.data,
-      workspaces: state => state.workspacesModule.data,
-    }),
-    ...mapGetters(['currentWorkspaceRole', 'isAuthenticated']),
-    organizations() {
-      return Array.isArray(this.workspaces.organizations) ? this.workspaces.organizations : [];
-    },
-    programs() {
-      return Array.isArray(this.workspaces.programs) ? this.workspaces.programs : [];
-    },
-    showLogin() {
-      let value = null;
-      if (this.$route.name !== 'viewPublicProgram') {
-        value = true;
-      } else {
-        value = false;
-      }
-      return value;
-    },
-  },
+  //  computed: {
+  //   ...mapState({
+  //     profile: state => state.profileModule.myProfile.data,
+  //     workspaces: state => state.workspacesModule.data,
+  //   }),
+  //   ...mapGetters(['currentWorkspaceRole', 'isAuthenticated']),
+  //   organizations() {
+  //     return Array.isArray(this.workspaces.organizations) ? this.workspaces.organizations : [];
+  //   },
+  //   programs() {
+  //     return Array.isArray(this.workspaces.programs) ? this.workspaces.programs : [];
+  //   },
+  //   showLogin() {
+  //     let value = null;
+  //     if (this.$route.name !== 'viewPublicProgram') {
+  //       value = true;
+  //     } else {
+  //       value = false;
+  //     }
+  //     return value;
+  //   },
+  // },
   methods: {
     ...mapActions(['logout']),
     getRole,
