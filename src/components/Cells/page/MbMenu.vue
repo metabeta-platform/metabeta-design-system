@@ -60,7 +60,9 @@
 
 <script>
 // import config from './menu-configuration';
-
+export default {
+  name: 'MbMenu'
+}
 // export default {
 //   name: 'SideMenu',
 //   data() {
