@@ -46,13 +46,7 @@
 </template>
 
 <script>
-import { mapActions, mapState, mapGetters } from 'vuex';
-
-import {
-  BaseIcon,
-  BaseButton,
-  AddOrganizationModal,
-} from 'library';
+// import { mapActions, mapState, mapGetters } from 'vuex';
 
 const roleMap = [
   {

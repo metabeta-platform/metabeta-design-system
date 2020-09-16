@@ -1,6 +1,3 @@
-import { mapState as mapState$1, mapGetters as mapGetters$1, mapActions } from 'vuex';
-import { BaseIcon, BaseButton, AddOrganizationModal } from 'library';
-
 function commonjsRequire () {
 	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
 }
@@ -988,6 +985,53 @@ const __vue_component__$5 = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__$5, __vue_script__$5, __vue_scope_id__$5, __vue_is_functional_template__$5, __vue_module_identifier__$5, false, createInjector, undefined, undefined);
 
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import { mapActions, mapState, mapGetters } from 'vuex';
 const roleMap = [{
   key: 'reviewer',
   value: 'Reviewer'
@@ -1046,11 +1090,11 @@ var script$6 = {
     };
   },
 
-  computed: { ...mapState$1({
+  computed: { ...mapState({
       profile: state => state.profileModule.myProfile.data,
       workspaces: state => state.workspacesModule.data
     }),
-    ...mapGetters$1(['currentWorkspaceRole', 'isAuthenticated']),
+    ...mapGetters(['currentWorkspaceRole', 'isAuthenticated']),
 
     organizations() {
       return Array.isArray(this.workspaces.organizations) ? this.workspaces.organizations : [];
@@ -1271,8 +1315,8 @@ var __vue_staticRenderFns__$6 = [];
 
 const __vue_inject_styles__$6 = function (inject) {
   if (!inject) return;
-  inject("data-v-7d2493d2_0", {
-    source: "li[data-v-7d2493d2],ul[data-v-7d2493d2]{margin:0;padding:0}.user-preview[data-v-7d2493d2]{display:flex;align-items:center}.user-preview .user-icon[data-v-7d2493d2]{border-radius:16px}.user-preview .user-info[data-v-7d2493d2]{display:none;margin-left:8px}.user-preview .user-info .user-name[data-v-7d2493d2]{font-size:14px;line-height:20px;margin-right:8px}.menu-dropdown-list[data-v-7d2493d2]{min-width:250px;position:absolute;background:#fff;box-shadow:0 l/2 l rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);border-radius:.25rem;z-index:350;transform:scaleY(0);transition:all .2s ease-in-out;transform-origin:top}.menu-dropdown-list.expanded[data-v-7d2493d2]{transform:scaleY(1);min-width:250px}.menu-dropdown-list .menu-dropdown-list-section[data-v-7d2493d2]{padding:8px;border-top:1px solid #adb6bd}.menu-dropdown-list .menu-dropdown-list-section[data-v-7d2493d2]:first-of-type{border-top:none}.menu-dropdown-list .menu-dropdown-list-section .user-role[data-v-7d2493d2]{padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;font-size:11px;line-height:12px;color:#dde2e5;text-transform:uppercase}.menu-dropdown-list .menu-dropdown-list-item[data-v-7d2493d2]{height:32px;padding:8px;color:#e8ecef;display:flex;align-items:center;border-radius:3px}.menu-dropdown-list .menu-dropdown-list-item[data-v-7d2493d2]:hover{color:#f6fafb;background:#494f57}.menu-dropdown-list .menu-dropdown-list-item:hover .title[data-v-7d2493d2]{color:#f6fafb}.menu-dropdown-list .menu-dropdown-list-item .icon[data-v-7d2493d2]{margin-right:8px}.menu-dropdown-list .menu-dropdown-list-item .title[data-v-7d2493d2]{color:#e8ecef;font-size:14px;line-height:16px}",
+  inject("data-v-5a8397a7_0", {
+    source: "li[data-v-5a8397a7],ul[data-v-5a8397a7]{margin:0;padding:0}.user-preview[data-v-5a8397a7]{display:flex;align-items:center}.user-preview .user-icon[data-v-5a8397a7]{border-radius:16px}.user-preview .user-info[data-v-5a8397a7]{display:none;margin-left:8px}.user-preview .user-info .user-name[data-v-5a8397a7]{font-size:14px;line-height:20px;margin-right:8px}.menu-dropdown-list[data-v-5a8397a7]{min-width:250px;position:absolute;background:#fff;box-shadow:0 l/2 l rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);border-radius:.25rem;z-index:350;transform:scaleY(0);transition:all .2s ease-in-out;transform-origin:top}.menu-dropdown-list.expanded[data-v-5a8397a7]{transform:scaleY(1);min-width:250px}.menu-dropdown-list .menu-dropdown-list-section[data-v-5a8397a7]{padding:8px;border-top:1px solid #adb6bd}.menu-dropdown-list .menu-dropdown-list-section[data-v-5a8397a7]:first-of-type{border-top:none}.menu-dropdown-list .menu-dropdown-list-section .user-role[data-v-5a8397a7]{padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;font-size:11px;line-height:12px;color:#dde2e5;text-transform:uppercase}.menu-dropdown-list .menu-dropdown-list-item[data-v-5a8397a7]{height:32px;padding:8px;color:#e8ecef;display:flex;align-items:center;border-radius:3px}.menu-dropdown-list .menu-dropdown-list-item[data-v-5a8397a7]:hover{color:#f6fafb;background:#494f57}.menu-dropdown-list .menu-dropdown-list-item:hover .title[data-v-5a8397a7]{color:#f6fafb}.menu-dropdown-list .menu-dropdown-list-item .icon[data-v-5a8397a7]{margin-right:8px}.menu-dropdown-list .menu-dropdown-list-item .title[data-v-5a8397a7]{color:#e8ecef;font-size:14px;line-height:16px}",
     map: undefined,
     media: undefined
   });
@@ -1280,7 +1324,7 @@ const __vue_inject_styles__$6 = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$6 = "data-v-7d2493d2";
+const __vue_scope_id__$6 = "data-v-5a8397a7";
 /* module identifier */
 
 const __vue_module_identifier__$6 = undefined;
@@ -1390,7 +1434,7 @@ var script$7 = {
 
   },
   components: {
-    MbIcon: () => import('MbIcon')
+    MbIcon: () => Promise.resolve().then(function () { return MbIcon; })
   },
 
   created() {
@@ -1469,7 +1513,7 @@ var __vue_staticRenderFns__$7 = [];
 
 const __vue_inject_styles__$7 = function (inject) {
   if (!inject) return;
-  inject("data-v-cf314c38_0", {
+  inject("data-v-175cae38_0", {
     source: ".mtb-button{align-items:center;justify-content:center}.mtb-button .mtb-button-label{margin:0}",
     map: undefined,
     media: undefined
@@ -1869,7 +1913,7 @@ var script$d = {
     }
   },
   components: {
-    MbAvatar: () => import('MbAvatar')
+    MbAvatar: () => Promise.resolve().then(function () { return MbAvatar; })
   }
 };
 
@@ -1916,7 +1960,7 @@ var __vue_staticRenderFns__$d = [];
 
 const __vue_inject_styles__$d = function (inject) {
   if (!inject) return;
-  inject("data-v-16aee08c_0", {
+  inject("data-v-a95ab6a8_0", {
     source: ".mb-navigation-list li{padding:1.5rem}.mb-navigation-list li:hover{background-color:#adb6bd}",
     map: undefined,
     media: undefined
@@ -2105,6 +2149,11 @@ const __vue_component__$f = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__$f
 }, __vue_inject_styles__$f, __vue_script__$f, __vue_scope_id__$f, __vue_is_functional_template__$f, __vue_module_identifier__$f, false, createInjector, undefined, undefined);
 
+var MbFieldset = /*#__PURE__*/Object.freeze({
+	__proto__: null,
+	'default': __vue_component__$f
+});
+
 //
 //
 //
@@ -2134,8 +2183,8 @@ var script$g = {
     }
   },
   components: {
-    MbIcon: () => import('../../../../MbIcon'),
-    MbFieldSet: () => import('MbFieldset')
+    MbIcon: () => Promise.resolve().then(function () { return MbIcon; }),
+    MbFieldSet: () => Promise.resolve().then(function () { return MbFieldset; })
   },
   watch: {
     value(newValue) {
@@ -2286,7 +2335,7 @@ var __vue_staticRenderFns__$g = [];
 
 const __vue_inject_styles__$g = function (inject) {
   if (!inject) return;
-  inject("data-v-3e49242d_0", {
+  inject("data-v-67eaa62c_0", {
     source: ".mb-input+.has-after-icon{padding-right:50px}.mb-input+.has-after-icon.input-icon{position:absolute;top:50%;transform:translateY(-50%);right:10px}.mb-input+.has-before-icon{padding-left:50px}.mb-input+.has-before-icon.input-icon{position:absolute;top:50%;transform:translateY(-50%);left:10px}",
     map: undefined,
     media: undefined
@@ -2569,6 +2618,95 @@ const __vue_component__$i = /*#__PURE__*/normalizeComponent({
 var MbAvatar = /*#__PURE__*/Object.freeze({
 	__proto__: null,
 	'default': __vue_component__$i
+});
+
+//
+//
+//
+//
+var script$j = {
+  name: "MbIcon",
+  iconBefore: {
+    type: Object,
+    default: {
+      name: {
+        type: String,
+        default: ''
+      },
+      size: {
+        type: Number,
+        default: 40
+      }
+    }
+  },
+  iconAfter: {
+    type: Object,
+    default: {
+      name: {
+        type: String,
+        default: ''
+      },
+      size: {
+        type: Number,
+        default: 40
+      }
+    }
+  }
+};
+
+/* script */
+const __vue_script__$j = script$j;
+/* template */
+
+var __vue_render__$j = function () {
+  var _vm = this;
+
+  var _h = _vm.$createElement;
+
+  var _c = _vm._self._c || _h;
+
+  return _c(_vm.iconBefore.name || _vm.iconAfter.name, {
+    tag: "component",
+    class: _vm.iconBefore ? 'float__left' : 'float__right',
+    attrs: {
+      "width": _vm.iconBefore.size || _vm.iconAfter.size
+    }
+  });
+};
+
+var __vue_staticRenderFns__$j = [];
+/* style */
+
+const __vue_inject_styles__$j = function (inject) {
+  if (!inject) return;
+  inject("data-v-2d6121aa_0", {
+    source: ".float__right[data-v-2d6121aa]{float:right}.float__left[data-v-2d6121aa]{float:left}",
+    map: undefined,
+    media: undefined
+  });
+};
+/* scoped */
+
+
+const __vue_scope_id__$j = "data-v-2d6121aa";
+/* module identifier */
+
+const __vue_module_identifier__$j = undefined;
+/* functional template */
+
+const __vue_is_functional_template__$j = false;
+/* style inject SSR */
+
+/* style inject shadow dom */
+
+const __vue_component__$j = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$j,
+  staticRenderFns: __vue_staticRenderFns__$j
+}, __vue_inject_styles__$j, __vue_script__$j, __vue_scope_id__$j, __vue_is_functional_template__$j, __vue_module_identifier__$j, false, createInjector, undefined, undefined);
+
+var MbIcon = /*#__PURE__*/Object.freeze({
+	__proto__: null,
+	'default': __vue_component__$j
 });
 
 export default plugin;

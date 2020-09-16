@@ -23,7 +23,7 @@ export default {
     }
   },
   components: {
-    MbAvatar : () => import('MbAvatar'),
+    MbAvatar : () => import('@/components/cells/MbAvatar'),
   },
 }
 </script>
