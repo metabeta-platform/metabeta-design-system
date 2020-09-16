@@ -6,6 +6,7 @@
   "browser": "dist/metabeta-design-system.esm.js",
   "module": "dist/metabeta-design-system.esm.js",
   "unpkg": "dist/metabeta-design-system.min.js",
+  "inlineDynamicImports" : true,
   "files": [
     "dist/*",
     "src/**/*.vue"
