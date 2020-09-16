@@ -1,6 +1,6 @@
 <template>
-  <div v-if="isAuthenticated" class="user-header-menu clickable" @mouseover="expanded = true" @mouseleave="expanded = false">
-    <div class="user-preview" v-on:click="() => $router.push({ name: 'profileDashboard' })">
+  <div class="user-header-menu clickable" @mouseover="expanded = true" @mouseleave="expanded = false">
+    <div class="user-preview" @click="() => $router.push({ name: 'profileDashboard' })">
       <img class="user-icon" :src="tryGet(() => profile.avatarUrl) !== '' ? profile.avatarUrl: defaultImages.getImage('user', 'icon')" width="32" height="32" />
       <div class="user-info">
         <div class="d-flex align-items-center">
@@ -8,7 +8,6 @@
         </div>
       </div>
     </div>
-    <!-- Oz Fix this Tomorrow -->
     <ul class="user-menu-items menu-dropdown-list" :class="{ expanded: expanded }" style="right:0; top:57px; margin-right:24px">
       <section class="account-items menu-dropdown-list-section">
         <p class="user-role" v-if="getRole(currentWorkspaceRole) !== ''">{{profile.firstName}} {{profile.lastName}} &#8226; {{getRole(currentWorkspaceRole)}}</p>
@@ -44,15 +43,116 @@
     </ul>
     <add-organization-modal ref="addOrgModal" />
   </div>
-  <div v-else-if="showLogin">
-    <mb-button variant="primary" v-on:click="$router.push({ name: 'login'})">Log in</mb-button>
-  </div>
 </template>
 
 <script>
-export default {
+import { mapActions, mapState, mapGetters } from 'vuex';
 
-}
+import {
+  BaseIcon,
+  BaseButton,
+  AddOrganizationModal,
+} from 'library';
+
+const roleMap = [
+  {
+    key: 'reviewer',
+    value: 'Reviewer',
+  },
+  {
+    key: 'mentor',
+    value: 'Mentor',
+  },
+  {
+    key: 'founders',
+    value: 'Founder',
+  },
+  {
+    key: 'advisors',
+    value: 'Advisor',
+  },
+  {
+    key: 'boardMembers',
+    value: 'Board member',
+  },
+  {
+    key: 'keyEmployees',
+    value: 'Employee',
+  },
+  {
+    key: 'managers',
+    value: 'Manager',
+  },
+];
+const getRole = (keys) => {
+  if (Array.isArray(keys)) {
+    const matchedValues = keys.map((key) => {
+      const matchedRoles = roleMap.filter(x => x.key === key);
+      if (matchedRoles.length === 1) {
+        return matchedRoles[0].value;
+      }
+      return '';
+    });
+
+    if (matchedValues.length > 0) {
+      return matchedValues.join(', ');
+    }
+  } else {
+    const matchedRoles = roleMap.filter(x => x.key === keys);
+    if (matchedRoles.length === 1) {
+      return matchedRoles[0].value;
+    }
+  }
+  return '';
+};
+
+export default {
+  name: 'UserMenu',
+  data() {
+    return {
+      expanded: false,
+    };
+  },
+  computed: {
+    ...mapState({
+      profile: state => state.profileModule.myProfile.data,
+      workspaces: state => state.workspacesModule.data,
+    }),
+    ...mapGetters(['currentWorkspaceRole', 'isAuthenticated']),
+    organizations() {
+      return Array.isArray(this.workspaces.organizations) ? this.workspaces.organizations : [];
+    },
+    programs() {
+      return Array.isArray(this.workspaces.programs) ? this.workspaces.programs : [];
+    },
+    showLogin() {
+      let value = null;
+      if (this.$route.name !== 'viewPublicProgram') {
+        value = true;
+      } else {
+        value = false;
+      }
+      return value;
+    },
+  },
+  methods: {
+    ...mapActions(['logout']),
+    getRole,
+    async onLogout() {
+      sessionStorage.setItem('logout-clicked', true);
+      await this.logout();
+      this.$router.push({ name: 'login' });
+    },
+    goToHelp() {
+      window.open('https://www.metabeta.com/en/feedback/', '_blank');
+    },
+  },
+  components: {
+    BaseIcon,
+    BaseButton,
+    AddOrganizationModal,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

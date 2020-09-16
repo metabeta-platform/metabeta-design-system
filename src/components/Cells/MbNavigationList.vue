@@ -2,7 +2,7 @@
 <div class="mb-navigation-list">
   <h5>{{title}}</h5>
   <ul class="nav-link">
-    <li v-for="link in links" :key="link._id" @click="$router.push(link.url)">
+    <li v-for="link in links" :key="link._id" @click="$router.push({name : link.url})">
       <router-link :to="link.url">
         <MbAvatar :type="type" :avatar="link.data"></MbAvatar>
       </router-link>
