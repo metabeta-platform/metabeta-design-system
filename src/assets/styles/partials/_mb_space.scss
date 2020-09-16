@@ -130,7 +130,7 @@ $mb-grid-gutter: $mb-space-m;
 @mixin mb-shadow(
   $elevation: 1,
   $direction: "bottom",
-  $color: $color-gray-100,
+  $color: $mb-color-gray-100,
   $opacity: $mb-opacity-m
 ) {
   @if $direction== "left" {

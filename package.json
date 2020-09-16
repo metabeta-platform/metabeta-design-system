@@ -1,11 +1,12 @@
 {
   "name": "metabeta-design-system",
-  "version": "1.0.32",
+  "version": "1.0.35",
   "description": "\"Metabeta Design System\"",
   "main": "dist/metabeta-design-system.ssr.js",
   "browser": "dist/metabeta-design-system.esm.js",
   "module": "dist/metabeta-design-system.esm.js",
   "unpkg": "dist/metabeta-design-system.min.js",
+  "inlineDynamicImports": true,
   "files": [
     "dist/*",
     "src/**/*.vue"

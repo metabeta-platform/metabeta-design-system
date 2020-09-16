@@ -13,8 +13,8 @@
 <script>
 export default {
   components: {
-    MbAvatar: () => import('../MbAvatar'),
-    MbNavigationList: () => import('../MbNavigationList'),
+    MbAvatar: () => import('../MbAvatar.vue'),
+    MbNavigationList: () => import('../MbNavigationList.vue'),
   },
 }
 </script>

@@ -35,12 +35,13 @@ export default {
     }
   },
   components: {
-    MbRadio: () => import('../cells/form/MbRadio'),
+    MbRadio: () => import('../cells/form/MbRadio.vue'),
   },
 }
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/styles/partials/_mb_space.scss";
 .mb-checkbox-group{
   .horizontal{
     display: flex;

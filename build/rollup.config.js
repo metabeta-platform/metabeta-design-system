@@ -71,6 +71,7 @@ if (!argv.format || argv.format === 'es') {
     external,
     output: {
       file: 'dist/metabeta-design-system.esm.js',
+      inlineDynamicImports: true,
       format: 'esm',
       exports: 'named',
     },
@@ -106,6 +107,7 @@ if (!argv.format || argv.format === 'cjs') {
       compact: true,
       file: 'dist/metabeta-design-system.ssr.js',
       format: 'cjs',
+      inlineDynamicImports: true,
       name: 'MetabetaDesignSystem',
       exports: 'named',
       globals,
@@ -135,6 +137,7 @@ if (!argv.format || argv.format === 'iife') {
       compact: true,
       file: 'dist/metabeta-design-system.min.js',
       format: 'iife',
+      inlineDynamicImports: true,
       name: 'MetabetaDesignSystem',
       exports: 'named',
       globals,

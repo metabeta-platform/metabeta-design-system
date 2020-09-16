@@ -167,6 +167,8 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../../../assets/styles/partials/_mb_color.scss";
+@import "../../../assets/styles/partials/_mb_space.scss";
 .separator-blank {
   height: 16px;
 }
@@ -195,21 +197,21 @@
         margin: 12px;
       }
       .name {
-        color: $gray2;
+        color: $mb-color-gray-200;
         font-size: 14px;
         line-height: 16px;
       }
 
       &:hover {
-        background: $gray5;
+        background: $mb-color-gray-500;
         .name {
-          color: $gray1;
+          color: $mb-color-gray-100;
         }
       }
       &.selected {
-        background: $focus;
+        background: $mb-color-gray-100;
         .name {
-          color: $primary;
+          color: $mb-color-primary;
         }
       }
     }
@@ -222,18 +224,18 @@
       .title {
         font-size: 10px;
         line-height: 12px;
-        color: $gray3;
+        color: $mb-color-gray-300;
         text-transform: uppercase;
       }
     }
   }
 }
 .side-nav {
-  box-shadow: 1px 1px 1px $gray5;
+  box-shadow: 1px 1px 1px $mb-color-gray-500;
   z-index: 305;
   height: 100%;
   width: 216px;
-  background: $white;
+  background: $mb-color-white;;
   position: fixed;
   transition: all .2s ease-in-out;
   transform-origin: left;
@@ -278,7 +280,7 @@
   .side-nav-options {
     height: 100%;
      &.sub-menu {
-        border-right: 1px solid $gray5;
+        border-right: 1px solid $mb-color-gray-500;
       }
     .side-nav-options-list {
       margin: 0;
@@ -294,21 +296,21 @@
         }
         .name {
           display: none;
-          color: $gray2;
+          color: $mb-color-gray-200;
           font-size: 14px;
           line-height: 16px;
         }
 
         &:hover {
-          background: $gray7;
+          background: $mb-color-gray-700;
           .name {
-            color: $gray1;
+            color: $mb-color-gray-100;
           }
         }
         &.selected {
-          background: $focus;
+          background: $mb-color-gray-100;
           .name {
-            color: $primary;
+            color: $mb-color-primary;
           }
         }
       }

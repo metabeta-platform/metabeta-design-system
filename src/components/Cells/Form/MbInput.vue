@@ -28,8 +28,8 @@ export default {
     }
   },
   components: {
-    MbIcon: () => import('../MbIcon'),
-    MbFieldSet: () => import('./MbFieldset'),
+    MbIcon: () => import('@/components/cells/MbIcon'),
+    MbFieldSet: () => import('@/components/cells/form/MbFieldset'),
   },
   watch: {
     value(newValue) {
