@@ -1,7 +1,7 @@
 <template>
   <aside>
     <mb-icon name="metabeta-icon"></mb-icon>
-    <section class="side-nav-options" :class="{ 'sub-menu': hasSubMenu }">
+    <!-- <section class="side-nav-options" :class="{ 'sub-menu': hasSubMenu }">
       <ul class="side-nav-options-list">
         <li
           v-if="pages.length === 0 && isAuthenticated"
@@ -54,116 +54,116 @@
     </section>
     <section class="side-nav-footer">
       <p class="ui-caption">{{currentVersion}}</p>
-    </section>
+    </section> -->
   </aside>
 </template>
 
 <script>
-import config from './menu-configuration';
+// import config from './menu-configuration';
 
-export default {
-  name: 'SideMenu',
-  data() {
-    return {
-      pages: [],
-      hasSubMenu: false,
-    };
-  },
-  props: {
-    currentVersion:{
-      type: String,
-      default: '1.5.2',
-    },
-    expanded: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  watch: {
-    currentWorkspace: {
-      immediate: true,
-      handler(val) {
-        this.pages = config.getMenuOptions(val.pages);
-      },
-    },
-    subMenu(val) {
-      if (val.length > 0) {
-        this.hasSubMenu = true;
-      } else {
-        this.hasSubMenu = false;
-      }
-    },
-    activePage: {
-      immediate: true,
-      handler() {
-        this.$emit('page-change', { subMenu: this.hasSubMenu });
-        this.toggleSubMenu(this.hasSubMenu);
-      },
-    },
-    expanded: {
-      immediate: true,
-      handler(val) {
-        this.toggleMenuCollapse(val);
-      },
-    },
-  },
-  computed: {
-    ...mapState({
-      workspaces: state => state.workspacesModule.data,
-    }),
-    ...mapGetters(['settings_currentWorkspace', 'currentWorkspaceRole', 'isAuthenticated']),
-    organizations() {
-      return Array.isArray(this.workspaces.organizations) ? this.workspaces.organizations : [];
-    },
-    programs() {
-      return Array.isArray(this.workspaces.programs) ? this.workspaces.programs : [];
-    },
-    currentWorkspace() {
-      if (typeof this.settings_currentWorkspace.id !== 'undefined') {
-        const matchedProgramWorkspaces = this.programs.filter(x => x.id === this.settings_currentWorkspace.id);
-        if (matchedProgramWorkspaces.length === 1) {
-          return matchedProgramWorkspaces[0];
-        }
-        const matchedOrganizationWorkspaces = this.organizations.filter(x => x.id === this.settings_currentWorkspace.id);
-        if (matchedOrganizationWorkspaces.length === 1) {
-          return matchedOrganizationWorkspaces[0];
-        }
-      }
-      return {
-        id: 'none',
-      };
-    },
-    level0Pages() {
-      return this.pages.filter(x => x.level === 0);
-    },
-    level1Pages() {
-      return this.pages.filter(x => x.level === 1);
-    },
-    level2Pages() {
-      return this.pages.filter(x => x.level === 2);
-    },
-    subMenu() {
-      const subMenu = this.tryGet(() => this.activePage) === '' ? [] : this.activePage.subMenu;
-      if (typeof subMenu !== 'undefined') {
-        return subMenu.filter((x) => {
-          if (typeof x.role === 'undefined') {
-            return true;
-          }
-          return this.currentWorkspaceRole.includes(x.role);
-        });
-      }
-      return [];
-    },
-    subMenuGroups() {
-      return [...new Set(this.subMenu.map(x => x.group))];
-    },
-    activePage() {
-      const subRoutes = this.$route.name.split('.');
-      const parrentRoute = subRoutes[0];
-      return this.pages.filter(x => x.routeName === parrentRoute)[0];
-    },
-  },
-}
+// export default {
+//   name: 'SideMenu',
+//   data() {
+//     return {
+//       pages: [],
+//       hasSubMenu: false,
+//     };
+//   },
+//   props: {
+//     currentVersion:{
+//       type: String,
+//       default: '1.5.2',
+//     },
+//     expanded: {
+//       type: Boolean,
+//       default: false,
+//     },
+//   },
+//   watch: {
+//     currentWorkspace: {
+//       immediate: true,
+//       handler(val) {
+//         this.pages = config.getMenuOptions(val.pages);
+//       },
+//     },
+//     subMenu(val) {
+//       if (val.length > 0) {
+//         this.hasSubMenu = true;
+//       } else {
+//         this.hasSubMenu = false;
+//       }
+//     },
+//     activePage: {
+//       immediate: true,
+//       handler() {
+//         this.$emit('page-change', { subMenu: this.hasSubMenu });
+//         this.toggleSubMenu(this.hasSubMenu);
+//       },
+//     },
+//     expanded: {
+//       immediate: true,
+//       handler(val) {
+//         this.toggleMenuCollapse(val);
+//       },
+//     },
+//   },
+//   computed: {
+//     ...mapState({
+//       workspaces: state => state.workspacesModule.data,
+//     }),
+//     ...mapGetters(['settings_currentWorkspace', 'currentWorkspaceRole', 'isAuthenticated']),
+//     organizations() {
+//       return Array.isArray(this.workspaces.organizations) ? this.workspaces.organizations : [];
+//     },
+//     programs() {
+//       return Array.isArray(this.workspaces.programs) ? this.workspaces.programs : [];
+//     },
+//     currentWorkspace() {
+//       if (typeof this.settings_currentWorkspace.id !== 'undefined') {
+//         const matchedProgramWorkspaces = this.programs.filter(x => x.id === this.settings_currentWorkspace.id);
+//         if (matchedProgramWorkspaces.length === 1) {
+//           return matchedProgramWorkspaces[0];
+//         }
+//         const matchedOrganizationWorkspaces = this.organizations.filter(x => x.id === this.settings_currentWorkspace.id);
+//         if (matchedOrganizationWorkspaces.length === 1) {
+//           return matchedOrganizationWorkspaces[0];
+//         }
+//       }
+//       return {
+//         id: 'none',
+//       };
+//     },
+//     level0Pages() {
+//       return this.pages.filter(x => x.level === 0);
+//     },
+//     level1Pages() {
+//       return this.pages.filter(x => x.level === 1);
+//     },
+//     level2Pages() {
+//       return this.pages.filter(x => x.level === 2);
+//     },
+//     subMenu() {
+//       const subMenu = this.tryGet(() => this.activePage) === '' ? [] : this.activePage.subMenu;
+//       if (typeof subMenu !== 'undefined') {
+//         return subMenu.filter((x) => {
+//           if (typeof x.role === 'undefined') {
+//             return true;
+//           }
+//           return this.currentWorkspaceRole.includes(x.role);
+//         });
+//       }
+//       return [];
+//     },
+//     subMenuGroups() {
+//       return [...new Set(this.subMenu.map(x => x.group))];
+//     },
+//     activePage() {
+//       const subRoutes = this.$route.name.split('.');
+//       const parrentRoute = subRoutes[0];
+//       return this.pages.filter(x => x.routeName === parrentRoute)[0];
+//     },
+//   },
+// }
 </script>
 
 <style lang="scss" scoped>
