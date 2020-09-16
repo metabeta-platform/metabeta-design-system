@@ -3,11 +3,18 @@ export  {default as MbRadioGroup } from './tissues/MbRadioGroup.vue';
 export  {default as MbCheckboxGroup } from './tissues/MbCheckboxGroup.vue';
 
 export  {default as MbApp } from './cells/page/MbApp.vue';
+export  {default as MbMenu } from './cells/page/MbMenu.vue';
+export  {default as MbOrganization } from './cells/page/MbOrganization.vue';
+export  {default as MbTopbar } from './cells/page/MbTopbar.vue';
+export  {default as MbUser } from './cells/page/MbUser.vue'
+
 export  {default as MbButton } from './cells/MbButton.vue';
 export  {default as MbFooterActions } from './cells/MbFooterActions.vue';
 export  {default as MbHeaderActions } from './cells/MbHeaderActions.vue';
 export  {default as MbPanel } from './cells/MbPanel.vue';
 export  {default as MbTooltip } from './cells/MbTooltip.vue';
+export  {default as MbEdgesLayout } from './cells/MbEdgesLayout.vue';
+export  {default as MbNavigationList } from './cells/MbNavigationList.vue';
 
 export  {default as MbCheckbox } from './cells/form/MbCheckbox.vue';
 export  {default as MbFieldset } from './cells/form/MbFieldset.vue';
