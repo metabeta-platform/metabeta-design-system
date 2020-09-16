@@ -53,7 +53,7 @@
       </ul>
     </section>
     <section class="side-nav-footer">
-      <p class="ui-caption">1.5.2</p>
+      <p class="ui-caption">{{currentVersion}}</p>
     </section>
   </aside>
 </template>
@@ -70,6 +70,10 @@ export default {
     };
   },
   props: {
+    currentVersion:{
+      type: String,
+      default: '1.5.2',
+    },
     expanded: {
       type: Boolean,
       default: false,

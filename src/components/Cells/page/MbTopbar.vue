@@ -2,7 +2,7 @@
   <header class="mb-topbar" :class="{'active': active}">
     <mb-edges-layout> 
       <template slot="title">
-        <mb-icon name="hamburger"></mb-icon>
+        <mb-button :isBefore="burgerButton"></mb-button>
         <!-- we need hamburger icon here unless I do it myself with animations which you may or may not like :))))) -->
         <h1>{{title}}</h1>
       </template>
@@ -19,6 +19,11 @@
 
 <script>
 export default {
+  data:()=>({
+    burgerButton:{
+      name: 'hamburger',
+    }
+  }),
   props: {
     active: {
       type: Boolean,

@@ -34,12 +34,12 @@ export default {
       required: false,
     },
     isBefore:{
-      type: Boolean,
-      default: true,
+      type: Object,
+      default: () => {},
     },
     isAfter:{
-      type:Boolean,
-      default: false,
+      type: Object,
+      default: () => {},
     },
     isDisabled:{
       type: Boolean,
