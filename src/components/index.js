@@ -32,7 +32,7 @@ const tryGet = (value) => {
 
 Vue.prototype.tryGet = tryGet;
 
-const requireIcons = require.context('../src/assets/icons', false, /\.svg$/);
+const requireIcons = require.context('../assets/icons', false, /\.svg$/);
 
 requireIcons.keys().forEach((fileName) => {
   const iconName = upperFirst(camelCase(fileName.replace(/(\.\/|\.svg)/g, '')));
