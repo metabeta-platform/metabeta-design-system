@@ -144,9 +144,14 @@ $mb-grid-gutter: $mb-space-m;
   @if $direction== "top" {
     box-shadow: 0 -$elevation/2 $elevation rgba($color, $opacity),
       0 0 1px rgba($color, $opacity);
-  } @else {
+  }
+  @if $direction == "bottom"{
     box-shadow: 0 $elevation/2 $elevation rgba($color, $opacity),
       0 0 1px rgba($color, $opacity);
+  }
+  @else{
+    box-shadow: 0 0 $elevation rgba($color, $opacity),
+    0 0 1px rgba($color, $opacity);
   }
 }
 
