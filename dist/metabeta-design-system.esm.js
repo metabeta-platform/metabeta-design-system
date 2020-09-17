@@ -1,10 +1,6 @@
 import Vue from 'vue';
-import upperFirst from 'lodash/upperFirst';
-import camelCase from 'lodash/camelCase';
-
-function commonjsRequire () {
-	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
-}
+import 'lodash/upperFirst';
+import 'lodash/camelCase';
 
 //
 //
@@ -1245,8 +1241,8 @@ const __vue_component__$b = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__$b, __vue_script__$b, __vue_scope_id__$b, __vue_is_functional_template__$b, __vue_module_identifier__$b, false, createInjector, undefined, undefined);
 
 var MbNavigationList = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	'default': __vue_component__$b
+  __proto__: null,
+  'default': __vue_component__$b
 });
 
 //
@@ -1348,8 +1344,8 @@ const __vue_component__$c = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__$c, __vue_script__$c, __vue_scope_id__$c, __vue_is_functional_template__$c, __vue_module_identifier__$c, false, undefined, undefined, undefined);
 
 var MbCheckbox = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	'default': __vue_component__$c
+  __proto__: null,
+  'default': __vue_component__$c
 });
 
 //
@@ -1409,8 +1405,8 @@ const __vue_component__$d = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__$d, __vue_script__$d, __vue_scope_id__$d, __vue_is_functional_template__$d, __vue_module_identifier__$d, false, createInjector, undefined, undefined);
 
 var MbFieldset = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	'default': __vue_component__$d
+  __proto__: null,
+  'default': __vue_component__$d
 });
 
 //
@@ -1721,9 +1717,13 @@ const __vue_component__$f = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__$f, __vue_script__$f, __vue_scope_id__$f, __vue_is_functional_template__$f, __vue_module_identifier__$f, false, undefined, undefined, undefined);
 
 var MbRadio = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	'default': __vue_component__$f
+  __proto__: null,
+  'default': __vue_component__$f
 });
+
+function commonjsRequire () {
+	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
+}
 
 //
 //
@@ -1731,6 +1731,9 @@ var MbRadio = /*#__PURE__*/Object.freeze({
 //
 var script$g = {
   name: "MbIcon",
+  data: () => ({
+    svg: ''
+  }),
   iconBefore: {
     type: Object,
     default: {
@@ -1756,7 +1759,12 @@ var script$g = {
         default: 40
       }
     }
+  },
+
+  created() {
+    this.svg = commonjsRequire(`../../assets/icons/${this.iconBefore.name || this.iconAfter.name}.svg`);
   }
+
 };
 
 /* script */
@@ -1771,10 +1779,13 @@ var __vue_render__$g = function () {
   var _c = _vm._self._c || _h;
 
   return _c(_vm.iconBefore.name || _vm.iconAfter.name, {
-    tag: "component",
+    tag: "div",
     class: _vm.iconBefore ? 'float__left' : 'float__right',
     attrs: {
       "width": _vm.iconBefore.size || _vm.iconAfter.size
+    },
+    domProps: {
+      "innerHTML": _vm._s(_vm.svg)
     }
   });
 };
@@ -1784,8 +1795,8 @@ var __vue_staticRenderFns__$g = [];
 
 const __vue_inject_styles__$g = function (inject) {
   if (!inject) return;
-  inject("data-v-2d6121aa_0", {
-    source: ".float__right[data-v-2d6121aa]{float:right}.float__left[data-v-2d6121aa]{float:left}",
+  inject("data-v-bcb364d0_0", {
+    source: ".float__right[data-v-bcb364d0]{float:right}.float__left[data-v-bcb364d0]{float:left}",
     map: undefined,
     media: undefined
   });
@@ -1793,7 +1804,7 @@ const __vue_inject_styles__$g = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$g = "data-v-2d6121aa";
+const __vue_scope_id__$g = "data-v-bcb364d0";
 /* module identifier */
 
 const __vue_module_identifier__$g = undefined;
@@ -1810,8 +1821,8 @@ const __vue_component__$g = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__$g, __vue_script__$g, __vue_scope_id__$g, __vue_is_functional_template__$g, __vue_module_identifier__$g, false, createInjector, undefined, undefined);
 
 var MbIcon = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	'default': __vue_component__$g
+  __proto__: null,
+  'default': __vue_component__$g
 });
 
 //
@@ -1899,8 +1910,8 @@ const __vue_component__$h = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__$h, __vue_script__$h, __vue_scope_id__$h, __vue_is_functional_template__$h, __vue_module_identifier__$h, false, createInjector, undefined, undefined);
 
 var MbAvatar = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	'default': __vue_component__$h
+  __proto__: null,
+  'default': __vue_component__$h
 });
 
 const tryGet = value => {
@@ -1923,34 +1934,26 @@ const tryGet = value => {
 
 Vue.prototype.tryGet = tryGet;
 
-const requireIcons = commonjsRequire.context('../assets/icons', false, /\.svg$/);
-
-requireIcons.keys().forEach(fileName => {
-  const iconName = upperFirst(camelCase(fileName.replace(/(\.\/|\.svg)/g, '')));
-  const componentConfig = requireIcons(fileName);
-  Vue.component(iconName, componentConfig.default || componentConfig);
-});
-
 var components = /*#__PURE__*/Object.freeze({
-	__proto__: null,
-	MbRadioGroup: __vue_component__,
-	MbCheckboxGroup: __vue_component__$1,
-	MbApp: __vue_component__$2,
-	MbOrganization: __vue_component__$3,
-	MbTopbar: __vue_component__$4,
-	MbButton: __vue_component__$5,
-	MbFooterActions: __vue_component__$6,
-	MbHeaderActions: __vue_component__$7,
-	MbPanel: __vue_component__$8,
-	MbTooltip: __vue_component__$9,
-	MbEdgesLayout: __vue_component__$a,
-	MbNavigationList: __vue_component__$b,
-	MbCheckbox: __vue_component__$c,
-	MbFieldset: __vue_component__$d,
-	MbInput: __vue_component__$e,
-	MbRadio: __vue_component__$f,
-	MbIcon: __vue_component__$g,
-	MbAvatar: __vue_component__$h
+  __proto__: null,
+  MbRadioGroup: __vue_component__,
+  MbCheckboxGroup: __vue_component__$1,
+  MbApp: __vue_component__$2,
+  MbOrganization: __vue_component__$3,
+  MbTopbar: __vue_component__$4,
+  MbButton: __vue_component__$5,
+  MbFooterActions: __vue_component__$6,
+  MbHeaderActions: __vue_component__$7,
+  MbPanel: __vue_component__$8,
+  MbTooltip: __vue_component__$9,
+  MbEdgesLayout: __vue_component__$a,
+  MbNavigationList: __vue_component__$b,
+  MbCheckbox: __vue_component__$c,
+  MbFieldset: __vue_component__$d,
+  MbInput: __vue_component__$e,
+  MbRadio: __vue_component__$f,
+  MbIcon: __vue_component__$g,
+  MbAvatar: __vue_component__$h
 });
 
 // Import vue components

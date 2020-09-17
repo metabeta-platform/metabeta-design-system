@@ -1,4 +1,4 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var Vue=require('vue'),upperFirst=require('lodash/upperFirst'),camelCase=require('lodash/camelCase');function _interopDefaultLegacy(e){return e&&typeof e==='object'&&'default'in e?e:{'default':e}}var Vue__default=/*#__PURE__*/_interopDefaultLegacy(Vue);var upperFirst__default=/*#__PURE__*/_interopDefaultLegacy(upperFirst);var camelCase__default=/*#__PURE__*/_interopDefaultLegacy(camelCase);function _slicedToArray(arr, i) {
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var Vue=require('vue');require('lodash/upperFirst'),require('lodash/camelCase');function _interopDefaultLegacy(e){return e&&typeof e==='object'&&'default'in e?e:{'default':e}}var Vue__default=/*#__PURE__*/_interopDefaultLegacy(Vue);function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
@@ -52,8 +52,6 @@ function _arrayLikeToArray(arr, len) {
 
 function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}function commonjsRequire () {
-	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
 }//
 //
 //
@@ -1627,12 +1625,19 @@ var __vue_is_functional_template__$f = false;
 var __vue_component__$f = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$f,
   staticRenderFns: __vue_staticRenderFns__$f
-}, __vue_inject_styles__$f, __vue_script__$f, __vue_scope_id__$f, __vue_is_functional_template__$f, __vue_module_identifier__$f, false, undefined, undefined, undefined);var MbRadio=/*#__PURE__*/Object.freeze({__proto__:null,'default': __vue_component__$f});//
+}, __vue_inject_styles__$f, __vue_script__$f, __vue_scope_id__$f, __vue_is_functional_template__$f, __vue_module_identifier__$f, false, undefined, undefined, undefined);var MbRadio=/*#__PURE__*/Object.freeze({__proto__:null,'default': __vue_component__$f});function commonjsRequire () {
+	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
+}//
 //
 //
 //
 var script$g = {
   name: "MbIcon",
+  data: function data() {
+    return {
+      svg: ''
+    };
+  },
   iconBefore: {
     type: Object,
     default: {
@@ -1658,6 +1663,9 @@ var script$g = {
         default: 40
       }
     }
+  },
+  created: function created() {
+    this.svg = commonjsRequire("../../assets/icons/".concat(this.iconBefore.name || this.iconAfter.name, ".svg"));
   }
 };/* script */
 var __vue_script__$g = script$g;
@@ -1671,10 +1679,13 @@ var __vue_render__$g = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c(_vm.iconBefore.name || _vm.iconAfter.name, {
-    tag: "component",
+    tag: "div",
     class: _vm.iconBefore ? 'float__left' : 'float__right',
     attrs: {
       "width": _vm.iconBefore.size || _vm.iconAfter.size
+    },
+    domProps: {
+      "innerHTML": _vm._s(_vm.svg)
     }
   });
 };
@@ -1684,8 +1695,8 @@ var __vue_staticRenderFns__$g = [];
 
 var __vue_inject_styles__$g = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-2d6121aa_0", {
-    source: ".float__right[data-v-2d6121aa]{float:right}.float__left[data-v-2d6121aa]{float:left}",
+  inject("data-v-bcb364d0_0", {
+    source: ".float__right[data-v-bcb364d0]{float:right}.float__left[data-v-bcb364d0]{float:left}",
     map: undefined,
     media: undefined
   });
@@ -1693,10 +1704,10 @@ var __vue_inject_styles__$g = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$g = "data-v-2d6121aa";
+var __vue_scope_id__$g = "data-v-bcb364d0";
 /* module identifier */
 
-var __vue_module_identifier__$g = "data-v-2d6121aa";
+var __vue_module_identifier__$g = "data-v-bcb364d0";
 /* functional template */
 
 var __vue_is_functional_template__$g = false;
@@ -1792,15 +1803,7 @@ var __vue_component__$h = /*#__PURE__*/normalizeComponent({
   }
 };
 
-Vue__default['default'].prototype.tryGet = tryGet;
-
-var requireIcons = commonjsRequire.context('../assets/icons', false, /\.svg$/);
-
-requireIcons.keys().forEach(function (fileName) {
-  var iconName = upperFirst__default['default'](camelCase__default['default'](fileName.replace(/(\.\/|\.svg)/g, '')));
-  var componentConfig = requireIcons(fileName);
-  Vue__default['default'].component(iconName, componentConfig.default || componentConfig);
-});var components=/*#__PURE__*/Object.freeze({__proto__:null,MbRadioGroup: __vue_component__,MbCheckboxGroup: __vue_component__$1,MbApp: __vue_component__$2,MbOrganization: __vue_component__$3,MbTopbar: __vue_component__$4,MbButton: __vue_component__$5,MbFooterActions: __vue_component__$6,MbHeaderActions: __vue_component__$7,MbPanel: __vue_component__$8,MbTooltip: __vue_component__$9,MbEdgesLayout: __vue_component__$a,MbNavigationList: __vue_component__$b,MbCheckbox: __vue_component__$c,MbFieldset: __vue_component__$d,MbInput: __vue_component__$e,MbRadio: __vue_component__$f,MbIcon: __vue_component__$g,MbAvatar: __vue_component__$h});var install = function installMetabetaDesignSystem(Vue) {
+Vue__default['default'].prototype.tryGet = tryGet;var components=/*#__PURE__*/Object.freeze({__proto__:null,MbRadioGroup: __vue_component__,MbCheckboxGroup: __vue_component__$1,MbApp: __vue_component__$2,MbOrganization: __vue_component__$3,MbTopbar: __vue_component__$4,MbButton: __vue_component__$5,MbFooterActions: __vue_component__$6,MbHeaderActions: __vue_component__$7,MbPanel: __vue_component__$8,MbTooltip: __vue_component__$9,MbEdgesLayout: __vue_component__$a,MbNavigationList: __vue_component__$b,MbCheckbox: __vue_component__$c,MbFieldset: __vue_component__$d,MbInput: __vue_component__$e,MbRadio: __vue_component__$f,MbIcon: __vue_component__$g,MbAvatar: __vue_component__$h});var install = function installMetabetaDesignSystem(Vue) {
   if (install.installed) return;
   install.installed = true;
   Object.entries(components).forEach(function (_ref) {

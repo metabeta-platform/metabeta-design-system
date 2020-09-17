@@ -1,16 +1,19 @@
 <template>
-  <component :class="iconBefore ? 'float__left' : 'float__right'" :width="iconBefore.size || iconAfter.size" :is="iconBefore.name || iconAfter.name"></component>
+  <div :class="iconBefore ? 'float__left' : 'float__right'" :width="iconBefore.size || iconAfter.size" :is="iconBefore.name || iconAfter.name" v-html="svg"></div>
 </template>
 
 <script>
 export default {
   name: "MbIcon",
+  data: () => ({
+    svg: '',
+  }),
   iconBefore:{
     type: Object,
     default:{
       name: {
         type: String,
-        default: ''
+        default: '',
       },
       size: {
         type: Number,
@@ -30,6 +33,9 @@ export default {
         default: 40,
       },
     }
+  },
+  created(){
+    this.svg = require(`../../assets/icons/${this.iconBefore.name || this.iconAfter.name}.svg`);
   }
 }
 </script>
