@@ -7,11 +7,11 @@
     @mouseenter="$emit('mouseenter', $event)"
     @mouseleave="$emit('mouseleave', $event)"
     :href="type === 'link' ? href : false"
-    :class="['mtb-button', `mtb-type-${type}`, `mtb-priority-${priority}`, color, `mtb-size-${size}`]"
+    :class="['mb-button', `mb-type-${type}`, `mb-priority-${priority}`,`mb-color-${color}`, `mb-size-${size}`]"
     :disabled="isDisabled">
-      <mb-icon v-if="!responsiveLabelOnly && isBefore" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
-      <label class="mtb-button-label" v-if="!responsiveIconOnly">{{label}}</label>
-      <mb-icon v-if="!responsiveLabelOnly && isAfter" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
+      <i v-if="!responsiveLabelOnly && isBefore" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></i>
+      <span class="mb-button-label" v-if="!responsiveIconOnly">{{label}}</span>
+      <i v-if="!responsiveLabelOnly && isAfter" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></i>
   </component>
 </keep-alive>
 </template>
@@ -19,7 +19,7 @@
 <script>
 export default {
   name: "MbButton",
-  data:() => ({
+  data:() => ({  
     responsiveLabelOnly: '',
     responsiveIconOnly: '',
   }),
