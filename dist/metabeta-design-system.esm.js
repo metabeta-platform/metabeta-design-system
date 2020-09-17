@@ -1,3 +1,7 @@
+import Vue from 'vue';
+import upperFirst from 'lodash/upperFirst';
+import camelCase from 'lodash/camelCase';
+
 function commonjsRequire () {
 	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
 }
@@ -750,13 +754,13 @@ var __vue_render__$5 = function () {
         return _vm.$emit('mouseleave', $event);
       }
     }
-  }, [!_vm.responsiveLabelOnly && _vm.isBefore.name ? _c('mb-icon', {
+  }, [!_vm.responsiveLabelOnly && _vm.isBefore ? _c('mb-icon', {
     attrs: {
       "name": _vm.type === 'action' ? _vm.iconBefore.name = 'dropdown' : _vm.iconBefore.name
     }
   }) : _vm._e(), _vm._v(" "), !_vm.responsiveIconOnly ? _c('label', {
     staticClass: "mtb-button-label"
-  }, [_vm._v(_vm._s(_vm.label))]) : _vm._e(), _vm._v(" "), !_vm.responsiveLabelOnly && _vm.isAfter.name ? _c('mb-icon', {
+  }, [_vm._v(_vm._s(_vm.label))]) : _vm._e(), _vm._v(" "), !_vm.responsiveLabelOnly && _vm.isAfter ? _c('mb-icon', {
     attrs: {
       "name": _vm.type === 'action' ? _vm.iconBefore.name = 'dropdown' : _vm.iconBefore.name
     }
@@ -768,7 +772,7 @@ var __vue_staticRenderFns__$5 = [];
 
 const __vue_inject_styles__$5 = function (inject) {
   if (!inject) return;
-  inject("data-v-175cae38_0", {
+  inject("data-v-4b26d2b8_0", {
     source: ".mtb-button{align-items:center;justify-content:center}.mtb-button .mtb-button-label{margin:0}",
     map: undefined,
     media: undefined

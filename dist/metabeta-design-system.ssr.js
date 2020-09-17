@@ -1,4 +1,4 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});function _slicedToArray(arr, i) {
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var Vue=require('vue'),upperFirst=require('lodash/upperFirst'),camelCase=require('lodash/camelCase');function _interopDefaultLegacy(e){return e&&typeof e==='object'&&'default'in e?e:{'default':e}}var Vue__default=/*#__PURE__*/_interopDefaultLegacy(Vue);var upperFirst__default=/*#__PURE__*/_interopDefaultLegacy(upperFirst);var camelCase__default=/*#__PURE__*/_interopDefaultLegacy(camelCase);function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
@@ -769,13 +769,13 @@ var __vue_render__$5 = function __vue_render__() {
         return _vm.$emit('mouseleave', $event);
       }
     }
-  }, [!_vm.responsiveLabelOnly && _vm.isBefore.name ? _c('mb-icon', {
+  }, [!_vm.responsiveLabelOnly && _vm.isBefore ? _c('mb-icon', {
     attrs: {
       "name": _vm.type === 'action' ? _vm.iconBefore.name = 'dropdown' : _vm.iconBefore.name
     }
   }) : _vm._e(), _vm._v(" "), !_vm.responsiveIconOnly ? _c('label', {
     staticClass: "mtb-button-label"
-  }, [_vm._v(_vm._s(_vm.label))]) : _vm._e(), _vm._v(" "), !_vm.responsiveLabelOnly && _vm.isAfter.name ? _c('mb-icon', {
+  }, [_vm._v(_vm._s(_vm.label))]) : _vm._e(), _vm._v(" "), !_vm.responsiveLabelOnly && _vm.isAfter ? _c('mb-icon', {
     attrs: {
       "name": _vm.type === 'action' ? _vm.iconBefore.name = 'dropdown' : _vm.iconBefore.name
     }
@@ -787,7 +787,7 @@ var __vue_staticRenderFns__$5 = [];
 
 var __vue_inject_styles__$5 = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-175cae38_0", {
+  inject("data-v-4b26d2b8_0", {
     source: ".mtb-button{align-items:center;justify-content:center}.mtb-button .mtb-button-label{margin:0}",
     map: undefined,
     media: undefined
@@ -799,7 +799,7 @@ var __vue_inject_styles__$5 = function __vue_inject_styles__(inject) {
 var __vue_scope_id__$5 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$5 = "data-v-175cae38";
+var __vue_module_identifier__$5 = "data-v-4b26d2b8";
 /* functional template */
 
 var __vue_is_functional_template__$5 = false;
@@ -1792,14 +1792,14 @@ var __vue_component__$h = /*#__PURE__*/normalizeComponent({
   }
 };
 
-Vue.prototype.tryGet = tryGet;
+Vue__default['default'].prototype.tryGet = tryGet;
 
 var requireIcons = commonjsRequire.context('../assets/icons', false, /\.svg$/);
 
 requireIcons.keys().forEach(function (fileName) {
-  var iconName = upperFirst(camelCase(fileName.replace(/(\.\/|\.svg)/g, '')));
+  var iconName = upperFirst__default['default'](camelCase__default['default'](fileName.replace(/(\.\/|\.svg)/g, '')));
   var componentConfig = requireIcons(fileName);
-  Vue.component(iconName, componentConfig.default || componentConfig);
+  Vue__default['default'].component(iconName, componentConfig.default || componentConfig);
 });var components=/*#__PURE__*/Object.freeze({__proto__:null,MbRadioGroup: __vue_component__,MbCheckboxGroup: __vue_component__$1,MbApp: __vue_component__$2,MbOrganization: __vue_component__$3,MbTopbar: __vue_component__$4,MbButton: __vue_component__$5,MbFooterActions: __vue_component__$6,MbHeaderActions: __vue_component__$7,MbPanel: __vue_component__$8,MbTooltip: __vue_component__$9,MbEdgesLayout: __vue_component__$a,MbNavigationList: __vue_component__$b,MbCheckbox: __vue_component__$c,MbFieldset: __vue_component__$d,MbInput: __vue_component__$e,MbRadio: __vue_component__$f,MbIcon: __vue_component__$g,MbAvatar: __vue_component__$h});var install = function installMetabetaDesignSystem(Vue) {
   if (install.installed) return;
   install.installed = true;
