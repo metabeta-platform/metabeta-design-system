@@ -1,4 +1,4 @@
-.primary {
+.mb-priority-primary {
   background-color: $mb-color-primary ;
   color: $mb-color-white;
   border: $mb-border-thin solid $mb-color-transparent;
@@ -31,7 +31,7 @@
       } // style for icons
     }
   }
-  &.danger {
+  &.mb-color-danger {
     background-color: $mb-color-danger;
     &:hover {
       background-color: $mb-color-danger-dark;
@@ -44,7 +44,7 @@
       background-color: fade-out(desaturate($mb-color-danger, $mb-opacity-m), $mb-opacity-l);
     }
   }
-  &.success {
+  &.mb-color-success {
     background-color: $mb-color-success;
     &:hover {
       background-color: $mb-color-success-dark;
@@ -57,7 +57,7 @@
       background-color: fade-out(desaturate($mb-color-success, $mb-opacity-m), $mb-opacity-l);
     }
   }
-  &.info {
+  &.mb-color-info {
     background-color: $mb-color-info;
     &:hover {
       background-color: $mb-color-info-dark;
@@ -70,7 +70,7 @@
       background-color: fade-out(desaturate($mb-color-info, $mb-opacity-m), $mb-opacity-l);
     }
   }
-  &.warning {
+  &.mb-color-warning {
     background-color: $mb-color-warning;
     &:hover {
       background-color: $mb-color-warning-dark;
@@ -83,7 +83,7 @@
       background-color: fade-out(desaturate($mb-color-warning, $mb-opacity-m), $mb-opacity-l);
     }
   }
-  &.note {
+  &.mb-color-note {
     background-color: $mb-color-note;
     &:hover {
       background-color: $mb-color-note-dark;
@@ -96,9 +96,74 @@
       background-color: fade-out(desaturate($mb-color-note, $mb-opacity-m), $mb-opacity-l);
     }
   }
+  &.mb-color-lime {
+    background-color: $mb-color-lime;
+    &:hover {
+      background-color: $mb-color-lime-dark;
+    }
+    &:active {
+      background-color: $mb-color-lime-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-lime, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-teal {
+    background-color: $mb-color-teal;
+    &:hover {
+      background-color: $mb-color-teal-dark;
+    }
+    &:active {
+      background-color: $mb-color-teal-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-teal, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-pink {
+    background-color: $mb-color-pink;
+    &:hover {
+      background-color: $mb-color-pink-dark;
+    }
+    &:active {
+      background-color: $mb-color-pink-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-pink, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-purple {
+    background-color: $mb-color-purple;
+    &:hover {
+      background-color: $mb-color-purple-dark;
+    }
+    &:active {
+      background-color: $mb-color-purple-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-purple, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-indigo {
+    background-color: $mb-color-indigo;
+    &:hover {
+      background-color: $mb-color-indigo-dark;
+    }
+    &:active {
+      background-color: $mb-color-indigo-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-indigo, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
 }
 
-.secondary {
+.mb-priority-secondary {
   background-color: $mb-color-white;
   color: $mb-color-text-medium;
   border: $mb-border-thin solid $mb-color-border-medium;
@@ -150,7 +215,7 @@
       } // style for icons
     }
   }
-  &.danger {
+  &.mb-color-danger {
     color: $mb-color-danger;
     border: $mb-border-thin solid rgba($mb-color-danger, $mb-opacity-s);
     svg {
@@ -202,7 +267,7 @@
       }
     }
   }
-  &.success {
+  &.mb-color-success {
     color: $mb-color-success;
     border: $mb-border-thin solid rgba($mb-color-success, $mb-opacity-s);
     svg {
@@ -254,7 +319,7 @@
       }
     }
   }
-  &.info {
+  &.mb-color-info {
     color: $mb-color-info;
     border: $mb-border-thin solid rgba($mb-color-info, $mb-opacity-s);
     svg {
@@ -306,7 +371,7 @@
       }
     }
   }
-  &.warning {
+  &.mb-color-warning {
     color: $mb-color-warning;
     border: $mb-border-thin solid rgba($mb-color-warning, $mb-opacity-s);
     svg {
@@ -358,7 +423,7 @@
       }
     }
   }
-  &.note {
+  &.mb-color-note {
     color: $mb-color-note;
     border: $mb-border-thin solid rgba($mb-color-note, $mb-opacity-s);
     svg {
@@ -394,9 +459,189 @@
       }
     }
   }
+  &.mb-color-lime {
+    color: $mb-color-pink;
+    border: $mb-border-thin solid rgba($mb-color-lime, $mb-opacity-s);
+    svg {
+      .svg-fill {
+        fill: $mb-color-lime;
+      }
+      .svg-stroke {
+        stroke: $mb-color-lime;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-lime-dark;
+      background-color: $mb-color-lime-highlight;
+      border: $mb-border-thin solid rgba($mb-color-lime, $mb-opacity-m);
+    }
+    &:active {
+      color: $mb-color-lime;
+      background-color: $mb-color-lime-highlight;
+      border: $mb-border-thin solid $mb-color-lime;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-lime, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-lime, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-lime, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-lime, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-lime, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-teal {
+    color: $mb-color-teal;
+    border: $mb-border-thin solid rgba($mb-color-teal, $mb-opacity-s);
+    svg {
+      .svg-fill {
+        fill: $mb-color-teal;
+      }
+      .svg-stroke {
+        stroke: $mb-color-teal;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-teal;
+      background-color: $mb-color-teal-highlight;
+      border: $mb-border-thin solid rgba($mb-color-teal, $mb-opacity-m);
+    }
+    &:active {
+      color: $mb-color-teal;
+      background-color: $mb-color-teal-highlight;
+      border: $mb-border-thin solid $mb-color-teal;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-teal, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-teal, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-teal, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-teal, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-teal, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-pink {
+    color: $mb-color-pink;
+    border: $mb-border-thin solid rgba($mb-color-pink, $mb-opacity-s);
+    svg {
+      .svg-fill {
+        fill: $mb-color-pink;
+      }
+      .svg-stroke {
+        stroke: $mb-color-pink;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-pink-dark;
+      background-color: $mb-color-pink-highlight;
+      border: $mb-border-thin solid rgba($mb-color-pink, $mb-opacity-m);
+    }
+    &:active {
+      color: $mb-color-pink;
+      background-color: $mb-color-pink-highlight;
+      border: $mb-border-thin solid $mb-color-pink;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-pink, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-pink, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-pink, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-pink, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-pink, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-purple {
+    color: $mb-color-purple;
+    border: $mb-border-thin solid rgba($mb-color-purple, $mb-opacity-s);
+    svg {
+      .svg-fill {
+        fill: $mb-color-purple;
+      }
+      .svg-stroke {
+        stroke: $mb-color-purple;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-purple-dark;
+      background-color: $mb-color-purple-highlight;
+      border: $mb-border-thin solid rgba($mb-color-purple, $mb-opacity-m);
+    }
+    &:active {
+      color: $mb-color-purple;
+      background-color: $mb-color-purple-highlight;
+      border: $mb-border-thin solid $mb-color-purple;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-purple, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-purple, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-purple, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-purple, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-purple, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-indigo {
+    color: $mb-color-indigo;
+    border: $mb-border-thin solid rgba($mb-color-indigo, $mb-opacity-s);
+    svg {
+      .svg-fill {
+        fill: $mb-color-indigo;
+      }
+      .svg-stroke {
+        stroke: $mb-color-indigo;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-indigo-dark;
+      background-color: $mb-color-indigo-highlight;
+      border: $mb-border-thin solid rgba($mb-color-indigo, $mb-opacity-m);
+    }
+    &:active {
+      color: $mb-color-indigo;
+      background-color: $mb-color-indigo-highlight;
+      border: $mb-border-thin solid $mb-color-indigo;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-indigo, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-indigo, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-indigo, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-indigo, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-indigo, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
 }
 
-.base {
+.mb-priority-base {
   background-color: $mb-color-white;
   color: $mb-color-text-medium;
   border: $mb-border-thin solid $mb-color-transparent;
@@ -453,7 +698,7 @@
       } // style for icons
     }
   }
-  &.danger{
+  &.mb-color-danger{
     color: $mb-color-danger;
     svg {
       #svg-fill,
@@ -509,7 +754,7 @@
       }
     }
   }
-  &.success{
+  &.mb-color-success{
     color: $mb-color-success;
     svg {
       #svg-fill,
@@ -565,7 +810,7 @@
       }
     }
   }
-  &.info{
+  &.mb-color-info{
     color: $mb-color-info;
     svg {
       #svg-fill,
@@ -621,7 +866,7 @@
       }
     }
   }
-  &.warning{
+  &.mb-color-warning{
     color: $mb-color-warning;
     svg {
       #svg-fill,
@@ -677,7 +922,7 @@
       }
     }
   }
-  &.note{
+  &.mb-color-note{
     color: $mb-color-note;
     svg {
       #svg-fill,
@@ -719,7 +964,7 @@
     }
     &:disabled,
     &.disabled {
-      background-color: fade-out(desaturate($mb-color-note, $mb-opacity-m),0.9);
+      background-color: fade-out(desaturate($mb-color-note, $mb-opacity-m),$mb-opacity-xl);
       color: fade-out($mb-color-note, $mb-opacity-l);
       svg {
         #svg-fill,
@@ -733,4 +978,284 @@
       }
     }
   }
+  &.mb-color-lime{
+    color: $mb-color-lime;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-lime;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-lime;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-lime-dark;
+      background-color: $mb-color-lime-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-lime-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-lime-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-lime-light;
+      background-color: $mb-color-lime-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-lime-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-lime-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-lime, $mb-opacity-m),$mb-opacity-xl);
+      color: fade-out($mb-color-lime, $mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-lime, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-lime,$mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-teal{
+    color: $mb-color-teal;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-teal;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-teal;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-teal-dark;
+      background-color: $mb-color-teal-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-teal-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-teal-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-teal-light;
+      background-color: $mb-color-teal-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-teal-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-teal-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-teal, $mb-opacity-m),$mb-opacity-xl);
+      color: fade-out($mb-color-teal, $mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-teal, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-teal,$mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-pink{
+    color: $mb-color-pink;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-pink;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-pink;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-pink-dark;
+      background-color: $mb-color-pink-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-pink-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-pink-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-pink-light;
+      background-color: $mb-color-pink-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-pink-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-pink-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-pink, $mb-opacity-m),$mb-opacity-xl);
+      color: fade-out($mb-color-pink, $mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-pink, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-pink,$mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-indigo{
+    color: $mb-color-indigo;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-indigo;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-indigo;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-indigo-dark;
+      background-color: $mb-color-indigo-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-indigo-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-indigo-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-indigo-light;
+      background-color: $mb-color-indigo-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-indigo-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-indigo-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-indigo, $mb-opacity-m),$mb-opacity-xl);
+      color: fade-out($mb-color-indigo, $mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-indigo, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-indigo,$mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+    &.mb-color-purple{
+      color: $mb-color-purple;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-purple;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-purple;
+        } // style for icons
+      }
+      &:hover {
+        color: $mb-color-purple-dark;
+        background-color: $mb-color-purple-highlight;
+        svg {
+          #svg-fill,
+          .svg-fill {
+            fill: $mb-color-purple-dark;
+          }
+          #svg-stroke,
+          .svg-stroke {
+            stroke: $mb-color-purple-dark;
+          } // style for icons
+        }
+      }
+      &:active {
+        color: $mb-color-purple-light;
+        background-color: $mb-color-purple-highlight;
+        svg {
+          #svg-fill,
+          .svg-fill {
+            fill: $mb-color-purple-light;
+          }
+          #svg-stroke,
+          .svg-stroke {
+            stroke: $mb-color-purple-light;
+          } // style for icons
+        }
+      }
+      &:disabled,
+      &.disabled {
+        background-color: fade-out(desaturate($mb-color-purple, $mb-opacity-m),$mb-opacity-xl);
+        color: fade-out($mb-color-purple, $mb-opacity-l);
+        svg {
+          #svg-fill,
+          .svg-fill {
+            fill: fade-out(desaturate($mb-color-purple, $mb-opacity-m),$mb-opacity-xl);
+          }
+          #svg-stroke,
+          .svg-stroke {
+            stroke: fade-out($mb-color-purple,$mb-opacity-xl);
+          } // style for icons
+        }
+      }
+    }
 }
