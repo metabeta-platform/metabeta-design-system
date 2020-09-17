@@ -333,7 +333,7 @@ input {
 
   &[type="submit"],
   &[type="button"] {
-    @extend .primary, button; 
+    @extend button; 
   }
 
   &:focus {
