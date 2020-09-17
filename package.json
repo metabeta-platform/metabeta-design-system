@@ -1,6 +1,6 @@
 {
   "name": "metabeta-design-system",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "description": "\"Metabeta Design System\"",
   "main": "dist/metabeta-design-system.ssr.js",
   "browser": "dist/metabeta-design-system.esm.js",
