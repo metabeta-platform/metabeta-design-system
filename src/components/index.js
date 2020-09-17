@@ -9,7 +9,7 @@ export  {default as MbApp } from '@/components/cells/page/MbApp.vue';
 
 export  {default as MbOrganization } from '@/components/cells/page/MbOrganization.vue';
 export  {default as MbTopbar } from '@/components/cells/page/MbTopbar.vue';
-
+export  {default as MbTabs} from '@/components/cells/page/MbTabs.vue';
 
 export  {default as MbButton } from '@/components/cells/MbButton.vue';
 export  {default as MbFooterActions } from '@/components/cells/MbFooterActions.vue';
@@ -23,8 +23,8 @@ export  {default as MbCheckbox } from '@/components/cells/form/MbCheckbox.vue';
 export  {default as MbFieldset } from '@/components/cells/form/MbFieldset.vue';
 export  {default as MbInput } from '@/components/cells/form/MbInput.vue';
 export  {default as MbRadio } from '@/components/cells/form/MbRadio.vue';
-export {default as MbIcon} from '@/components/cells/MbIcon.vue';
-export {default as MbAvatar} from '@/components/cells/MbAvatar.vue';
+export  {default as MbIcon} from '@/components/cells/MbIcon.vue';
+export  {default as MbAvatar} from '@/components/cells/MbAvatar.vue';
 
 const tryGet = (value) => {
   try {
