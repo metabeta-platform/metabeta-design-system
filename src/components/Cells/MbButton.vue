@@ -9,9 +9,9 @@
     :href="type === 'link' ? href : false"
     :class="['mtb-button', `mtb-type-${type}`, `mtb-priority-${priority}`, color, `mtb-size-${size}`]"
     :disabled="isDisabled">
-      <mb-icon v-if="!responsiveLabelOnly && isBefore.name" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && isBefore" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
       <label class="mtb-button-label" v-if="!responsiveIconOnly">{{label}}</label>
-      <mb-icon v-if="!responsiveLabelOnly && isAfter.name" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && isAfter" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
   </component>
 </keep-alive>
 </template>

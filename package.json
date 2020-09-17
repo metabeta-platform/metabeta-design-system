@@ -20,6 +20,7 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
+    "lodash": "^4.17.20",
     "node-sass": "^4.14.1",
     "sass-loader": "^7.3.1"
   },

@@ -1,5 +1,5 @@
 <script>
-// import Vue from 'vue';
+import Vue from 'vue';
 import { MbButton } from '../src/components/index';
 
 export default Vue.extend({
