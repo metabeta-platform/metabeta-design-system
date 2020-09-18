@@ -40,6 +40,11 @@ export default Vue.extend({
     programs:[
 
     ],
+    avatar:{
+      avatarUrl: 'https://placekitten.com/200/200',
+      name: 'Some random cat',
+      desc: "seriously I don't know which one shows up"
+    },
   }),
   name: 'ServeDev',
   components: {
@@ -77,5 +82,6 @@ export default Vue.extend({
     </mb-fieldset>
     <mb-radio label="test" name="test"></mb-radio>
     <!-- <mb-app></mb-app> MB LOADER ISN'T READY because it isn't decided -->
+    <mb-avatar :avatar="avatar"></mb-avatar>
   </div>
 </template>
