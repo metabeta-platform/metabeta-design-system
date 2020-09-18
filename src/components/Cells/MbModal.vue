@@ -1,10 +1,10 @@
 <template>
-  <section class="mb-modal" :class="[size , modalVisibility == true ? 'is-visible' : 'is-hidden' ]">
+  <section class="mb-modal" :class="[modalVisibility ? 'is-visible' : 'is-hidden', size]">
     <div class="content">
-      <mb-header-actions>
+      <mb-header-actions is-visible>
         <template slot="header-title">
           <h3>{{title}}</h3>
-          <mb-button @click="modalVisibility = false; $emit('on-close')" priority="base" :iconBefore="iconClose"></mb-button>
+          <mb-button @click="modalVisibility = false; $emit('on-close')" priority="base" label="close" :iconBefore="iconClose"></mb-button>
         </template>
       </mb-header-actions>
       <slot name="header"></slot>
@@ -15,6 +15,12 @@
 
 <script>
 export default {
+  name: "MbModal",
+  data:()=>({
+    iconClose: {
+      name: 'close'
+    }
+  }),
   props: {
     size: {
       type: String,
@@ -32,6 +38,7 @@ export default {
   computed: {
     modalVisibility: {
       get(){
+        console.log(this.isVisible);
         return this.isVisible;
       },
       set(value){
@@ -41,6 +48,7 @@ export default {
   },
   components: {
     MbHeaderActions : () => import('./MbHeaderActions'),
+    MbButton : () => import('./MbButton'),
   },
 }
 </script>
@@ -58,9 +66,11 @@ export default {
     max-height: 100vh;
     @include mb-elevation(5);
     &.is-visible{
+      display: block;
      transition: $mb-speed-slow $mb-ease-intro;
     }
     &.is-hidden{
+      display: none;
       transition: $mb-speed-fast $mb-ease-intro;
     }
     .content{

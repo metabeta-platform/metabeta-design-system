@@ -57,6 +57,7 @@ export default Vue.extend({
         }
       },
     ],
+    TRUE_FLAG: true,
     programs:[
 
     ],
@@ -104,5 +105,11 @@ export default Vue.extend({
     <!-- <mb-app></mb-app> MB LOADER ISN'T READY because it isn't decided -->
     <mb-avatar :avatar="avatar"></mb-avatar>
     <mb-navigation-list :links="links"></mb-navigation-list>
+    <mb-button @click="TRUE_FLAG = !TRUE_FLAG" label="CloseModal"></mb-button>
+    <mb-modal title="testTitle" :is-visible="TRUE_FLAG">
+      <template slot="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dicta quisquam necessitatibus mollitia dignissimos, labore quaerat corporis? Hic libero, fugiat quia pariatur provident sapiente accusantium ullam? Delectus ratione soluta nulla.Sit veritatis laboriosam animi laudantium quo perferendis doloremque pariatur id beatae maxime, commodi suscipit dolorem soluta perspiciatis sunt molestias? Culpa rem omnis sapiente? Iste corporis quod repellat odit consectetur harum.
+      </template>
+    </mb-modal>
   </div>
 </template>
