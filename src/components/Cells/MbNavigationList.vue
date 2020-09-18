@@ -1,13 +1,15 @@
 <template>
 <div class="mb-navigation-list">
   <h5>{{title}}</h5>
-  <ul class="nav-link">
-    <li v-for="link in links" :key="link._id" @click="$router.push({name : link.url})">
-      <router-link :to="link.url">
-        <mb-avatar :type="type" :avatar="link.data"></mb-avatar>
-      </router-link>
-    </li>
-  </ul>
+  <nav>
+    <ul class="nav-link">
+      <li v-for="link in links" :key="link._id" @click="$router.push({name : link.url})">
+        <router-link :to="link.url">
+          <mb-avatar :type="type" :avatar="link.data"></mb-avatar>
+        </router-link>
+      </li>
+    </ul>
+  </nav>
 </div>
 </template>
 
@@ -20,6 +22,9 @@ export default {
     },
     title:{
       type: [String, Number],
+    },
+    links:{
+      type: [Array, Object],
     }
   },
   components: {

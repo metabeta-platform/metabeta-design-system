@@ -37,6 +37,26 @@ export default Vue.extend({
 
       }
     ],
+    links:[
+      {
+        _id: '123162387sgahdjsadgdasj',
+        url: 'somePlace',
+        data: {
+          avatarUrl: 'https://placekitten.com/205/200',
+          name: 'Some another cat',
+          desc: "seriously I don't know which one shows up"
+        }
+      },
+      {
+        _id: 'asdgashjdgksja1213a',
+        url: 'someOtherPlace',
+        data: {
+          avatarUrl: 'https://placekitten.com/205/205',
+          name: 'Some another cat different than the others',
+          desc: "seriously I don't know which one shows up"
+        }
+      },
+    ],
     programs:[
 
     ],
@@ -83,5 +103,6 @@ export default Vue.extend({
     <mb-radio label="test" name="test"></mb-radio>
     <!-- <mb-app></mb-app> MB LOADER ISN'T READY because it isn't decided -->
     <mb-avatar :avatar="avatar"></mb-avatar>
+    <mb-navigation-list :links="links"></mb-navigation-list>
   </div>
 </template>
