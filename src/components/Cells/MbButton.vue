@@ -9,9 +9,9 @@
     :href="type === 'link' ? href : false"
     :class="['mb-button', `mb-type-${type}`, `mb-priority-${priority}`,`mb-color-${color}`, `mb-size-${size}`]"
     :disabled="isDisabled">
-      <i v-if="!responsiveLabelOnly && isBefore" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></i>
+      <mb-icon v-if="!responsiveLabelOnly && isBefore" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
       <span class="mb-button-label" v-if="!responsiveIconOnly">{{label}}</span>
-      <i v-if="!responsiveLabelOnly && isAfter" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></i>
+      <mb-icon v-if="!responsiveLabelOnly && isAfter" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
   </component>
 </keep-alive>
 </template>
@@ -121,11 +121,25 @@ export default {
 </script>
 
 <style lang="scss">
-  .mtb-button{
+  .mb-button{
     align-items: center;
     justify-content: center;
-    .mtb-button-label{
+    .mb-button-label{
       margin: 0;
+    }
+    &.mb-size{
+      &-s{
+        padding: $mb-space-xxs $mb-space-xs;
+        @include mb-font(body, xs, normal, normal);
+      }
+      &-m{
+        padding: $mb-space-xs $mb-space-s;
+        @include mb-font(body, s, normal, normal);
+      }
+      &-l{
+        padding: $mb-space-s $mb-space-m;
+        @include mb-font(body, m, normal, normal);
+      }
     }
   }
 </style>
