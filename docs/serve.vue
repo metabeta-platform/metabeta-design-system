@@ -70,19 +70,6 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <mb-radio-group></mb-radio-group>
-    <mb-checkbox-group></mb-checkbox-group>
-    <mb-tooltip></mb-tooltip>
-    <mb-panel></mb-panel>
-    <mb-navigation-list></mb-navigation-list>
-    <mb-modal></mb-modal>
-    <mb-icon name="hr"></mb-icon>
-    <mb-header-actions></mb-header-actions>
-    <mb-footer-actions></mb-footer-actions>
-    <mb-drawer></mb-drawer>
-    <mb-avatar></mb-avatar>
-    <mb-topbar></mb-topbar>
-    <mb-tabs></mb-tabs>
     <mb-button label="test"></mb-button>
     <mb-checkbox name="test" label="test"></mb-checkbox>
     <mb-fieldset>
@@ -90,6 +77,5 @@ export default Vue.extend({
     </mb-fieldset>
     <mb-radio label="test" name="test"></mb-radio>
     <!-- <mb-app></mb-app> MB LOADER ISN'T READY because it isn't decided -->
-    <mb-organization></mb-organization>
   </div>
 </template>
