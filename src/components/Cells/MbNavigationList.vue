@@ -38,9 +38,11 @@ export default {
 @import "../../assets/styles/partials/_mb_space.scss";
   .mb-navigation-list{
     li{
-      padding: $mb-space-l;
+      padding: $mb-space-xs;
+      margin: 0 $mb-space-xs;
+      @include mb-border-radius(m);
       &:hover{
-        background-color: $mb-color-gray-500;
+        background-color: $mb-color-gray-300;
       }
     }
   }
