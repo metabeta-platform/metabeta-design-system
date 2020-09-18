@@ -1,14 +1,17 @@
 <template>
 <mb-fieldset>
-  <mb-icon :class="{iconBefore : 'icon-before'}" @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconBefore" v-if="iconBefore.name.length > 0"></mb-icon>
-  <input class="mb-input" :class="[{'has-before-icon' : beforeIcon.name.length > 0}, {'has-after-icon' : afterIcon.name.length > 0}]" :type="type" :name="name" v-model="value">
-  <mb-icon :class="{iconAfter : 'icon-after'}" @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconAfter" v-if="iconAfter.name.length > 0"></mb-icon>
+  <mb-icon v-if="iconBefore" :class="{iconBefore : 'icon-before'}" @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconBefore"></mb-icon>
+  <input class="mb-input" :class="[{'has-before-icon' : iconBefore}, {'has-after-icon' : iconAfter}]" :type="type" v-model="inputValue">
+  <mb-icon v-if="iconAfter" :class="{iconAfter : 'icon-after'}" @click="emit('icon-clicked')" class="input-icon" :iconBefore="iconBefore" :iconAfter="iconAfter"></mb-icon>
 </mb-fieldset>
 </template>
 
 <script>
 export default {
   name: "MbInput",
+  data: () =>({
+    inputValue: '',
+  }),
   props: {
     type: {
       type: String,
@@ -29,13 +32,17 @@ export default {
   },
   components: {
     MbIcon: () => import('@/components/cells/MbIcon'),
-    MbFieldSet: () => import('@/components/cells/form/MbFieldset'),
+    MbFieldset: () => import('@/components/cells/form/MbFieldset'),
   },
   watch: {
     value(newValue) {
       this.$emit('changed', newValue);
+      this.inputValue = newValue;
     },
   },
+  created(){
+    this.inputValue = this.value;
+  }
 }
 </script>
 

@@ -5,7 +5,7 @@
     </div>
     <div class="organization-menu" :class="{expanded : 'expanded'}">
       <mb-navigation-list v-for="org in organizations" type="organization" :key="org._id" :avatar="org" title="Organizations"></mb-navigation-list>
-      <mb-navigation-list v-for="prg in programs" type="organization" :key="prg._id" :avatar="prg" title="Programs"></mb-navigation-list>
+      <mb-navigation-list v-for="prg in programs" type="program" :key="prg._id" :avatar="prg" title="Programs"></mb-navigation-list>
     </div>
   </section>
 </template> 
@@ -15,6 +15,20 @@ export default {
   components: {
     MbAvatar: () => import('../MbAvatar.vue'),
     MbNavigationList: () => import('../MbNavigationList.vue'),
+  },
+  props: {
+    currentWorkspace: {
+      type: [Array,Object],
+      default: () => {},
+    },
+    organizations:{
+      type: [Array,Object],
+      default: () => {},
+    },
+    programs:{
+      type: [Array,Object],
+      default: () => {},
+    }
   },
 }
 </script>

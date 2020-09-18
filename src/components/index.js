@@ -10,7 +10,8 @@ export  {default as MbApp } from '@/components/cells/page/MbApp.vue';
 export  {default as MbOrganization } from '@/components/cells/page/MbOrganization.vue';
 export  {default as MbTopbar } from '@/components/cells/page/MbTopbar.vue';
 export  {default as MbTabs} from '@/components/cells/page/MbTabs.vue';
-
+export  {default as MbModal} from '@/components/cells/MbModal.vue';
+export  {default as MbDrawer} from '@/components/cells/MbDrawer.vue';
 export  {default as MbButton } from '@/components/cells/MbButton.vue';
 export  {default as MbFooterActions } from '@/components/cells/MbFooterActions.vue';
 export  {default as MbHeaderActions } from '@/components/cells/MbHeaderActions.vue';
@@ -43,3 +44,36 @@ const tryGet = (value) => {
 };
 
 Vue.prototype.tryGet = tryGet;
+
+class DefaultImages {
+  constructor() {
+    this.images = {
+      investor: {
+        icon: 'http://cdn.metabeta.com/static/images/accelerator/icon.png',
+        logo: 'http://cdn.metabeta.com/static/images/accelerator/logo.png',
+      },
+      startup: {
+        icon: 'http://cdn.metabeta.com/static/images/startup/icon.png',
+        logo: 'http://cdn.metabeta.com/static/images/startup/logo.png',
+      },
+      program: {
+        icon: 'http://cdn.metabeta.com/static/images/program/icon.png',
+        logo: 'http://cdn.metabeta.com/static/images/program/logo.png',
+      },
+      user: {
+        icon: 'http://cdn.metabeta.com/static/images/user/icon.png',
+      },
+    };
+  }
+
+  getImage(entity, type) {
+    try {
+      const url = this.images[`${entity}`][`${type}`];
+      return url;
+    } catch (error) {
+      throw new Error(`Could not get default ${type} image for ${entity}`);
+    }
+  }
+}
+
+Vue.prototype.defaultImages = new DefaultImages();

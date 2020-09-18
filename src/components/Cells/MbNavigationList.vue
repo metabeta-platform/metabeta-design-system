@@ -4,7 +4,7 @@
   <ul class="nav-link">
     <li v-for="link in links" :key="link._id" @click="$router.push({name : link.url})">
       <router-link :to="link.url">
-        <MbAvatar :type="type" :avatar="link.data"></MbAvatar>
+        <mb-avatar :type="type" :avatar="link.data"></mb-avatar>
       </router-link>
     </li>
   </ul>

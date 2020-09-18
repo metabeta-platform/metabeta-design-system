@@ -1,7 +1,7 @@
 <template>
   <div @click="radioEvent" class="radiobox">
-    <input type="radio" :name="name" :is-checked="radioState" :value="name">
-    <label :for="name">{{labe}}</label>
+    <input type="radio" :name="name" :checked="radioState" :value="name">
+    <label :for="name">{{label}}</label>
   </div>
 </template>
 
@@ -27,10 +27,10 @@ export default {
   },
   methods: {
     radioEvent() {
-      if(!this.checkState) 
-        {this.checkState = false; this.$emit('checked', this.name)}
+      if(!this.radioState) 
+        {this.radioState = true; this.$emit('checked', this.name)}
       else 
-        {this.checkState = true; this.$emit('unchecked', this.name)};
+        {this.radioState = false; this.$emit('unchecked', this.name)};
     },
   },
   created () {

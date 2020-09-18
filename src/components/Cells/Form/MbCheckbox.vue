@@ -1,7 +1,7 @@
 <template>
   <div @click="checkEvent" class="checkbox">
-    <input type="checkbox" :name="name" :is-checked="checkState">
-    <label :for="name">{{labe}}</label>
+    <input type="checkbox" :name="name" :checked="checkState">
+    <label :for="name">{{label}}</label>
   </div>
 </template>
 
@@ -28,9 +28,9 @@ export default {
   methods: {
     checkEvent() {
       if(!this.checkState) 
-        {this.checkState = false; this.$emit('checked', this.name)}
+        {this.checkState = true; this.$emit('checked', this.name)}
       else 
-        {this.checkState = true; this.$emit('unchecked', this.name)};
+        {this.checkState = false; this.$emit('unchecked', this.name)};
     },
   },
   created () {

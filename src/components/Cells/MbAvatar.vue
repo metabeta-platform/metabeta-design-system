@@ -3,11 +3,11 @@
     <img :class="type == 'organization' ? 'org-icon' : 'user-icon'" :src="avatar.avatarUrl ? avatar.avatarUrl : defaultImages.getImage(type, 'icon')">
     <div class="avatar-text">
       <p class="mb-label">
-        avatar.name
+        {{avatar.name}}
       </p>
       <p v-if="avatar.desc">
         <small>
-          avatar.desc
+          {{avatar.desc}}
         </small>
       </p>
     </div>
