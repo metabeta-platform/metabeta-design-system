@@ -21,5 +21,23 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .tooltip{
+    position: absolute;
+    visibility: hidden;
+    &_visible{
+      visibility: visible;
+    }
+    &.top{
+      top: 0;
+    }
+    &.left{
+      left: 0;
+    }
+    &.right{
+      right: 0;
+    }
+    &.bottom{
+      bottom: 0;
+    }
+  }
 </style>

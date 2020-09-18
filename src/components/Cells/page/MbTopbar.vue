@@ -24,6 +24,9 @@ export default {
       name: 'hamburger',
     }
   }),
+  components: {
+    MbEdgesLayout: () => import('../MbEdgesLayout'),
+  },
   props: {
     active: {
       type: Boolean,
