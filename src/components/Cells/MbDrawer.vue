@@ -63,8 +63,9 @@ export default {
     }
   },
   components: {
-    MbModal: () => import('./MbModal'),
-    MbButton:() => import('./MbButton'),
+    MbModal: () => import('@/components/cells/MbModal'),
+    MbButton:() => import('@/components/cells/MbButton'),
+    MbHeaderActions:() => import('@/components/cells/MbHeaderActions')
   },
   computed:{
      sideMenuHasContent () {
@@ -83,6 +84,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/styles/partials/_mb_motion.scss";
+@import "../../assets/styles/partials/_mb_space.scss";
 .mb-transition-drawer {
   position: fixed;
   top: 0;

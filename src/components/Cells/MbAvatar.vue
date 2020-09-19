@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/styles/partials/_mb_space.scss";
+@import "../../assets/styles/partials/_mb_typography.scss";
   .mb-avatar{
     display: flex;
     align-items: center;

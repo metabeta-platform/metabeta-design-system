@@ -121,6 +121,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../assets/styles/partials/_mb_space.scss";
+@import "../../assets/styles/partials/_mb_typography.scss";
   .mb-button{
     align-items: center;
     justify-content: center;

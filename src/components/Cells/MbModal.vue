@@ -47,13 +47,16 @@ export default {
     }
   },
   components: {
-    MbHeaderActions : () => import('./MbHeaderActions'),
-    MbButton : () => import('./MbButton'),
+    MbHeaderActions : () => import('@/components/cells/MbHeaderActions'),
+    MbButton : () => import('@/components/cells/MbButton'),
   },
 }
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/styles/partials/_mb_space.scss";
+@import "../../assets/styles/partials/_mb_motion.scss";
+@import "../../assets/styles/partials/_mb_color.scss";
   .mb-modal{
     position : fixed;
     top: 0;

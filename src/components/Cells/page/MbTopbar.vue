@@ -25,7 +25,7 @@ export default {
     }
   }),
   components: {
-    MbEdgesLayout: () => import('../MbEdgesLayout'),
+    MbEdgesLayout: () => import('@/components/cells/MbEdgesLayout'),
   },
   props: {
     active: {

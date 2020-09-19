@@ -23,8 +23,8 @@
 export default {
   name: "MbPanel",
   components: {
-    MbHeaderActions: () => import('./MbHeaderActions'),
-    MbFooterActions: () => import('./MbFooterActions'),
+    MbHeaderActions: () => import('@/components/cells/MbHeaderActions'),
+    MbFooterActions: () => import('@/components/cells/MbFooterActions'),
   },
   props: {
     type: {
@@ -37,6 +37,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../assets/styles/partials/_mb_space.scss";
+@import "../../assets/styles/partials/_mb_color.scss";
   .base{
     border: none;
     background-color: $mb-color-white;
