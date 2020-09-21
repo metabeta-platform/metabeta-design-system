@@ -96,6 +96,84 @@
       background-color: fade-out(desaturate($mb-color-note, $mb-opacity-m), $mb-opacity-l);
     }
   }
+  &.mb-color-blue {
+    background-color: $mb-color-blue;
+    &:hover {
+      background-color: $mb-color-blue-dark;
+    }
+    &:active {
+      background-color: $mb-color-blue-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-blue, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-red {
+    background-color: $mb-color-red;
+    &:hover {
+      background-color: $mb-color-red-dark;
+    }
+    &:active {
+      background-color: $mb-color-red-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-red, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-green {
+    background-color: $mb-color-green;
+    &:hover {
+      background-color: $mb-color-green-dark;
+    }
+    &:active {
+      background-color: $mb-color-green-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-green, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-cyan {
+    background-color: $mb-color-cyan;
+    &:hover {
+      background-color: $mb-color-cyan-dark;
+    }
+    &:active {
+      background-color: $mb-color-cyan-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-cyan, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-orange {
+    background-color: $mb-color-orange;
+    &:hover {
+      background-color: $mb-color-orange-dark;
+    }
+    &:active {
+      background-color: $mb-color-orange-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-orange, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
+  &.mb-color-yellow {
+    background-color: $mb-color-yellow;
+    &:hover {
+      background-color: $mb-color-yellow-dark;
+    }
+    &:active {
+      background-color: $mb-color-yellow-light;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-yellow, $mb-opacity-m), $mb-opacity-l);
+    }
+  }
   &.mb-color-lime {
     background-color: $mb-color-lime;
     &:hover {
@@ -166,7 +244,7 @@
 .mb-priority-secondary {
   background-color: $mb-color-white;
   color: $mb-color-text-medium;
-  border: $mb-border-thin solid $mb-color-border-medium;
+  border: $mb-border-thin solid $mb-color-border-dark;
   svg {
     .svg-fill {
       fill: $mb-color-text-light;
@@ -178,7 +256,7 @@
   &:hover {
     color: $mb-color-headings;
     background-color: $mb-color-gray-highlight;
-    border: $mb-border-thin solid $mb-color-border-dark;
+    border: $mb-border-thin solid $mb-color-border-darker;
     svg {
       .svg-fill {
         fill: $mb-color-text-medium;
@@ -217,7 +295,7 @@
   }
   &.mb-color-danger {
     color: $mb-color-danger;
-    border: $mb-border-thin solid rgba($mb-color-danger, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-danger-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-danger;
@@ -269,7 +347,7 @@
   }
   &.mb-color-success {
     color: $mb-color-success;
-    border: $mb-border-thin solid rgba($mb-color-success, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-success-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-success;
@@ -321,7 +399,7 @@
   }
   &.mb-color-info {
     color: $mb-color-info;
-    border: $mb-border-thin solid rgba($mb-color-info, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-info-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-info;
@@ -373,7 +451,7 @@
   }
   &.mb-color-warning {
     color: $mb-color-warning;
-    border: $mb-border-thin solid rgba($mb-color-warning, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-warning-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-warning;
@@ -425,7 +503,7 @@
   }
   &.mb-color-note {
     color: $mb-color-note;
-    border: $mb-border-thin solid rgba($mb-color-note, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-note-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-note;
@@ -459,9 +537,305 @@
       }
     }
   }
+  &.mb-color-blue {
+    color: $mb-color-blue;
+    border: $mb-border-thin solid rgba($mb-color-blue-light, $mb-opacity-m);
+    svg {
+      .svg-fill {
+        fill: $mb-color-blue;
+      }
+      .svg-stroke {
+        stroke: $mb-color-blue;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-blue-dark;
+      background-color: $mb-color-blue-highlight;
+      border: $mb-border-thin solid rgba($mb-color-blue, $mb-opacity-m);
+      svg {
+        .svg-fill {
+          fill: $mb-color-blue-dark;
+        }
+        .svg-stroke {
+          stroke: $mb-color-blue-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-blue;
+      background-color: $mb-color-blue-highlight;
+      border: $mb-border-thin solid $mb-color-blue;
+      svg {
+        .svg-fill {
+          fill: $mb-color-blue-light;
+        }
+        .svg-stroke {
+          stroke: $mb-color-blue-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-blue, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-blue, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-blue, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-blue, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-blue, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-red {
+    color: $mb-color-red;
+    border: $mb-border-thin solid rgba($mb-color-red-light, $mb-opacity-m);
+    svg {
+      .svg-fill {
+        fill: $mb-color-red;
+      }
+      .svg-stroke {
+        stroke: $mb-color-red;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-red-dark;
+      background-color: $mb-color-red-highlight;
+      border: $mb-border-thin solid rgba($mb-color-red, $mb-opacity-m);
+      svg {
+        .svg-fill {
+          fill: $mb-color-red-dark;
+        }
+        .svg-stroke {
+          stroke: $mb-color-red-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-red;
+      background-color: $mb-color-red-highlight;
+      border: $mb-border-thin solid $mb-color-red;
+      svg {
+        .svg-fill {
+          fill: $mb-color-red-light;
+        }
+        .svg-stroke {
+          stroke: $mb-color-red-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-red, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-red, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-red, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-red, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-red, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-green {
+    color: $mb-color-green;
+    border: $mb-border-thin solid rgba($mb-color-green-light, $mb-opacity-m);
+    svg {
+      .svg-fill {
+        fill: $mb-color-green;
+      }
+      .svg-stroke {
+        stroke: $mb-color-green;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-green-dark;
+      background-color: $mb-color-green-highlight;
+      border: $mb-border-thin solid rgba($mb-color-green, $mb-opacity-m);
+      svg {
+        .svg-fill {
+          fill: $mb-color-green-dark;
+        }
+        .svg-stroke {
+          stroke: $mb-color-green-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-green;
+      background-color: $mb-color-green-highlight;
+      border: $mb-border-thin solid $mb-color-green;
+      svg {
+        .svg-fill {
+          fill: $mb-color-green-light;
+        }
+        .svg-stroke {
+          stroke: $mb-color-green-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-green, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-green, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-green, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-green, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-green, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-cyan {
+    color: $mb-color-cyan;
+    border: $mb-border-thin solid rgba($mb-color-cyan-light, $mb-opacity-m);
+    svg {
+      .svg-fill {
+        fill: $mb-color-cyan;
+      }
+      .svg-stroke {
+        stroke: $mb-color-cyan;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-cyan-dark;
+      background-color: $mb-color-cyan-highlight;
+      border: $mb-border-thin solid rgba($mb-color-cyan, $mb-opacity-m);
+      svg {
+        .svg-fill {
+          fill: $mb-color-cyan-dark;
+        }
+        .svg-stroke {
+          stroke: $mb-color-cyan-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-cyan;
+      background-color: $mb-color-cyan-highlight;
+      border: $mb-border-thin solid $mb-color-cyan;
+      svg {
+        .svg-fill {
+          fill: $mb-color-cyan-light;
+        }
+        .svg-stroke {
+          stroke: $mb-color-cyan-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-cyan, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-cyan, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-cyan, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-cyan, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-cyan, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-orange{
+    color: $mb-color-orange;
+    border: $mb-border-thin solid rgba($mb-color-orange-light, $mb-opacity-m);
+    svg {
+      .svg-fill {
+        fill: $mb-color-orange;
+      }
+      .svg-stroke {
+        stroke: $mb-color-orange;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-orange-dark;
+      background-color: $mb-color-orange-highlight;
+      border: $mb-border-thin solid rgba($mb-color-orange, $mb-opacity-m);
+      svg {
+        .svg-fill {
+          fill: $mb-color-orange-dark;
+        }
+        .svg-stroke {
+          stroke: $mb-color-orange-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-orange;
+      background-color: $mb-color-warning-highlight;
+      border: $mb-border-thin solid $mb-color-orange;
+      svg {
+        .svg-fill {
+          fill: $mb-color-orange-light;
+        }
+        .svg-stroke {
+          stroke: $mb-color-orange-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-orange, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-orange, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-orange, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-orange, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-orange, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-yellow {
+    color: $mb-color-yellow;
+    border: $mb-border-thin solid rgba($mb-color-yellow-light, $mb-opacity-m);
+    svg {
+      .svg-fill {
+        fill: $mb-color-yellow;
+      }
+      .svg-stroke {
+        stroke: $mb-color-yellow;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-yellow-dark;
+      background-color: $mb-color-yellow-highlight;
+      border: $mb-border-thin solid rgba($mb-color-yellow, $mb-opacity-m);
+    }
+    &:active {
+      color: $mb-color-yellow;
+      background-color: $mb-color-yellow-highlight;
+      border: $mb-border-thin solid $mb-color-yellow;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-yellow, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-yellow, $mb-opacity-l);
+      border: $mb-border-thin solid fade-out(desaturate($mb-color-yellow, 0.24),0.9);
+      svg {
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-yellow, $mb-opacity-m), $mb-opacity-xl);
+        }
+        .svg-stroke {
+          stroke: fade-out($mb-color-yellow, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
   &.mb-color-lime {
     color: $mb-color-lime;
-    border: $mb-border-thin solid rgba($mb-color-lime, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-lime-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-lime;
@@ -497,7 +871,7 @@
   }
   &.mb-color-teal {
     color: $mb-color-teal;
-    border: $mb-border-thin solid rgba($mb-color-teal, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-teal-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-teal;
@@ -533,7 +907,7 @@
   }
   &.mb-color-pink {
     color: $mb-color-pink;
-    border: $mb-border-thin solid rgba($mb-color-pink, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-pink-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-pink;
@@ -569,7 +943,7 @@
   }
   &.mb-color-purple {
     color: $mb-color-purple;
-    border: $mb-border-thin solid rgba($mb-color-purple, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-purple-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-purple;
@@ -605,7 +979,7 @@
   }
   &.mb-color-indigo {
     color: $mb-color-indigo;
-    border: $mb-border-thin solid rgba($mb-color-indigo, $mb-opacity-s);
+    border: $mb-border-thin solid rgba($mb-color-indigo-light, $mb-opacity-m);
     svg {
       .svg-fill {
         fill: $mb-color-indigo;
@@ -974,6 +1348,342 @@
         #svg-stroke,
         .svg-stroke {
           stroke: fade-out($mb-color-note,$mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-blue{
+    color: $mb-color-blue;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-blue;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-blue;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-blue-dark;
+      background-color: $mb-color-blue-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-blue-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-blue-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-blue-light;
+      background-color: $mb-color-blue-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-blue-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-blue-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-blue, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-blue, $mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-blue, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-blue, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-red{
+    color: $mb-color-red;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-red;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-red;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-red-dark;
+      background-color: $mb-color-red-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-red-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-red-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-red-light;
+      background-color: $mb-color-red-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-red-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-red-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-red, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-red, $mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-red, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-red, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-green{
+    color: $mb-color-green;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-green;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-green;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-green-dark;
+      background-color: $mb-color-green-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-green-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-green-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-green-light;
+      background-color: $mb-color-green-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-green-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-green-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-green, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-green,$mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-green, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-green, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-cyan{
+    color: $mb-color-cyan;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-cyan;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-cyan;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-cyan-dark;
+      background-color: $mb-color-cyan-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-cyan-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-cyan-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-cyan-light;
+      background-color: $mb-color-cyan-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-cyan-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-cyan-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-cyan, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-cyan,$mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-cyan, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-cyan,$mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-orange{
+    color: $mb-color-orange;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-orange;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-orange;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-orange-dark;
+      background-color: $mb-color-orange-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-orange-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-orange-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-orange-light;
+      background-color: $mb-color-orange-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-orange-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-orange-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-orange, $mb-opacity-m),0.9);
+      color: fade-out($mb-color-orange, $mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-orange, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-orange, $mb-opacity-xl);
+        } // style for icons
+      }
+    }
+  }
+  &.mb-color-yellow{
+    color: $mb-color-yellow;
+    svg {
+      #svg-fill,
+      .svg-fill {
+        fill: $mb-color-yellow;
+      }
+      #svg-stroke,
+      .svg-stroke {
+        stroke: $mb-color-yellow;
+      } // style for icons
+    }
+    &:hover {
+      color: $mb-color-yellow-dark;
+      background-color: $mb-color-yellow-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-yellow-dark;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-yellow-dark;
+        } // style for icons
+      }
+    }
+    &:active {
+      color: $mb-color-yellow-light;
+      background-color: $mb-color-yellow-highlight;
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: $mb-color-yellow-light;
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: $mb-color-yellow-light;
+        } // style for icons
+      }
+    }
+    &:disabled,
+    &.disabled {
+      background-color: fade-out(desaturate($mb-color-yellow, $mb-opacity-m),$mb-opacity-xl);
+      color: fade-out($mb-color-yellow, $mb-opacity-l);
+      svg {
+        #svg-fill,
+        .svg-fill {
+          fill: fade-out(desaturate($mb-color-yellow, $mb-opacity-m),$mb-opacity-xl);
+        }
+        #svg-stroke,
+        .svg-stroke {
+          stroke: fade-out($mb-color-yellow,$mb-opacity-xl);
         } // style for icons
       }
     }

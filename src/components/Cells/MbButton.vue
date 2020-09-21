@@ -51,7 +51,7 @@ export default {
     },
     color: {
       type: String,
-      default: '',
+      default: 'base',
     },
     size: {
       type: String,
@@ -126,6 +126,11 @@ export default {
   .mb-button{
     align-items: center;
     justify-content: center;
+    margin-right: $mb-space-xs;
+    &.mb-type-link{
+      @extend button; 
+      margin-right: $mb-space-xs;
+    }
     .mb-button-label{
       margin: 0;
     }
