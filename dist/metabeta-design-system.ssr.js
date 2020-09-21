@@ -751,6 +751,10 @@ var __vue_component__$5 = /*#__PURE__*/normalizeComponent({
 //
 //
 //
+//
+//
+//
+//
 var script$6 = {
   name: "MbModal",
   data: function data() {
@@ -763,7 +767,7 @@ var script$6 = {
   props: {
     size: {
       type: String,
-      default: 'l'
+      default: 'm'
     },
     title: {
       type: String,
@@ -786,9 +790,6 @@ var script$6 = {
     }
   },
   components: {
-    MbHeaderActions: function MbHeaderActions$1() {
-      return Promise.resolve().then(function(){return MbHeaderActions});
-    },
     MbButton: function MbButton$1() {
       return Promise.resolve().then(function(){return MbButton});
     }
@@ -805,15 +806,9 @@ var __vue_render__$6 = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('section', {
-    staticClass: "mb-modal",
-    class: [_vm.modalVisibility ? 'is-visible' : 'is-hidden', _vm.size]
-  }, [_vm._ssrNode("<div class=\"content\" data-v-2b57fbb4>", "</div>", [_c('mb-header-actions', {
-    attrs: {
-      "is-visible": ""
-    }
-  }, [_c('template', {
-    slot: "header-title"
-  }, [_c('h3', [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('mb-button', {
+    staticClass: "mb-backdrop",
+    class: [_vm.modalVisibility ? 'is-visible' : 'is-hidden']
+  }, [_vm._ssrNode("<div is-visible" + _vm._ssrClass(null, ['mb-modal', "mb-size-" + _vm.size]) + " data-v-4b25719c>", "</div>", [_vm._ssrNode("<div class=\"mb-modal-header\" data-v-4b25719c>", "</div>", [_vm._t("header", [_c('h3', [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('mb-button', {
     attrs: {
       "priority": "base",
       "label": "close",
@@ -826,7 +821,7 @@ var __vue_render__$6 = function __vue_render__() {
         _vm.$emit('on-close');
       }
     }
-  })], 1)], 2), _vm._ssrNode(" "), _vm._t("header"), _vm._ssrNode(" "), _vm._t("content")], 2)]);
+  })])], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"mb-modal-content\" data-v-4b25719c>", "</div>", [_vm._t("content")], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"mb-modal-footer\" data-v-4b25719c>", "</div>", [_vm._t("footer")], 2)], 2)]);
 };
 
 var __vue_staticRenderFns__$6 = [];
@@ -834,8 +829,8 @@ var __vue_staticRenderFns__$6 = [];
 
 var __vue_inject_styles__$6 = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-2b57fbb4_0", {
-    source: ".mb-modal[data-v-2b57fbb4]{position:fixed;top:0;left:0;bottom:0;right:0;width:100vw;height:100vh;max-width:100vw;max-height:100vh;z-index:500}.mb-modal.is-visible[data-v-2b57fbb4]{display:block;transition:.4s cubic-bezier(.4,.14,.3,1)}.mb-modal.is-hidden[data-v-2b57fbb4]{display:none;transition:.2s cubic-bezier(.4,.14,.3,1)}.mb-modal .content[data-v-2b57fbb4]{position:absolute;top:10vh;left:50%;transform:translateX(-50%);background-color:#fff}.mb-modal .content.xl[data-v-2b57fbb4]{box-shadow:0 .5 1 rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);width:75vw}.mb-modal .content.l[data-v-2b57fbb4]{box-shadow:0 .5 1 rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);width:60vw}.mb-modal .content.m[data-v-2b57fbb4]{border-radius:.5rem;box-shadow:0 .5 1 rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);width:50vw}.mb-modal .content.s[data-v-2b57fbb4]{border-radius:.375rem;box-shadow:0 .5 1 rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);width:35vw}",
+  inject("data-v-4b25719c_0", {
+    source: "@font-face{font-family:\"IBM Plex Sans\";src:local(\"?\"),url(~@/assets/fonts/ibm-plex-sans.woff2) format(\"woff2\"),url(~@/assets/fonts/ibm-plex-sans.woff) format(\"woff\"),url(~@/assets/fonts/ibm-plex-sans.ttf) format(\"truetype\");font-weight:400;font-style:normal}@font-face{font-family:\"IBM Plex Sans\";src:local(\"?\"),url(~@/assets/fonts/ibm-plex-sans-italic.woff2) format(\"woff2\"),url(~@/assets/fonts/ibm-plex-sans-italic.woff) format(\"woff\"),url(~@/assets/fonts/ibm-plex-sans-italic.ttf) format(\"truetype\");font-weight:400;font-style:italic}@font-face{font-family:\"IBM Plex Sans\";src:local(\"?\"),url(~@/assets/fonts/ibm-plex-sans-medium.woff2) format(\"woff2\"),url(~@/assets/fonts/ibm-plex-sans-medium.woff) format(\"woff\"),url(~@/assets/fonts/ibm-plex-sans-medium.ttf) format(\"truetype\");font-weight:500;font-style:normal}@font-face{font-family:\"IBM Plex Sans\";src:local(\"?\"),url(~@/assets/fonts/ibm-plex-sans-mediumitalic.woff2) format(\"woff2\"),url(~@/assets/fonts/ibm-plex-sans-mediumitalic.woff) format(\"woff\"),url(~@/assets/fonts/ibm-plex-sans-mediumitalic.ttf) format(\"truetype\");font-weight:500;font-style:italic}.mb-backdrop[data-v-4b25719c]{position:fixed;top:0;left:0;bottom:0;right:0;width:100vw;height:100vh;max-width:100vw;max-height:100vh;background-color:rgba(0,0,0,.48);overflow:hidden}.mb-backdrop.is-visible[data-v-4b25719c]{display:block;transition:.4s cubic-bezier(.4,.14,.3,1)}.mb-backdrop.is-hidden[data-v-4b25719c]{display:none;transition:.2s cubic-bezier(.4,.14,.3,1)}.mb-backdrop .mb-modal[data-v-4b25719c]{position:absolute;top:10vh;left:50%;transform:translateX(-50%);background-color:#fff;padding:1rem;border-radius:.375rem}.mb-backdrop .mb-modal .mb-modal-header h3[data-v-4b25719c]{margin-top:0}.mb-backdrop .mb-modal .mb-modal-header .mb-button[data-v-4b25719c]{position:absolute;top:0;right:0}.mb-backdrop .mb-modal .mb-modal-content p[data-v-4b25719c]{font-family:\"IBM Plex Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Arial,sans-serif;font-size:.875rem;line-height:1.25rem;line-height:1.25rem;font-weight:400;font-style:normal;letter-spacing:0}.mb-backdrop .mb-modal .mb-modal-footer p[data-v-4b25719c]{font-family:\"IBM Plex Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Arial,sans-serif;font-size:.875rem;line-height:1.25rem;line-height:1rem;font-weight:400;font-style:normal;letter-spacing:0;color:#494f57}.mb-backdrop .mb-modal.mb-size-xl[data-v-4b25719c]{box-shadow:0 .5 1 rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);width:95vw}.mb-backdrop .mb-modal.mb-size-l[data-v-4b25719c]{box-shadow:0 .5 1 rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);width:66.66vw}.mb-backdrop .mb-modal.mb-size-m[data-v-4b25719c]{box-shadow:0 .5 1 rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);width:50vw}.mb-backdrop .mb-modal.mb-size-s[data-v-4b25719c]{box-shadow:0 .5 1 rgba(246,250,251,.48),0 0 1px rgba(246,250,251,.48);width:33.33vw}",
     map: undefined,
     media: undefined
   });
@@ -843,10 +838,10 @@ var __vue_inject_styles__$6 = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$6 = "data-v-2b57fbb4";
+var __vue_scope_id__$6 = "data-v-4b25719c";
 /* module identifier */
 
-var __vue_module_identifier__$6 = "data-v-2b57fbb4";
+var __vue_module_identifier__$6 = "data-v-4b25719c";
 /* functional template */
 
 var __vue_is_functional_template__$6 = false;
@@ -1770,8 +1765,8 @@ var __vue_staticRenderFns__$g = [];
 
 var __vue_inject_styles__$g = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-e92c3c60_0", {
-    source: ".mb-fieldset{position:relative;appearance:none;box-sizing:border-box;display:flex;align-items:center}",
+  inject("data-v-72a782f0_0", {
+    source: ".mb-fieldset{position:relative;appearance:none;margin-bottom:.5rem;box-sizing:border-box;display:flex;align-items:center}",
     map: undefined,
     media: undefined
   });
@@ -1782,7 +1777,7 @@ var __vue_inject_styles__$g = function __vue_inject_styles__(inject) {
 var __vue_scope_id__$g = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$g = "data-v-e92c3c60";
+var __vue_module_identifier__$g = "data-v-72a782f0";
 /* functional template */
 
 var __vue_is_functional_template__$g = false;
@@ -1979,8 +1974,8 @@ var __vue_staticRenderFns__$h = [];
 
 var __vue_inject_styles__$h = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-28a2ddf0_0", {
-    source: ".mb-input+.has-after-icon{padding-right:50px}.mb-input+.has-after-icon.input-icon{position:absolute;top:50%;transform:translateY(-50%);right:10px}.mb-input+.has-before-icon{padding-left:50px}.mb-input+.has-before-icon.input-icon{position:absolute;top:50%;transform:translateY(-50%);left:10px}",
+  inject("data-v-7f4c35ec_0", {
+    source: ".mb-input{width:100%;box-sizing:border-box}.mb-input+.has-after-icon{padding-right:50px}.mb-input+.has-after-icon.input-icon{position:absolute;top:50%;transform:translateY(-50%);right:10px}.mb-input+.has-before-icon{padding-left:50px}.mb-input+.has-before-icon.input-icon{position:absolute;top:50%;transform:translateY(-50%);left:10px}",
     map: undefined,
     media: undefined
   });
@@ -1991,7 +1986,7 @@ var __vue_inject_styles__$h = function __vue_inject_styles__(inject) {
 var __vue_scope_id__$h = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$h = "data-v-28a2ddf0";
+var __vue_module_identifier__$h = "data-v-7f4c35ec";
 /* functional template */
 
 var __vue_is_functional_template__$h = false;
@@ -2136,8 +2131,7 @@ var __vue_render__$j = function __vue_render__() {
 
   var _c = _vm._self._c || _h;
 
-  return _c(_vm.iconBefore.name || _vm.iconAfter.name, {
-    tag: "div",
+  return _c('div', {
     class: _vm.iconBefore ? 'float__left' : 'float__right',
     attrs: {
       "width": _vm.iconBefore.size || _vm.iconAfter.size
@@ -2145,7 +2139,7 @@ var __vue_render__$j = function __vue_render__() {
     domProps: {
       "innerHTML": _vm._s(_vm.svg)
     }
-  });
+  }, []);
 };
 
 var __vue_staticRenderFns__$j = [];
@@ -2153,8 +2147,8 @@ var __vue_staticRenderFns__$j = [];
 
 var __vue_inject_styles__$j = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-bcb364d0_0", {
-    source: ".float__right[data-v-bcb364d0]{float:right}.float__left[data-v-bcb364d0]{float:left}",
+  inject("data-v-4930a268_0", {
+    source: ".float__right[data-v-4930a268]{float:right}.float__left[data-v-4930a268]{float:left}",
     map: undefined,
     media: undefined
   });
@@ -2162,10 +2156,10 @@ var __vue_inject_styles__$j = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$j = "data-v-bcb364d0";
+var __vue_scope_id__$j = "data-v-4930a268";
 /* module identifier */
 
-var __vue_module_identifier__$j = "data-v-bcb364d0";
+var __vue_module_identifier__$j = "data-v-4930a268";
 /* functional template */
 
 var __vue_is_functional_template__$j = false;

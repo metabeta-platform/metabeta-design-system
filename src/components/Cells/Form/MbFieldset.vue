@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../../assets/styles/partials/_mb_space.scss";
   .mb-fieldset{
     position: relative;
     appearance: none;
