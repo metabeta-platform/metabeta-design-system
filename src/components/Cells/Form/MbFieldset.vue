@@ -10,10 +10,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .mb-fieldset{
     position: relative;
     appearance: none;
+    margin-bottom: $mb-space-xs;
     box-sizing: border-box;
     display: flex;
     align-items: center;

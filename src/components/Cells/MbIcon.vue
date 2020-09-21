@@ -1,5 +1,5 @@
 <template>
-  <div :class="iconBefore ? 'float__left' : 'float__right'" :width="iconBefore.size || iconAfter.size" :is="iconBefore.name || iconAfter.name" v-html="svg"></div>
+  <div :class="iconBefore ? 'float__left' : 'float__right'" :width="iconBefore.size || iconAfter.size" v-html="svg"></div>
 </template>
 
 <script>

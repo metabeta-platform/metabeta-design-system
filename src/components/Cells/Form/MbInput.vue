@@ -48,6 +48,8 @@ export default {
 
 <style lang="scss">
 .mb-input{
+  width: 100%;
+  box-sizing: border-box;
   &+.has-after-icon{
     padding-right: 50px;
     &.input-icon{

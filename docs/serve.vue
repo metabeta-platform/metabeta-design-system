@@ -25,6 +25,10 @@ import {
 
 export default Vue.extend({
   data : () =>({
+    isVisible: false,
+    selectedParent: '',
+    metricName: '',
+    metricOrder: 0,
     test: 'test',
     organizations:[
       {
@@ -126,5 +130,12 @@ export default Vue.extend({
       Hover Here
     </div>
     <mb-topbar></mb-topbar>
+    <mb-button label="OpenModal" @click="TRUE_FLAG = !TRUE_FLAG"></mb-button>
+    <mb-modal title="Edit metrics category" :is-visible="TRUE_FLAG">
+       <template slot="content">
+      <mb-input v-model="metricName"></mb-input>
+      <mb-input type="number" v-model="metricOrder"></mb-input>
+    </template>
+    </mb-modal>
   </div>
 </template>
