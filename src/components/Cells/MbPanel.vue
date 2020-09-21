@@ -8,7 +8,6 @@
         <slot name="header-actions"></slot>
       </template>
     </mb-header-actions>
-    Test
     <slot name="content"></slot>
     <mb-footer-actions :is-visible="$slots.footerActions || $scopedSlots.footerActions">
       <template name="footer-actions">
@@ -17,7 +16,7 @@
     </mb-footer-actions>
   </section>
 </template>
-
+ 
 <script>
 
 export default {
