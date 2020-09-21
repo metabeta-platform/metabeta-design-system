@@ -122,7 +122,10 @@ export default {
 
 <style lang="scss">
 @import "../../assets/styles/partials/_mb_space.scss";
+@import "../../assets/styles/partials/_mb_icons.scss";
 @import "../../assets/styles/partials/_mb_typography.scss";
+@import "../../assets/styles/partials/_mb_color.scss";
+@import "../../assets/styles/partials/_mb_theme.scss";
   .mb-button{
     align-items: center;
     justify-content: center;
