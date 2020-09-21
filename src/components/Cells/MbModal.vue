@@ -1,14 +1,18 @@
 <template>
-  <section class="mb-modal" :class="[modalVisibility ? 'is-visible' : 'is-hidden', size]">
-    <div class="content">
-      <mb-header-actions is-visible>
-        <template slot="header-title">
+  <section class="mb-backdrop" :class="[modalVisibility ? 'is-visible' : 'is-hidden']">
+    <div :class="['mb-modal', `mb-size-${size}`]" is-visible>
+      <div class="mb-modal-header">
+        <slot name="header">
           <h3>{{title}}</h3>
-          <mb-button @click="modalVisibility = false; $emit('on-close')" priority="base" label="close" :iconBefore="iconClose"></mb-button>
-        </template>
-      </mb-header-actions>
-      <slot name="header"></slot>
-      <slot name="content"></slot>
+          <mb-button  @click="modalVisibility = false; $emit('on-close')" priority="base" label="close" :iconBefore="iconClose"></mb-button>
+        </slot>
+      </div>
+      <div class="mb-modal-content">
+        <slot name="content"></slot>
+      </div>
+      <div class="mb-modal-footer">
+        <slot name="footer"></slot>
+      </div>
     </div>
   </section>
 </template>
@@ -24,7 +28,7 @@ export default {
   props: {
     size: {
       type: String,
-      default: 'l',
+      default: 'm',
     },
     title:{
       type: String,
@@ -47,7 +51,6 @@ export default {
     }
   },
   components: {
-    MbHeaderActions : () => import('@/components/cells/MbHeaderActions'),
     MbButton : () => import('@/components/cells/MbButton'),
   },
 }
@@ -57,7 +60,8 @@ export default {
 @import "../../assets/styles/partials/_mb_space.scss";
 @import "../../assets/styles/partials/_mb_motion.scss";
 @import "../../assets/styles/partials/_mb_color.scss";
-  .mb-modal{
+@import "../../assets/styles/partials/_mb_typography.scss";
+  .mb-backdrop{
     position : fixed;
     top: 0;
     left: 0;
@@ -67,40 +71,64 @@ export default {
     height: 100vh;
     max-width: 100vw;
     max-height: 100vh;
-    @include mb-elevation(5);
+    background-color:rgba($mb-color-black, $mb-opacity-m);
+    overflow: hidden;
     &.is-visible{
       display: block;
-     transition: $mb-speed-slow $mb-ease-intro;
+      transition: $mb-speed-slow $mb-ease-intro;
     }
     &.is-hidden{
       display: none;
       transition: $mb-speed-fast $mb-ease-intro;
     }
-    .content{
+    .mb-modal{
       position: absolute;
       top: 10vh;
       left: 50%;
       transform: translateX(-50%);
       background-color: $mb-color-white;
-      &.xl{
-        @include mb-border-radius(xxl);
-        @include mb-shadow();
-        width: 75vw;
+      padding:$mb-space-m;
+      @include mb-border-radius(m);
+      .mb-modal{
+        &-header{
+          h3{
+            margin-top:0;
+          }
+          .mb-button{
+          position: absolute;
+          top: 0;
+          right: 0;
+          }
+        }
+        &-content{
+        p {
+           @include mb-font(body, s, normal, normal);
+          }
+        }
+        &-footer{
+        p {
+          @include mb-caption(s);
+          }
+        }
+      
       }
-      &.l{
-        @include mb-border-radius(xl);
-        @include mb-shadow();
-        width: 60vw;
-      }
-      &.m{
-        @include mb-border-radius(l);
-        @include mb-shadow();
-        width: 50vw;
-      }
-      &.s{
-        @include mb-border-radius(m);
-        @include mb-shadow();
-        width: 35vw;
+      &.mb-size{
+        &-xl{
+          @include mb-shadow();
+          width: 95vw;
+        }
+        &-l{
+          @include mb-shadow();
+          width: 66.66vw;
+        }
+        &-m{
+          @include mb-shadow();
+          width: 50vw;
+        }
+        &-s{
+          @include mb-shadow();
+          width: 33.33vw;
+        }
       }
     }
   }
