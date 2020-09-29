@@ -1,15 +1,13 @@
 <template>
-  <div class="mb-avatar">
-    <img class="avatar-image" :class="type == 'organization' ? 'org-icon' : 'user-icon'" :src="avatar.avatarUrl ? avatar.avatarUrl : defaultImages.getImage(type, 'icon')">
-    <div class="avatar-text">
+  <div :class="['mb-avatar', `mb-size-${size}`]">
+    <img class="mb-avatar-image" :class="type == 'organization' ? 'mb-organization-avatar' : 'mb-user-avatar'" :src="avatar.avatarUrl ? avatar.avatarUrl : defaultImages.getImage(type, 'icon')">
+    <div class="mb-avatar-description">
       <p class="mb-label">
         {{avatar.name}}
       </p>
-      <p class="mb-desc" v-if="avatar.desc">
-        <small>
-          {{avatar.desc}}
-        </small>
-      </p>
+      <small class="mb-caption" v-if="avatar.description">
+          {{avatar.description}}
+      </small>
     </div>
   </div>
 </template>
@@ -24,7 +22,11 @@ export default {
     avatar:{
       type: Object,
       default: () => {},
-    }
+    },
+    size:{
+      type: String,
+      default: 'm',
+    },
   },
 }
 </script>
@@ -35,30 +37,116 @@ export default {
   .mb-avatar{
     display: flex;
     align-items: center;
-    .avatar-image{
-      width: 32px;
-      height:32px;
+    .mb-avatar-image{
       object-fit: cover;
     }
-    .user-icon{
+    .mb-user-avatar{
       @include mb-border-radius(circle);
     }
-    .org-icon{
-      @include mb-border-radius(s);
-    }
-    .avatar-text{
+    .mb-avatar-description{
       display: block;
-      margin-left: $mb-space-s;
-      .mb-label{
-        margin: 0;
-        font-weight: $mb-font-weight-bold;
-        line-height: $mb-line-height-xs;
-        font-size: $mb-font-size-s;
+    }
+    &.mb-size{
+      &-xs{
+        .mb-avatar-image{
+          width: 1rem;
+          height:1rem;
+        }
+        .mb-avatar-description{
+          margin-left: $mb-space-xs;
+          .mb-label{
+            @include mb-caption(s);
+            color:$mb-color-headings;
+            margin:0;
+          }
+          .mb-caption{
+            display: none;
+            @include mb-caption(xs);
+            @include mb-wrap-text(false);
+          }
+        }
+        .mb-organization-avatar{
+          @include mb-border-radius(xs);
+        }
       }
-      .mb-desc{
-        margin: 0;
-        line-height: $mb-line-height-xxs;
-        font-size: $mb-font-size-xs;
+      &-s{
+        .mb-avatar-image{
+          width: 1.25rem;
+          height:1.25rem;
+        }
+        .mb-avatar-description{
+          margin-left: $mb-space-xs;
+          .mb-label{
+            @include mb-label(s);
+            margin:0;
+            color:$mb-color-text-medium;
+          }
+          .mb-caption{
+            display: none;
+            @include mb-caption(xs);
+          }
+        }
+        .mb-organization-avatar{
+          @include mb-border-radius(s);
+        }
+      }
+      &-m{
+        .mb-avatar-image{
+          width: 2.5rem;
+          height:2.5rem;
+        }
+        .mb-avatar-description{
+          margin-left: $mb-space-s;
+          .mb-label{
+            @include mb-label(s);
+            margin:0;
+          }
+          .mb-caption{
+            @include mb-caption(xs);
+            margin:0;
+          }
+        }
+        .mb-organization-avatar{
+          @include mb-border-radius(s);
+        }
+      }
+      &-l{
+        .mb-avatar-image{
+          width: 3.75rem;
+          height:3.75rem;
+        }
+        .mb-avatar-description{
+          margin-left: $mb-space-s;
+          .mb-label{
+            @include mb-label(l);
+            margin:0;
+          }
+          .mb-caption{
+            @include mb-caption(s);
+          }
+        }
+        .mb-organization-avatar{
+          @include mb-border-radius(m);
+        }
+      }
+      &-xl{
+        .mb-avatar-image{
+          width: 4.5rem;
+          height:4.5rem;
+        }
+        .mb-avatar-description{
+          margin-left: $mb-space-s;
+          .mb-label{
+            @include mb-label(xl);
+            margin:0;
+          }
+          .mb-caption{
+            @include mb-caption(m);
+          }
+        }
+        .mb-organization-avatar{
+          @include mb-border-radius(l);
+        }
       }
     }
   }
