@@ -5,9 +5,9 @@
       <p class="mb-label">
         {{avatar.name}}
       </p>
-      <small class="mb-caption" v-if="avatar.description">
+      <p class="mb-caption" v-if="avatar.description">
           {{avatar.description}}
-      </small>
+      </p>
     </div>
   </div>
 </template>
@@ -36,7 +36,6 @@ export default {
 @import "../../assets/styles/partials/_mb_typography.scss";
   .mb-avatar{
     display: flex;
-    align-items: center;
     .mb-avatar-image{
       object-fit: cover;
     }
@@ -45,6 +44,10 @@ export default {
     }
     .mb-avatar-description{
       display: block;
+      max-width: 32em;
+      .mb-label{
+         @include mb-wrap-text(false);
+      }
     }
     &.mb-size{
       &-xs{
@@ -53,7 +56,7 @@ export default {
           height:1rem;
         }
         .mb-avatar-description{
-          margin-left: $mb-space-xs;
+          margin-left: $mb-space-xxs;
           .mb-label{
             @include mb-caption(s);
             color:$mb-color-headings;
@@ -62,7 +65,6 @@ export default {
           .mb-caption{
             display: none;
             @include mb-caption(xs);
-            @include mb-wrap-text(false);
           }
         }
         .mb-organization-avatar{
