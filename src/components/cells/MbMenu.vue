@@ -2,7 +2,7 @@
 <nav :class="['mb-menu', `mb-size-${size}`, `mb-flow-${flow}`]">
   <h5 class="mb-menu-title">{{title}}</h5>
   <ul>
-      <mb-menu-item v-for="link in links" :key="link._id" @click="$router.push({name : link.href})" :href="link.href" :menuItemContent="link.menuItemContent" :isDisabled="link.isDisabled"> 
+      <mb-menu-item v-for="item in items" :key="item._id" @click="$router.push({name : item.href})" :href="item.href" :menuItemContent="item.menuItemContent" :isDisabled="item.isDisabled"> 
       </mb-menu-item>
   </ul>
 </nav>
@@ -23,7 +23,7 @@ export default {
       type: String,
       default: 'vertical',
     },
-    links:{
+    items:{
       type: [Array, Object],
     }
   },
