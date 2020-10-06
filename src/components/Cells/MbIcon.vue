@@ -1,17 +1,10 @@
 <template>
-  <<<<<<<
-    HEAD
-    <component
+  <component
     :class="['mb-icon', type]"
     :height="size"
     :width="size"
     :is="iconComponent"
   />
-  =======
-  <i :class="['mb-icon',`mb-color-${color}`,`mb-size-${size}`]">
-    <component :is="iconComponent" />
-  </i>
-  >>>>>>> 06095cdb2257d4d8b898d2770b37062a3e6917dc
 </template>
 
 <script>
