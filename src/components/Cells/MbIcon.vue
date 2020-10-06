@@ -1,5 +1,10 @@
 <template>
-    <component :is="iconComponent"/>
+  <component
+    :class="['mb-icon', type]"
+    :height="size"
+    :width="size"
+    :is="iconComponent"
+  />
 </template>
 
 <script>
@@ -17,10 +22,18 @@ export default {
     name: {
       type: String,
       required: true,
+    },
+    size: {
+      type: Number,
+      default: 18,
+    },
+    type: {
+      type: String,
+      default: 'base',
     }
   },
   computed: {
-    iconComponent() {
+    iconComponent () {
       console.log(icons);
       return icons[this.name]
     },
@@ -29,12 +42,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .float{
-    &__right{
-      float: right;
-    }
-    &__left{
-      float: left;
-    }
+@import "../../assets/styles/partials/_mb_color.scss";
+.mb-icon {
+  stroke: $mb-color-black;
+  fill: $mb-color-transparent;
+  &.base {
+    stroke: $mb-color-black;
+    fill: $mb-color-transparent;
   }
+  &.primary {
+    stroke: $mb-color-white;
+    fill: $mb-color-transparent;
+  }
+}
 </style>
