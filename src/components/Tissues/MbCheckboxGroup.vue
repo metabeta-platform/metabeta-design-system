@@ -1,6 +1,6 @@
 <template>
-<div class="mb-checkbox-group">
-  <ul v-for="(checkboxIndex, i) in value" :key="checkboxIndex._id" :class="alignment">
+<div :class="['mb-checkbox-group', `mb-flow-${flow}`]">
+  <ul v-for="(checkboxIndex, i) in value" :key="checkboxIndex._id">
     <li>
       <mb-checkbox @unchecked="uncheckedEmit" @checked="checkedEmit" :name="checkboxIndex.name" :is-checked="checkedValue[i]" :label="checkboxIndex.label"></mb-checkbox>
     </li>
@@ -15,7 +15,7 @@ export default {
     checkedArr: [],
   }),
   props: {
-    alignment: {
+    flow: {
       type: String,
       default: 'horizontal',
     },
@@ -43,15 +43,28 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/styles/partials/_mb_space.scss";
 .mb-checkbox-group{
-  .horizontal{
-    display: flex;
-    margin-right: $mb-space-m;
-    &:last-child{
-      margin-right: 0;
+  ul{
+    li{
+    margin:0;
+    padding:0;
     }
   }
-  .vertical{
-
+  &.mb-flow{
+    &-horizontal{
+      ul{
+        li{
+          display:inline-block;
+          margin-right:$mb-space-xs;
+        }
+      }
+    }
+    &-vertical{
+      ul{
+        li{
+          display:flex;
+        }
+      }
+    }
   }
 }
 </style>

@@ -19,10 +19,12 @@ export  {default as MbPanel } from '@/components/cells/MbPanel.vue';
 export  {default as MbTooltip } from '@/components/cells/MbTooltip.vue';
 export  {default as MbEdgesLayout } from '@/components/cells/MbEdgesLayout.vue';
 export  {default as MbNavigationList } from '@/components/cells/MbNavigationList.vue';
-
+export  {default as MbMenu} from '@/components/cells/MbMenu.vue';
+export  {default as MbMenuItem} from '@/components/cells/MbMenuItem.vue';
 export  {default as MbCheckbox } from '@/components/cells/form/MbCheckbox.vue';
 export  {default as MbFieldset } from '@/components/cells/form/MbFieldset.vue';
 export  {default as MbInput } from '@/components/cells/form/MbInput.vue';
+export  {default as MbFormInput } from '@/components/cells/form/MbFormInput.vue';
 export  {default as MbRadio } from '@/components/cells/form/MbRadio.vue';
 export  {default as MbIcon} from '@/components/cells/MbIcon.vue';
 export  {default as MbAvatar} from '@/components/cells/MbAvatar.vue';

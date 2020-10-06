@@ -1,6 +1,6 @@
 <template>
-  <div @click="checkEvent" class="checkbox">
-    <input type="checkbox" :name="name" :checked="checkState">
+  <div @click="checkEvent" :class="['mb-checkbox', checkboxDisabled ? 'mb-is-disabled' : null]">
+    <input type="checkbox" :name="name" :checked="checkState" :disabled="isDisabled">
     <label :for="name">{{label}}</label>
   </div>
 </template>
@@ -23,6 +23,10 @@ export default {
     isChecked:{
       type: Boolean,
       default: false,
+    },
+    isDisabled:{
+      type: Boolean,
+      default: false,
     }
   },
   methods: {
@@ -33,12 +37,31 @@ export default {
         {this.checkState = false; this.$emit('unchecked', this.name)};
     },
   },
+  computed: {
+    checkboxDisabled:{
+      get(){
+        return this.isDisabled;
+      },
+      set(value){
+        this.isDisabled = value;
+      }
+    },
+  },
   created () {
     this.checkState = this.checked;
   },
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "../../../assets/styles/partials/_mb_color.scss";
+@import "../../../assets/styles/partials/_mb_space.scss";
+@import "../../../assets/styles/partials/_mb_typography.scss";
+.mb-checkbox{
+  .mb-is-disabled{
+    pointer-events:none;
+    cursor: not-allowed;
+    }
+}
 
 </style>

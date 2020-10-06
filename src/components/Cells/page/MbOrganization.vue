@@ -1,11 +1,11 @@
 <template>
   <section class="mb-organization">
-    <div class="current">
+    <mb-button type="dropdown" >
       <mb-avatar :avatar="currentWorkspace"></mb-avatar>
-    </div>
-    <div class="organization-menu" :class="{expanded : 'expanded'}">
-      <mb-navigation-list v-for="org in organizations" type="organization" :key="org._id" :avatar="org" title="Organizations"></mb-navigation-list>
-      <mb-navigation-list v-for="prg in programs" type="program" :key="prg._id" :avatar="prg" title="Programs"></mb-navigation-list>
+    </mb-button>
+    <div class="mb-dropdown-container" :class="{expanded : 'mb-is-expanded'}">
+      <mb-menu v-for="organization in organizations" type="organization" :key="organization._id" :avatar="organization" title="Organizations"></mb-menu>
+      <mb-menu v-for="programs in programs" type="program" :key="program._id" :avatar="program" title="Programs"> </mb-menu>
     </div>
   </section>
 </template> 
@@ -14,7 +14,7 @@
 export default {
   components: {
     MbAvatar: () => import('../MbAvatar.vue'),
-    MbNavigationList: () => import('../MbNavigationList.vue'),
+    MbMenu: () => import('../MbMenu.vue'),
   },
   props: {
     currentWorkspace: {
@@ -34,15 +34,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .mb-organizations{
-    position: fixed;
-    right: 50px;
-    .organization-menu{
-      min-width: 250px;
-      max-height: 0;
-    }
-    .expand{
-      max-height: initial;
-    }
-  }
+ 
 </style>
