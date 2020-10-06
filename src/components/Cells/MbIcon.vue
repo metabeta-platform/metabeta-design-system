@@ -1,5 +1,5 @@
 <template>
-    <component :is="iconComponent"/>
+   <i :class="['mb-icon',`mb-color-${color}`,`mb-size-${size}`]"> <component :is="iconComponent"/> </i>
 </template>
 
 <script>
@@ -17,7 +17,15 @@ export default {
     name: {
       type: String,
       required: true,
-    }
+    },
+    size: {
+      type: String,
+      default: 'm'
+    },
+    color: { //or should be overwritten by the parent, e.g. the states of the MbButton
+      type: String,
+      default: 'gray'
+    },
   },
   computed: {
     iconComponent() {
@@ -29,12 +37,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .float{
-    &__right{
-      float: right;
+  .mb-icon{
+    &.mb-size{
+      &-xs{
+
+      }
+      &-s{
+
+      }
+      &-m{
+        width: 1rem;
+        height: 1rem;
+      }
+      &-l{
+        
+      }
     }
-    &__left{
-      float: left;
+    &.mb-color{
+      &-gray{
+
+      }
     }
+ 
   }
 </style>
