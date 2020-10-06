@@ -5,7 +5,7 @@
     </mb-button>
     <div class="mb-dropdown-container" :class="{expanded : 'mb-is-expanded'}">
       <mb-menu v-for="organization in organizations" type="organization" :key="organization._id" :avatar="organization" title="Organizations"></mb-menu>
-      <mb-menu v-for="programs in programs" type="program" :key="program._id" :avatar="program" title="Programs"> </mb-menu>
+      <mb-menu v-for="program in programs" type="program" :key="program._id" :avatar="program" title="Programs"> </mb-menu>
     </div>
   </section>
 </template> 
@@ -15,6 +15,7 @@ export default {
   components: {
     MbAvatar: () => import('../MbAvatar.vue'),
     MbMenu: () => import('../MbMenu.vue'),
+    MbButton: () => import('../MbButton'),
   },
   props: {
     currentWorkspace: {

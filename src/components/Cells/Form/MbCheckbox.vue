@@ -31,10 +31,14 @@ export default {
   },
   methods: {
     checkEvent() {
-      if(!this.checkState) 
-        {this.checkState = true; this.$emit('checked', this.name)}
-      else 
-        {this.checkState = false; this.$emit('unchecked', this.name)};
+      if(!this.isDisabled){
+        if(!this.checkState) {
+          this.checkState = true; this.$emit('checked', this.name)
+        }
+        else {
+          this.checkState = false; this.$emit('unchecked', this.name)
+        };
+      }
     },
   },
   computed: {

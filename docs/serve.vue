@@ -250,7 +250,6 @@ export default Vue.extend({
       error="danger" 
       hint="This is a form field - danger">
     </mb-form-input>
-    <!-- <mb-icon SVGFile='add.svg'/> -->
     <section id="drawers">
       <mb-button @click="openDrawer = !openDrawer" label="Open drawer"></mb-button>
       <mb-drawer 
@@ -419,7 +418,7 @@ export default Vue.extend({
         <mb-button label='teal'  priority='secondary' color='teal'/>
         <mb-button label='lime'  priority='secondary' color='lime'/>
         <p>Priority base and color</p>
-        <mb-button label='danger'  priority='base' color='danger'/></mb-button>
+        <mb-button label='danger'  priority='base' color='danger'/>
         <mb-button label='success'  priority='base' color='success'/>
         <mb-button label='warning'  priority='base' color='warning'/>
         <mb-button label='info'  priority='base' color='info'/>
@@ -440,12 +439,13 @@ export default Vue.extend({
         <h4>Size</h4>
         <mb-button label='s'  priority='primary' size='s' />
         <mb-button label='m'  priority='primary' size='m'/>
-        <mb-button label='l'  priority='primary'size='l' />
+        <mb-button label='l'  priority='primary' size='l' />
       </section>
       <section id="buttons-icons">
         <h4>Icons</h4>
-        <mb-button label='icon-name'  priority='primary' size='m'/>
+        <mb-button label='icon-name'  :icon-before="{name: 'icon-picture'}" priority='primary' size='m'/>
         <mb-button label='icon-name'  priority='primary' size='m' />
+        <mb-icon name="add"></mb-icon>
       </section>
     </section>
   </div>

@@ -9,9 +9,9 @@
     :href="type === 'link' ? href : false"
     :class="['mb-button', `mb-type-${type}`, `mb-priority-${priority}`,`mb-color-${color}`, `mb-size-${size}`]"
     :disabled="isDisabled">
-      <mb-icon v-if="!responsiveLabelOnly && isBefore" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && iconBefore" :name="type === 'action' ? 'dropdown' : iconBefore.name"></mb-icon>
       <span class="mb-button-label" v-if="!responsiveIconOnly">{{label}}</span>
-      <mb-icon v-if="!responsiveLabelOnly && isAfter" :name="type === 'action' ? iconBefore.name = 'dropdown' : iconBefore.name"></mb-icon>
+      <mb-icon v-if="!responsiveLabelOnly && iconAfter" :name="type === 'action' ? 'dropdown' : iconBefore.name"></mb-icon>
   </component>
 </keep-alive>
 </template>
@@ -32,14 +32,6 @@ export default {
       type: String,
       default: '/',
       required: false,
-    },
-    isBefore:{
-      type: Object,
-      default: () => {},
-    },
-    isAfter:{
-      type: Object,
-      default: () => {},
     },
     isDisabled:{
       type: Boolean,

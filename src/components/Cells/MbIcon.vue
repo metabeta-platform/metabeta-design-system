@@ -1,42 +1,30 @@
 <template>
-  <div :class="iconBefore ? 'float__left' : 'float__right'" :width="iconBefore.size || iconAfter.size" v-html="svg"></div>
+    <component :is="iconComponent"/>
 </template>
 
 <script>
+const icons = {}
+const requireComponents = require.context('../../assets/icons/', false, /.svg$/)
+requireComponents.keys().forEach(fileName => {
+  const iconName = fileName.replace(/(\.\/|\.svg)/g, '');
+  const componentConfig = requireComponents(fileName)
+  icons[iconName] = componentConfig.default || componentConfig
+});
+
 export default {
   name: "MbIcon",
-  data: () => ({
-    svg: '',
-  }),
-  iconBefore:{
-    type: Object,
-    default:{
-      name: {
-        type: String,
-        default: '',
-      },
-      size: {
-        type: Number,
-        default: 40,
-      }
+  props: {
+    name: {
+      type: String,
+      required: true,
     }
   },
-  iconAfter:{
-    type: Object,
-    default:{
-      name: {
-        type: String,
-        default: ''
-      },
-      size: {
-        type: Number,
-        default: 40,
-      },
-    }
+  computed: {
+    iconComponent() {
+      console.log(icons);
+      return icons[this.name]
+    },
   },
-  created(){
-    this.svg = require(`../../assets/icons/${this.iconBefore.name || this.iconAfter.name}.svg`);
-  }
 }
 </script>
 
