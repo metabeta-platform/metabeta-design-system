@@ -1,43 +1,54 @@
 <template>
-  <keep-alive>
-    <component
-      :type="type != 'link' ? type : null"
-      :is="componentType"
-      @click="$emit('click', $event)"
-      @mouseenter="$emit('mouseenter', $event)"
-      @mouseleave="$emit('mouseleave', $event)"
-      :href="type === 'link' ? href : false"
-      :class="['mb-button', `mb-type-${type}`, `mb-priority-${priority}`,`mb-color-${color}`, `mb-size-${size}`]"
-      :disabled="isDisabled"
-    >
-      <mb-icon
-        :type="priority"
-        :size="iconBefore.size"
-        class="mb-button-icon-left"
-        v-if="!responsiveLabelOnly && iconBefore"
-        :name="type === 'action' ? 'dropdown' : iconBefore.name"
-      ></mb-icon>
-      <span
-        class="mb-button-label"
-        v-if="!responsiveIconOnly"
-      >{{label}}</span>
-      <mb-icon
-        :type="priority"
-        :size="iconAfter.size"
-        class="mb-button-icon-right"
-        v-if="!responsiveLabelOnly && iconAfter"
-        :name="type === 'action' ? 'dropdown' : iconAfter.name"
-      ></mb-icon>
-    </component>
-  </keep-alive>
+  <div class="mb-btn-anc">
+    <keep-alive>
+      <component
+        :type="type != 'link' ? type : null"
+        :is="componentType"
+        @click="$emit('click', $event)"
+        @mouseenter="mouseEnter"
+        @mouseleave="mouseLeave"
+        :href="type === 'link' ? href : false"
+        :class="['mb-button', `mb-type-${type}`, `mb-priority-${priority}`,`mb-color-${color}`, `mb-size-${size}`]"
+        :disabled="isDisabled"
+      >
+        <mb-icon
+          :type="priority"
+          :size="iconBefore.size"
+          class="mb-button-icon-left"
+          v-if="!responsiveLabelOnly && iconBefore"
+          :name="type === 'action' ? 'dropdown' : iconBefore.name"
+        ></mb-icon>
+        <span
+          class="mb-button-label"
+          v-if="!responsiveIconOnly"
+        >{{label}}</span>
+        <mb-icon
+          :type="priority"
+          :size="iconAfter.size"
+          class="mb-button-icon-right"
+          v-if="!responsiveLabelOnly && iconAfter"
+          :name="type === 'action' ? 'dropdown' : iconAfter.name"
+        ></mb-icon>
+      </component>
+    </keep-alive>
+    <mb-tooltip :is-visible="TRUE_FLAG">
+      <template slot="content">
+        lol
+        <slot name="tooltip"></slot>
+      </template>
+    </mb-tooltip>
+  </div>
 </template>
 
 <script>
+import MbTooltip from '@/components/cells/MbTooltip';
+
 export default {
   name: "MbButton",
   data: () => ({
     responsiveLabelOnly: '',
     responsiveIconOnly: '',
+    TRUE_FLAG: false,
   }),
   props: {
     type: {
@@ -89,6 +100,10 @@ export default {
       type: String,
       default: 'default',
     },
+    tooltip: {
+      type: String,
+      default: '',
+    },
     onPhone: {
       type: String,
       default: 'default',
@@ -101,6 +116,7 @@ export default {
   },
   components: {
     MbIcon: () => import('@/components/cells/MbIcon'),
+    MbTooltip,
   },
   created () {
     const windowWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -125,6 +141,16 @@ export default {
         break;
     }
   },
+  methods: {
+    mouseEnter (event) {
+      this.$emit('mouseenter', event);
+      this.TRUE_FLAG = true;
+    },
+    mouseLeave () {
+      this.$emit('mouseleave', event);
+      this.TRUE_FLAG = false;
+    }
+  }
 };
 </script>
 
@@ -134,39 +160,42 @@ export default {
 @import "../../assets/styles/partials/_mb_typography.scss";
 @import "../../assets/styles/partials/_mb_color.scss";
 @import "../../assets/styles/partials/_mb_theme.scss";
-.mb-button {
-  margin: $mb-space-xs;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &.mb-type-link {
-    @extend button;
+.mb-btn-anc {
+  position: relative;
+  .mb-button {
     margin: $mb-space-xs;
-  }
-  .mb-button-icon {
-    &-left {
-      padding-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.mb-type-link {
+      @extend button;
+      margin: $mb-space-xs;
     }
-    &-right {
-      padding-left: 6px;
+    .mb-button-icon {
+      &-left {
+        padding-right: 6px;
+      }
+      &-right {
+        padding-left: 6px;
+      }
     }
-  }
-  .mb-button-label {
-    margin: 0;
-  }
+    .mb-button-label {
+      margin: 0;
+    }
 
-  &.mb-size {
-    &-s {
-      padding: $mb-space-xxs $mb-space-xs;
-      @include mb-font(body, xs, normal, normal);
-    }
-    &-m {
-      padding: $mb-space-xs $mb-space-s;
-      @include mb-font(body, s, normal, normal);
-    }
-    &-l {
-      padding: $mb-space-s $mb-space-m;
-      @include mb-font(body, m, normal, normal);
+    &.mb-size {
+      &-s {
+        padding: $mb-space-xxs $mb-space-xs;
+        @include mb-font(body, xs, normal, normal);
+      }
+      &-m {
+        padding: $mb-space-xs $mb-space-s;
+        @include mb-font(body, s, normal, normal);
+      }
+      &-l {
+        padding: $mb-space-s $mb-space-m;
+        @include mb-font(body, m, normal, normal);
+      }
     }
   }
 }

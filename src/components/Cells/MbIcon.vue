@@ -34,7 +34,6 @@ export default {
   },
   computed: {
     iconComponent () {
-      console.log(icons);
       return icons[this.name]
     },
   },

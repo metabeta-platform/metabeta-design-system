@@ -316,7 +316,6 @@ export default Vue.extend({
         </template>
       </mb-drawer>
     </section>
-
     <mb-radio
       label="test"
       name="test"
@@ -390,10 +389,14 @@ export default Vue.extend({
     <section id="mb-modal">
       <h3>MbModal</h3>
       <mb-button
-        v-on:click="openModal = !openModal"
+        tooltip="top"
+        @click="openModal = !openModal"
         label="Open modal"
-        soze
-      ></mb-button>
+      >
+        <template slot="tooltip">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </template>
+      </mb-button>
       <mb-modal
         name="modal-id"
         title="Modal title"
