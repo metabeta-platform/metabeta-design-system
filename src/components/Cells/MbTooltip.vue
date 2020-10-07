@@ -1,5 +1,9 @@
 <template>
-  <div :class="`mb-tooltip mb-placement-${placement} ${show ? '' : 'hidden'}`">
+  <div
+    @mouseenter="show = true"
+    @mouseleave="show = false"
+    :class="`mb-tooltip mb-placement-${placement} ${show ? '' : 'hidden'}`"
+  >
     <div class="mb-tooltip-content">
       <slot name="content"></slot>
     </div>
@@ -70,13 +74,17 @@ export default {
     @include mb-border-radius(s);
     @include mb-font(body, s, normal, normal);
     padding: $mb-space-xxs $mb-space-xs;
-    position: absolute;
     z-index: 3;
     &::after {
       content: "";
       position: absolute;
-      border-width: $mb-space-xxs;
-      border-style: solid;
+      width: 10px;
+      height: 10px;
+      left: 50%;
+      background-color: inherit;
+      transform: translateX(-50%) rotate(45deg);
+      bottom: -$mb-space-xxs;
+      background: rgba($mb-color-black, $mb-opacity-xxl);
     }
   }
 }

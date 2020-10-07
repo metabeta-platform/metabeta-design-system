@@ -161,6 +161,7 @@ export default {
 @import "../../assets/styles/partials/_mb_color.scss";
 @import "../../assets/styles/partials/_mb_theme.scss";
 .mb-btn-anc {
+  display: inline-block;
   position: relative;
   .mb-button {
     margin: $mb-space-xs;
