@@ -963,7 +963,7 @@ export default Vue.extend({
           size='l'
         />
       </section>
-            <section id="buttons-icons">
+      <section id="buttons-icons">
         <h4>Button with icon</h4>
         <p>Priority primary and color</p>
         <mb-button
@@ -1256,6 +1256,16 @@ export default Vue.extend({
           color='lime'
           :icon-before="{name: 'icon-image'}"
         />
+        <mb-icon name="icon-user"/>
+        <mb-icon name="icon-business-work"/>
+        <mb-icon name="icon-mini-arrow"/>
+        <mb-icon name="icon-close"/>
+        <mb-icon name="icon-password"/>
+        <mb-icon name="icon-search"/>
+        <mb-icon name="icon-view"/>
+        <mb-icon name="icon-hide"/>
+        <mb-icon name="icon-call"/>
+        <mb-icon name="icon-email"/>
       </section>
     </section>
   </div>
