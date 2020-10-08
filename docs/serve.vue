@@ -138,6 +138,21 @@ export default Vue.extend({
       name: 'Jane Joe',
       description: "Company, Position"
     },
+    marius: {
+      avatarUrl: 'https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/13912706_10154427613364161_4664911369655757049_n.jpg?_nc_cat=100&_nc_sid=174925&_nc_ohc=Yl1uRkHhLzYAX9I8X1Z&_nc_ht=scontent.fias1-1.fna&oh=68beec904d76af7d72593f5eb0bd3f82&oe=5FA35BF4',
+      name: 'Marius',
+      description: "Metabeta, Boss"
+    },
+    ozgur: {
+      avatarUrl: 'https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/110242239_3763569180325905_8256757860282009782_n.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=UyNXs3qmnQoAX-sq5gJ&_nc_ht=scontent.fias1-1.fna&oh=f923f0c4dddd622c54c47e536038145b&oe=5FA4FFA9',
+      name: 'Ozgur',
+      description: "Metabeta, Developer"
+    },
+    cristian: {
+      avatarUrl: 'https://scontent.fias1-1.fna.fbcdn.net/v/t1.0-9/45987617_10218113947499143_8767349249932263424_n.jpg?_nc_cat=110&_nc_sid=174925&_nc_ohc=364UuUGpgjcAX_0Vorl&_nc_ht=scontent.fias1-1.fna&oh=7fd9cac1585a4cc5fa26c5c0ea83e320&oe=5FA3559D',
+      name: 'Cristian',
+      description: "Metabeta, Designer"
+    },
     organization: {
       avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRwMYrqRxreis8fdCGMc3-1jnsR8SdwrgThzA&usqp=CAU',
       name: 'Pied Piper',
@@ -173,7 +188,7 @@ export default Vue.extend({
 });
 </script>
 <style lang="scss" >
-.mb-checkbox-group {
+.mb-checkbox-group,.mb-radio-group {
   ul {
     li {
       margin: 0;
@@ -198,9 +213,6 @@ export default Vue.extend({
     }
   }
 }
-.mb-avatar {
-  margin-top: 16px !important;
-}
 </style> 
 
 <template>
@@ -209,7 +221,7 @@ export default Vue.extend({
     <mb-panel
         title="Cells"
         type="card"
-        name="cells"
+        name="cells" 
         :has-header="true"
         :has-footer="true"
       >
@@ -227,158 +239,284 @@ export default Vue.extend({
               <tr>
                 <td>MbButton</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbTooltip</td>
                 <td>1.0.0</td>
-                <td>Cristian</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Testing</td>
               </tr>
               <tr>
                 <td>MbPanel</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbModal</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbDrawer</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Doing</td>
               </tr>
               <tr>
                 <td>MbIcon</td>
                 <td>1.0.0</td>
-                <td>Cristian</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbFormInput</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbFormSelect</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbFormDataList</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbFormFieldset</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbFormTextArea</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Doing</td>
               </tr>
               <tr>
-                <td>MbCheckbox</td>
+                <td><a href="#section-checkbox">MbCheckbox</a></td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
-                <td>MbCheckboxGroup</td>
+                <td><a href="#section-checkbox-group">MbCheckboxGroup</a></td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbRadio</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Doing</td>
               </tr>
               <tr>
                 <td>MbRadioGroup</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Doing</td>
               </tr>
               <tr>
                 <td>MbMenu</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbMenuItem</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbTab</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbTabGroup</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td><a href="#section-avatar">MbAvatar</a></td>
                 <td>1.0.0</td>
-                <td>Cristian</td>
-                <td>Testing</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
+                <td>Waiting</td>
               </tr>
                <tr>
                 <td>MbUser</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Doing</td>
               </tr>
               <tr>
                 <td>MbOrganization</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Waiting</td>
               </tr>
               <tr>
                 <td>MbTopbar</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>Doing</td>
               </tr>
               <tr>
                 <td>MbTable</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td><mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                </td>
                 <td>To do</td>
               </tr>
               <tr>
                 <td>MbApp</td>
                 <td>1.0.0</td>
-                <td>Ozgur</td>
+                <td>
+                  <mb-avatar
+                    :avatar="ozgur"
+                    type="user"
+                    size="s"
+                  ></mb-avatar>
+                  </td>
                 <td>To do</td>
               </tr>
             </tbody>
           </table>
         </template>
         <template slot="footer">
-          <small>This should be maintained updated!</small>
+         <mb-icon name="icon-alert-warning-fill" color="warning" /> <small>This should be maintained updated!</small>
         </template>
     </mb-panel>
 
@@ -436,6 +574,84 @@ export default Vue.extend({
         size="xl"
       ></mb-avatar>
     </section>
+    <h2>Pre testing - Needs small fixez</h2>
+    
+    <section id="section-checkbox">
+      <h3>MbCheckbox</h3>
+      <p><mb-icon name="icon-alert-warning-fill" color="warning" />Needs to have the Metabeta icon</p>
+      <mb-checkbox
+        name="checkbox-1"
+        label="Checkbox-1"
+        :isDisabled="true"
+      ></mb-checkbox>
+      <p><mb-icon name="icon-alert-warning-fill" color="warning" />When is check and disabled I can't see the checked icon</p>
+      <mb-checkbox
+        name="checkbox-2"
+        label="Checkbox-2"
+        :isDisabled="true"
+        :isChecked="true"
+      ></mb-checkbox>
+    </section>
+    <section id="section-checkbox-group">
+      <h3>MbCheckboxGroup</h3>
+      <p><mb-icon name="icon-alert-warning-fill" color="warning" /> Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works</p>
+      <div class="mb-checkbox-group mb-flow-horizontal">
+        <ul>
+          <li>
+            <mb-checkbox
+              name="checkbox-3"
+              label="Checkbox-3"
+            ></mb-checkbox>
+          </li>
+          <li>
+            <mb-checkbox
+              name="checkbox-4"
+              label="Checkbox-4"
+            ></mb-checkbox>
+          </li>
+          <li>
+            <mb-checkbox
+              name="checkbox-5"
+              label="Checkbox-5"
+            ></mb-checkbox>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="section-radio">
+      <h3>MbRadio</h3>
+      <p><mb-icon name="icon-alert-warning-fill" color="warning" /> Label and the radiobox should be aligned</p>
+      <mb-radio
+      label="Radio label"
+      name="test1"
+    ></mb-radio>
+    <section id="section-radio-group">
+      <h3>MbRadioGroup</h3>
+      <p><mb-icon name="icon-alert-warning-fill" color="warning" /> Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works</p>
+      <div class="mb-radio-group mb-flow-horizontal">
+        <ul>
+          <li>
+            <mb-radio
+              label="RadioBox"
+              name="test"
+            ></mb-radio>
+          </li>
+          <li>
+            <mb-radio
+              label="RadioBox2"
+              name="test"
+            ></mb-radio>
+          </li>
+          <li>
+            <mb-radio
+              label="RadioBox3"
+              name="test"
+            ></mb-radio>
+          </li>
+        </ul>
+      </div>
+    </section>
+    </section>
 
     <h2>In progress</h2>
 
@@ -445,58 +661,7 @@ export default Vue.extend({
     <mb-tabs :tabs="tabs">
     </mb-tabs>
     <br />
-    <p>icon</p>
-    <mb-icon name="add"></mb-icon>
-    <!-- <img src="~@/assets/icons/add.svg" alt="" width="40%" class="">-->
-    <mb-checkbox
-      name="checkbox-1"
-      label="Checkbox-1"
-      :isDisabled="true"
-    ></mb-checkbox>
-    <mb-checkbox
-      name="checkbox-2"
-      label="Checkbox-2"
-      :isDisabled="true"
-      :isChecked="true"
-    ></mb-checkbox>
-    <div class="mb-checkbox-group mb-flow-horizontal">
-      <ul>
-        <li>
-          <mb-checkbox
-            name="checkbox-3"
-            label="Checkbox-3"
-          ></mb-checkbox>
-        </li>
-        <li>
-          <mb-checkbox
-            name="checkbox-4"
-            label="Checkbox-4"
-          ></mb-checkbox>
-        </li>
-        <li>
-          <mb-checkbox
-            name="checkbox-5"
-            label="Checkbox-5"
-          ></mb-checkbox>
-        </li>
-      </ul>
-    </div>
-    <mb-tooltip
-      placement="top"
-      content="Top tooltip"
-    >tossssssssp</mb-tooltip>
-    <mb-tooltip
-      placement="right"
-      content="right tooltip"
-    >tosssdsssssp</mb-tooltip>
-    <mb-tooltip
-      placement="left"
-      content="left tooltip"
-    >tosssdsssssp</mb-tooltip>
-    <mb-tooltip
-      placement="bottom"
-      content="bottom tooltip"
-    >tosssdsssssp</mb-tooltip>
+
     <mb-form-input
       type="text"
       label="Label for input"
@@ -550,10 +715,7 @@ export default Vue.extend({
         </template>
       </mb-drawer>
     </section>
-    <mb-radio
-      label="test"
-      name="test"
-    ></mb-radio>
+    
   
     <h3>MbMenu</h3>
     <mb-menu
@@ -1266,6 +1428,7 @@ export default Vue.extend({
         <mb-icon name="icon-hide"/>
         <mb-icon name="icon-call"/>
         <mb-icon name="icon-email"/>
+        <mb-icon name="icon-alert-warning-fill"/>
       </section>
     </section>
   </div>
