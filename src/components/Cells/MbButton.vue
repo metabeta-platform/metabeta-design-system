@@ -178,16 +178,14 @@ export default {
     }
     .mb-button-icon {
       &-left {
-        display: inline-flex;
         margin-right: $mb-space-xs;
       }
       &-right {
-        display: inline-flex;
         margin-left: $mb-space-xs;
       }
     }
     .mb-button-label {
-       margin: 0;
+      margin: 0;
     }
 
     &.mb-size {
