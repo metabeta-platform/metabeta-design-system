@@ -207,180 +207,237 @@ export default Vue.extend({
   <div id="app">
     <h1>Cells</h1>
     <mb-panel
-      title="Cells"
-      type="card"
-      name="cells"
-      :has-header="true"
-      :has-footer="true"
-    >
-      <template slot="content">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Version</th>
-              <th>Responsabile</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>MbButton</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Testing</td>
-            </tr>
-            <tr>
-              <td>MbTooltip</td>
-              <td>1.0.0</td>
-              <td>Cristian</td>
-              <td>Testing</td>
-            </tr>
-            <tr>
-              <td>MbPanel</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbModal</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbDrawer</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Doing</td>
-            </tr>
-            <tr>
-              <td>MbIcon</td>
-              <td>1.0.0</td>
-              <td>Cristian</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbFormInput</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbFormSelect</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbFormDataList</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbFormFieldset</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbFormTextArea</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Doing</td>
-            </tr>
-            <tr>
-              <td>MbCheckbox</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbCheckboxGroup</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbRadio</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Doing</td>
-            </tr>
-            <tr>
-              <td>MbRadioGroup</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Doing</td>
-            </tr>
-            <tr>
-              <td>MbMenu</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbMenuItem</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbTab</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbTabGroup</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbAvatar</td>
-              <td>1.0.0</td>
-              <td>Cristian</td>
-              <td>Testing</td>
-            </tr>
-            <tr>
-              <td>MbUser</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Doing</td>
-            </tr>
-            <tr>
-              <td>MbOrganization</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Waiting</td>
-            </tr>
-            <tr>
-              <td>MbTopbar</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>Doing</td>
-            </tr>
-            <tr>
-              <td>MbTable</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>To do</td>
-            </tr>
-            <tr>
-              <td>MbApp</td>
-              <td>1.0.0</td>
-              <td>Ozgur</td>
-              <td>To do</td>
-            </tr>
-          </tbody>
-        </table>
-      </template>
-      <template slot="footer">
-        <small>This should be maintained updated!</small>
-      </template>
+        title="Cells"
+        type="card"
+        name="cells"
+        :has-header="true"
+        :has-footer="true"
+      >
+        <template slot="content">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Version</th>
+                <th>Responsabile</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MbButton</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbTooltip</td>
+                <td>1.0.0</td>
+                <td>Cristian</td>
+                <td>Testing</td>
+              </tr>
+              <tr>
+                <td>MbPanel</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbModal</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbDrawer</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Doing</td>
+              </tr>
+              <tr>
+                <td>MbIcon</td>
+                <td>1.0.0</td>
+                <td>Cristian</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbFormInput</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbFormSelect</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbFormDataList</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbFormFieldset</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbFormTextArea</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Doing</td>
+              </tr>
+              <tr>
+                <td>MbCheckbox</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbCheckboxGroup</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbRadio</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Doing</td>
+              </tr>
+              <tr>
+                <td>MbRadioGroup</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Doing</td>
+              </tr>
+              <tr>
+                <td>MbMenu</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbMenuItem</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbTab</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbTabGroup</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td><a href="#section-avatar">MbAvatar</a></td>
+                <td>1.0.0</td>
+                <td>Cristian</td>
+                <td>Testing</td>
+              </tr>
+               <tr>
+                <td>MbUser</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Doing</td>
+              </tr>
+              <tr>
+                <td>MbOrganization</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Waiting</td>
+              </tr>
+              <tr>
+                <td>MbTopbar</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>Doing</td>
+              </tr>
+              <tr>
+                <td>MbTable</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>To do</td>
+              </tr>
+              <tr>
+                <td>MbApp</td>
+                <td>1.0.0</td>
+                <td>Ozgur</td>
+                <td>To do</td>
+              </tr>
+            </tbody>
+          </table>
+        </template>
+        <template slot="footer">
+          <small>This should be maintained updated!</small>
+        </template>
     </mb-panel>
+
+    <h2>Ready for testing</h2>
+    <section id="section-avatar">
+      <h3>MbAvatar</h3>
+      <mb-avatar
+        :avatar="userSmall"
+        type="user"
+        size="xs"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="userSmall"
+        type="user"
+        size="s"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="user"
+        type="user"
+        size="m"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="user"
+        type="user"
+        size="l"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="user"
+        type="user"
+        size="xl"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="organization"
+        type="organization"
+        size="xs"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="organization"
+        type="organization"
+        size="s"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="organization"
+        type="organization"
+        size="m"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="organization"
+        type="organization"
+        size="l"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="organization"
+        type="organization"
+        size="xl"
+      ></mb-avatar>
+    </section>
+
+    <h2>In progress</h2>
 
     <mb-organization :currentWorkspace="currentWorkspace">
 
@@ -497,57 +554,7 @@ export default Vue.extend({
       label="test"
       name="test"
     ></mb-radio>
-    <h3>MbAvatar</h3>
-    <mb-avatar
-      :avatar="userSmall"
-      type="user"
-      size="xs"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="userSmall"
-      type="user"
-      size="s"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="user"
-      type="user"
-      size="m"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="user"
-      type="user"
-      size="l"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="user"
-      type="user"
-      size="xl"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="organization"
-      type="organization"
-      size="xs"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="organization"
-      type="organization"
-      size="s"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="organization"
-      type="organization"
-      size="m"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="organization"
-      type="organization"
-      size="l"
-    ></mb-avatar>
-    <mb-avatar
-      :avatar="organization"
-      type="organization"
-      size="xl"
-    ></mb-avatar>
+  
     <h3>MbMenu</h3>
     <mb-menu
       title="This is the menu title"
@@ -956,21 +963,299 @@ export default Vue.extend({
           size='l'
         />
       </section>
-      <section id="buttons-icons">
-        <h4>Icons</h4>
+            <section id="buttons-icons">
+        <h4>Button with icon</h4>
+        <p>Priority primary and color</p>
         <mb-button
-          label='icon-name'
-          :icon-before="{name: 'icon-picture', size: 14}"
+          label='danger'
           priority='primary'
-          size='m'
+          color='danger'
+          :icon-before="{name: 'icon-image'}"
         />
         <mb-button
-          label='icon-name'
+          label='success'
           priority='primary'
-          size='m'
-          :icon-after="{name: 'pen', size: 20}"
+          color='success'
+          :icon-before="{name: 'icon-image'}"
         />
-        <mb-icon name="add"></mb-icon>
+        <mb-button
+          label='warning'
+          priority='primary'
+          color='warning'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='info'
+          priority='primary'
+          color='info'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='note'
+          priority='primary'
+          color='note'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='blue'
+          priority='primary'
+          color='blue'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='red'
+          priority='primary'
+          color='red'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='green'
+          priority='primary'
+          color='green'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='orange'
+          priority='primary'
+          color='orange'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='cyan'
+          priority='primary'
+          color='cyan'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='yellow'
+          priority='primary'
+          color='yellow'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='indigo'
+          priority='primary'
+          color='indigo'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='purple'
+          priority='primary'
+          color='purple'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='pink'
+          priority='primary'
+          color='pink'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='teal'
+          priority='primary'
+          color='teal'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='lime'
+          priority='primary'
+          color='lime'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <p>Priority secondary and color</p>
+        <mb-button
+          label='danger'
+          priority='secondary'
+          color='danger'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='success'
+          priority='secondary'
+          color='success'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='warning'
+          priority='secondary'
+          color='warning'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='info'
+          priority='secondary'
+          color='info'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='note'
+          priority='secondary'
+          color='note'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='blue'
+          priority='secondary'
+          color='blue'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='red'
+          priority='secondary'
+          color='red'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='green'
+          priority='secondary'
+          color='green'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='orange'
+          priority='secondary'
+          color='orange'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='cyan'
+          priority='secondary'
+          color='cyan'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='yellow'
+          priority='secondary'
+          color='yellow'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='indigo'
+          priority='secondary'
+          color='indigo'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='purple'
+          priority='secondary'
+          color='purple'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='pink'
+          priority='secondary'
+          color='pink'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='teal'
+          priority='secondary'
+          color='teal'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='lime'
+          priority='secondary'
+          color='lime'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <p>Priority base and color</p>
+        <mb-button
+          label='danger'
+          priority='base'
+          color='danger'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='success'
+          priority='base'
+          color='success'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='warning'
+          priority='base'
+          color='warning'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='info'
+          priority='base'
+          color='info'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='note'
+          priority='base'
+          color='note'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='blue'
+          priority='base'
+          color='blue'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='red'
+          priority='base'
+          color='red'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='green'
+          priority='base'
+          color='green'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='orange'
+          priority='base'
+          color='orange'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='cyan'
+          priority='base'
+          color='cyan'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='yellow'
+          priority='base'
+          color='yellow'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='indigo'
+          priority='base'
+          color='indigo'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='purple'
+          priority='base'
+          color='purple'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='pink'
+          priority='base'
+          color='pink'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='teal'
+          priority='base'
+          color='teal'
+          :icon-before="{name: 'icon-image'}"
+        />
+        <mb-button
+          label='lime'
+          priority='base'
+          color='lime'
+          :icon-before="{name: 'icon-image'}"
+        />
       </section>
     </section>
   </div>
