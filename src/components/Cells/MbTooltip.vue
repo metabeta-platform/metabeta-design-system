@@ -39,6 +39,7 @@ export default {
   position: absolute;
   display: inline-block;
   width: 100%;
+  @include mb-elevation(10);
   &.hidden {
     visibility: hidden;
     display: none;

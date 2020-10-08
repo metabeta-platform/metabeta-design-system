@@ -31,12 +31,13 @@
         ></mb-icon>
       </component>
     </keep-alive>
-    <mb-tooltip :is-visible="TRUE_FLAG">
-      <template slot="content">
-        lol
-        <slot name="tooltip"></slot>
-      </template>
-    </mb-tooltip>
+    <div class="tooltip-wrapp">
+      <mb-tooltip :is-visible="TRUE_FLAG">
+        <template slot="content">
+          <slot name="tooltip"></slot>
+        </template>
+      </mb-tooltip>
+    </div>
   </div>
 </template>
 

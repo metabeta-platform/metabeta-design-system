@@ -389,7 +389,7 @@ export default Vue.extend({
     <section id="mb-modal">
       <h3>MbModal</h3>
       <mb-button
-        tooltip="top"
+        tooltip="'top'"
         @click="openModal = !openModal"
         label="Open modal"
       >
