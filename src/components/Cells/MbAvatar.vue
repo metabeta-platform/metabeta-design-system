@@ -1,11 +1,19 @@
 <template>
-  <div :class="['mb-avatar', `mb-size-${size}`]">
+  <div
+    @mouseenter="TRUE_FLAG = true"
+    @mouseleave="TRUE_FLAG = false"
+    :class="['mb-avatar', `mb-size-${size}` , {'only-image' : onlyImage}]"
+  >
     <img
+      svg-inline
       class="mb-avatar-image"
       :class="type == 'organization' ? 'mb-organization-avatar' : 'mb-user-avatar'"
-      :src="avatar.avatarUrl ? avatar.avatarUrl : defaultImages.getImage(type, 'icon')"
+      :src="avatar.avatarUrl === '' || avatar.avatarUrl === null ? defaultImages.getImage(type, 'icon') : avatar.avatarUrl"
     >
-    <div class="mb-avatar-description">
+    <div
+      v-if="!onlyImage"
+      class="mb-avatar-description"
+    >
       <p class="mb-label">
         {{avatar.name}}
       </p>
@@ -16,15 +24,38 @@
         {{avatar.description}}
       </p>
     </div>
+    <div v-if="onlyImage">
+      <mb-tooltip
+        :placement="tooltip"
+        :is-visible="TRUE_FLAG"
+      >
+        <template slot="content">
+          <div class="tooltip">
+            <p class="mb-label">
+              {{avatar.name}}
+            </p>
+            <p
+              class="mb-caption"
+              v-if="avatar.description"
+            >
+              {{avatar.description}}
+            </p>
+          </div>
+        </template>
+      </mb-tooltip>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  data: () => ({
+    TRUE_FLAG: false,
+  }),
   props: {
     type: {
       type: String,
-      default: 'user',
+      default: 'organization',
     },
     avatar: {
       type: Object,
@@ -34,6 +65,17 @@ export default {
       type: String,
       default: 'm',
     },
+    tooltip: {
+      type: String,
+      default: 'top-right',
+    },
+    onlyImage: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  components: {
+    MbTooltip: () => import('@/components/cells/MbTooltip.vue'),
   },
 }
 </script>
@@ -43,6 +85,10 @@ export default {
 @import "../../assets/styles/partials/_mb_typography.scss";
 .mb-avatar {
   display: flex;
+  position: relative;
+  &.only-image {
+    display: inline-block;
+  }
   .mb-avatar-image {
     object-fit: cover;
   }
@@ -54,6 +100,15 @@ export default {
     max-width: 32em;
     .mb-label {
       @include mb-wrap-text(false);
+    }
+  }
+  .tooltip {
+    text-align: left;
+    .mb-caption {
+      color: $mb-color-gray-400 !important;
+    }
+    .mb-label {
+      color: $mb-color-gray-100 !important;
     }
   }
   &.mb-size {

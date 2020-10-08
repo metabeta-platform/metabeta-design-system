@@ -49,6 +49,39 @@ export default {
       bottom: 100%;
       left: 50%;
       transform: translateX(-50%);
+      @include mb-border-radius(xxs);
+    }
+    &-top-left {
+      bottom: calc(100% + 2px);
+      left: 0;
+      .mb-tooltip-content::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: 4px;
+        @include mb-border-radius(xxs);
+        background-color: inherit;
+        transform: rotate(45deg);
+        bottom: -$mb-space-xxs;
+        background: rgba($mb-color-black, $mb-opacity-xl);
+      }
+    }
+    &-top-right {
+      bottom: calc(100% + 2px);
+      right: -33.33334%;
+      .mb-tooltip-content::after {
+        content: "";
+        position: absolute;
+        @include mb-border-radius(xxs);
+        width: 10px;
+        height: 10px;
+        left: 4px;
+        background-color: inherit;
+        transform: rotate(45deg);
+        bottom: -$mb-space-xxs;
+        background: rgba($mb-color-black, $mb-opacity-xxl);
+      }
     }
     &-bottom {
       top: 100%;
@@ -67,8 +100,9 @@ export default {
     }
   }
   &:not(.hidden) .mb-tooltip-content {
-    width: auto;
+    position: relative;
     max-width: 300px;
+    min-width: 250px;
     background: rgba($mb-color-black, $mb-opacity-xxl);
     color: $mb-color-white;
     text-align: center;
@@ -76,17 +110,6 @@ export default {
     @include mb-font(body, s, normal, normal);
     padding: $mb-space-xxs $mb-space-xs;
     z-index: 3;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      left: 50%;
-      background-color: inherit;
-      transform: translateX(-50%) rotate(45deg);
-      bottom: -$mb-space-xxs;
-      background: rgba($mb-color-black, $mb-opacity-xxl);
-    }
   }
 }
 

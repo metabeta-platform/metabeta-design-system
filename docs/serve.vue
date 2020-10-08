@@ -143,6 +143,11 @@ export default Vue.extend({
       name: 'Pied Piper',
       description: "Inventor of compression algorithms that will disrupt Artificial Intelligence, blockchain, biotech, drones, space and time travel. A radical inventor of compression algorithms that will disrupt Artificial Intelligence, blockchain, biotech, drones, space and time travel."
     },
+    noUrl: {
+      avatarUrl: '',
+      name: 'Pied Piper',
+      description: "Inventor of compression algorithms that will disrupt Artificial Intelligence, blockchain, biotech, drones, space and time travel. A radical inventor of compression algorithms that will disrupt Artificial Intelligence, blockchain, biotech, drones, space and time travel."
+    }
   }),
   name: 'ServeDev',
   components: {
@@ -207,179 +212,179 @@ export default Vue.extend({
   <div id="app">
     <h1>Cells</h1>
     <mb-panel
-        title="Cells"
-        type="card"
-        name="cells"
-        :has-header="true"
-        :has-footer="true"
-      >
-        <template slot="content">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Version</th>
-                <th>Responsabile</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>MbButton</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbTooltip</td>
-                <td>1.0.0</td>
-                <td>Cristian</td>
-                <td>Testing</td>
-              </tr>
-              <tr>
-                <td>MbPanel</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbModal</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbDrawer</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Doing</td>
-              </tr>
-              <tr>
-                <td>MbIcon</td>
-                <td>1.0.0</td>
-                <td>Cristian</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbFormInput</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbFormSelect</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbFormDataList</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbFormFieldset</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbFormTextArea</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Doing</td>
-              </tr>
-              <tr>
-                <td>MbCheckbox</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbCheckboxGroup</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbRadio</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Doing</td>
-              </tr>
-              <tr>
-                <td>MbRadioGroup</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Doing</td>
-              </tr>
-              <tr>
-                <td>MbMenu</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbMenuItem</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbTab</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbTabGroup</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td><a href="#section-avatar">MbAvatar</a></td>
-                <td>1.0.0</td>
-                <td>Cristian</td>
-                <td>Testing</td>
-              </tr>
-               <tr>
-                <td>MbUser</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Doing</td>
-              </tr>
-              <tr>
-                <td>MbOrganization</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Waiting</td>
-              </tr>
-              <tr>
-                <td>MbTopbar</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>Doing</td>
-              </tr>
-              <tr>
-                <td>MbTable</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>To do</td>
-              </tr>
-              <tr>
-                <td>MbApp</td>
-                <td>1.0.0</td>
-                <td>Ozgur</td>
-                <td>To do</td>
-              </tr>
-            </tbody>
-          </table>
-        </template>
-        <template slot="footer">
-          <small>This should be maintained updated!</small>
-        </template>
+      title="Cells"
+      type="card"
+      name="cells"
+      :has-header="true"
+      :has-footer="true"
+    >
+      <template slot="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Version</th>
+              <th>Responsabile</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MbButton</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbTooltip</td>
+              <td>1.0.0</td>
+              <td>Cristian</td>
+              <td>Testing</td>
+            </tr>
+            <tr>
+              <td>MbPanel</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbModal</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbDrawer</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Doing</td>
+            </tr>
+            <tr>
+              <td>MbIcon</td>
+              <td>1.0.0</td>
+              <td>Cristian</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbFormInput</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbFormSelect</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbFormDataList</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbFormFieldset</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbFormTextArea</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Doing</td>
+            </tr>
+            <tr>
+              <td>MbCheckbox</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbCheckboxGroup</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbRadio</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Doing</td>
+            </tr>
+            <tr>
+              <td>MbRadioGroup</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Doing</td>
+            </tr>
+            <tr>
+              <td>MbMenu</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbMenuItem</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbTab</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbTabGroup</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td><a href="#section-avatar">MbAvatar</a></td>
+              <td>1.0.0</td>
+              <td>Cristian</td>
+              <td>Testing</td>
+            </tr>
+            <tr>
+              <td>MbUser</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Doing</td>
+            </tr>
+            <tr>
+              <td>MbOrganization</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Waiting</td>
+            </tr>
+            <tr>
+              <td>MbTopbar</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>Doing</td>
+            </tr>
+            <tr>
+              <td>MbTable</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>To do</td>
+            </tr>
+            <tr>
+              <td>MbApp</td>
+              <td>1.0.0</td>
+              <td>Ozgur</td>
+              <td>To do</td>
+            </tr>
+          </tbody>
+        </table>
+      </template>
+      <template slot="footer">
+        <small>This should be maintained updated!</small>
+      </template>
     </mb-panel>
 
     <h2>Ready for testing</h2>
@@ -389,6 +394,12 @@ export default Vue.extend({
         :avatar="userSmall"
         type="user"
         size="xs"
+      ></mb-avatar>
+      <mb-avatar
+        :avatar="noUrl"
+        only-image
+        type="user"
+        size="l"
       ></mb-avatar>
       <mb-avatar
         :avatar="userSmall"
@@ -554,7 +565,7 @@ export default Vue.extend({
       label="test"
       name="test"
     ></mb-radio>
-  
+
     <h3>MbMenu</h3>
     <mb-menu
       title="This is the menu title"
@@ -1256,16 +1267,16 @@ export default Vue.extend({
           color='lime'
           :icon-before="{name: 'icon-image'}"
         />
-        <mb-icon name="icon-user"/>
-        <mb-icon name="icon-business-work"/>
-        <mb-icon name="icon-mini-arrow"/>
-        <mb-icon name="icon-close"/>
-        <mb-icon name="icon-password"/>
-        <mb-icon name="icon-search"/>
-        <mb-icon name="icon-view"/>
-        <mb-icon name="icon-hide"/>
-        <mb-icon name="icon-call"/>
-        <mb-icon name="icon-email"/>
+        <mb-icon name="icon-user" />
+        <mb-icon name="icon-business-work" />
+        <mb-icon name="icon-mini-arrow" />
+        <mb-icon name="icon-close" />
+        <mb-icon name="icon-password" />
+        <mb-icon name="icon-search" />
+        <mb-icon name="icon-view" />
+        <mb-icon name="icon-hide" />
+        <mb-icon name="icon-call" />
+        <mb-icon name="icon-email" />
       </section>
     </section>
   </div>

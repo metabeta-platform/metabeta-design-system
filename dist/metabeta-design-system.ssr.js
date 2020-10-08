@@ -2266,7 +2266,7 @@ var DefaultImages = /*#__PURE__*/function () {
         icon: 'http://cdn.metabeta.com/static/images/accelerator/icon.png',
         logo: 'http://cdn.metabeta.com/static/images/accelerator/logo.png'
       },
-      startup: {
+      organization: {
         icon: 'http://cdn.metabeta.com/static/images/startup/icon.png',
         logo: 'http://cdn.metabeta.com/static/images/startup/logo.png'
       },
