@@ -1,10 +1,11 @@
 <template>
+  <i :class="['mb-icon', `mb-size-${size}` ]">
   <component
-    :class="['mb-icon', type]"
     :height="size"
     :width="size"
     :is="iconComponent"
   />
+  </i>
 </template>
 
 <script>
@@ -43,15 +44,13 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/styles/partials/_mb_color.scss";
 .mb-icon {
-  stroke: $mb-color-black;
-  fill: $mb-color-transparent;
-  &.base {
-    stroke: $mb-color-black;
-    fill: $mb-color-transparent;
+  stroke:transparent;
+  fill: transparent;
+  #svg-stroke, .svg-stroke{
+      stroke: $mb-color-gray;
   }
-  &.primary {
-    stroke: $mb-color-white;
-    fill: $mb-color-transparent;
-  }
+  #svg-fill, .svg-fill {
+      fill: $mb-color-gray;
+  } 
 }
 </style>
