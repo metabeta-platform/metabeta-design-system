@@ -168,24 +168,26 @@ export default {
   display: inline-block;
   position: relative;
   .mb-button {
-    margin: $mb-space-xs;
+    margin-right: $mb-space-xs;
     display: flex;
     align-items: center;
     justify-content: center;
     &.mb-type-link {
       @extend button;
-      margin: $mb-space-xs;
+      margin-right: $mb-space-xs;
     }
     .mb-button-icon {
       &-left {
-        padding-right: 6px;
+        display: inline-flex;
+        margin-right: $mb-space-xs;
       }
       &-right {
-        padding-left: 6px;
+        display: inline-flex;
+        margin-left: $mb-space-xs;
       }
     }
     .mb-button-label {
-      margin: 0;
+       margin: 0;
     }
 
     &.mb-size {
