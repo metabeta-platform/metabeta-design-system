@@ -31,7 +31,10 @@
         ></mb-icon>
       </component>
     </keep-alive>
-    <div class="tooltip-wrapp">
+    <div
+      v-if="tooltip"
+      class="tooltip-wrap"
+    >
       <mb-tooltip :is-visible="TRUE_FLAG">
         <template slot="content">
           <slot name="tooltip"></slot>
