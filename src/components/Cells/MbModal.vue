@@ -4,7 +4,7 @@
       <header class="mb-modal-header">
         <header class="mb-header-title-bar">
           <h3>{{title}}</h3>
-          <mb-button class="mb-header-close" @click="modalVisibility = false; $emit('on-close')" priority="base" label="close"></mb-button>
+          <mb-button class="mb-header-close" @click="modalVisibility = false; $emit('on-close')" priority="base" :icon-before="{name: 'icon-close'}"></mb-button>
         </header>
         <section class="mb-header-content" v-show="hasHeader">
           <slot name="header"></slot>
@@ -113,6 +113,9 @@ export default {
               float:right;
               margin-top: -$mb-space-xs;
               margin-right: -$mb-space-s;
+              .mb-button{
+                margin-right: 0;
+              }
             }
           }
           &-content{

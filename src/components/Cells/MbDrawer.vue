@@ -3,7 +3,7 @@
   <article :id="name" :class="['mb-drawer', `mb-size-${size}`]">
       <header class="mb-drawer-header">
         <header class="mb-header-title-bar">
-          <mb-button @click="drawerVisibility = false; $emit('on-close')" label="close" priority="base"></mb-button>
+          <mb-button @click="drawerVisibility = false; $emit('on-close')"  :icon-before="{name: 'icon-close'}" priority="base"></mb-button>
         </header>
         <section class="mb-header-content" v-show="hasHeader">
           <slot name="header"></slot>
