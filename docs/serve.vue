@@ -2,6 +2,8 @@
 import Vue from 'vue';
 import {
   MbButton,
+  MbChip,
+  MbAlert,
   MbCheckbox,
   MbFieldset,
   MbFormInput,
@@ -167,6 +169,8 @@ export default Vue.extend({
   name: 'ServeDev',
   components: {
     MbButton,
+    MbChip,
+    MbAlert,
     MbCheckbox,
     MbFieldset,
     MbFormInput,
@@ -229,7 +233,34 @@ export default Vue.extend({
         name="cells" 
         :has-header="true"
         :has-footer="true"
-      >
+      > 
+        <template slot="header">
+          <mb-chip
+            label='To do'
+            color='base'
+            size="s"
+          />
+          <mb-chip
+            label='Doing'
+            color='info'
+            size="s"
+          />
+          <mb-chip
+            label='Waiting'
+            color='warning'
+            size="s"
+          />
+          <mb-chip
+            label='Testing'
+            color='lime'
+            size="s"
+          />
+          <mb-chip
+            label='Done'
+            color='success'
+            size="s"
+          />
+        </template>
         <template slot="content">
           <table>
             <thead>
@@ -250,7 +281,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbTooltip</td>
@@ -261,7 +298,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Testing</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-panel">MbPanel</a></td>
@@ -272,7 +315,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-modal">MbModal</a></td>
@@ -283,7 +332,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-drawer">MbDrawer</a></td>
@@ -294,7 +349,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Doing</td>
+                <td>
+                  <mb-chip
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-icon">MbIcon</a></td>
@@ -305,7 +366,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>MbFormInput</td>
@@ -316,7 +383,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbFormSelect</td>
@@ -327,7 +400,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbFormDataList</td>
@@ -338,7 +417,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbFormFieldset</td>
@@ -349,7 +434,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbFormTextArea</td>
@@ -360,7 +451,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Doing</td>
+                <td>
+                  <mb-chip
+                    label='Doing'
+                    color='info'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-checkbox">MbCheckbox</a></td>
@@ -371,7 +468,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-checkbox-group">MbCheckboxGroup</a></td>
@@ -382,7 +485,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                   />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-radio">MbRadio</a></td>
@@ -393,7 +502,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Doing</td>
+                <td>
+                  <mb-chip
+                    label='Doing'
+                    color='info'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-radio-group">MbRadioGroup</a></td>
@@ -404,7 +519,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Doing</td>
+                <td>
+                  <mb-chip
+                    label='Doing'
+                    color='info'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-menu">MbMenu</a></td>
@@ -415,7 +536,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-menu">MbMenuItem</a></td>
@@ -426,7 +553,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbTab</td>
@@ -437,7 +570,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbTabGroup</td>
@@ -448,7 +587,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td><a href="#section-avatar">MbAvatar</a></td>
@@ -459,7 +604,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
                <tr>
                 <td>MbUser</td>
@@ -470,7 +621,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Doing</td>
+                <td>
+                  <mb-chip
+                    label='Doing'
+                    color='info'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>MbOrganization</td>
@@ -481,7 +638,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Waiting</td>
+                <td>
+                  <mb-chip
+                  label='Waiting'
+                  color='warning'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbTopbar</td>
@@ -492,7 +655,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>Doing</td>
+                <td>
+                  <mb-chip
+                    label='Doing'
+                    color='info'
+                    size="s"
+                  />
+                </td>
               </tr>
               <tr>
                 <td>MbTable</td>
@@ -503,7 +672,13 @@ export default Vue.extend({
                     size="s"
                   ></mb-avatar>
                 </td>
-                <td>To do</td>
+                <td>
+                  <mb-chip
+                  label='To do'
+                  color='base'
+                  size="s"
+                />
+                </td>
               </tr>
               <tr>
                 <td>MbApp</td>
@@ -514,17 +689,27 @@ export default Vue.extend({
                     type="user"
                     size="s"
                   ></mb-avatar>
-                  </td>
-                <td>To do</td>
+                </td>
+                <td>
+                  <mb-chip
+                  label='To do'
+                  color='base'
+                  size="s"
+                />
+                </td>
               </tr>
             </tbody>
           </table>
         </template>
         <template slot="footer">
-         <mb-icon name="icon-alert-warning-fill" color="warning" /> <small>This should be maintained updated!</small>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon name="icon-alert-warning-fill" color="warning" /> This should be maintained updated!
+            </template>
+          </mb-alert>
         </template>
     </mb-panel>
-
+   
     <h2>Ready for testing</h2>
    
     <section id="section-menu">
@@ -547,7 +732,13 @@ export default Vue.extend({
     <h2>Pre testing - Needs small fixez</h2>
      <section id="section-avatar">
       <h3>MbAvatar</h3>
-       <p><mb-icon name="icon-alert-warning-fill" color="warning" />Needs to have the default icon for organization, needs improvements for tooltip (display only the name on it)</p>
+        <p>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon name="icon-alert-warning-fill" color="warning" /> Needs to have the default icon for organization, needs improvements for tooltip (display only the name on it)
+            </template>
+          </mb-alert>
+        </p>
        <mb-avatar
         :avatar="noUrl"
         only-image
@@ -605,15 +796,72 @@ export default Vue.extend({
         size="xl"
       ></mb-avatar>
     </section>
+     <h3>MbFormInput</h3>
+    <mb-form-input
+      type="text"
+      label="Label for input"
+      help="Help for label"
+      name="input-test"
+      placeholder="input-placeholder"
+      :is-required="true"
+      :is-disabled="true"
+      error="danger"
+      hint="This is a form field - hint"
+    >
+    </mb-form-input>
+    <mb-form-input
+      type="password"
+      label="Label for password"
+      name="input-password"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      placeholder="Password"
+    >
+    </mb-form-input>
+    <mb-form-input
+      type="email"
+      label="Label for email"
+      name="input-email"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      placeholder="Email"
+    >
+    </mb-form-input>
+    <mb-form-input
+      type="phone"
+      label="Label for phone"
+      name="input-phone"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      placeholder="Phone"
+    >
+     </mb-form-input>
+    <mb-form-input
+      type="url"
+      label="Label for url"
+      name="input-url"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      placeholder="Url"
+    >
+    </mb-form-input>
     <section id="section-checkbox">
       <h3>MbCheckbox</h3>
-      <p><mb-icon name="icon-alert-warning-fill" color="warning" />Needs to have the Metabeta icon</p>
+      <p>
+        <mb-alert color="warning">
+          <template slot="content">
+            <mb-icon name="icon-alert-warning-fill" color="warning" />Needs to have the Metabeta icon
+          </template>
+        </mb-alert>
+      </p>
       <mb-checkbox
         name="checkbox-1"
         label="Checkbox-1"
         :isDisabled="true"
       ></mb-checkbox>
-      <p><mb-icon name="icon-alert-warning-fill" color="warning" />When is check and disabled I can't see the checked icon</p>
+      <p>
+        <mb-alert color="warning">
+          <template slot="content">
+            <mb-icon name="icon-alert-warning-fill" color="warning" />When is check and disabled I can't see the checked icon
+          </template>
+        </mb-alert>
+      </p>
       <mb-checkbox
         name="checkbox-2"
         label="Checkbox-2"
@@ -623,7 +871,13 @@ export default Vue.extend({
     </section>
     <section id="section-checkbox-group">
       <h3>MbCheckboxGroup</h3>
-      <p><mb-icon name="icon-alert-warning-fill" color="warning" /> Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works</p>
+      <p>
+        <mb-alert color="warning">
+          <template slot="content">
+            <mb-icon name="icon-alert-warning-fill" color="warning" />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
+          </template>
+        </mb-alert>
+      </p>
       <div class="mb-checkbox-group mb-flow-horizontal">
         <ul>
           <li>
@@ -649,7 +903,13 @@ export default Vue.extend({
     </section>
     <section id="section-radio">
       <h3>MbRadio</h3>
-      <p><mb-icon name="icon-alert-warning-fill" color="warning" /> Label and the radiobox should be aligned</p>
+      <p>
+        <mb-alert color="warning">
+          <template slot="content">
+            <mb-icon name="icon-alert-warning-fill" color="warning" />Label and the radiobox should be aligned
+          </template>
+        </mb-alert>
+      </p>
       <mb-radio
       label="Radio label"
       name="test1"
@@ -657,7 +917,13 @@ export default Vue.extend({
     </section>
     <section id="section-radio-group">
       <h3>MbRadioGroup</h3>
-      <p><mb-icon name="icon-alert-warning-fill" color="warning" /> Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works</p>
+      <p>
+        <mb-alert color="warning">
+          <template slot="content">
+            <mb-icon name="icon-alert-warning-fill" color="warning" />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
+          </template>
+        </mb-alert>
+      </p>
       <div class="mb-radio-group mb-flow-horizontal">
         <ul>
           <li>
@@ -683,7 +949,6 @@ export default Vue.extend({
     </section>
     <section id="section-modal">
       <h3>MbModal</h3>
-      <p><mb-icon name="icon-alert-warning-fill" color="warning" />Needs icon button for close</p>
       <mb-button
         tooltip="'top'"
         @click="openModal = !openModal"
@@ -712,7 +977,6 @@ export default Vue.extend({
     </section>
     <section id="section-drawer">
       <h3>MbDrawer</h3>
-      <p><mb-icon name="icon-alert-warning-fill" color="warning" />Needs icon button for close</p>
       <mb-button
         @click="openDrawer = !openDrawer"
         label="Open drawer"
@@ -782,8 +1046,14 @@ export default Vue.extend({
     </section>
     <section id="section-button">
       <h3>MbButton</h3>
-        <p><mb-icon name="icon-alert-warning-fill" color="warning" />Needs styling for mb-type-dropdown button and to update the markup</p>
-        <h4>Type</h4>
+      <p>
+        <mb-alert color="warning">
+          <template slot="content">
+            <mb-icon name="icon-alert-warning-fill" color="warning" />Needs styling for mb-type-dropdown button and to update the markup
+          </template>
+        </mb-alert>
+      </p>
+      <h4>Type</h4>
         <mb-button
           data-tooltip="B"
           data-tooltip-placement="bottom"
@@ -1395,7 +1665,13 @@ export default Vue.extend({
       </section>
       <section id="section-icon">
         <h3>MbIcon</h3>
-        <p><mb-icon name="icon-alert-warning-fill" color="warning" />Size prop needs to be fixed</p>
+        <p>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon name="icon-alert-warning-fill" color="warning" />Size prop needs to be fixed
+            </template>
+          </mb-alert>
+        </p>
         <mb-icon name="icon-user"/>
         <mb-icon name="icon-business-work"/>
         <mb-icon name="icon-mini-arrow"/>
@@ -1421,29 +1697,6 @@ export default Vue.extend({
     </mb-tabs>
     <br />
 
-    <mb-form-input
-      type="text"
-      label="Label for input"
-      help="Help for label"
-      name="input-test"
-      placeholder="input-placeholder"
-      value="test-value"
-      :is-required="true"
-      :is-disabled="true"
-      error="danger"
-      hint="This is a form field - hint"
-    >
-    </mb-form-input>
-    <mb-form-input
-      type="password"
-      label="Label for password"
-      name="input-password"
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-      placeholder="Password"
-      error="danger"
-      hint="This is a form field - danger"
-    >
-    </mb-form-input>
     
     
       

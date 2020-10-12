@@ -2,7 +2,7 @@
   <div
     @mouseenter="TRUE_FLAG = true"
     @mouseleave="TRUE_FLAG = false"
-    :class="['mb-avatar', `mb-size-${size}` , {'only-image' : onlyImage}]"
+    :class="['mb-avatar', `mb-size-${size}` , {'mb-only-image' : onlyImage}]"
   >
     <img
       svg-inline
@@ -86,7 +86,7 @@ export default {
 .mb-avatar {
   display: flex;
   position: relative;
-  &.only-image {
+  &.mb-only-image {
     display: inline-block;
   }
   .mb-avatar-image {

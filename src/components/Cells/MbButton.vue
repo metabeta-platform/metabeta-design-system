@@ -192,14 +192,17 @@ export default {
       &-s {
         padding: $mb-space-xxs $mb-space-xs;
         @include mb-font(body, xs, normal, normal);
+        @include mb-border-radius(s);
       }
       &-m {
         padding: $mb-space-xs $mb-space-s;
         @include mb-font(body, s, normal, normal);
+        @include mb-border-radius(m);
       }
       &-l {
         padding: $mb-space-s $mb-space-m;
         @include mb-font(body, m, normal, normal);
+        @include mb-border-radius(l);
       }
     }
   }
