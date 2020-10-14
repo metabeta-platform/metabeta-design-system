@@ -228,6 +228,7 @@ export default Vue.extend({
     i{
       margin-right: $mb-space-xs;
     }
+    
   }
 </style> 
 
@@ -1803,58 +1804,174 @@ export default Vue.extend({
             <small>icon-workspace</small>
           </div> 
         <h4>Business</h4>
+        <div class="mb-icon-container">
+            <mb-icon name="icon-business-accounting"/>
+            <small>icon-business-accounting</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-activity"/>
+            <small>icon-business-activity</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-apps"/>
+            <small>icon-business-apps</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-archive"/>
+            <small>icon-business-archive</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-chart-area"/>
+            <small>icon-business-chart-area</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-chart-bar"/>
+            <small>icon-business-chart-bar</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-chart-column-notepad"/>
+            <small>icon-business-chart-column-notepad</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-chart-column"/>
+            <small>icon-business-chart-column</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-chart-complex"/>
+            <small>icon-business-chart-complex</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-chart-line"/>
+            <small>icon-business-chart-line</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-chart-lines"/>
+            <small>icon-business-chart-lines</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-chart-pie"/>
+            <small>icon-business-chart-pie</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-design"/>
+            <small>icon-business-design</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-education"/>
+            <small>icon-business-education</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-idea"/>
+            <small>icon-business-idea</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-inbox"/>
+            <small>icon-business-inbox</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-investment"/>
+            <small>icon-business-investment</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-metrics"/>
+            <small>icon-business-metrics</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-money"/>
+            <small>icon-business-money</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-paperwork"/>
+            <small>icon-business-paperwork</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-performance"/>
+            <small>icon-business-performance</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-report"/>
+            <small>icon-business-report</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-site"/>
+            <small>icon-business-site</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-strategy"/>
+            <small>icon-business-strategy</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-target"/>
+            <small>icon-business-target</small>
+          </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-business-work"/>
+            <small>icon-business-work</small>
           </div>
+
         <h4>Formatting</h4>
         <h4>Forms</h4>
           <div class="mb-icon-container">
             <mb-icon name="icon-search"/>
+            <small>icon-search</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-password"/>
+            <small>icon-password</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-view"/>
+            <small>icon-view</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-hide"/>
+            <small>icon-settings</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-call"/>
+            <small>icon-call</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-email"/>
+            <small>icon-email</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-radio"/>
+            <small>icon-radio</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-radio-selected"/>
+            <small>icon-radio-selected</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-checkbox"/>
+            <small>icon-checkbox</small>
           </div>
           <div class="mb-icon-container">
             <mb-icon name="icon-checkbox-selected"/>
+            <small>icon-check-selected</small>
           </div>
         <h4>Alerts</h4>
           <div class="mb-icon-container">
             <mb-icon name="icon-alert-warning-fill"/>
+            <small>icon-alert-warning-fill</small>
           </div>
         <h4>Utility</h4>
           <div class="mb-icon-container">
             <mb-icon name="icon-close"/>
+            <small>icon-close</small>
           </div>
         <h4>Concepts</h4>
         <h4>Misc</h4>
         <h4>Users</h4>
           <div class="mb-icon-container">
             <mb-icon name="icon-user"/>
+            <small>icon-user</small>
           </div>
         <h4>Mini icons</h4>
           <div class="mb-icon-container">
             <mb-icon name="icon-mini-arrow"/>
+            <small>icon-mini-arrow</small>
           </div>
         <h4>Files</h4>
         <h4>Social</h4>
