@@ -80,7 +80,7 @@ export default Vue.extend({
         _id: 'sdsdfsd',
         href: 'https://medium.com/',
         menuItemContent: 'Menu Item 3'
-      },
+      }
     ],
     menuItems: [
       {
@@ -105,6 +105,13 @@ export default Vue.extend({
         href: 'https://medium.com/',
         menuItemContent: 'Menu Item 6'
       },
+    ],
+     sideNavItems: [
+      {
+        _id: 'icons-doc11122',
+        href: '#doc-section-icon',
+        menuItemContent: 'Icons'
+      }
     ],
     openModal: false,
     openDrawer: false,
@@ -197,6 +204,33 @@ export default Vue.extend({
 });
 </script>
 <style lang="scss" >
+
+/*---Navigation---*/
+  
+  .mb-side-navigation{
+    position: fixed;
+    top:0;
+    left: 0;
+    background: $mb-color-white;
+    width: 200px;
+    padding:8px;
+    height: 100%;
+    box-shadow: 1px 0 4px -2px rgba(0,0,0,0.1);
+  }
+
+  .mb-side-menu{
+    padding: $mb-space-xs;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 80%;
+  }
+
+  main{
+    width: calc(100% - 200px);
+    margin-left: 200px;
+  }
+
+
 .mb-checkbox-group,.mb-radio-group {
   ul {
     li {
@@ -334,6 +368,17 @@ export default Vue.extend({
 
 <template>
   <div id="app">
+      <aside class="mb-side-navigation">
+        <mb-menu
+        title="Cells"
+        :items="sideNavItems"
+        size="m"
+        flow="vertical"
+        >
+      </mb-menu>
+
+      </aside>
+      <main>
     <h1>Cells</h1>
     <mb-panel
         title="Cells"
@@ -1808,12 +1853,16 @@ export default Vue.extend({
     <br />
 
     <h2>For documentation (Includes extra styling for proper layout)</h2>
-      <section id="doc-section-icon">
-        <h3>MbIcon</h3>
+    <mb-panel 
+    name="doc-section-icon" 
+    title="MbIcon"
+    type="card"
+    
+    >
+    <template slot="content">
         <p>
           Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information. 
         </p>
-        <p>We use a the <a href="https://app.streamlineicons.com/"> Streamline Regular </a> library. </p>
         <h4>Navigation</h4>
           <div class="mb-icon-container">
             <mb-icon name="icon-admin"/>
@@ -2632,18 +2681,8 @@ export default Vue.extend({
 
         <h4>Files</h4>
         <h4>Social</h4>
-        
-        
-        
-       
-        
-        
-        
-        
-        
-        
-      </section>
-    
-      
+      </template>
+    </mb-panel>      
+    </main>
   </div>
 </template>
