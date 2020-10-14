@@ -1,0 +1,8 @@
+<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-stroke" fill-rule="evenodd" clip-rule="evenodd" d="M8.5 0.499981C5.95955 0.496318 3.61712 1.87127 2.38186 4.09119C1.14661 6.3111 1.21302 9.02644 2.55533 11.1833L0.5 15.5L4.81667 13.4446C7.34085 15.014 10.5809 14.8182 12.8977 12.9563C15.2146 11.0944 16.1029 7.97231 15.1134 5.16957C14.1239 2.36683 11.4723 0.494581 8.5 0.499981Z" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="svg-stroke" fill-rule="evenodd" clip-rule="evenodd" d="M10.5 8.99999C10.5 10.1046 9.60457 11 8.5 11C7.39543 11 6.5 10.1046 6.5 8.99999H10.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="svg-stroke" fill-rule="evenodd" clip-rule="evenodd" d="M5.5 6.24999C5.36193 6.24999 5.25 6.36192 5.25 6.49999C5.25 6.63806 5.36193 6.74999 5.5 6.74999C5.63807 6.74999 5.75 6.63806 5.75 6.49999C5.75 6.36192 5.63807 6.24999 5.5 6.24999Z"  stroke-linecap="round" stroke-linejoin="round"/>
+<path class="svg-stroke" fill-rule="evenodd" clip-rule="evenodd" d="M11.5 6.24999C11.3619 6.24999 11.25 6.36192 11.25 6.49999C11.25 6.63806 11.3619 6.74999 11.5 6.74999C11.6381 6.74999 11.75 6.63806 11.75 6.49999C11.75 6.36192 11.6381 6.24999 11.5 6.24999Z" stroke-linecap="round" stroke-linejoin="round"/>
+<circle class="svg-fill" cx="5.5" cy="6.5" r="0.5"/>
+<circle class="svg-fill" cx="11.5" cy="6.5" r="0.5"/>
+</svg>
