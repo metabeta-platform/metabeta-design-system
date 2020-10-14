@@ -228,7 +228,12 @@ export default Vue.extend({
     i{
       margin-right: $mb-space-xs;
     }
-    
+    // .svg-stroke{
+    //   stroke:black!important;
+    // }
+    // .svg-fill{
+    //   fill:black!important;
+    // }
   }
 </style> 
 
@@ -1910,6 +1915,103 @@ export default Vue.extend({
           </div>
 
         <h4>Formatting</h4>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-attachment"/>
+            <small>icon-format-attachment</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-body"/>
+            <small>icon-format-body</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-close-quote"/>
+            <small>icon-format-close-quote</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-code"/>
+            <small>icon-format-code</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-email"/>
+            <small>icon-format-email</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-eraser"/>
+            <small>icon-format-eraser</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-h1"/>
+            <small>icon-format-h1</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-h2"/>
+            <small>icon-format-h2</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-h3"/>
+            <small>icon-format-h3</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-hash"/>
+            <small>icon-format-hash</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-image"/>
+            <small>icon-format-image</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-line"/>
+            <small>icon-format-line</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-link"/>
+            <small>icon-format-link</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-ordered-list"/>
+            <small>icon-format-ordered-list</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-redo"/>
+            <small>icon-format-redo</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-resizer"/>
+            <small>icon-format-resizer</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-table"/>
+            <small>icon-format-table</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-text-bold"/>
+            <small>icon-format-text-bold</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-text-italic"/>
+            <small>icon-format-text-italic</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-text-strike-through"/>
+            <small>icon-format-text-strike-through</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-text-underline"/>
+            <small>icon-format-text-underline</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-todo"/>
+            <small>icon-format-todo</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-undo"/>
+            <small>icon-format-undo</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-format-unordered-list"/>
+            <small>icon-format-unordered-list</small>
+          </div>
+          
         <h4>Forms</h4>
           <div class="mb-icon-container">
             <mb-icon name="icon-search"/>
