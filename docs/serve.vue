@@ -234,6 +234,22 @@ export default Vue.extend({
     // .svg-fill{
     //   fill:black!important;
     // }
+    .mb-icon-checkbox{
+      .svg-fill{
+        fill:$mb-color-white;
+      }
+    }
+    .mb-icon-checkbox-selected{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-radio{
+      .svg-fill{
+        fill:$mb-color-white;
+      }
+    }
+    
   }
 </style> 
 
@@ -2014,44 +2030,84 @@ export default Vue.extend({
           
         <h4>Forms</h4>
           <div class="mb-icon-container">
-            <mb-icon name="icon-search"/>
-            <small>icon-search</small>
+            <mb-icon name="icon-forms-call"/>
+            <small>icon-forms-call</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-password"/>
-            <small>icon-password</small>
+            <mb-icon name="icon-forms-check"/>
+            <small>icon-forms-check</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-view"/>
-            <small>icon-view</small>
+              <mb-icon name="icon-forms-checkbox"/>
+              <small>icon-forms-checkbox</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-hide"/>
-            <small>icon-settings</small>
+            <mb-icon name="icon-forms-checkbox-selected"/>
+            <small>icon-forms-checkbox-selected</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-call"/>
-            <small>icon-call</small>
+            <mb-icon name="icon-forms-disabled"/>
+            <small>icon-forms-disabled</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-email"/>
-            <small>icon-email</small>
+            <mb-icon name="icon-forms-edit"/>
+            <small>icon-forms-edit</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-radio"/>
-            <small>icon-radio</small>
+            <mb-icon name="icon-forms-email"/>
+            <small>icon-forms-email</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-radio-selected"/>
-            <small>icon-radio-selected</small>
+            <mb-icon name="icon-forms-formula"/>
+            <small>icon-forms-formula</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-checkbox"/>
-            <small>icon-checkbox</small>
+            <mb-icon name="icon-forms-hide"/>
+            <small>icon-forms-hide</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-checkbox-selected"/>
-            <small>icon-check-selected</small>
+            <mb-icon name="icon-forms-lock"/>
+            <small>icon-forms-lock</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-password"/>
+            <small>icon-forms-password</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-radio"/>
+            <small>icon-forms-radio</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-radio-selected"/>
+            <small>icon-forms-radio-selected</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-search"/>
+            <small>icon-forms-search</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-submit"/>
+            <small>icon-forms-submit</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-sync"/>
+            <small>icon-forms-sync</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-tags"/>
+            <small>icon-forms-tags</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-time"/>
+            <small>icon-forms-time</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-unlock"/>
+            <small>icon-forms-unlock</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-forms-view"/>
+            <small>icon-forms-view</small>
           </div>
         <h4>Alerts</h4>
           <div class="mb-icon-container">

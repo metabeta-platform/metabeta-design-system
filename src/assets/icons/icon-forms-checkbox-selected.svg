@@ -1,0 +1,6 @@
+<svg class="mb-icon-checkbox-selected" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="forms-checkbox:selected">
+    <path class="svg-fill" d="M12 0H4C1.79086 0 0 1.79086 0 4V12C0 14.2091 1.79086 16 4 16H12C14.2091 16 16 14.2091 16 12V4C16 1.79086 14.2091 0 12 0Z" />
+    <path class="svg-stroke" d="M4 8.81601L5.633 11.134C5.69505 11.2264 5.77825 11.3027 5.87568 11.3565C5.97312 11.4104 6.08199 11.4402 6.19326 11.4435C6.30453 11.4468 6.41499 11.4236 6.51546 11.3757C6.61594 11.3277 6.70354 11.2566 6.771 11.168L12 4.55301" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
