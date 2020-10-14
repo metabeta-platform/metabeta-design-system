@@ -222,6 +222,13 @@ export default Vue.extend({
     }
   }
 }
+.mb-icon-container{
+    display:inline-flex;
+    padding: 1rem;
+    i{
+      margin-right: $mb-space-xs;
+    }
+  }
 </style> 
 
 <template>
@@ -796,7 +803,9 @@ export default Vue.extend({
         size="xl"
       ></mb-avatar>
     </section>
-     <h3>MbFormInput</h3>
+    <h3>MbFormInput</h3>
+    <p></p>
+    
     <mb-form-input
       type="text"
       label="Label for input"
@@ -1697,7 +1706,169 @@ export default Vue.extend({
     </mb-tabs>
     <br />
 
-    
+    <h2>For documentation (Includes extra styling for proper layout)</h2>
+      <section id="doc-section-icon">
+        <h3>MbIcon</h3>
+        <p>
+          Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information. 
+        </p>
+        <p>We use a the <a href="https://app.streamlineicons.com/"> Streamline Regular </a> library. </p>
+        <h4>Navigation</h4>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-admin"/>
+            <small>icon-admin</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-archive"/>
+            <small>icon-archive</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-billing"/>
+            <small>icon-billing</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-burger-collapsed"/>
+            <small>icon-burger-collapsed</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-burger"/>
+            <small>icon-burger</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-calendar"/>
+            <small>icon-calendar</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-contacts"/>
+            <small>icon-contacts</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-conversations"/>
+            <small>icon-conversations</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-dashboard"/>
+            <small>icon-dashboard</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-dealflow"/>
+            <small>icon-dealflow</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-filter"/>
+            <small>icon-filter</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-help"/>
+            <small>icon-help</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-home"/>
+            <small>icon-home</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-investor"/>
+            <small>icon-investor</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-logout"/>
+            <small>icon-logout</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-organization-profile"/>
+            <small>icon-organization-profile</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-performance"/>
+            <small>icon-performance</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-program-profile"/>
+            <small>icon-program-profile</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-program"/>
+            <small>icon-program</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-settings"/>
+            <small>icon-settings</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-user-profile"/>
+            <small>icon-user-profile</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-workspace"/>
+            <small>icon-workspace</small>
+          </div> 
+        <h4>Business</h4>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-work"/>
+          </div>
+        <h4>Formatting</h4>
+        <h4>Forms</h4>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-search"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-password"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-view"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-hide"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-call"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-email"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-radio"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-radio-selected"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-checkbox"/>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-checkbox-selected"/>
+          </div>
+        <h4>Alerts</h4>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-warning-fill"/>
+          </div>
+        <h4>Utility</h4>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-close"/>
+          </div>
+        <h4>Concepts</h4>
+        <h4>Misc</h4>
+        <h4>Users</h4>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-user"/>
+          </div>
+        <h4>Mini icons</h4>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-mini-arrow"/>
+          </div>
+        <h4>Files</h4>
+        <h4>Social</h4>
+        
+        
+        
+       
+        
+        
+        
+        
+        
+        
+      </section>
     
       
   </div>
