@@ -249,7 +249,56 @@ export default Vue.extend({
         fill:$mb-color-white;
       }
     }
-    
+    .mb-icon-alert-add-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-alert-danger-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-alert-delete-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-alert-error-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-alert-help-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-alert-info-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-alert-more-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-alert-remove-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-alert-success-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+    .mb-icon-alert-warning-fill{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
   }
 </style> 
 
@@ -2111,9 +2160,86 @@ export default Vue.extend({
           </div>
         <h4>Alerts</h4>
           <div class="mb-icon-container">
+            <mb-icon name="icon-alert-add-fill"/>
+            <small>icon-alert-add-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-add"/>
+            <small>icon-alert-add</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-danger-fill"/>
+            <small>icon-alert-danger-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-danger"/>
+            <small>icon-alert-danger</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-delete-fill"/>
+            <small>icon-alert-delete-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-delete"/>
+            <small>icon-alert-delete</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-error-fill"/>
+            <small>icon-alert-error-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-error"/>
+            <small>icon-alert-error</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-help-fill"/>
+            <small>icon-alert-help-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-help"/>
+            <small>icon-alert-help</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-info-fill"/>
+            <small>icon-alert-info-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-info"/>
+            <small>icon-alert-info</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-more-fill"/>
+            <small>icon-alert-more-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-more"/>
+            <small>icon-alert-more</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-remove-fill"/>
+            <small>icon-alert-remove-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-remove"/>
+            <small>icon-alert-remove</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-success-fill"/>
+            <small>icon-alert-success-fill</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-success"/>
+            <small>icon-alert-success</small>
+          </div>
+          <div class="mb-icon-container">
             <mb-icon name="icon-alert-warning-fill"/>
             <small>icon-alert-warning-fill</small>
           </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-alert-warning"/>
+            <small>icon-alert-warning</small>
+          </div>
+      
         <h4>Utility</h4>
           <div class="mb-icon-container">
             <mb-icon name="icon-close"/>
