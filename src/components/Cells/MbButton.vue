@@ -15,6 +15,7 @@
           :type="priority"
           :size="iconBefore.size"
           class="mb-button-icon-left"
+          :class="{'icon-only' : iconOnly}"
           v-if="!responsiveLabelOnly && iconBefore"
           :name="type === 'action' ? 'dropdown' : iconBefore.name"
         ></mb-icon>
@@ -24,6 +25,7 @@
         >{{label}}</span>
         <mb-icon
           :type="priority"
+          :class="{iconOnly : 'icon-only'}"
           :size="iconAfter.size"
           class="mb-button-icon-right"
           v-if="!responsiveLabelOnly && iconAfter"
@@ -117,6 +119,9 @@ export default {
     componentType () {
       return this.type === 'link' ? 'a' : 'button';
     },
+    iconOnly () {
+      return this.label.length === 0;
+    }
   },
   components: {
     MbIcon: () => import('@/components/cells/MbIcon'),
@@ -179,9 +184,15 @@ export default {
     .mb-button-icon {
       &-left {
         margin-right: $mb-space-xs;
+        &.icon-only {
+          margin: 0;
+        }
       }
       &-right {
         margin-right: $mb-space-xs;
+        &.icon-only {
+          margin: 0;
+        }
       }
     }
     .mb-button-label {
