@@ -178,10 +178,10 @@ export default {
     }
     .mb-button-icon {
       &-left {
-        margin-right: 0;
+        margin-right: $mb-space-xs;
       }
       &-right {
-        margin-left: 0;
+        margin-right: $mb-space-xs;
       }
     }
     .mb-button-label {
