@@ -2850,6 +2850,54 @@ export default Vue.extend({
             <small>icon-file-zip</small>
           </div>
         <h6>Social</h6>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-contact-email"/>
+            <small>icon-contact-email</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-contact-phone"/>
+            <small>icon-contact-phone</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-contact-scheduler"/>
+            <small>icon-contact-scheduler</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-contact-skype"/>
+            <small>icon-contact-web</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-social-angellist"/>
+            <small>icon-social-angellist</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-social-crunchbase"/>
+            <small>icon-social-crunchbase</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-social-dribbble"/>
+            <small>icon-social-dribbble</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-social-facebook"/>
+            <small>icon-social-facebook</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-social-github"/>
+            <small>icon-social-github</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-social-linkedin"/>
+            <small>icon-social-linkedin</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-social-medium"/>
+            <small>icon-social-medium</small>
+          </div>
+           <div class="mb-icon-container">
+            <mb-icon name="icon-social-twitter"/>
+            <small>icon-social-twitter</small>
+          </div>
       </template>
     </mb-panel>      
     </main>
