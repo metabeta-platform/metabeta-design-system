@@ -26,7 +26,7 @@ export default {
     },
     size: {
       type: Number,
-      default: 18,
+      default: 16,
     },
     color: {
       type: String,
@@ -55,132 +55,164 @@ export default {
   .svg-fill {
     fill: $mb-color-gray;
   }
-   &.mb-color{
-    &-danger{
-      #svg-stroke, .svg-stroke{
+  &.mb-color {
+    &-danger {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-danger;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-danger;
       }
     }
-    &-success{
-      #svg-stroke, .svg-stroke{
+    &-success {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-success;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-success;
       }
     }
-    &-warning{
-      #svg-stroke, .svg-stroke{
+    &-warning {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-warning;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-warning;
       }
     }
-    &-info{
-      #svg-stroke, .svg-stroke{
+    &-info {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-info;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-info;
       }
     }
-    &-note{
-      #svg-stroke, .svg-stroke{
+    &-note {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-note;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-note;
       }
     }
-    &-blue{
-      #svg-stroke, .svg-stroke{
+    &-blue {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-blue;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-blue;
       }
     }
-    &-red{
-      #svg-stroke, .svg-stroke{
+    &-red {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-red;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-red;
       }
     }
-    &-green{
-      #svg-stroke, .svg-stroke{
+    &-green {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-green;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-green;
       }
     }
-    &-orange{
-      #svg-stroke, .svg-stroke{
+    &-orange {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-orange;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-orange;
       }
     }
-    &-cyan{
-      #svg-stroke, .svg-stroke{
+    &-cyan {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-cyan;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-cyan;
       }
     }
-    &-yellow{
-      #svg-stroke, .svg-stroke{
+    &-yellow {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-yellow;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-yellow;
       }
     }
-    &-indigo{
-      #svg-stroke, .svg-stroke{
+    &-indigo {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-indigo;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-indigo;
       }
     }
-    &-purple{
-      #svg-stroke, .svg-stroke{
+    &-purple {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-purple;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-purple;
       }
     }
-    &-pink{
-      #svg-stroke, .svg-stroke{
+    &-pink {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-pink;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-pink;
       }
     }
-    &-teal{
-      #svg-stroke, .svg-stroke{
+    &-teal {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-teal;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-teal;
       }
     }
-    &-lime{
-      #svg-stroke, .svg-stroke{
+    &-lime {
+      #svg-stroke,
+      .svg-stroke {
         stroke: $mb-color-lime;
       }
-      #svg-fill, .svg-fill {
+      #svg-fill,
+      .svg-fill {
         fill: $mb-color-lime;
       }
     }

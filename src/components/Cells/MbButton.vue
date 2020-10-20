@@ -168,7 +168,7 @@ export default {
   display: inline-block;
   position: relative;
   .mb-button {
-    margin-right: $mb-space-xs;
+    margin-right: $mb-space-xxs;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,10 +178,10 @@ export default {
     }
     .mb-button-icon {
       &-left {
-        margin-right: $mb-space-xs;
+        margin-right: 0;
       }
       &-right {
-        margin-left: $mb-space-xs;
+        margin-left: 0;
       }
     }
     .mb-button-label {
