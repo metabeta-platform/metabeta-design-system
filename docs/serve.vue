@@ -106,7 +106,7 @@ export default Vue.extend({
         menuItemContent: 'Menu Item 6'
       },
     ],
-     sideNavItems: [
+    sideNavItems: [
       {
         _id: 'icons-doc11122',
         href: '#doc-section-icon',
@@ -204,34 +204,33 @@ export default Vue.extend({
 });
 </script>
 <style lang="scss" >
-
 /*---Navigation---*/
-  
-  .mb-side-navigation{
-    position: fixed;
-    top:0;
-    left: 0;
-    background: $mb-color-white;
-    width: 200px;
-    padding:8px;
-    height: 100%;
-    box-shadow: 1px 0 4px -2px rgba(0,0,0,0.1);
-  }
 
-  .mb-side-menu{
-    padding: $mb-space-xs;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-height: 80%;
-  }
+.mb-side-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $mb-color-white;
+  width: 200px;
+  padding: 8px;
+  height: 100%;
+  box-shadow: 1px 0 4px -2px rgba(0, 0, 0, 0.1);
+}
 
-  main{
-    width: calc(100% - 200px);
-    margin-left: 200px;
-  }
+.mb-side-menu {
+  padding: $mb-space-xs;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 80%;
+}
 
+main {
+  width: calc(100% - 200px);
+  margin-left: 200px;
+}
 
-.mb-checkbox-group,.mb-radio-group {
+.mb-checkbox-group,
+.mb-radio-group {
   ul {
     li {
       margin: 0;
@@ -256,203 +255,202 @@ export default Vue.extend({
     }
   }
 }
-.mb-icon-container{
-    display:inline-flex;
-    padding: 1rem;
-    i{
-      margin-right: $mb-space-xs;
-    }
-    // .svg-stroke{
-    //   stroke:black!important;
-    // }
-    // .svg-fill{
-    //   fill:black!important;
-    // }
-    .mb-icon-checkbox{
-      .svg-fill{
-        fill:$mb-color-white;
-      }
-    }
-    .mb-icon-checkbox-selected{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-radio{
-      .svg-fill{
-        fill:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-add-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-danger-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-alert-delete-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-error-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-help-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-info-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-more-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-remove-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-success-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-alert-warning-fill{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-mini-add{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-mini-delete{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-mini-error{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-mini-more{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-mini-remove{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-mini-success{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-    .mb-icon-file-csv{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-doc{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-google-doc{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-google-sheet{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-google-slides{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-json{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-other{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-pdf{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-ppt{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-sql{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-xls{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-xml{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-     .mb-icon-file-zip{
-      .svg-stroke{
-        stroke:$mb-color-white;
-      }
-    }
-
+.mb-icon-container {
+  display: inline-flex;
+  padding: 1rem;
+  i {
+    margin-right: $mb-space-xs;
   }
+  // .svg-stroke{
+  //   stroke:black!important;
+  // }
+  // .svg-fill{
+  //   fill:black!important;
+  // }
+  .mb-icon-checkbox {
+    .svg-fill {
+      fill: $mb-color-white;
+    }
+  }
+  .mb-icon-checkbox-selected {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-radio {
+    .svg-fill {
+      fill: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-add-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-danger-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-delete-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-error-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-help-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-info-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-more-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-remove-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-success-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-alert-warning-fill {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-mini-add {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-mini-delete {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-mini-error {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-mini-more {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-mini-remove {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-mini-success {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-csv {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-doc {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-google-doc {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-google-sheet {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-google-slides {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-json {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-other {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-pdf {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-ppt {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-sql {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-xls {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-xml {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+  .mb-icon-file-zip {
+    .svg-stroke {
+      stroke: $mb-color-white;
+    }
+  }
+}
 </style> 
 
 <template>
   <div id="app">
-      <aside class="mb-side-navigation">
-        <mb-menu
+    <aside class="mb-side-navigation">
+      <mb-menu
         title="Cells"
         :items="sideNavItems"
         size="m"
         flow="vertical"
-        >
+      >
       </mb-menu>
 
-      </aside>
-      <main>
-    <h1>Cells</h1>
-    <mb-panel
+    </aside>
+    <main>
+      <h1>Cells</h1>
+      <mb-panel
         title="Cells"
         type="card"
-        name="cells" 
+        name="cells"
         :has-header="true"
         :has-footer="true"
-      > 
+      >
         <template slot="header">
           <mb-chip
             label='To do'
@@ -494,7 +492,8 @@ export default Vue.extend({
               <tr>
                 <td><a href="#section-button">MbButton</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -502,16 +501,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>MbTooltip</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -519,16 +519,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td><a href="#section-panel">MbPanel</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -536,16 +537,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td><a href="#section-modal">MbModal</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -562,7 +564,8 @@ export default Vue.extend({
               <tr>
                 <td><a href="#section-drawer">MbDrawer</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -579,7 +582,8 @@ export default Vue.extend({
               <tr>
                 <td><a href="#section-icon">MbIcon</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -596,7 +600,8 @@ export default Vue.extend({
               <tr>
                 <td>MbFormInput</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -604,16 +609,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>MbFormSelect</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -621,16 +627,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>MbFormDataList</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -638,16 +645,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>MbFormFieldset</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -655,16 +663,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>MbFormTextArea</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -681,7 +690,8 @@ export default Vue.extend({
               <tr>
                 <td><a href="#section-checkbox">MbCheckbox</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -698,7 +708,8 @@ export default Vue.extend({
               <tr>
                 <td><a href="#section-checkbox-group">MbCheckboxGroup</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -709,13 +720,14 @@ export default Vue.extend({
                     label='Waiting'
                     color='warning'
                     size="s"
-                   />
+                  />
                 </td>
               </tr>
               <tr>
                 <td><a href="#section-radio">MbRadio</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -732,7 +744,8 @@ export default Vue.extend({
               <tr>
                 <td><a href="#section-radio-group">MbRadioGroup</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -749,7 +762,8 @@ export default Vue.extend({
               <tr>
                 <td><a href="#section-menu">MbMenu</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -757,16 +771,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td><a href="#section-menu">MbMenuItem</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -774,16 +789,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>MbTab</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -791,16 +807,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>MbTabGroup</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -808,16 +825,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td><a href="#section-avatar">MbAvatar</a></td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -825,16 +843,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
-               <tr>
+              <tr>
                 <td>MbUser</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -851,7 +870,8 @@ export default Vue.extend({
               <tr>
                 <td>MbOrganization</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -859,16 +879,17 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='Waiting'
-                  color='warning'
-                  size="s"
-                />
+                    label='Waiting'
+                    color='warning'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>MbTopbar</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -885,7 +906,8 @@ export default Vue.extend({
               <tr>
                 <td>MbTable</td>
                 <td>1.0.0</td>
-                <td><mb-avatar
+                <td>
+                  <mb-avatar
                     :avatar="ozgur"
                     type="user"
                     size="s"
@@ -893,10 +915,10 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='To do'
-                  color='base'
-                  size="s"
-                />
+                    label='To do'
+                    color='base'
+                    size="s"
+                  />
                 </td>
               </tr>
               <tr>
@@ -911,10 +933,10 @@ export default Vue.extend({
                 </td>
                 <td>
                   <mb-chip
-                  label='To do'
-                  color='base'
-                  size="s"
-                />
+                    label='To do'
+                    color='base'
+                    size="s"
+                  />
                 </td>
               </tr>
             </tbody>
@@ -923,358 +945,383 @@ export default Vue.extend({
         <template slot="footer">
           <mb-alert color="warning">
             <template slot="content">
-              <mb-icon name="icon-alert-warning-fill" color="warning" /> This should be maintained updated!
+              <mb-icon
+                size="s"
+                name="icon-alert-warning-fill"
+                color="warning"
+              /> This should be maintained updated!
             </template>
           </mb-alert>
         </template>
-    </mb-panel>
-   
-    <h2>Ready for testing</h2>
-   
-    <section id="section-menu">
-      <h3>MbMenu + MbMenuItem</h3>
-      <mb-menu
-        title="This is the menu title"
-        :items="items"
-        size="m"
-        flow="vertical"
-      >
-      </mb-menu>
-      <mb-menu
-        title="Horizontal flow, size l"
-        :items="menuItems"
-        size="l"
-        flow="horizontal"
-      >
-      </mb-menu>
-    </section>
-    <h2>Pre testing - Needs small fixez</h2>
-     <section id="section-avatar">
-      <h3>MbAvatar</h3>
+      </mb-panel>
+
+      <h2>Ready for testing</h2>
+
+      <section id="section-menu">
+        <h3>MbMenu + MbMenuItem</h3>
+        <mb-menu
+          title="This is the menu title"
+          :items="items"
+          size="m"
+          flow="vertical"
+        >
+        </mb-menu>
+        <mb-menu
+          title="Horizontal flow, size l"
+          :items="menuItems"
+          size="l"
+          flow="horizontal"
+        >
+        </mb-menu>
+      </section>
+      <h2>Pre testing - Needs small fixez</h2>
+      <section id="section-avatar">
+        <h3>MbAvatar</h3>
         <p>
           <mb-alert color="warning">
             <template slot="content">
-              <mb-icon name="icon-alert-warning-fill" color="warning" /> Needs to have the default icon for organization, needs improvements for tooltip (display only the name on it)
+              <mb-icon
+                name="icon-alert-warning-fill"
+                color="warning"
+              /> Needs to have the default icon for organization, needs improvements for tooltip (display only the name on it)
             </template>
           </mb-alert>
         </p>
-       <mb-avatar
-        :avatar="noUrl"
-        only-image
-        type="user"
-        size="l"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="userSmall"
-        type="user"
-        size="xs"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="userSmall"
-        type="user"
-        size="s"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="user"
-        type="user"
-        size="m"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="user"
-        type="user"
-        size="l"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="user"
-        type="user"
-        size="xl"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="organization"
-        type="organization"
-        size="xs"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="organization"
-        type="organization"
-        size="s"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="organization"
-        type="organization"
-        size="m"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="organization"
-        type="organization"
-        size="l"
-      ></mb-avatar>
-      <mb-avatar
-        :avatar="organization"
-        type="organization"
-        size="xl"
-      ></mb-avatar>
-    </section>
-    <h3>MbFormInput</h3>
-    <p></p>
-    
-    <mb-form-input
-      type="text"
-      label="Label for input"
-      help="Help for label"
-      name="input-test"
-      placeholder="input-placeholder"
-      :is-required="true"
-      :is-disabled="true"
-      error="danger"
-      hint="This is a form field - hint"
-    >
-    </mb-form-input>
-    <mb-form-input
-      type="password"
-      label="Label for password"
-      name="input-password"
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-      placeholder="Password"
-    >
-    </mb-form-input>
-    <mb-form-input
-      type="email"
-      label="Label for email"
-      name="input-email"
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-      placeholder="Email"
-    >
-    </mb-form-input>
-    <mb-form-input
-      type="phone"
-      label="Label for phone"
-      name="input-phone"
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-      placeholder="Phone"
-    >
-     </mb-form-input>
-    <mb-form-input
-      type="url"
-      label="Label for url"
-      name="input-url"
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-      placeholder="Url"
-    >
-    </mb-form-input>
-    <section id="section-checkbox">
-      <h3>MbCheckbox</h3>
-      <p>
-        <mb-alert color="warning">
-          <template slot="content">
-            <mb-icon name="icon-alert-warning-fill" color="warning" />Needs to have the Metabeta icon
-          </template>
-        </mb-alert>
-      </p>
-      <mb-checkbox
-        name="checkbox-1"
-        label="Checkbox-1"
-        :isDisabled="true"
-      ></mb-checkbox>
-      <p>
-        <mb-alert color="warning">
-          <template slot="content">
-            <mb-icon name="icon-alert-warning-fill" color="warning" />When is check and disabled I can't see the checked icon
-          </template>
-        </mb-alert>
-      </p>
-      <mb-checkbox
-        name="checkbox-2"
-        label="Checkbox-2"
-        :isDisabled="true"
-        :isChecked="true"
-      ></mb-checkbox>
-    </section>
-    <section id="section-checkbox-group">
-      <h3>MbCheckboxGroup</h3>
-      <p>
-        <mb-alert color="warning">
-          <template slot="content">
-            <mb-icon name="icon-alert-warning-fill" color="warning" />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
-          </template>
-        </mb-alert>
-      </p>
-      <div class="mb-checkbox-group mb-flow-horizontal">
-        <ul>
-          <li>
-            <mb-checkbox
-              name="checkbox-3"
-              label="Checkbox-3"
-            ></mb-checkbox>
-          </li>
-          <li>
-            <mb-checkbox
-              name="checkbox-4"
-              label="Checkbox-4"
-            ></mb-checkbox>
-          </li>
-          <li>
-            <mb-checkbox
-              name="checkbox-5"
-              label="Checkbox-5"
-            ></mb-checkbox>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="section-radio">
-      <h3>MbRadio</h3>
-      <p>
-        <mb-alert color="warning">
-          <template slot="content">
-            <mb-icon name="icon-alert-warning-fill" color="warning" />Label and the radiobox should be aligned
-          </template>
-        </mb-alert>
-      </p>
-      <mb-radio
-      label="Radio label"
-      name="test1"
-    ></mb-radio>
-    </section>
-    <section id="section-radio-group">
-      <h3>MbRadioGroup</h3>
-      <p>
-        <mb-alert color="warning">
-          <template slot="content">
-            <mb-icon name="icon-alert-warning-fill" color="warning" />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
-          </template>
-        </mb-alert>
-      </p>
-      <div class="mb-radio-group mb-flow-horizontal">
-        <ul>
-          <li>
-            <mb-radio
-              label="RadioBox"
-              name="test"
-            ></mb-radio>
-          </li>
-          <li>
-            <mb-radio
-              label="RadioBox2"
-              name="test"
-            ></mb-radio>
-          </li>
-          <li>
-            <mb-radio
-              label="RadioBox3"
-              name="test"
-            ></mb-radio>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="section-modal">
-      <h3>MbModal</h3>
-      <mb-button
-        tooltip="'top'"
-        @click="openModal = !openModal"
-        label="Open modal"
+        <mb-avatar
+          :avatar="noUrl"
+          only-image
+          type="user"
+          size="l"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="userSmall"
+          type="user"
+          size="xs"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="userSmall"
+          type="user"
+          size="s"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="user"
+          type="user"
+          size="m"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="user"
+          type="user"
+          size="l"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="user"
+          type="user"
+          size="xl"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="organization"
+          type="organization"
+          size="xs"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="organization"
+          type="organization"
+          size="s"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="organization"
+          type="organization"
+          size="m"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="organization"
+          type="organization"
+          size="l"
+        ></mb-avatar>
+        <mb-avatar
+          :avatar="organization"
+          type="organization"
+          size="xl"
+        ></mb-avatar>
+      </section>
+      <h3>MbFormInput</h3>
+      <p></p>
+
+      <mb-form-input
+        type="text"
+        label="Label for input"
+        help="Help for label"
+        name="input-test"
+        placeholder="input-placeholder"
+        :is-required="true"
+        :is-disabled="true"
+        error="danger"
+        hint="This is a form field - hint"
       >
-        <template slot="tooltip">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </template>
-      </mb-button>
-      <mb-modal
-        name="modal-id"
-        title="Modal title"
-        :is-visible="openModal"
-        size="s"
+      </mb-form-input>
+      <mb-form-input
+        type="password"
+        label="Label for password"
+        name="input-password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        placeholder="Password"
       >
-        <template slot="header">
-          Header content
-        </template>
-        <template slot="content">
-          Main content
-        </template>
-        <template slot="footer">
-          Footer content
-        </template>
-      </mb-modal>
-    </section>
-    <section id="section-drawer">
-      <h3>MbDrawer</h3>
-      <mb-button
-        @click="openDrawer = !openDrawer"
-        label="Open drawer"
-      ></mb-button>
-      <mb-drawer
-        :is-visible="openDrawer"
-        size="l"
-        name="mb-drawer-id"
-        :has-header="true"
-        :has-footer="true"
+      </mb-form-input>
+      <mb-form-input
+        type="email"
+        label="Label for email"
+        name="input-email"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        placeholder="Email"
       >
-        <template slot="header">
-          <p> Header Content </p>
-        </template>
-        <template slot="content">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </template>
-        <template slot="footer">
-          Footer
-        </template>
-      </mb-drawer>
-    </section>
-    <section id="mb-panel">
-      <h3>MbPanel</h3>
-      <h4>card</h4>
-      <mb-panel
-        title="Panel Title"
-        type="card"
-        name="panel-title"
-        :has-header="true"
-        :has-footer="true"
+      </mb-form-input>
+      <mb-form-input
+        type="phone"
+        label="Label for phone"
+        name="input-phone"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        placeholder="Phone"
       >
-        <template slot="header">
-          Header content
-        </template>
-        <template slot="content">
-          Main content
-        </template>
-        <template slot="footer">
-          Footer content
-        </template>
-      </mb-panel>
-      <h4>base, without header and footer </h4>
-      <mb-panel
-        type="base"
-        name="panel-title-2"
-        :has-header="false"
-        :has-footer="false"
+      </mb-form-input>
+      <mb-form-input
+        type="url"
+        label="Label for url"
+        name="input-url"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        placeholder="Url"
       >
-        <template slot="header">
-          Header content
-        </template>
-        <template slot="content">
-          Main content
-        </template>
-        <template slot="footer">
-          Footer content
-        </template>
-      </mb-panel>
-    </section>
-    <section id="section-button">
-      <h3>MbButton</h3>
-      <p>
-        <mb-alert color="warning">
-          <template slot="content">
-            <mb-icon name="icon-alert-warning-fill" color="warning" />Needs styling for mb-type-dropdown button and to update the markup
+      </mb-form-input>
+      <section id="section-checkbox">
+        <h3>MbCheckbox</h3>
+        <p>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon
+                name="icon-alert-warning-fill"
+                color="warning"
+              />Needs to have the Metabeta icon
+            </template>
+          </mb-alert>
+        </p>
+        <mb-checkbox
+          name="checkbox-1"
+          label="Checkbox-1"
+          :isDisabled="true"
+        ></mb-checkbox>
+        <p>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon
+                name="icon-alert-warning-fill"
+                color="warning"
+              />When is check and disabled I can't see the checked icon
+            </template>
+          </mb-alert>
+        </p>
+        <mb-checkbox
+          name="checkbox-2"
+          label="Checkbox-2"
+          :isDisabled="true"
+          :isChecked="true"
+        ></mb-checkbox>
+      </section>
+      <section id="section-checkbox-group">
+        <h3>MbCheckboxGroup</h3>
+        <p>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon
+                name="icon-alert-warning-fill"
+                color="warning"
+              />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
+            </template>
+          </mb-alert>
+        </p>
+        <div class="mb-checkbox-group mb-flow-horizontal">
+          <ul>
+            <li>
+              <mb-checkbox
+                name="checkbox-3"
+                label="Checkbox-3"
+              ></mb-checkbox>
+            </li>
+            <li>
+              <mb-checkbox
+                name="checkbox-4"
+                label="Checkbox-4"
+              ></mb-checkbox>
+            </li>
+            <li>
+              <mb-checkbox
+                name="checkbox-5"
+                label="Checkbox-5"
+              ></mb-checkbox>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="section-radio">
+        <h3>MbRadio</h3>
+        <p>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon
+                name="icon-alert-warning-fill"
+                color="warning"
+              />Label and the radiobox should be aligned
+            </template>
+          </mb-alert>
+        </p>
+        <mb-radio
+          label="Radio label"
+          name="test1"
+        ></mb-radio>
+      </section>
+      <section id="section-radio-group">
+        <h3>MbRadioGroup</h3>
+        <p>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon
+                name="icon-alert-warning-fill"
+                color="warning"
+              />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
+            </template>
+          </mb-alert>
+        </p>
+        <div class="mb-radio-group mb-flow-horizontal">
+          <ul>
+            <li>
+              <mb-radio
+                label="RadioBox"
+                name="test"
+              ></mb-radio>
+            </li>
+            <li>
+              <mb-radio
+                label="RadioBox2"
+                name="test"
+              ></mb-radio>
+            </li>
+            <li>
+              <mb-radio
+                label="RadioBox3"
+                name="test"
+              ></mb-radio>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="section-modal">
+        <h3>MbModal</h3>
+        <mb-button
+          tooltip="'top'"
+          @click="openModal = !openModal"
+          label="Open modal"
+        >
+          <template slot="tooltip">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </template>
-        </mb-alert>
-      </p>
-      <h4>Type</h4>
+        </mb-button>
+        <mb-modal
+          name="modal-id"
+          title="Modal title"
+          :is-visible="openModal"
+          size="s"
+        >
+          <template slot="header">
+            Header content
+          </template>
+          <template slot="content">
+            Main content
+          </template>
+          <template slot="footer">
+            Footer content
+          </template>
+        </mb-modal>
+      </section>
+      <section id="section-drawer">
+        <h3>MbDrawer</h3>
+        <mb-button
+          @click="openDrawer = !openDrawer"
+          label="Open drawer"
+        ></mb-button>
+        <mb-drawer
+          :is-visible="openDrawer"
+          size="l"
+          name="mb-drawer-id"
+          :has-header="true"
+          :has-footer="true"
+        >
+          <template slot="header">
+            <p> Header Content </p>
+          </template>
+          <template slot="content">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </template>
+          <template slot="footer">
+            Footer
+          </template>
+        </mb-drawer>
+      </section>
+      <section id="mb-panel">
+        <h3>MbPanel</h3>
+        <h4>card</h4>
+        <mb-panel
+          title="Panel Title"
+          type="card"
+          name="panel-title"
+          :has-header="true"
+          :has-footer="true"
+        >
+          <template slot="header">
+            Header content
+          </template>
+          <template slot="content">
+            Main content
+          </template>
+          <template slot="footer">
+            Footer content
+          </template>
+        </mb-panel>
+        <h4>base, without header and footer </h4>
+        <mb-panel
+          type="base"
+          name="panel-title-2"
+          :has-header="false"
+          :has-footer="false"
+        >
+          <template slot="header">
+            Header content
+          </template>
+          <template slot="content">
+            Main content
+          </template>
+          <template slot="footer">
+            Footer content
+          </template>
+        </mb-panel>
+      </section>
+      <section id="section-button">
+        <h3>MbButton</h3>
+        <p>
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon
+                name="icon-alert-warning-fill"
+                color="warning"
+              />Needs styling for mb-type-dropdown button and to update the markup
+            </template>
+          </mb-alert>
+        </p>
+        <h4>Type</h4>
         <mb-button
           data-tooltip="B"
           data-tooltip-placement="bottom"
@@ -1893,1013 +1940,1012 @@ export default Vue.extend({
             </template>
           </mb-alert>
         </p>
-        <mb-icon name="icon-user"/>
-        <mb-icon name="icon-business-work"/>
-        <mb-icon name="icon-mini-arrow"/>
-        <mb-icon name="icon-close"/>
-        <mb-icon name="icon-password"/>
-        <mb-icon name="icon-search"/>
-        <mb-icon name="icon-view"/>
-        <mb-icon name="icon-hide"/>
-        <mb-icon name="icon-call"/>
-        <mb-icon name="icon-email"/>
-        <mb-icon name="icon-alert-warning-fill"/>
-        <mb-icon name="icon-radio"/>
-        <mb-icon name="icon-radio-selected"/>
-        <mb-icon name="icon-checkbox"/>
-        <mb-icon name="icon-checkbox-selected"/>
+        <mb-icon name="icon-user" />
+        <mb-icon name="icon-business-work" />
+        <mb-icon name="icon-mini-arrow" />
+        <mb-icon name="icon-close" />
+        <mb-icon name="icon-password" />
+        <mb-icon name="icon-search" />
+        <mb-icon name="icon-view" />
+        <mb-icon name="icon-hide" />
+        <mb-icon name="icon-call" />
+        <mb-icon name="icon-email" />
+        <mb-icon name="icon-alert-warning-fill" />
+        <mb-icon name="icon-radio" />
+        <mb-icon name="icon-radio-selected" />
+        <mb-icon name="icon-checkbox" />
+        <mb-icon name="icon-checkbox-selected" />
       </section>
-    <h2>In progress</h2>
+      <h2>In progress</h2>
 
-    <mb-organization :currentWorkspace="currentWorkspace">
+      <mb-organization :currentWorkspace="currentWorkspace">
 
-    </mb-organization>
-    <mb-tabs :tabs="tabs">
-    </mb-tabs>
-    <br />
+      </mb-organization>
+      <mb-tabs :tabs="tabs">
+      </mb-tabs>
+      <br />
 
-    <h2>For documentation (Includes extra styling for proper layout)</h2>
-    <mb-panel 
-    name="doc-section-icon" 
-    title="MbIcon"
-    type="card"
-    
-    >
-    <template slot="content">
-        <p>
-          Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information. 
-        </p>
-        <h4>How it works</h4>
-         <pre> <code> &lt;mb-icon name="icon-user" size="m" /&gt;</code></pre>
-        <div class="mb-props-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Props</th>
-                <th>Type</th>
-                <th>Default</th>
-                <th>Options</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>name</td>
-                <td>string</td>
-                <td>none</td>
-                <td><a>List with all icons</a></td>
-                <td>You can use any icon name from the list</td>
-              </tr>
-              <tr>
-                <td>size</td>
-                <td>string</td>
-                <td>m</td>
-                <td>s, m, l</td>
-                <td> - </td>
-              </tr>
-               <tr>
-                <td>color</td>
-                <td>string</td>
-                <td>$mb-color-gray</td>
-                <td>none</td>
-                <td>The color of an icon is set by the parent</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h4>Icon sizes</h4>
-        <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill"/>
-            <small>size="s"</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon  name="icon-utility-star-fill"/>
-          <small>size="m"</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon  name="icon-utility-star-fill"/>
-          <small>size="l"</small>
-        </div>
-        <h4>All Icons</h4>
-        <h6>Navigation</h6>
+      <h2>For documentation (Includes extra styling for proper layout)</h2>
+      <mb-panel
+        name="doc-section-icon"
+        title="MbIcon"
+        type="card"
+      >
+        <template slot="content">
+          <p>
+            Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information.
+          </p>
+          <h4>How it works</h4>
+          <pre> <code> &lt;mb-icon name="icon-user" size="m" /&gt;</code></pre>
+          <div class="mb-props-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Props</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>name</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td><a>List with all icons</a></td>
+                  <td>You can use any icon name from the list</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>string</td>
+                  <td>m</td>
+                  <td>s, m, l</td>
+                  <td> - </td>
+                </tr>
+                <tr>
+                  <td>color</td>
+                  <td>string</td>
+                  <td>$mb-color-gray</td>
+                  <td>none</td>
+                  <td>The color of an icon is set by the parent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>Icon sizes</h4>
           <div class="mb-icon-container">
-            <mb-icon name="icon-admin"/>
+            <mb-icon name="icon-utility-star-fill" />
+            <small>size="s"</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-utility-star-fill" />
+            <small>size="m"</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-utility-star-fill" />
+            <small>size="l"</small>
+          </div>
+          <h4>All Icons</h4>
+          <h6>Navigation</h6>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-admin" />
             <small>icon-admin</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-archive"/>
+            <mb-icon name="icon-archive" />
             <small>icon-archive</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-billing"/>
+            <mb-icon name="icon-billing" />
             <small>icon-billing</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-burger-collapsed"/>
+            <mb-icon name="icon-burger-collapsed" />
             <small>icon-burger-collapsed</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-burger"/>
+            <mb-icon name="icon-burger" />
             <small>icon-burger</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-calendar"/>
+            <mb-icon name="icon-calendar" />
             <small>icon-calendar</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-contacts"/>
+            <mb-icon name="icon-contacts" />
             <small>icon-contacts</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-conversations"/>
+            <mb-icon name="icon-conversations" />
             <small>icon-conversations</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-dashboard"/>
+            <mb-icon name="icon-dashboard" />
             <small>icon-dashboard</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-dealflow"/>
+            <mb-icon name="icon-dealflow" />
             <small>icon-dealflow</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-filter"/>
+            <mb-icon name="icon-filter" />
             <small>icon-filter</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-help"/>
+            <mb-icon name="icon-help" />
             <small>icon-help</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-home"/>
+            <mb-icon name="icon-home" />
             <small>icon-home</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-investor"/>
+            <mb-icon name="icon-investor" />
             <small>icon-investor</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-logout"/>
+            <mb-icon name="icon-logout" />
             <small>icon-logout</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-organization-profile"/>
+            <mb-icon name="icon-organization-profile" />
             <small>icon-organization-profile</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-performance"/>
+            <mb-icon name="icon-performance" />
             <small>icon-performance</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-program-profile"/>
+            <mb-icon name="icon-program-profile" />
             <small>icon-program-profile</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-program"/>
+            <mb-icon name="icon-program" />
             <small>icon-program</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-settings"/>
+            <mb-icon name="icon-settings" />
             <small>icon-settings</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user-profile"/>
+            <mb-icon name="icon-user-profile" />
             <small>icon-user-profile</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-workspace"/>
+            <mb-icon name="icon-workspace" />
             <small>icon-workspace</small>
-          </div> 
-        <h6>Business</h6>
-        <div class="mb-icon-container">
-            <mb-icon name="icon-business-accounting"/>
+          </div>
+          <h6>Business</h6>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-business-accounting" />
             <small>icon-business-accounting</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-activity"/>
+            <mb-icon name="icon-business-activity" />
             <small>icon-business-activity</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-apps"/>
+            <mb-icon name="icon-business-apps" />
             <small>icon-business-apps</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-archive"/>
+            <mb-icon name="icon-business-archive" />
             <small>icon-business-archive</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-area"/>
+            <mb-icon name="icon-business-chart-area" />
             <small>icon-business-chart-area</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-bar"/>
+            <mb-icon name="icon-business-chart-bar" />
             <small>icon-business-chart-bar</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-column-notepad"/>
+            <mb-icon name="icon-business-chart-column-notepad" />
             <small>icon-business-chart-column-notepad</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-column"/>
+            <mb-icon name="icon-business-chart-column" />
             <small>icon-business-chart-column</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-complex"/>
+            <mb-icon name="icon-business-chart-complex" />
             <small>icon-business-chart-complex</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-line"/>
+            <mb-icon name="icon-business-chart-line" />
             <small>icon-business-chart-line</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-lines"/>
+            <mb-icon name="icon-business-chart-lines" />
             <small>icon-business-chart-lines</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-pie"/>
+            <mb-icon name="icon-business-chart-pie" />
             <small>icon-business-chart-pie</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-design"/>
+            <mb-icon name="icon-business-design" />
             <small>icon-business-design</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-education"/>
+            <mb-icon name="icon-business-education" />
             <small>icon-business-education</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-idea"/>
+            <mb-icon name="icon-business-idea" />
             <small>icon-business-idea</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-inbox"/>
+            <mb-icon name="icon-business-inbox" />
             <small>icon-business-inbox</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-investment"/>
+            <mb-icon name="icon-business-investment" />
             <small>icon-business-investment</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-metrics"/>
+            <mb-icon name="icon-business-metrics" />
             <small>icon-business-metrics</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-money"/>
+            <mb-icon name="icon-business-money" />
             <small>icon-business-money</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-paperwork"/>
+            <mb-icon name="icon-business-paperwork" />
             <small>icon-business-paperwork</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-performance"/>
+            <mb-icon name="icon-business-performance" />
             <small>icon-business-performance</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-report"/>
+            <mb-icon name="icon-business-report" />
             <small>icon-business-report</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-site"/>
+            <mb-icon name="icon-business-site" />
             <small>icon-business-site</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-strategy"/>
+            <mb-icon name="icon-business-strategy" />
             <small>icon-business-strategy</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-target"/>
+            <mb-icon name="icon-business-target" />
             <small>icon-business-target</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-business-work"/>
+            <mb-icon name="icon-business-work" />
             <small>icon-business-work</small>
           </div>
 
-        <h6>Formatting</h6>
+          <h6>Formatting</h6>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-attachment"/>
+            <mb-icon name="icon-format-attachment" />
             <small>icon-format-attachment</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-body"/>
+            <mb-icon name="icon-format-body" />
             <small>icon-format-body</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-close-quote"/>
+            <mb-icon name="icon-format-close-quote" />
             <small>icon-format-close-quote</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-code"/>
+            <mb-icon name="icon-format-code" />
             <small>icon-format-code</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-email"/>
+            <mb-icon name="icon-format-email" />
             <small>icon-format-email</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-eraser"/>
+            <mb-icon name="icon-format-eraser" />
             <small>icon-format-eraser</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-h1"/>
+            <mb-icon name="icon-format-h1" />
             <small>icon-format-h1</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-h2"/>
+            <mb-icon name="icon-format-h2" />
             <small>icon-format-h2</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-h3"/>
+            <mb-icon name="icon-format-h3" />
             <small>icon-format-h3</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-hash"/>
+            <mb-icon name="icon-format-hash" />
             <small>icon-format-hash</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-image"/>
+            <mb-icon name="icon-format-image" />
             <small>icon-format-image</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-line"/>
+            <mb-icon name="icon-format-line" />
             <small>icon-format-line</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-link"/>
+            <mb-icon name="icon-format-link" />
             <small>icon-format-link</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-ordered-list"/>
+            <mb-icon name="icon-format-ordered-list" />
             <small>icon-format-ordered-list</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-redo"/>
+            <mb-icon name="icon-format-redo" />
             <small>icon-format-redo</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-resizer"/>
+            <mb-icon name="icon-format-resizer" />
             <small>icon-format-resizer</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-table"/>
+            <mb-icon name="icon-format-table" />
             <small>icon-format-table</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-text-bold"/>
+            <mb-icon name="icon-format-text-bold" />
             <small>icon-format-text-bold</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-text-italic"/>
+            <mb-icon name="icon-format-text-italic" />
             <small>icon-format-text-italic</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-text-strike-through"/>
+            <mb-icon name="icon-format-text-strike-through" />
             <small>icon-format-text-strike-through</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-text-underline"/>
+            <mb-icon name="icon-format-text-underline" />
             <small>icon-format-text-underline</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-todo"/>
+            <mb-icon name="icon-format-todo" />
             <small>icon-format-todo</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-undo"/>
+            <mb-icon name="icon-format-undo" />
             <small>icon-format-undo</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-format-unordered-list"/>
+            <mb-icon name="icon-format-unordered-list" />
             <small>icon-format-unordered-list</small>
           </div>
-          
-        <h6>Forms</h6>
+
+          <h6>Forms</h6>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-call"/>
+            <mb-icon name="icon-forms-call" />
             <small>icon-forms-call</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-check"/>
+            <mb-icon name="icon-forms-check" />
             <small>icon-forms-check</small>
           </div>
           <div class="mb-icon-container">
-              <mb-icon name="icon-forms-checkbox"/>
-              <small>icon-forms-checkbox</small>
+            <mb-icon name="icon-forms-checkbox" />
+            <small>icon-forms-checkbox</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-checkbox-selected"/>
+            <mb-icon name="icon-forms-checkbox-selected" />
             <small>icon-forms-checkbox-selected</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-disabled"/>
+            <mb-icon name="icon-forms-disabled" />
             <small>icon-forms-disabled</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-edit"/>
+            <mb-icon name="icon-forms-edit" />
             <small>icon-forms-edit</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-email"/>
+            <mb-icon name="icon-forms-email" />
             <small>icon-forms-email</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-formula"/>
+            <mb-icon name="icon-forms-formula" />
             <small>icon-forms-formula</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-hide"/>
+            <mb-icon name="icon-forms-hide" />
             <small>icon-forms-hide</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-lock"/>
+            <mb-icon name="icon-forms-lock" />
             <small>icon-forms-lock</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-password"/>
+            <mb-icon name="icon-forms-password" />
             <small>icon-forms-password</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-radio"/>
+            <mb-icon name="icon-forms-radio" />
             <small>icon-forms-radio</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-radio-selected"/>
+            <mb-icon name="icon-forms-radio-selected" />
             <small>icon-forms-radio-selected</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-search"/>
+            <mb-icon name="icon-forms-search" />
             <small>icon-forms-search</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-submit"/>
+            <mb-icon name="icon-forms-submit" />
             <small>icon-forms-submit</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-sync"/>
+            <mb-icon name="icon-forms-sync" />
             <small>icon-forms-sync</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-tags"/>
+            <mb-icon name="icon-forms-tags" />
             <small>icon-forms-tags</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-time"/>
+            <mb-icon name="icon-forms-time" />
             <small>icon-forms-time</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-unlock"/>
+            <mb-icon name="icon-forms-unlock" />
             <small>icon-forms-unlock</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-forms-view"/>
+            <mb-icon name="icon-forms-view" />
             <small>icon-forms-view</small>
           </div>
-        <h6>Alerts</h6>
+          <h6>Alerts</h6>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-add-fill"/>
+            <mb-icon name="icon-alert-add-fill" />
             <small>icon-alert-add-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-add"/>
+            <mb-icon name="icon-alert-add" />
             <small>icon-alert-add</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-danger-fill"/>
+            <mb-icon name="icon-alert-danger-fill" />
             <small>icon-alert-danger-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-danger"/>
+            <mb-icon name="icon-alert-danger" />
             <small>icon-alert-danger</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-delete-fill"/>
+            <mb-icon name="icon-alert-delete-fill" />
             <small>icon-alert-delete-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-delete"/>
+            <mb-icon name="icon-alert-delete" />
             <small>icon-alert-delete</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-error-fill"/>
+            <mb-icon name="icon-alert-error-fill" />
             <small>icon-alert-error-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-error"/>
+            <mb-icon name="icon-alert-error" />
             <small>icon-alert-error</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-help-fill"/>
+            <mb-icon name="icon-alert-help-fill" />
             <small>icon-alert-help-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-help"/>
+            <mb-icon name="icon-alert-help" />
             <small>icon-alert-help</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-info-fill"/>
+            <mb-icon name="icon-alert-info-fill" />
             <small>icon-alert-info-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-info"/>
+            <mb-icon name="icon-alert-info" />
             <small>icon-alert-info</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-more-fill"/>
+            <mb-icon name="icon-alert-more-fill" />
             <small>icon-alert-more-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-more"/>
+            <mb-icon name="icon-alert-more" />
             <small>icon-alert-more</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-remove-fill"/>
+            <mb-icon name="icon-alert-remove-fill" />
             <small>icon-alert-remove-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-remove"/>
+            <mb-icon name="icon-alert-remove" />
             <small>icon-alert-remove</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-success-fill"/>
+            <mb-icon name="icon-alert-success-fill" />
             <small>icon-alert-success-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-success"/>
+            <mb-icon name="icon-alert-success" />
             <small>icon-alert-success</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-warning-fill"/>
+            <mb-icon name="icon-alert-warning-fill" />
             <small>icon-alert-warning-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-alert-warning"/>
+            <mb-icon name="icon-alert-warning" />
             <small>icon-alert-warning</small>
           </div>
-      
-        <h6>Utility</h6>
+
+          <h6>Utility</h6>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-add"/>
+            <mb-icon name="icon-utility-add" />
             <small>icon-utility-add</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-arrow-left"/>
+            <mb-icon name="icon-utility-arrow-left" />
             <small>icon-utility-arrow</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-both"/>
+            <mb-icon name="icon-utility-both" />
             <small>icon-utility-both</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-check"/>
+            <mb-icon name="icon-utility-check" />
             <small>icon-utility-check</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-close"/>
+            <mb-icon name="icon-utility-close" />
             <small>icon-utility-close</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-copy"/>
+            <mb-icon name="icon-utility-copy" />
             <small>icon-utility-copy</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-custom"/>
+            <mb-icon name="icon-utility-custom" />
             <small>icon-utility-custom</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-doublecheck"/>
+            <mb-icon name="icon-utility-doublecheck" />
             <small>icon-utility-doublecheck</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-download"/>
+            <mb-icon name="icon-utility-download" />
             <small>icon-utility-download</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-layout"/>
+            <mb-icon name="icon-utility-layout" />
             <small>icon-utility-layout</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-love"/>
+            <mb-icon name="icon-utility-love" />
             <small>icon-utility-love</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-menu"/>
+            <mb-icon name="icon-utility-menu" />
             <small>icon-utility-menu</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-more"/>
+            <mb-icon name="icon-utility-more" />
             <small>icon-utility-more</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-notification"/>
+            <mb-icon name="icon-utility-notification" />
             <small>icon-utility-notification</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-pin"/>
+            <mb-icon name="icon-utility-pin" />
             <small>icon-utility-pin</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-print"/>
+            <mb-icon name="icon-utility-print" />
             <small>icon-utility-print</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-previous"/>
+            <mb-icon name="icon-utility-previous" />
             <small>icon-utility-previous</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-rating"/>
+            <mb-icon name="icon-utility-rating" />
             <small>icon-utility-rating</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-save"/>
+            <mb-icon name="icon-utility-save" />
             <small>icon-utility-save</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill"/>
+            <mb-icon name="icon-utility-star-fill" />
             <small>icon-utility-star-fill</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star"/>
+            <mb-icon name="icon-utility-star" />
             <small>icon-utility-star</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-select"/>
+            <mb-icon name="icon-utility-select" />
             <small>icon-utility-select</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-two-colums"/>
+            <mb-icon name="icon-utility-two-colums" />
             <small>icon-utility-two-colums</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-upload"/>
+            <mb-icon name="icon-utility-upload" />
             <small>icon-utility-upload</small>
           </div>
-        <h6>Concepts</h6>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-block"/>
-          <small>icon-concepts-block</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-blocks"/>
-          <small>icon-concepts-blocks</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-briefcase"/>
-          <small>icon-concepts-briefcase</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-bug"/>
-          <small>icon-concepts-bug</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-chart"/>
-          <small>icon-concepts-chart</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-database"/>
-          <small>icon-concepts-database</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-deal"/>
-          <small>icon-concepts-deal</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-experiment"/>
-          <small>icon-concepts-experiment</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-goals"/>
-          <small>icon-concepts-goals</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-hub"/>
-          <small>icon-concepts-hub</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-idea"/>
-          <small>icon-concepts-idea</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-mentor"/>
-          <small>icon-concepts-mentor</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-mood"/>
-          <small>icon-concepts-mood</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-tabbed"/>
-          <small>icon-concepts-tabbed</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-team"/>
-          <small>icon-concepts-team</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-concepts-wealth"/>
-          <small>icon-concepts-wealth</small>
-        </div>
-
-        <h6>Misc</h6>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-chat"/>
-          <small>icon-misc-chat</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-chat"/>
-          <small>icon-misc-chat</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-checklists"/>
-          <small>icon-misc-checklists</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-document"/>
-          <small>icon-misc-document</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-documents"/>
-          <small>icon-misc-documents</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-flag"/>
-          <small>icon-misc-flag</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-add"/>
-          <small>icon-misc-folder-add</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-ban"/>
-          <small>icon-misc-folder-ban</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-close"/>
-          <small>icon-misc-folder-close</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-closed"/>
-          <small>icon-misc-folder-closed</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-locked"/>
-          <small>icon-misc-folder-locked</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-open"/>
-          <small>icon-misc-folder-open</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-remove"/>
-          <small>icon-misc-folder-remove</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-sync"/>
-          <small>icon-misc-folder-sync</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-tree"/>
-          <small>icon-misc-folder-tree</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-folder-warning"/>
-          <small>icon-misc-folder-warning</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-message-square"/>
-          <small>icon-misc-message-square</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-notify"/>
-          <small>icon-misc-notify</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-thumbsdown"/>
-          <small>icon-misc-thumbsdown</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-thumbsup"/>
-          <small>icon-misc-thumbsup</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-trend-down"/>
-          <small>icon-misc-trend-down</small>
-        </div>
-        <div class="mb-icon-container">
-          <mb-icon name="icon-misc-trend-up"/>
-          <small>icon-misc-trend-up</small>
-        </div>
-
-        <h6>Users</h6>
+          <h6>Concepts</h6>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user-add"/>
+            <mb-icon name="icon-concepts-block" />
+            <small>icon-concepts-block</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-blocks" />
+            <small>icon-concepts-blocks</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-briefcase" />
+            <small>icon-concepts-briefcase</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-bug" />
+            <small>icon-concepts-bug</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-chart" />
+            <small>icon-concepts-chart</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-database" />
+            <small>icon-concepts-database</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-deal" />
+            <small>icon-concepts-deal</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-experiment" />
+            <small>icon-concepts-experiment</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-goals" />
+            <small>icon-concepts-goals</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-hub" />
+            <small>icon-concepts-hub</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-idea" />
+            <small>icon-concepts-idea</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-mentor" />
+            <small>icon-concepts-mentor</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-mood" />
+            <small>icon-concepts-mood</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-tabbed" />
+            <small>icon-concepts-tabbed</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-team" />
+            <small>icon-concepts-team</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-concepts-wealth" />
+            <small>icon-concepts-wealth</small>
+          </div>
+
+          <h6>Misc</h6>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-chat" />
+            <small>icon-misc-chat</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-chat" />
+            <small>icon-misc-chat</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-checklists" />
+            <small>icon-misc-checklists</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-document" />
+            <small>icon-misc-document</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-documents" />
+            <small>icon-misc-documents</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-flag" />
+            <small>icon-misc-flag</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-add" />
+            <small>icon-misc-folder-add</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-ban" />
+            <small>icon-misc-folder-ban</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-close" />
+            <small>icon-misc-folder-close</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-closed" />
+            <small>icon-misc-folder-closed</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-locked" />
+            <small>icon-misc-folder-locked</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-open" />
+            <small>icon-misc-folder-open</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-remove" />
+            <small>icon-misc-folder-remove</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-sync" />
+            <small>icon-misc-folder-sync</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-tree" />
+            <small>icon-misc-folder-tree</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-folder-warning" />
+            <small>icon-misc-folder-warning</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-message-square" />
+            <small>icon-misc-message-square</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-notify" />
+            <small>icon-misc-notify</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-thumbsdown" />
+            <small>icon-misc-thumbsdown</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-thumbsup" />
+            <small>icon-misc-thumbsup</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-trend-down" />
+            <small>icon-misc-trend-down</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-misc-trend-up" />
+            <small>icon-misc-trend-up</small>
+          </div>
+
+          <h6>Users</h6>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-user-add" />
             <small>icon-user-add</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user-delete"/>
+            <mb-icon name="icon-user-delete" />
             <small>icon-user-delete</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user-group"/>
+            <mb-icon name="icon-user-group" />
             <small>icon-user-group</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user-network"/>
+            <mb-icon name="icon-user-network" />
             <small>icon-user-network</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user-remove"/>
+            <mb-icon name="icon-user-remove" />
             <small>icon-user-remove</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user-search"/>
+            <mb-icon name="icon-user-search" />
             <small>icon-user-search</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user-success"/>
+            <mb-icon name="icon-user-success" />
             <small>icon-user-success</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-user"/>
+            <mb-icon name="icon-user" />
             <small>icon-user</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-users"/>
+            <mb-icon name="icon-users" />
             <small>icon-users</small>
           </div>
-        <h6>Mini icons</h6>
+          <h6>Mini icons</h6>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-add"/>
+            <mb-icon name="icon-mini-add" />
             <small>icon-mini-add</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-arrow"/>
+            <mb-icon name="icon-mini-arrow" />
             <small>icon-mini-arrow</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-check"/>
+            <mb-icon name="icon-mini-check" />
             <small>icon-mini-check</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-close"/>
+            <mb-icon name="icon-mini-close" />
             <small>icon-mini-close</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-delete"/>
+            <mb-icon name="icon-mini-delete" />
             <small>icon-mini-delete</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-down"/>
+            <mb-icon name="icon-mini-down" />
             <small>icon-mini-down</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-error"/>
+            <mb-icon name="icon-mini-error" />
             <small>icon-mini-error</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-arrow"/>
+            <mb-icon name="icon-mini-arrow" />
             <small>icon-mini-arrow</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-filter"/>
+            <mb-icon name="icon-mini-filter" />
             <small>icon-mini-filter</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-heart"/>
+            <mb-icon name="icon-mini-heart" />
             <small>icon-mini-heart</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-more"/>
+            <mb-icon name="icon-mini-more" />
             <small>icon-mini-more</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-remove"/>
+            <mb-icon name="icon-mini-remove" />
             <small>icon-mini-remove</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-sort"/>
+            <mb-icon name="icon-mini-sort" />
             <small>icon-mini-sort</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-sorted"/>
+            <mb-icon name="icon-mini-sorted" />
             <small>icon-mini-sorted</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-star"/>
+            <mb-icon name="icon-mini-star" />
             <small>icon-mini-star</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-success"/>
+            <mb-icon name="icon-mini-success" />
             <small>icon-mini-success</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-up"/>
+            <mb-icon name="icon-mini-up" />
             <small>icon-mini-up</small>
           </div>
-        <h6>Files</h6>
+          <h6>Files</h6>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-csv"/>
+            <mb-icon name="icon-file-csv" />
             <small>icon-file-csv</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-doc"/>
+            <mb-icon name="icon-file-doc" />
             <small>icon-file-doc</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-google-doc"/>
+            <mb-icon name="icon-file-google-doc" />
             <small>icon-file-google-doc</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-google-sheet"/>
+            <mb-icon name="icon-file-google-sheet" />
             <small>icon-file-google-sheet</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-google-slides"/>
+            <mb-icon name="icon-file-google-slides" />
             <small>icon-file-google-slides</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-json"/>
+            <mb-icon name="icon-file-json" />
             <small>icon-file-json</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-other"/>
+            <mb-icon name="icon-file-other" />
             <small>icon-file-other</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-pdf"/>
+            <mb-icon name="icon-file-pdf" />
             <small>icon-file-pdf</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-ppt"/>
+            <mb-icon name="icon-file-ppt" />
             <small>icon-file-ppt</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-sql"/>
+            <mb-icon name="icon-file-sql" />
             <small>icon-file-sql</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-xls"/>
+            <mb-icon name="icon-file-xls" />
             <small>icon-file-xls</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-xml"/>
+            <mb-icon name="icon-file-xml" />
             <small>icon-file-xml</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-file-zip"/>
+            <mb-icon name="icon-file-zip" />
             <small>icon-file-zip</small>
           </div>
-        <h6>Social</h6>
+          <h6>Social</h6>
           <div class="mb-icon-container">
-            <mb-icon name="icon-contact-email"/>
+            <mb-icon name="icon-contact-email" />
             <small>icon-contact-email</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-contact-phone"/>
+            <mb-icon name="icon-contact-phone" />
             <small>icon-contact-phone</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-contact-scheduler"/>
+            <mb-icon name="icon-contact-scheduler" />
             <small>icon-contact-scheduler</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-contact-skype"/>
+            <mb-icon name="icon-contact-skype" />
             <small>icon-contact-web</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-social-angellist"/>
+            <mb-icon name="icon-social-angellist" />
             <small>icon-social-angellist</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-social-crunchbase"/>
+            <mb-icon name="icon-social-crunchbase" />
             <small>icon-social-crunchbase</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-social-dribbble"/>
+            <mb-icon name="icon-social-dribbble" />
             <small>icon-social-dribbble</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-social-facebook"/>
+            <mb-icon name="icon-social-facebook" />
             <small>icon-social-facebook</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-social-github"/>
+            <mb-icon name="icon-social-github" />
             <small>icon-social-github</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-social-linkedin"/>
+            <mb-icon name="icon-social-linkedin" />
             <small>icon-social-linkedin</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-social-medium"/>
+            <mb-icon name="icon-social-medium" />
             <small>icon-social-medium</small>
           </div>
-           <div class="mb-icon-container">
-            <mb-icon name="icon-social-twitter"/>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-social-twitter" />
             <small>icon-social-twitter</small>
           </div>
-      </template>
-    </mb-panel>      
+        </template>
+      </mb-panel>
     </main>
   </div>
 </template>

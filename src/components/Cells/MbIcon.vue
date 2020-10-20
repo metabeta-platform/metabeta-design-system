@@ -1,8 +1,8 @@
 <template>
   <i :class="['mb-icon',`mb-color-${color}`, `mb-size-${size}` ]">
     <component
-      :height="size"
-      :width="size"
+      :height="wh"
+      :width="wh"
       :is="iconComponent"
     />
   </i>
@@ -19,14 +19,17 @@ requireComponents.keys().forEach(fileName => {
 
 export default {
   name: "MbIcon",
+  data: () => ({
+    wh: 16,
+  }),
   props: {
     name: {
       type: String,
       required: true,
     },
     size: {
-      type: Number,
-      default: 16,
+      type: String,
+      default: 'm',
     },
     color: {
       type: String,
@@ -38,6 +41,24 @@ export default {
       return icons[this.name]
     },
   },
+  created () {
+    switch (this.size) {
+      case 'xs':
+        this.wh = 8
+        break;
+      case 's':
+        this.wh = 12
+        break;
+      case 'm':
+        this.wh = 16
+        break;
+      case 'l':
+        this.wh = 24
+        break;
+      default:
+        break;
+    }
+  }
 }
 </script>
 
