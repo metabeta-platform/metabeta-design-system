@@ -363,6 +363,72 @@ export default Vue.extend({
         stroke:$mb-color-white;
       }
     }
+    .mb-icon-file-csv{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-doc{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-google-doc{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-google-sheet{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-google-slides{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-json{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-other{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-pdf{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-ppt{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-sql{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-xls{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-xml{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+     .mb-icon-file-zip{
+      .svg-stroke{
+        stroke:$mb-color-white;
+      }
+    }
+
   }
 </style> 
 
@@ -1823,7 +1889,7 @@ export default Vue.extend({
         <p>
           <mb-alert color="warning">
             <template slot="content">
-              <mb-icon name="icon-alert-warning-fill" color="warning" />Size prop needs to be fixed
+              <mb-icon name="icon-alert-warning-fill" />Size prop needs to be fixed
             </template>
           </mb-alert>
         </p>
@@ -1863,7 +1929,59 @@ export default Vue.extend({
         <p>
           Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information. 
         </p>
-        <h4>Navigation</h4>
+        <h4>How it works</h4>
+         <pre> <code> &lt;mb-icon name="icon-user" size="m" /&gt;</code></pre>
+        <div class="mb-props-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Props</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Options</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>none</td>
+                <td><a>List with all icons</a></td>
+                <td>You can use any icon name from the list</td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>string</td>
+                <td>m</td>
+                <td>s, m, l</td>
+                <td> - </td>
+              </tr>
+               <tr>
+                <td>color</td>
+                <td>string</td>
+                <td>$mb-color-gray</td>
+                <td>none</td>
+                <td>The color of an icon is set by the parent</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4>Icon sizes</h4>
+        <div class="mb-icon-container">
+            <mb-icon name="icon-utility-star-fill"/>
+            <small>size="s"</small>
+        </div>
+        <div class="mb-icon-container">
+          <mb-icon  name="icon-utility-star-fill"/>
+          <small>size="m"</small>
+        </div>
+        <div class="mb-icon-container">
+          <mb-icon  name="icon-utility-star-fill"/>
+          <small>size="l"</small>
+        </div>
+        <h4>All Icons</h4>
+        <h6>Navigation</h6>
           <div class="mb-icon-container">
             <mb-icon name="icon-admin"/>
             <small>icon-admin</small>
@@ -1952,7 +2070,7 @@ export default Vue.extend({
             <mb-icon name="icon-workspace"/>
             <small>icon-workspace</small>
           </div> 
-        <h4>Business</h4>
+        <h6>Business</h6>
         <div class="mb-icon-container">
             <mb-icon name="icon-business-accounting"/>
             <small>icon-business-accounting</small>
@@ -2058,7 +2176,7 @@ export default Vue.extend({
             <small>icon-business-work</small>
           </div>
 
-        <h4>Formatting</h4>
+        <h6>Formatting</h6>
           <div class="mb-icon-container">
             <mb-icon name="icon-format-attachment"/>
             <small>icon-format-attachment</small>
@@ -2156,7 +2274,7 @@ export default Vue.extend({
             <small>icon-format-unordered-list</small>
           </div>
           
-        <h4>Forms</h4>
+        <h6>Forms</h6>
           <div class="mb-icon-container">
             <mb-icon name="icon-forms-call"/>
             <small>icon-forms-call</small>
@@ -2237,7 +2355,7 @@ export default Vue.extend({
             <mb-icon name="icon-forms-view"/>
             <small>icon-forms-view</small>
           </div>
-        <h4>Alerts</h4>
+        <h6>Alerts</h6>
           <div class="mb-icon-container">
             <mb-icon name="icon-alert-add-fill"/>
             <small>icon-alert-add-fill</small>
@@ -2319,7 +2437,7 @@ export default Vue.extend({
             <small>icon-alert-warning</small>
           </div>
       
-        <h4>Utility</h4>
+        <h6>Utility</h6>
           <div class="mb-icon-container">
             <mb-icon name="icon-utility-add"/>
             <small>icon-utility-add</small>
@@ -2416,7 +2534,7 @@ export default Vue.extend({
             <mb-icon name="icon-utility-upload"/>
             <small>icon-utility-upload</small>
           </div>
-        <h4>Concepts</h4>
+        <h6>Concepts</h6>
         <div class="mb-icon-container">
           <mb-icon name="icon-concepts-block"/>
           <small>icon-concepts-block</small>
@@ -2482,7 +2600,7 @@ export default Vue.extend({
           <small>icon-concepts-wealth</small>
         </div>
 
-        <h4>Misc</h4>
+        <h6>Misc</h6>
         <div class="mb-icon-container">
           <mb-icon name="icon-misc-chat"/>
           <small>icon-misc-chat</small>
@@ -2572,7 +2690,7 @@ export default Vue.extend({
           <small>icon-misc-trend-up</small>
         </div>
 
-        <h4>Users</h4>
+        <h6>Users</h6>
           <div class="mb-icon-container">
             <mb-icon name="icon-user-add"/>
             <small>icon-user-add</small>
@@ -2609,7 +2727,7 @@ export default Vue.extend({
             <mb-icon name="icon-users"/>
             <small>icon-users</small>
           </div>
-        <h4>Mini icons</h4>
+        <h6>Mini icons</h6>
           <div class="mb-icon-container">
             <mb-icon name="icon-mini-add"/>
             <small>icon-mini-add</small>
@@ -2678,9 +2796,60 @@ export default Vue.extend({
             <mb-icon name="icon-mini-up"/>
             <small>icon-mini-up</small>
           </div>
-
-        <h4>Files</h4>
-        <h4>Social</h4>
+        <h6>Files</h6>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-csv"/>
+            <small>icon-file-csv</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-doc"/>
+            <small>icon-file-doc</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-google-doc"/>
+            <small>icon-file-google-doc</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-google-sheet"/>
+            <small>icon-file-google-sheet</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-google-slides"/>
+            <small>icon-file-google-slides</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-json"/>
+            <small>icon-file-json</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-other"/>
+            <small>icon-file-other</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-pdf"/>
+            <small>icon-file-pdf</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-ppt"/>
+            <small>icon-file-ppt</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-sql"/>
+            <small>icon-file-sql</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-xls"/>
+            <small>icon-file-xls</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-xml"/>
+            <small>icon-file-xml</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-file-zip"/>
+            <small>icon-file-zip</small>
+          </div>
+        <h6>Social</h6>
       </template>
     </mb-panel>      
     </main>
