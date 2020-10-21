@@ -19,17 +19,20 @@
         </header>
         <section
           class="mb-header-content"
-          v-show="hasHeader"
+          v-if="hasHeader && hasHeaderSlot"
         >
           <slot name="header"></slot>
         </section>
       </header>
-      <section class="mb-modal-content">
+      <section
+        class="mb-modal-content"
+        v-if="hasContent"
+      >
         <slot name="content"> </slot>
       </section>
       <footer
         class="mb-modal-footer"
-        v-show="hasFooter"
+        v-if="hasFooter && hasHeaderSlot"
       >
         <slot name="footer"></slot>
       </footer>
@@ -40,6 +43,9 @@
 <script>
 export default {
   name: 'MbModal',
+  data: () => ({
+    modalVisibility: false,
+  }),
   props: {
     size: {
       type: String,
@@ -67,23 +73,29 @@ export default {
     },
   },
   computed: {
-    modalVisibility: {
-      get () {
-        return this.isVisible;
-      },
-      set (value) {
-        this.isVisible = value;
-      }
-    }
+    hasContent () {
+      return !!this.$slots['content'] || !!this.$defaultSlots['content'];
+    },
+    hasHeaderSlot () {
+      return !!this.$slots['header'] || !!this.$defaultSlots['header'];
+    },
+    hasFooterSlot () {
+      return !!this.$slots['footer'] || !!this.$defaultSlots['footer'];
+    },
   },
   watch: {
     isVisible (val) {
       if (val) {
         document.body.style.setProperty('overflow', 'hidden');
+        this.modalVisibility = true;
       }
       else {
         document.body.style.removeProperty('overflow', 'hidden');
+        this.modalVisibility = false;
       }
+    },
+    modalVisibility (val) {
+      this.$emit('update:isVisible', this.modalVisibility);
     }
   },
   methods: {

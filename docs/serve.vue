@@ -334,7 +334,7 @@ main {
               <tr>
                 <th>Name</th>
                 <th>Version</th>
-                <th>Responsabile</th>
+                <th>Responsible</th>
                 <th>Status</th>
               </tr>
             </thead>
@@ -1057,7 +1057,7 @@ main {
         <mb-modal
           name="modal-id"
           title="Modal title"
-          :is-visible="openModal"
+          :is-visible.sync="openModal"
           size="s"
         >
           <template slot="header">
@@ -2070,6 +2070,8 @@ main {
         name="doc-section-menu"
         title="MbMenu + MbMenuItem"
         type="card"
+        :has-header="true"
+        :has-footer="true"
       >
         <template slot="content">
           <p>MbMenu offers a list of items, actions or functions that a user can access. It can be used in any type of container.</p>

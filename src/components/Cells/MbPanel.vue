@@ -1,18 +1,17 @@
 <template>
-  <article :class="['mb-panel', `mb-type-${type}`]" :id="name">
-    <header class="mb-panel-header" v-show="hasHeader">
+  <article :class="['mb-panel', `mb-type-${type}`]">
+    <header class="mb-panel-header">
       <header class="mb-header-title-bar">
-       <h3>{{title}}</h3>
+        <h3 v-if="title.length > 0">{{title}}</h3>
       </header>
       <section class="mb-header-content">
-        <slot name="header">
-        </slot>
+        <slot name="header"></slot>
       </section>
     </header>
     <section class="mb-panel-content">
       <slot name="content"></slot>
     </section>
-    <footer class="mb-panel-footer" v-show="hasFooter">
+    <footer class="mb-panel-footer">
       <slot name="footer"></slot>
     </footer>
   </article>
@@ -26,23 +25,37 @@ export default {
       type: String,
       default: '',
     },
-    name:{
+    name: {
       type: String,
       default: '',
     },
-    title:{
+    title: {
       type: String,
       default: '',
     },
-    hasHeader:{
+    hasHeader: {
       type: Boolean,
       default: true,
     },
-    hasFooter:{
+    hasFooter: {
       type: Boolean,
       default: true,
     },
   },
+  computed: {
+    hasContent () {
+      return (!!this.$slots['content'] || !!this.$defaultSlots['content']);
+    },
+    hasHeaderSlot () {
+      return (!!this.$slots['header'] || !!this.$defaultSlots['header']) && this.hasHeader;
+    },
+    hasFooterSlot () {
+      return (!!this.$slots['footer'] || !!this.$defaultSlots['footer']) && this.hasFooter;
+    },
+  },
+  created () {
+    console.log(this);
+  }
 };
 
 </script>
@@ -50,36 +63,38 @@ export default {
 <style lang="scss">
 @import "../../assets/styles/partials/_mb_space.scss";
 @import "../../assets/styles/partials/_mb_color.scss";
-.mb-panel{
-   &.mb-type-base{
+.mb-panel {
+  .display-none {
+    display: none;
+  }
+  &.mb-type-base {
     background-color: $mb-color-transparent;
   }
-  &.mb-type-card{
+  &.mb-type-card {
     background-color: $mb-color-white;
     @include mb-border-radius(m);
     border: $mb-border-thin solid transparent;
   }
-  .mb-panel{
-    &-header{
-      .mb-header{
-        &-title-bar{
+  .mb-panel {
+    &-header {
+      .mb-header {
+        &-title-bar {
           h3 {
             padding: $mb-space-s $mb-space-m;
-            margin:0;
+            margin: 0;
           }
         }
-        &-content{
+        &-content {
           padding: $mb-space-s $mb-space-m;
         }
       }
     }
-    &-content{
+    &-content {
       padding: $mb-space-s $mb-space-m;
     }
-    &-footer{
+    &-footer {
       padding: $mb-space-s $mb-space-m;
     }
   }
-
 }
 </style>

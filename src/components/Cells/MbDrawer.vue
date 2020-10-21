@@ -17,17 +17,20 @@
         </header>
         <section
           class="mb-header-content"
-          v-show="hasHeader"
+          v-if="hasHeader && hasHeaderSlot"
         >
           <slot name="header"></slot>
         </section>
       </header>
-      <section class="mb-drawer-content">
+      <section
+        class="mb-drawer-content"
+        v-if="hasContent"
+      >
         <slot name="content"></slot>
       </section>
       <footer
         class="mb-drawer-footer"
-        v-show="hasFooter"
+        v-if="hasFooter && hasFooterSlot"
       >
         <slot name="footer"></slot>
       </footer>
@@ -71,6 +74,11 @@ export default {
       default: () => { },
     }
   },
+  methods: {
+    keyUp (e) {
+      e.key == "escape" ? this.isVisible = true : this.isVisible = false;
+    }
+  },
   watch: {
     isVisible (val) {
       console.log(val);
@@ -87,9 +95,27 @@ export default {
       this.$emit('update:isVisible', this.drawerVisibility);
     }
   },
+  computed: {
+    hasContent () {
+      return !!this.$slots['content'] || !!this.$defaultSlots['content'];
+    },
+    hasHeaderSlot () {
+      return !!this.$slots['header'] || !!this.$defaultSlots['header'];
+    },
+    hasFooterSlot () {
+      return !!this.$slots['footer'] || !!this.$defaultSlots['footer'];
+    },
+
+  },
   components: {
     MbButton: () => import('@/components/cells/MbButton'),
   },
+  created () {
+    document.addEventListener('keyup', this.keyUp);
+  },
+  destroyed () {
+    document.removeEventListener('keyup', this.keyUp);
+  }
 }
 </script>
 

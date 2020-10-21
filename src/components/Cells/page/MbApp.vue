@@ -8,7 +8,7 @@
     </div>
     <div v-else>
       <slot name="content-bar">
-        <router-view :key="$route.fullPath"/>
+        <router-view :key="$route.fullPath" />
       </slot>
     </div>
   </main>
@@ -19,11 +19,11 @@
 export default {
   name: "MbApp",
   props: {
-    isLoading:{
+    isLoading: {
       type: Boolean,
       default: true,
     },
-    expanded:{
+    expanded: {
       type: Boolean,
     }
   },
@@ -32,5 +32,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>
