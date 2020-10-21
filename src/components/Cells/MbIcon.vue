@@ -3,7 +3,7 @@
     <component
       :height="wh"
       :width="wh"
-      :viewBox="`${wh} ${wh} 100 100`"
+      :viewBox="`0 0 ${wh} ${wh}`"
       :is="iconComponent"
     />
   </i>
