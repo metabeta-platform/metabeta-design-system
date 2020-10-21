@@ -108,7 +108,7 @@ export default {
     }
   }
   .mb-icon-checkbox,
-  .mb-icon-radio{
+  .mb-icon-radio {
     .svg-fill {
       fill: $mb-color-white;
     }
