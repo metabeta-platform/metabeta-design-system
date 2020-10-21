@@ -805,8 +805,6 @@ main {
         </template>
       </mb-panel>
 
-
-     
       <h2>Pre testing - Needs small fixez</h2>
       <section id="section-avatar">
         <h3>MbAvatar</h3>
@@ -1080,11 +1078,12 @@ main {
           label="Open drawer"
         ></mb-button>
         <mb-drawer
-          :is-visible="openDrawer"
+          :is-visible.sync="openDrawer"
           size="l"
           name="mb-drawer-id"
           :has-header="true"
           :has-footer="true"
+          @on-close="openDrawer = false"
         >
           <template slot="header">
             <p> Header Content </p>
@@ -2120,36 +2119,36 @@ main {
               </tbody>
             </table>
           </div>
-        <h4>MbMenu sizes</h4>
-        <mb-menu
-          title="Size M"
-          :items="items"
-          size="m"
-          flow="vertical"
-        >
-        </mb-menu>
-        <mb-menu
-          title="Size L"
-          :items="menuItems"
-          size="l"
-          flow="vertical"
-        >
-        </mb-menu>
-        <h4>MbMenu flows</h4>
-        <mb-menu
-          title="Vertical Flow"
-          :items="items"
-          size="m"
-          flow="vertical"
-        >
-        </mb-menu>
-        <mb-menu
-          title="Horizontal Flow"
-          :items="menuItems"
-          size="m"
-          flow="horizontal"
-        >
-        </mb-menu>
+          <h4>MbMenu sizes</h4>
+          <mb-menu
+            title="Size M"
+            :items="items"
+            size="m"
+            flow="vertical"
+          >
+          </mb-menu>
+          <mb-menu
+            title="Size L"
+            :items="menuItems"
+            size="l"
+            flow="vertical"
+          >
+          </mb-menu>
+          <h4>MbMenu flows</h4>
+          <mb-menu
+            title="Vertical Flow"
+            :items="items"
+            size="m"
+            flow="vertical"
+          >
+          </mb-menu>
+          <mb-menu
+            title="Horizontal Flow"
+            :items="menuItems"
+            size="m"
+            flow="horizontal"
+          >
+          </mb-menu>
         </template>
       </mb-panel>
       <mb-panel
@@ -2215,8 +2214,8 @@ main {
             </code>
           </p>
           <p><small><strong>List of icons:</strong> .mb-icon-checkbox-selected, .mb-icon-alert-add-fill, .mb-icon-alert-danger-fill, .mb-icon-alert-delete-fill, .mb-icon-alert-error-fill, .mb-icon-alert-help-fill, .mb-icon-alert-info-fill, .mb-icon-alert-more-fill, .mb-icon-alert-remove-fill, .mb-icon-alert-success-fill, .mb-icon-alert-warning-fill, .mb-icon-mini-add,
-  .mb-icon-mini-delete, .mb-icon-mini-error, .mb-icon-mini-more, .mb-icon-mini-remove, .mb-icon-mini-success, .mb-icon-file-csv, .mb-icon-file-doc, .mb-icon-file-google-doc, .mb-icon-file-google-sheet, .mb-icon-file-google-slides, .mb-icon-file-json, .mb-icon-file-other, .mb-icon-file-pdf,  .mb-icon-file-ppt, .mb-icon-file-sql, .mb-icon-file-xls,
-  .mb-icon-file-xml, .mb-icon-file-zip </small></p>
+              .mb-icon-mini-delete, .mb-icon-mini-error, .mb-icon-mini-more, .mb-icon-mini-remove, .mb-icon-mini-success, .mb-icon-file-csv, .mb-icon-file-doc, .mb-icon-file-google-doc, .mb-icon-file-google-sheet, .mb-icon-file-google-slides, .mb-icon-file-json, .mb-icon-file-other, .mb-icon-file-pdf, .mb-icon-file-ppt, .mb-icon-file-sql, .mb-icon-file-xls,
+              .mb-icon-file-xml, .mb-icon-file-zip </small></p>
           <p><strong> Icons that have fill different that default color</strong></p>
           <p> To style them in different contexts you can use their name classes. </p>
           <p>
