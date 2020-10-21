@@ -122,14 +122,34 @@ export default Vue.extend({
         href: '#doc-section-panels',
         menuItemContent: 'MbPanel [Testing]'
       },
+       {
+        _id: 'drawer-doc11122',
+        href: '#doc-section-drawer',
+        menuItemContent: 'MbDrawer [Testing]'
+      },
+      {
+        _id: 'modal-doc11122',
+        href: '#doc-section-modal',
+        menuItemContent: 'MbModal [Testing]'
+      },
       {
         _id: 'menu-doc11122',
         href: '#doc-section-menu',
         menuItemContent: 'MbMenu [Testing]'
       }
     ],
-    openModal: false,
-    openDrawer: false,
+    openModalS: false,
+    openModalM: false,
+    openModalL: false,
+    openModalXl: false,
+    openModalFooter: false,
+    openModalHeader: false,
+    openDrawerS: false,
+    openDrawerM: false,
+    openDrawerL: false,
+    openDrawerXL: false,
+    openDrawerFooter: false,
+    openDrawerHeader: false,
     tabs: [
       {
         _id: 'asdgashdgksja1213a',
@@ -1043,103 +1063,8 @@ main {
           </ul>
         </div>
       </section>
-      <section id="section-modal">
-        <h3>MbModal</h3>
-        <mb-button
-          tooltip="'top'"
-          @click="openModal = !openModal"
-          label="Open modal"
-        >
-          <template slot="tooltip">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </template>
-        </mb-button>
-        <mb-modal
-          name="modal-id"
-          title="Modal title"
-          :is-visible.sync="openModal"
-          size="s"
-        >
-          <template slot="header">
-            Header content
-          </template>
-          <template slot="content">
-            Main content
-          </template>
-          <template slot="footer">
-            Footer content
-          </template>
-        </mb-modal>
-      </section>
-      <section id="section-drawer">
-        <h3>MbDrawer</h3>
-        <mb-button
-          @click="openDrawer = true"
-          label="Open drawer"
-        ></mb-button>
-        <mb-drawer
-          :is-visible.sync="openDrawer"
-          size="l"
-          name="mb-drawer-id"
-          :has-header="true"
-          :has-footer="true"
-        >
-          <template slot="header">
-            <p> Header Content </p>
-          </template>
-          <template slot="content">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </template>
-          <template slot="footer">
-            Footer
-          </template>
-        </mb-drawer>
-      </section>
-      <section id="mb-panel">
-        <h3>MbPanel</h3>
-        <h4>card</h4>
-        <mb-panel
-          title="Panel Title"
-          type="card"
-          name="panel-title"
-          :has-header="true"
-          :has-footer="true"
-        >
-          <template slot="header">
-            Header content
-          </template>
-          <template slot="content">
-            Main content
-          </template>
-          <template slot="footer">
-            Footer content
-          </template>
-        </mb-panel>
-        <h4>base, without header and footer </h4>
-        <mb-panel
-          type="base"
-          name="panel-title-2"
-          :has-header="false"
-          :has-footer="false"
-        >
-          <template slot="header">
-            Header content
-          </template>
-          <template slot="content">
-            Main content
-          </template>
-          <template slot="footer">
-            Footer content
-          </template>
-        </mb-panel>
-      </section>
+     
+    
       <section id="section-button">
         <h3>MbButton</h3>
         <p>
@@ -2067,6 +1992,566 @@ main {
 
       <h2>For documentation (Includes extra styling for proper layout)</h2>
       <mb-panel
+        name="doc-section-panels"
+        title="MbPanel"
+        type="card"
+      >
+        <template slot="content">
+          <p>Panel description</p>
+          <h4>How it works</h4>
+          <pre> 
+            <code> 
+              &lt;mb-panel title="Panel title" type="card" :has-header="true" :has-footer="true" &gt;
+                &lt;template slot="header">
+                  Any type of content
+                &lt;/template&gt;
+                &lt;template slot="content">
+                  Any type of content
+                &lt;/template&gt;
+                &lt;template slot="footer">
+                  Any type of content
+                &lt;/template&gt;
+              &lt;/mb-panel&gt;
+            </code>
+          </pre>
+          <div class="mb-props-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Props</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Options</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>title</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>none</td>
+                    <td>Adds a title to the panel</td>
+                  </tr>
+                  <tr>
+                    <td>name</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>none</td>
+                    <td>Renders in markup the id of the panel</td>
+                  </tr>
+                  <tr>
+                    <td>type</td>
+                    <td>string</td>
+                    <td>base</td>
+                    <td>base, card</td>
+                    <td>It is used for styling the panel</td>
+                  </tr>
+                  <tr>
+                    <td>:has-header</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>true, false</td>
+                    <td>Used for when you want to hide the header slot of the panel</td>
+                  </tr>
+                  <tr>
+                    <td>:has-footer</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>true, false</td>
+                    <td>Used for when you want to hide the footer slot of the panel</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>MbPanel type</h4>
+            <h6>Card</h6>
+            <mb-panel
+              title="Panel card"
+              type="card"
+              name="panel-title"
+              :has-header="true"
+              :has-footer="true"
+            >
+              <template slot="header">
+                Header content
+              </template>
+              <template slot="content">
+                Main content
+              </template>
+              <template slot="footer">
+                Footer content
+              </template>
+            </mb-panel>
+            <h6>Base</h6>
+            <mb-panel
+              title="Panel base"
+              type="base"
+              name="panel-title"
+              :has-header="true"
+              :has-footer="true"
+            >
+              <template slot="header">
+                Header content
+              </template>
+              <template slot="content">
+                Main content
+              </template>
+              <template slot="footer">
+                Footer content
+              </template>
+            </mb-panel>
+            <h4>MbPanel :has-header="false" </h4>
+            <mb-panel
+              type="base"
+              title="Panel Title"
+              name="panel-title-2"
+              :has-header="false"
+            >
+              <template slot="header">
+                Header content
+              </template>
+              <template slot="content">
+                Main content
+              </template>
+              <template slot="footer">
+                Footer content
+              </template>
+            </mb-panel>
+            <h4>MbPanel :has-footer="false" </h4>
+            <mb-panel
+              title="Panel Title"
+              type="base"
+              name="panel-title-2"
+              :has-footer="false"
+            >
+              <template slot="header">
+                Header content
+              </template>
+              <template slot="content">
+                Main content
+              </template>
+              <template slot="footer">
+                Footer content
+              </template>
+            </mb-panel>
+        </template>
+      </mb-panel>
+      </br>
+      <mb-panel
+        name="doc-section-Modal"
+        title="MbModal"
+        type="card"
+      >
+        <template slot="content">
+          <p>MbModal it is used to focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.</p>
+          <h4>How it works</h4>
+          <pre> <code> &lt;mb-modal name="modal-name" size="m" :has-header="true" :has-footer="true" /&gt;</code></pre>
+          <div class="mb-props-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Props</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>title</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Adds a title to the modal</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Renders in markup the id of the modal</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>string</td>
+                  <td>m</td>
+                  <td>s, m, l, xl</td>
+                  <td>Handles the width of the modal</td>
+                </tr>
+                <tr>
+                  <td>:has-header</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>true, false</td>
+                  <td>Used for when you want to hide the header slot of the modal</td>
+                </tr>
+                <tr>
+                  <td>:has-footer</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>true, false</td>
+                  <td>Used for when you want to hide the footer slot of the modal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>MbModal sizes</h4>
+          <mb-button
+            @click="openModalS = !openModalS"
+            label="Open modal size s"
+          />
+           <mb-button
+            @click="openModalM = !openModalM"
+            label="Open modal size m"
+          />
+           <mb-button
+            @click="openModalL = !openModalL"
+            label="Open modal size l"
+          />
+           <mb-button
+            @click="openModalXl = !openModalXl"
+            label="Open modal size xl"
+          />
+          <mb-modal
+            name="modal-s"
+            title="Modal title"
+            :is-visible="openModalS"
+            size="s"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <mb-modal
+            name="modal-m"
+            title="Modal title"
+            :is-visible="openModalM"
+            size="m"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <mb-modal
+            name="modal-l"
+            title="Modal title"
+            :is-visible="openModalL"
+            size="l"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <mb-modal
+            name="modal-xl"
+            title="Modal title"
+            :is-visible="openModalXl"
+            size="xl"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <h4>MbModal :has-header="false"</h4>
+          <mb-button
+            @click="openModalHeader = !openModalHeader"
+            label="Open modal"
+          />
+           <mb-modal
+            name="modal-header"
+            title="Modal title"
+            :is-visible="openModalHeader"
+            :has-header="false"
+            size="l"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <h4>MbModal :has-footer="false" </h4>
+           <mb-button
+            @click="openModalFooter = !openModalFooter"
+            label="Open modal"
+          />
+           <mb-modal
+            name="modal-footer"
+            title="Modal title"
+            :is-visible="openModalFooter"
+            :has-footer="false"
+            size="l"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+        </template>
+      </mb-panel>
+      <br/>
+      <mb-panel
+        name="doc-section-drawer"
+        title="MbDrawer"
+        type="card"
+      >
+        <template slot="content">
+          <p>MbDrawer is a panel that is typically overlaid on top of a page and slides in from the side. It contains a set of information or actions. Since the user can interact with the Drawer without leaving the current page, tasks can be achieved more efficiently within the same context.</p>
+          <h4>How it works</h4>
+          <pre> <code> &lt;mb-drawer name="drawer-name" size="l" :has-header="true" :has-footer="true" /&gt;</code></pre>
+          <div class="mb-props-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Props</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>name</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Renders in markup the id of the drawer</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>string</td>
+                  <td>l</td>
+                  <td>s, m, l, xl</td>
+                  <td>Handles the width of the drawer</td>
+                </tr>
+                <tr>
+                  <td>:has-header</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>true, false</td>
+                  <td>Used for when you want to hide the header slot of the drawer</td>
+                </tr>
+                <tr>
+                  <td>:has-footer</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>true, false</td>
+                  <td>Used for when you want to hide the footer slot of the drawer</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>MbDrawer sizes</h4>
+          <mb-button
+            @click="openDrawerS = true"
+            label="Open drawer size s"
+          ></mb-button>
+          <mb-button
+            @click="openDrawerM = true"
+            label="Open drawer size m"
+          ></mb-button>
+          <mb-button
+            @click="openDrawerL = true"
+            label="Open drawer size l"
+          ></mb-button>
+          <mb-button
+            @click="openDrawerXL = true"
+            label="Open drawer size xl"
+          ></mb-button>
+          <mb-drawer
+            :is-visible.sync="openDrawerS"
+            size="s"
+            name="mb-drawer-id"
+            :has-header="true"
+            :has-footer="true"
+          >
+            <template slot="header">
+              <p> Header Content </p>
+            </template>
+            <template slot="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </template>
+            <template slot="footer">
+              Footer
+            </template>
+          </mb-drawer>
+          <mb-drawer
+            :is-visible.sync="openDrawerM"
+            size="l"
+            name="mb-drawer-size-m"
+            :has-header="true"
+            :has-footer="true"
+          >
+            <template slot="header">
+              <p> Header Content </p>
+            </template>
+            <template slot="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </template>
+            <template slot="footer">
+              Footer
+            </template>
+          </mb-drawer>
+          <mb-drawer
+            :is-visible.sync="openDrawerL"
+            size="l"
+            name="mb-drawer-size-l"
+            :has-header="true"
+            :has-footer="true"
+          >
+            <template slot="header">
+              <p> Header Content </p>
+            </template>
+            <template slot="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </template>
+            <template slot="footer">
+              Footer
+            </template>
+          </mb-drawer>
+          <mb-drawer
+            :is-visible.sync="openDrawerXL"
+            size="xl"
+            name="mb-drawer-size-xl"
+            :has-header="true"
+            :has-footer="true"
+          >
+            <template slot="header">
+              <p> Header Content </p>
+            </template>
+            <template slot="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </template>
+            <template slot="footer">
+              Footer
+            </template>
+          </mb-drawer>
+          <h4>MbDrawer :has-header="false"</h4>
+          <mb-button
+            @click="openDrawerHeader = true"
+            label="Open drawer"
+          ></mb-button>
+          <mb-drawer
+            :is-visible.sync="openDrawerHeader"
+            size="xl"
+            name="mb-drawer-footer"
+            :has-header="false"
+          >
+            <template slot="header">
+              <p> Header Content </p>
+            </template>
+            <template slot="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </template>
+            <template slot="footer">
+              Footer
+            </template>
+          </mb-drawer>
+          <h4>MbDrawer :has-footer="false"</h4>
+          <mb-button
+            @click="openDrawerFooter = true"
+            label="Open drawer"
+          ></mb-button>
+           <mb-drawer
+            :is-visible.sync="openDrawerFooter"
+            size="xl"
+            name="mb-drawer-footer"
+            :has-header="true"
+            :has-footer="false"
+          >
+            <template slot="header">
+              <p> Header Content </p>
+            </template>
+            <template slot="content">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </template>
+            <template slot="footer">
+              Footer
+            </template>
+          </mb-drawer>
+
+        </template>
+      </mb-panel>
+      </br>
+      <mb-panel
         name="doc-section-menu"
         title="MbMenu + MbMenuItem"
         type="card"
@@ -2152,6 +2637,7 @@ main {
           </mb-menu>
         </template>
       </mb-panel>
+      </br>
       <mb-panel
         name="doc-section-icon"
         title="MbIcon"
