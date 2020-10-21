@@ -157,7 +157,7 @@ export default {
       }
     }
     .mb-drawer-content {
-      max-height: calc(100vh - 150px);
+      max-height: 90vh;
       overflow-y: scroll;
       padding: $mb-space-s $mb-space-m;
     }
