@@ -110,7 +110,22 @@ export default Vue.extend({
       {
         _id: 'icons-doc11122',
         href: '#doc-section-icon',
-        menuItemContent: 'Icons'
+        menuItemContent: 'MbIcon [Testing]'
+      },
+      {
+        _id: 'buttons-doc11122',
+        href: '#doc-section-buttons',
+        menuItemContent: 'MbButton [Waiting]'
+      },
+      {
+        _id: 'panels-doc11122',
+        href: '#doc-section-panels',
+        menuItemContent: 'MbPanel [Testing]'
+      },
+      {
+        _id: 'menu-doc11122',
+        href: '#doc-section-menu',
+        menuItemContent: 'MbMenu [Testing]'
       }
     ],
     openModal: false,
@@ -415,19 +430,19 @@ main {
                 </td>
               </tr>
               <tr>
-                <td><a href="#section-icon">MbIcon</a></td>
+                <td><a href="#doc-section-icon">MbIcon</a></td>
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
-                    :avatar="ozgur"
+                    :avatar="marius"
                     type="user"
                     size="s"
                   ></mb-avatar>
                 </td>
                 <td>
                   <mb-chip
-                    label='Waiting'
-                    color='warning'
+                    label='Testing'
+                    color='lime'
                     size="s"
                   />
                 </td>
@@ -599,15 +614,15 @@ main {
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
-                    :avatar="ozgur"
+                    :avatar="marius"
                     type="user"
                     size="s"
                   ></mb-avatar>
                 </td>
                 <td>
                   <mb-chip
-                    label='Waiting'
-                    color='warning'
+                    label='Testing'
+                    color='lime'
                     size="s"
                   />
                 </td>
@@ -617,15 +632,15 @@ main {
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
-                    :avatar="ozgur"
+                    :avatar="marius"
                     type="user"
                     size="s"
                   ></mb-avatar>
                 </td>
                 <td>
                   <mb-chip
-                    label='Waiting'
-                    color='warning'
+                    label='Testing'
+                    color='lime'
                     size="s"
                   />
                 </td>
@@ -2059,31 +2074,7 @@ main {
         :icon-before="{name: 'icon-alert-remove-fill'}"
       />
       </section>
-      <section id="section-icon">
-        <h3>MbIcon</h3>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon name="icon-alert-warning-fill" />Size prop needs to be fixed
-            </template>
-          </mb-alert>
-        </p>
-        <mb-icon name="icon-user" />
-        <mb-icon name="icon-business-work" />
-        <mb-icon name="icon-mini-arrow" />
-        <mb-icon name="icon-close" />
-        <mb-icon name="icon-password" />
-        <mb-icon name="icon-search" />
-        <mb-icon name="icon-view" />
-        <mb-icon name="icon-hide" />
-        <mb-icon name="icon-call" />
-        <mb-icon name="icon-email" />
-        <mb-icon name="icon-alert-warning-fill" />
-        <mb-icon name="icon-radio" />
-        <mb-icon name="icon-radio-selected" />
-        <mb-icon name="icon-checkbox" />
-        <mb-icon name="icon-checkbox-selected" />
-      </section>
+
       <h2>In progress</h2>
 
       <mb-organization :currentWorkspace="currentWorkspace">
@@ -2141,6 +2132,38 @@ main {
               </tbody>
             </table>
           </div>
+          <h4>Icons with fill and stroke</h4>
+          <p>Exists a list of icons that have fill and stroke that should have different colors.</p>
+          <h6><strong>Icons that have stroke different that default color</strong></h6>
+          <p>To style them in different contexts you can use their name classes. </p>
+          <p>
+            <code>
+              <pre>
+                .mb-icon-name{
+                  .svg-stroke{
+                    stroke: $mb-color-white;
+                  }
+                }
+              </pre>
+            </code>
+          </p>
+          <p><small><strong>List of icons:</strong> .mb-icon-checkbox-selected, .mb-icon-alert-add-fill, .mb-icon-alert-danger-fill, .mb-icon-alert-delete-fill, .mb-icon-alert-error-fill, .mb-icon-alert-help-fill, .mb-icon-alert-info-fill, .mb-icon-alert-more-fill, .mb-icon-alert-remove-fill, .mb-icon-alert-success-fill, .mb-icon-alert-warning-fill, .mb-icon-mini-add,
+  .mb-icon-mini-delete, .mb-icon-mini-error, .mb-icon-mini-more, .mb-icon-mini-remove, .mb-icon-mini-success, .mb-icon-file-csv, .mb-icon-file-doc, .mb-icon-file-google-doc, .mb-icon-file-google-sheet, .mb-icon-file-google-slides, .mb-icon-file-json, .mb-icon-file-other, .mb-icon-file-pdf,  .mb-icon-file-ppt, .mb-icon-file-sql, .mb-icon-file-xls,
+  .mb-icon-file-xml, .mb-icon-file-zip </small></p>
+          <p><strong> Icons that have fill different that default color</strong></p>
+          <p> To style them in different contexts you can use their name classes. </p>
+          <p>
+            <code>
+              <pre>
+                .mb-icon-name{
+                  .svg-fill{
+                    fill: $mb-color-white;
+                  }
+                }
+              </pre>
+            </code>
+          </p>
+          <p><small><strong>List of icons:</strong>.mb-icon-checkbox,.mb-icon-radio </small></p>
           <h4>Icon sizes</h4>
           <div class="mb-icon-container">
             <mb-icon

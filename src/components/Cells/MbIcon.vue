@@ -1,5 +1,5 @@
 <template>
-  <i :class="['mb-icon',`mb-color-${color}`, `mb-size-${size}` ]">
+  <i :class="['mb-icon',`mb-size-${size}` ]">
     <component
       :height="wh"
       :width="wh"
