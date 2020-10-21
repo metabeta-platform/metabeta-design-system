@@ -1472,7 +1472,7 @@ main {
           priority='primary'
           size='l'
         />
-        <h4>Button with icon</h4>
+                <h4>Button with icon</h4>
         <p>Priority primary and color</p>
         <mb-button
           label='danger'
@@ -1765,6 +1765,299 @@ main {
           :icon-before="{name: 'icon-image'}"
         />
       </section>
+        <h4>Button with icon</h4>
+        <p>Priority primary and color</p>
+        <mb-button
+          label='danger'
+          priority='primary'
+          color='danger'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='success'
+          priority='primary'
+          color='success'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='warning'
+          priority='primary'
+          color='warning'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='info'
+          priority='primary'
+          color='info'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='note'
+          priority='primary'
+          color='note'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='blue'
+          priority='primary'
+          color='blue'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='red'
+          priority='primary'
+          color='red'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='green'
+          priority='primary'
+          color='green'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='orange'
+          priority='primary'
+          color='orange'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='cyan'
+          priority='primary'
+          color='cyan'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='yellow'
+          priority='primary'
+          color='yellow'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='indigo'
+          priority='primary'
+          color='indigo'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='purple'
+          priority='primary'
+          color='purple'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='pink'
+          priority='primary'
+          color='pink'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='teal'
+          priority='primary'
+          color='teal'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='lime'
+          priority='primary'
+          color='lime'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <p>Priority secondary and color</p>
+        <mb-button
+          label='danger'
+          priority='secondary'
+          color='danger'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='success'
+          priority='secondary'
+          color='success'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='warning'
+          priority='secondary'
+          color='warning'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='info'
+          priority='secondary'
+          color='info'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='note'
+          priority='secondary'
+          color='note'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='blue'
+          priority='secondary'
+          color='blue'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='red'
+          priority='secondary'
+          color='red'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='green'
+          priority='secondary'
+          color='green'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='orange'
+          priority='secondary'
+          color='orange'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='cyan'
+          priority='secondary'
+          color='cyan'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='yellow'
+          priority='secondary'
+          color='yellow'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='indigo'
+          priority='secondary'
+          color='indigo'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='purple'
+          priority='secondary'
+          color='purple'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='pink'
+          priority='secondary'
+          color='pink'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='teal'
+          priority='secondary'
+          color='teal'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='lime'
+          priority='secondary'
+          color='lime'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <p>Priority base and color</p>
+        <mb-button
+          label='danger'
+          priority='base'
+          color='danger'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='success'
+          priority='base'
+          color='success'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='warning'
+          priority='base'
+          color='warning'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='info'
+          priority='base'
+          color='info'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='note'
+          priority='base'
+          color='note'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='blue'
+          priority='base'
+          color='blue'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='red'
+          priority='base'
+          color='red'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='green'
+          priority='base'
+          color='green'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='orange'
+          priority='base'
+          color='orange'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='cyan'
+          priority='base'
+          color='cyan'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='yellow'
+          priority='base'
+          color='yellow'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='indigo'
+          priority='base'
+          color='indigo'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='purple'
+          priority='base'
+          color='purple'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='pink'
+          priority='base'
+          color='pink'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='teal'
+          priority='base'
+          color='teal'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+        <mb-button
+          label='lime'
+          priority='base'
+          color='lime'
+          :icon-before="{name: 'icon-alert-remove-fill'}"
+        />
+      </section>
       <section id="section-icon">
         <h3>MbIcon</h3>
         <p>
@@ -1857,7 +2150,7 @@ main {
             <small>size="s"</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill"  ize="m"/>
+            <mb-icon name="icon-utility-star-fill"  size="m"/>
             <small>size="m"</small>
           </div>
           <div class="mb-icon-container">

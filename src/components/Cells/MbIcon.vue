@@ -3,7 +3,7 @@
     <component
       :height="wh"
       :width="wh"
-      :viewBox="`0 0 ${wh} ${wh}`"
+      :viewBox="`0 0 16 16`"
       :is="iconComponent"
     />
   </i>
@@ -32,10 +32,6 @@ export default {
       type: String,
       default: 'm',
     },
-    color: {
-      type: String,
-      default: 'base',
-    }
   },
   computed: {
     iconComponent () {
