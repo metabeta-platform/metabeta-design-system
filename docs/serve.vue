@@ -805,25 +805,8 @@ main {
         </template>
       </mb-panel>
 
-      <h2>Ready for testing</h2>
 
-      <section id="section-menu">
-        <h3>MbMenu + MbMenuItem</h3>
-        <mb-menu
-          title="This is the menu title"
-          :items="items"
-          size="m"
-          flow="vertical"
-        >
-        </mb-menu>
-        <mb-menu
-          title="Horizontal flow, size l"
-          :items="menuItems"
-          size="l"
-          flow="horizontal"
-        >
-        </mb-menu>
-      </section>
+     
       <h2>Pre testing - Needs small fixez</h2>
       <section id="section-avatar">
         <h3>MbAvatar</h3>
@@ -2085,6 +2068,90 @@ main {
       <br />
 
       <h2>For documentation (Includes extra styling for proper layout)</h2>
+      <mb-panel
+        name="doc-section-menu"
+        title="MbMenu + MbMenuItem"
+        type="card"
+      >
+        <template slot="content">
+          <p>MbMenu offers a list of items, actions or functions that a user can access. It can be used in any type of container.</p>
+          <h4>How it works</h4>
+          <pre> <code> &lt;mb-menu title="Menu title" :items="MenuItems" size="m" flow="vertical" /&gt;</code></pre>
+          <div class="mb-props-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Props</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>title</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Is the title that will be displayed in menu heading</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>string</td>
+                  <td>m</td>
+                  <td>m, l</td>
+                  <td>Use for handlign the sizes of the menu items</td>
+                </tr>
+                <tr>
+                  <td>flow</td>
+                  <td>string</td>
+                  <td>vertical</td>
+                  <td>vertical, horizontal</td>
+                  <td>You can use for vertical or horizontal displaying of the items</td>
+                </tr>
+                <tr>
+                  <td>:items</td>
+                  <td>array</td>
+                  <td>none</td>
+                  <td>_id: 'string', href: 'string', menuItemContent: 'string', isDisabled: boolean</td>
+                  <td>Used for defigning the MbMenuItem, that includes the list of items and actions displayed in MbMenu</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        <h4>MbMenu sizes</h4>
+        <mb-menu
+          title="Size M"
+          :items="items"
+          size="m"
+          flow="vertical"
+        >
+        </mb-menu>
+        <mb-menu
+          title="Size L"
+          :items="menuItems"
+          size="l"
+          flow="vertical"
+        >
+        </mb-menu>
+        <h4>MbMenu flows</h4>
+        <mb-menu
+          title="Vertical Flow"
+          :items="items"
+          size="m"
+          flow="vertical"
+        >
+        </mb-menu>
+        <mb-menu
+          title="Horizontal Flow"
+          :items="menuItems"
+          size="m"
+          flow="horizontal"
+        >
+        </mb-menu>
+        </template>
+      </mb-panel>
       <mb-panel
         name="doc-section-icon"
         title="MbIcon"
