@@ -4,6 +4,7 @@
       :height="wh"
       :width="wh"
       :is="iconComponent"
+      viewBox="0 0 16 16"
     />
   </i>
 </template>

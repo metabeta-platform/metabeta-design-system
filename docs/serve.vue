@@ -1849,15 +1849,19 @@ main {
           </div>
           <h4>Icon sizes</h4>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill"  size="s"/>
+            <mb-icon name="icon-utility-star-fill" size="xs"/>
+            <small>size="xs"</small>
+          </div>
+          <div class="mb-icon-container">
+            <mb-icon name="icon-utility-star-fill" size="s"/>
             <small>size="s"</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill"  size="m" />
+            <mb-icon name="icon-utility-star-fill"  ize="m"/>
             <small>size="m"</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill"  size="l"/>
+            <mb-icon name="icon-utility-star-fill" size="l"/>
             <small>size="l"</small>
           </div>
           <h4>All Icons</h4>
