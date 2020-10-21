@@ -261,172 +261,6 @@ main {
   i {
     margin-right: $mb-space-xs;
   }
-  // .svg-stroke{
-  //   stroke:black!important;
-  // }
-  // .svg-fill{
-  //   fill:black!important;
-  // }
-  .mb-icon-checkbox {
-    .svg-fill {
-      fill: $mb-color-white;
-    }
-  }
-  .mb-icon-checkbox-selected {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-radio {
-    .svg-fill {
-      fill: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-add-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-danger-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-delete-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-error-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-help-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-info-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-more-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-remove-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-success-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-alert-warning-fill {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-mini-add {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-mini-delete {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-mini-error {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-mini-more {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-mini-remove {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-mini-success {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-csv {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-doc {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-google-doc {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-google-sheet {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-google-slides {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-json {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-other {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-pdf {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-ppt {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-sql {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-xls {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-xml {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
-  .mb-icon-file-zip {
-    .svg-stroke {
-      stroke: $mb-color-white;
-    }
-  }
 }
 </style> 
 
@@ -2015,15 +1849,15 @@ main {
           </div>
           <h4>Icon sizes</h4>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill" />
+            <mb-icon name="icon-utility-star-fill"  size="s"/>
             <small>size="s"</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill" />
+            <mb-icon name="icon-utility-star-fill"  size="m" />
             <small>size="m"</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill" />
+            <mb-icon name="icon-utility-star-fill"  size="l"/>
             <small>size="l"</small>
           </div>
           <h4>All Icons</h4>

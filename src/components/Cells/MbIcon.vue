@@ -1,5 +1,5 @@
 <template>
-  <i :class="['mb-icon',`mb-color-${color}`, `mb-size-${size}` ]">
+  <i :class="['mb-icon',`mb-size-${size}` ]">
     <component
       :height="wh"
       :width="wh"
@@ -30,10 +30,6 @@ export default {
     size: {
       type: String,
       default: 'm',
-    },
-    color: {
-      type: String,
-      default: 'base',
     }
   },
   computed: {
@@ -76,166 +72,45 @@ export default {
   .svg-fill {
     fill: $mb-color-gray;
   }
-  &.mb-color {
-    &-danger {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-danger;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-danger;
-      }
+  
+  .mb-icon-checkbox-selected,
+  .mb-icon-alert-add-fill,
+  .mb-icon-alert-danger-fill,
+  .mb-icon-alert-delete-fill,
+  .mb-icon-alert-error-fill,
+  .mb-icon-alert-help-fill,
+  .mb-icon-alert-info-fill,
+  .mb-icon-alert-more-fill,
+  .mb-icon-alert-remove-fill,
+  .mb-icon-alert-success-fill,
+  .mb-icon-alert-warning-fill,
+  .mb-icon-mini-add,
+  .mb-icon-mini-delete,
+  .mb-icon-mini-error,
+  .mb-icon-mini-more,
+  .mb-icon-mini-remove,
+  .mb-icon-mini-success,
+  .mb-icon-file-csv,
+  .mb-icon-file-doc,
+  .mb-icon-file-google-doc,
+  .mb-icon-file-google-sheet,
+  .mb-icon-file-google-slides,
+  .mb-icon-file-json,
+  .mb-icon-file-other,
+  .mb-icon-file-pdf,
+  .mb-icon-file-ppt,
+  .mb-icon-file-sql,
+  .mb-icon-file-xls,
+  .mb-icon-file-xml,
+  .mb-icon-file-zip {
+    .svg-stroke {
+      stroke: $mb-color-white;
     }
-    &-success {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-success;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-success;
-      }
-    }
-    &-warning {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-warning;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-warning;
-      }
-    }
-    &-info {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-info;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-info;
-      }
-    }
-    &-note {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-note;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-note;
-      }
-    }
-    &-blue {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-blue;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-blue;
-      }
-    }
-    &-red {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-red;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-red;
-      }
-    }
-    &-green {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-green;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-green;
-      }
-    }
-    &-orange {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-orange;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-orange;
-      }
-    }
-    &-cyan {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-cyan;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-cyan;
-      }
-    }
-    &-yellow {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-yellow;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-yellow;
-      }
-    }
-    &-indigo {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-indigo;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-indigo;
-      }
-    }
-    &-purple {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-purple;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-purple;
-      }
-    }
-    &-pink {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-pink;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-pink;
-      }
-    }
-    &-teal {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-teal;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-teal;
-      }
-    }
-    &-lime {
-      #svg-stroke,
-      .svg-stroke {
-        stroke: $mb-color-lime;
-      }
-      #svg-fill,
-      .svg-fill {
-        fill: $mb-color-lime;
-      }
+  }
+  .mb-icon-checkbox,
+  .mb-icon-radio{
+    .svg-fill {
+      fill: $mb-color-white;
     }
   }
 }

@@ -93,58 +93,60 @@ pre {
 }
 
 article {
-  p {
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l;
-  }
-
-  li {
-    font-size: $mb-font-size-l;
-    line-height: $mb-line-height-l;
-
-    &::before {
-      display: inline-block;
-      width: $mb-space-l;
-      margin-left: -$mb-space-xl;
-      text-align: center;
-      direction: rtl;
-      color: $mb-color-cyan;
+  &.mb-long-form{
+    p {
+      font-size: $mb-font-size-l;
+      line-height: $mb-line-height-l;
     }
-  }
-
-  ul {
-    padding-left: $mb-space-xl;
-
-    li::before {
-      content: "\2022";
-      font-size: $mb-font-size-m;
-    }
-  }
-
-  ol {
-    padding-left: $mb-space-xl;
-    list-style: none;
-    counter-reset: li;
 
     li {
-      counter-increment: li;
+      font-size: $mb-font-size-l;
+      line-height: $mb-line-height-l;
+
+      &::before {
+        display: inline-block;
+        width: $mb-space-l;
+        margin-left: -$mb-space-xl;
+        text-align: center;
+        direction: rtl;
+        color: $mb-color-cyan;
+      }
     }
 
-    li::before {
-      content: counter(li);
+    ul {
+      padding-left: $mb-space-xl;
+
+      li::before {
+        content: "\2022";
+        font-size: $mb-font-size-m;
+      }
     }
-  }
 
-  dl {}
+    ol {
+      padding-left: $mb-space-xl;
+      list-style: none;
+      counter-reset: li;
 
-  dt {
-    @include mb-label(l);
-    margin: $mb-space-m 0 $mb-space-s;
-  }
+      li {
+        counter-increment: li;
+      }
 
-  dd {
-    @include mb-text(l);
-    margin: 0 0 0.5em;
+      li::before {
+        content: counter(li);
+      }
+    }
+
+    dl {}
+
+    dt {
+      @include mb-label(l);
+      margin: $mb-space-m 0 $mb-space-s;
+    }
+
+    dd {
+      @include mb-text(l);
+      margin: 0 0 0.5em;
+    }
   }
 }
 
