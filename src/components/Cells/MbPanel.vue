@@ -4,14 +4,23 @@
       <header class="mb-header-title-bar">
         <h3 v-if="title.length > 0">{{title}}</h3>
       </header>
-      <section class="mb-header-content">
+      <section
+        class="mb-header-content"
+        v-if="hasHeaderSlot"
+      >
         <slot name="header"></slot>
       </section>
     </header>
-    <section class="mb-panel-content">
+    <section
+      class="mb-panel-content"
+      v-if="hasContent"
+    >
       <slot name="content"></slot>
     </section>
-    <footer class="mb-panel-footer">
+    <footer
+      class="mb-panel-footer"
+      v-if="hasFooterSlot"
+    >
       <slot name="footer"></slot>
     </footer>
   </article>
@@ -44,17 +53,17 @@ export default {
   },
   computed: {
     hasContent () {
-      return (!!this.$slots['content'] || !!this.$defaultSlots['content']);
+      return (!!this.$slots['content']);
     },
     hasHeaderSlot () {
-      return (!!this.$slots['header'] || !!this.$defaultSlots['header']) && this.hasHeader;
+      return !!this.$slots['header'] && this.hasHeader;
     },
     hasFooterSlot () {
-      return (!!this.$slots['footer'] || !!this.$defaultSlots['footer']) && this.hasFooter;
+      return !!this.$slots['footer'] && this.hasFooter;
     },
   },
   created () {
-    console.log(this);
+    console.log(this.$slots.header);
   }
 };
 
