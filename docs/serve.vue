@@ -110,7 +110,22 @@ export default Vue.extend({
       {
         _id: 'icons-doc11122',
         href: '#doc-section-icon',
-        menuItemContent: 'Icons'
+        menuItemContent: 'MbIcon [Testing]'
+      },
+      {
+        _id: 'buttons-doc11122',
+        href: '#doc-section-buttons',
+        menuItemContent: 'MbButton [Waiting]'
+      },
+      {
+        _id: 'panels-doc11122',
+        href: '#doc-section-panels',
+        menuItemContent: 'MbPanel [Testing]'
+      },
+      {
+        _id: 'menu-doc11122',
+        href: '#doc-section-menu',
+        menuItemContent: 'MbMenu [Testing]'
       }
     ],
     openModal: false,
@@ -415,19 +430,19 @@ main {
                 </td>
               </tr>
               <tr>
-                <td><a href="#section-icon">MbIcon</a></td>
+                <td><a href="#doc-section-icon">MbIcon</a></td>
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
-                    :avatar="ozgur"
+                    :avatar="marius"
                     type="user"
                     size="s"
                   ></mb-avatar>
                 </td>
                 <td>
                   <mb-chip
-                    label='Waiting'
-                    color='warning'
+                    label='Testing'
+                    color='lime'
                     size="s"
                   />
                 </td>
@@ -599,15 +614,15 @@ main {
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
-                    :avatar="ozgur"
+                    :avatar="marius"
                     type="user"
                     size="s"
                   ></mb-avatar>
                 </td>
                 <td>
                   <mb-chip
-                    label='Waiting'
-                    color='warning'
+                    label='Testing'
+                    color='lime'
                     size="s"
                   />
                 </td>
@@ -617,15 +632,15 @@ main {
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
-                    :avatar="ozgur"
+                    :avatar="marius"
                     type="user"
                     size="s"
                   ></mb-avatar>
                 </td>
                 <td>
                   <mb-chip
-                    label='Waiting'
-                    color='warning'
+                    label='Testing'
+                    color='lime'
                     size="s"
                   />
                 </td>
@@ -790,25 +805,8 @@ main {
         </template>
       </mb-panel>
 
-      <h2>Ready for testing</h2>
 
-      <section id="section-menu">
-        <h3>MbMenu + MbMenuItem</h3>
-        <mb-menu
-          title="This is the menu title"
-          :items="items"
-          size="m"
-          flow="vertical"
-        >
-        </mb-menu>
-        <mb-menu
-          title="Horizontal flow, size l"
-          :items="menuItems"
-          size="l"
-          flow="horizontal"
-        >
-        </mb-menu>
-      </section>
+     
       <h2>Pre testing - Needs small fixez</h2>
       <section id="section-avatar">
         <h3>MbAvatar</h3>
@@ -2059,31 +2057,7 @@ main {
         :icon-before="{name: 'icon-alert-remove-fill'}"
       />
       </section>
-      <section id="section-icon">
-        <h3>MbIcon</h3>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon name="icon-alert-warning-fill" />Size prop needs to be fixed
-            </template>
-          </mb-alert>
-        </p>
-        <mb-icon name="icon-user" />
-        <mb-icon name="icon-business-work" />
-        <mb-icon name="icon-mini-arrow" />
-        <mb-icon name="icon-close" />
-        <mb-icon name="icon-password" />
-        <mb-icon name="icon-search" />
-        <mb-icon name="icon-view" />
-        <mb-icon name="icon-hide" />
-        <mb-icon name="icon-call" />
-        <mb-icon name="icon-email" />
-        <mb-icon name="icon-alert-warning-fill" />
-        <mb-icon name="icon-radio" />
-        <mb-icon name="icon-radio-selected" />
-        <mb-icon name="icon-checkbox" />
-        <mb-icon name="icon-checkbox-selected" />
-      </section>
+
       <h2>In progress</h2>
 
       <mb-organization :currentWorkspace="currentWorkspace">
@@ -2094,6 +2068,90 @@ main {
       <br />
 
       <h2>For documentation (Includes extra styling for proper layout)</h2>
+      <mb-panel
+        name="doc-section-menu"
+        title="MbMenu + MbMenuItem"
+        type="card"
+      >
+        <template slot="content">
+          <p>MbMenu offers a list of items, actions or functions that a user can access. It can be used in any type of container.</p>
+          <h4>How it works</h4>
+          <pre> <code> &lt;mb-menu title="Menu title" :items="MenuItems" size="m" flow="vertical" /&gt;</code></pre>
+          <div class="mb-props-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Props</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>title</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Is the title that will be displayed in menu heading</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>string</td>
+                  <td>m</td>
+                  <td>m, l</td>
+                  <td>Use for handlign the sizes of the menu items</td>
+                </tr>
+                <tr>
+                  <td>flow</td>
+                  <td>string</td>
+                  <td>vertical</td>
+                  <td>vertical, horizontal</td>
+                  <td>You can use for vertical or horizontal displaying of the items</td>
+                </tr>
+                <tr>
+                  <td>:items</td>
+                  <td>array</td>
+                  <td>none</td>
+                  <td>_id: 'string', href: 'string', menuItemContent: 'string', isDisabled: boolean</td>
+                  <td>Used for defigning the MbMenuItem, that includes the list of items and actions displayed in MbMenu</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        <h4>MbMenu sizes</h4>
+        <mb-menu
+          title="Size M"
+          :items="items"
+          size="m"
+          flow="vertical"
+        >
+        </mb-menu>
+        <mb-menu
+          title="Size L"
+          :items="menuItems"
+          size="l"
+          flow="vertical"
+        >
+        </mb-menu>
+        <h4>MbMenu flows</h4>
+        <mb-menu
+          title="Vertical Flow"
+          :items="items"
+          size="m"
+          flow="vertical"
+        >
+        </mb-menu>
+        <mb-menu
+          title="Horizontal Flow"
+          :items="menuItems"
+          size="m"
+          flow="horizontal"
+        >
+        </mb-menu>
+        </template>
+      </mb-panel>
       <mb-panel
         name="doc-section-icon"
         title="MbIcon"
@@ -2141,6 +2199,38 @@ main {
               </tbody>
             </table>
           </div>
+          <h4>Icons with fill and stroke</h4>
+          <p>Exists a list of icons that have fill and stroke that should have different colors.</p>
+          <h6><strong>Icons that have stroke different that default color</strong></h6>
+          <p>To style them in different contexts you can use their name classes. </p>
+          <p>
+            <code>
+              <pre>
+                .mb-icon-name{
+                  .svg-stroke{
+                    stroke: $mb-color-white;
+                  }
+                }
+              </pre>
+            </code>
+          </p>
+          <p><small><strong>List of icons:</strong> .mb-icon-checkbox-selected, .mb-icon-alert-add-fill, .mb-icon-alert-danger-fill, .mb-icon-alert-delete-fill, .mb-icon-alert-error-fill, .mb-icon-alert-help-fill, .mb-icon-alert-info-fill, .mb-icon-alert-more-fill, .mb-icon-alert-remove-fill, .mb-icon-alert-success-fill, .mb-icon-alert-warning-fill, .mb-icon-mini-add,
+  .mb-icon-mini-delete, .mb-icon-mini-error, .mb-icon-mini-more, .mb-icon-mini-remove, .mb-icon-mini-success, .mb-icon-file-csv, .mb-icon-file-doc, .mb-icon-file-google-doc, .mb-icon-file-google-sheet, .mb-icon-file-google-slides, .mb-icon-file-json, .mb-icon-file-other, .mb-icon-file-pdf,  .mb-icon-file-ppt, .mb-icon-file-sql, .mb-icon-file-xls,
+  .mb-icon-file-xml, .mb-icon-file-zip </small></p>
+          <p><strong> Icons that have fill different that default color</strong></p>
+          <p> To style them in different contexts you can use their name classes. </p>
+          <p>
+            <code>
+              <pre>
+                .mb-icon-name{
+                  .svg-fill{
+                    fill: $mb-color-white;
+                  }
+                }
+              </pre>
+            </code>
+          </p>
+          <p><small><strong>List of icons:</strong>.mb-icon-checkbox,.mb-icon-radio </small></p>
           <h4>Icon sizes</h4>
           <div class="mb-icon-container">
             <mb-icon
