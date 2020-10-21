@@ -1074,7 +1074,7 @@ main {
       <section id="section-drawer">
         <h3>MbDrawer</h3>
         <mb-button
-          @click="openDrawer = !openDrawer"
+          @click="openDrawer = true"
           label="Open drawer"
         ></mb-button>
         <mb-drawer
@@ -1083,7 +1083,6 @@ main {
           name="mb-drawer-id"
           :has-header="true"
           :has-footer="true"
-          @on-close="openDrawer = false"
         >
           <template slot="header">
             <p> Header Content </p>

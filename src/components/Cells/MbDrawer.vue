@@ -39,6 +39,9 @@
 <script>
 export default {
   name: 'MbIcon',
+  data: () => ({
+    drawerVisibility: false,
+  }),
   props: {
     isVisible: {
       type: Boolean,
@@ -70,28 +73,23 @@ export default {
   },
   watch: {
     isVisible (val) {
+      console.log(val);
       if (val) {
         document.body.style.setProperty('overflow', 'hidden');
+        this.drawerVisibility = true;
       }
       else {
         document.body.style.removeProperty('overflow', 'hidden');
+        this.drawerVisibility = false;
       }
+    },
+    drawerVisibility (val) {
+      this.$emit('update:isVisible', this.drawerVisibility);
     }
   },
   components: {
     MbButton: () => import('@/components/cells/MbButton'),
   },
-  computed: {
-
-    drawerVisibility: {
-      get () {
-        return this.isVisible;
-      },
-      set (value) {
-        this.isVisible = value;
-      }
-    }
-  }
 }
 </script>
 
