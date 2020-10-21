@@ -123,9 +123,14 @@ export default Vue.extend({
         menuItemContent: 'MbPanel [Testing]'
       },
        {
-        _id: 'panels-doc11122',
+        _id: 'drawer-doc11122',
         href: '#doc-section-drawer',
         menuItemContent: 'MbDrawer [Testing]'
+      },
+      {
+        _id: 'modal-doc11122',
+        href: '#doc-section-modal',
+        menuItemContent: 'MbModal [Testing]'
       },
       {
         _id: 'menu-doc11122',
@@ -133,7 +138,12 @@ export default Vue.extend({
         menuItemContent: 'MbMenu [Testing]'
       }
     ],
-    openModal: false,
+    openModalS: false,
+    openModalM: false,
+    openModalL: false,
+    openModalXl: false,
+    openModalFooter: false,
+    openModalHeader: false,
     openDrawerS: false,
     openDrawerM: false,
     openDrawerL: false,
@@ -1053,34 +1063,7 @@ main {
           </ul>
         </div>
       </section>
-      <section id="section-modal">
-        <h3>MbModal</h3>
-        <mb-button
-          tooltip="'top'"
-          @click="openModal = !openModal"
-          label="Open modal"
-        >
-          <template slot="tooltip">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </template>
-        </mb-button>
-        <mb-modal
-          name="modal-id"
-          title="Modal title"
-          :is-visible="openModal"
-          size="s"
-        >
-          <template slot="header">
-            Header content
-          </template>
-          <template slot="content">
-            Main content
-          </template>
-          <template slot="footer">
-            Footer content
-          </template>
-        </mb-modal>
-      </section>
+     
     
       <section id="section-button">
         <h3>MbButton</h3>
@@ -2156,6 +2139,193 @@ main {
       </mb-panel>
       </br>
       <mb-panel
+        name="doc-section-Modal"
+        title="MbModal"
+        type="card"
+      >
+        <template slot="content">
+          <p>MbModal it is used to focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.</p>
+          <h4>How it works</h4>
+          <pre> <code> &lt;mb-modal name="modal-name" size="m" :has-header="true" :has-footer="true" /&gt;</code></pre>
+          <div class="mb-props-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Props</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>title</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Adds a title to the modal</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Renders in markup the id of the modal</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>string</td>
+                  <td>m</td>
+                  <td>s, m, l, xl</td>
+                  <td>Handles the width of the modal</td>
+                </tr>
+                <tr>
+                  <td>:has-header</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>true, false</td>
+                  <td>Used for when you want to hide the header slot of the modal</td>
+                </tr>
+                <tr>
+                  <td>:has-footer</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>true, false</td>
+                  <td>Used for when you want to hide the footer slot of the modal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>MbModal sizes</h4>
+          <mb-button
+            @click="openModalS = !openModalS"
+            label="Open modal size s"
+          />
+           <mb-button
+            @click="openModalM = !openModalM"
+            label="Open modal size m"
+          />
+           <mb-button
+            @click="openModalL = !openModalL"
+            label="Open modal size l"
+          />
+           <mb-button
+            @click="openModalXl = !openModalXl"
+            label="Open modal size xl"
+          />
+          <mb-modal
+            name="modal-s"
+            title="Modal title"
+            :is-visible="openModalS"
+            size="s"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <mb-modal
+            name="modal-m"
+            title="Modal title"
+            :is-visible="openModalM"
+            size="m"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <mb-modal
+            name="modal-l"
+            title="Modal title"
+            :is-visible="openModalL"
+            size="l"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <mb-modal
+            name="modal-xl"
+            title="Modal title"
+            :is-visible="openModalXl"
+            size="xl"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <h4>MbModal :has-header="false"</h4>
+          <mb-button
+            @click="openModalHeader = !openModalHeader"
+            label="Open modal"
+          />
+           <mb-modal
+            name="modal-header"
+            title="Modal title"
+            :is-visible="openModalHeader"
+            :has-header="false"
+            size="l"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+          <h4>MbModal :has-footer="false" </h4>
+           <mb-button
+            @click="openModalFooter = !openModalFooter"
+            label="Open modal"
+          />
+           <mb-modal
+            name="modal-footer"
+            title="Modal title"
+            :is-visible="openModalFooter"
+            :has-footer="false"
+            size="l"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-modal>
+        </template>
+      </mb-panel>
+      <br/>
+      <mb-panel
         name="doc-section-drawer"
         title="MbDrawer"
         type="card"
@@ -2163,7 +2333,7 @@ main {
         <template slot="content">
           <p>MbDrawer is a panel that is typically overlaid on top of a page and slides in from the side. It contains a set of information or actions. Since the user can interact with the Drawer without leaving the current page, tasks can be achieved more efficiently within the same context.</p>
           <h4>How it works</h4>
-          <pre> <code> &lt;mb-drawer name="drawer-name" size="l" /&gt;</code></pre>
+          <pre> <code> &lt;mb-drawer name="drawer-name" size="l" :has-header="true" :has-footer="true" /&gt;</code></pre>
           <div class="mb-props-table">
             <table>
               <thead>
