@@ -2064,8 +2064,155 @@ main {
       <mb-tabs :tabs="tabs">
       </mb-tabs>
       <br />
-
+      
       <h2>For documentation (Includes extra styling for proper layout)</h2>
+      <mb-panel
+        name="doc-section-panels"
+        title="MbPanel"
+        type="card"
+      >
+        <template slot="content">
+          <p>Panel description</p>
+          <h4>How it works</h4>
+          <pre> 
+            <code> 
+              &lt;mb-panel title="Panel title" type="card" :has-header="true" :has-footer="true" &gt;
+                &lt;template slot="header">
+                  Any type of content
+                &lt;/template&gt;
+                &lt;template slot="content">
+                  Any type of content
+                &lt;/template&gt;
+                &lt;template slot="footer">
+                  Any type of content
+                &lt;/template&gt;
+              &lt;/mb-panel&gt;
+            </code>
+          </pre>
+          <div class="mb-props-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Props</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Options</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>title</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>none</td>
+                    <td>Adds a title to the panel</td>
+                  </tr>
+                  <tr>
+                    <td>name</td>
+                    <td>string</td>
+                    <td>none</td>
+                    <td>none</td>
+                    <td>Renders in markup the id of the panel</td>
+                  </tr>
+                  <tr>
+                    <td>type</td>
+                    <td>string</td>
+                    <td>base</td>
+                    <td>base, card</td>
+                    <td>It is used for styling the panel</td>
+                  </tr>
+                  <tr>
+                    <td>:has-header</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>true, false</td>
+                    <td>Used for when you want to hide the header slot of the panel</td>
+                  </tr>
+                  <tr>
+                    <td>:has-footer</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>true, false</td>
+                    <td>Used for when you want to hide the footer slot of the panel</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>MbPanel type</h4>
+            <h6>Card</h6>
+            <mb-panel
+              title="Panel card"
+              type="card"
+              name="panel-title"
+              :has-header="true"
+              :has-footer="true"
+            >
+              <template slot="header">
+                Header content
+              </template>
+              <template slot="content">
+                Main content
+              </template>
+              <template slot="footer">
+                Footer content
+              </template>
+            </mb-panel>
+            <h6>Base</h6>
+            <mb-panel
+              title="Panel base"
+              type="base"
+              name="panel-title"
+              :has-header="true"
+              :has-footer="true"
+            >
+              <template slot="header">
+                Header content
+              </template>
+              <template slot="content">
+                Main content
+              </template>
+              <template slot="footer">
+                Footer content
+              </template>
+            </mb-panel>
+            <h4>MbPanel :has-header="false" </h4>
+            <mb-panel
+              type="base"
+              title="Panel Title"
+              name="panel-title-2"
+              :has-header="false"
+            >
+              <template slot="header">
+                Header content
+              </template>
+              <template slot="content">
+                Main content
+              </template>
+              <template slot="footer">
+                Footer content
+              </template>
+            </mb-panel>
+            <h4>MbPanel :has-footer="false" </h4>
+            <mb-panel
+              title="Panel Title"
+              type="base"
+              name="panel-title-2"
+              :has-footer="false"
+            >
+              <template slot="header">
+                Header content
+              </template>
+              <template slot="content">
+                Main content
+              </template>
+              <template slot="footer">
+                Footer content
+              </template>
+            </mb-panel>
+        </template>
+      </mb-panel>
+      </br>
       <mb-panel
         name="doc-section-menu"
         title="MbMenu + MbMenuItem"
@@ -2150,6 +2297,7 @@ main {
           </mb-menu>
         </template>
       </mb-panel>
+      </br>
       <mb-panel
         name="doc-section-icon"
         title="MbIcon"
