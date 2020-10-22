@@ -122,7 +122,7 @@ export default Vue.extend({
         href: '#doc-section-panels',
         menuItemContent: 'MbPanel [Testing]'
       },
-       {
+      {
         _id: 'drawer-doc11122',
         href: '#doc-section-drawer',
         menuItemContent: 'MbDrawer [Testing]'
@@ -841,6 +841,7 @@ main {
         <mb-avatar
           :avatar="noUrl"
           only-image
+          tooltip="right"
           type="user"
           size="l"
         ></mb-avatar>
@@ -1063,9 +1064,6 @@ main {
           </ul>
         </div>
       </section>
-     
-    
-      
 
       <h2>In progress</h2>
 
@@ -1080,7 +1078,7 @@ main {
       <mb-panel
         id="doc-section-buttons"
         type="card"
-        >
+      >
         <template slot="content">
           <p>
             <mb-alert color="warning">
@@ -1130,17 +1128,17 @@ main {
           <mb-button
             label='base disabled'
             priority='base'
-            isDisabled="true"
+            :is-disabled="true"
           />
           <mb-button
             label='secondary disabled'
             priority='secondary'
-            isDisabled="true"
+            :is-disabled="true"
           />
           <mb-button
             label='primary disabled'
             priority='primary'
-            isDisabled="true"
+            :is-disabled="true"
           />
           <h4>Colors</h4>
           <h6>priority="primary" and color=""</h6>
@@ -1422,615 +1420,615 @@ main {
           />
           <h4>Button with icon</h4>
           <h6>icon-before="icon-name"</h6>
-            <mb-button
-              label='icon-format-image'
-              priority='primary'
-              :icon-before="{name: 'icon-format-image'}"
-            />
+          <mb-button
+            label='icon-format-image'
+            priority='primary'
+            :icon-before="{name: 'icon-format-image'}"
+          />
           <h6>icon-after="icon-name"</h6>
-            <mb-button
+          <mb-button
             label='icon-format-image'
             priority='primary'
             :icon-after="{name: 'icon-format-image'}"
+          />
+          <h6>priority="primary" and color=""</h6>
+          <mb-button
+            label='danger'
+            priority='primary'
+            color='danger'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='success'
+            priority='primary'
+            color='success'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='warning'
+            priority='primary'
+            color='warning'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='info'
+            priority='primary'
+            color='info'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='note'
+            priority='primary'
+            color='note'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='blue'
+            priority='primary'
+            color='blue'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='red'
+            priority='primary'
+            color='red'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='green'
+            priority='primary'
+            color='green'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='orange'
+            priority='primary'
+            color='orange'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='cyan'
+            priority='primary'
+            color='cyan'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='yellow'
+            priority='primary'
+            color='yellow'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='indigo'
+            priority='primary'
+            color='indigo'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='purple'
+            priority='primary'
+            color='purple'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='pink'
+            priority='primary'
+            color='pink'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='teal'
+            priority='primary'
+            color='teal'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='lime'
+            priority='primary'
+            color='lime'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <h6>priority="secondary" and color=""</h6>
+          <mb-button
+            label='danger'
+            priority='secondary'
+            color='danger'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='success'
+            priority='secondary'
+            color='success'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='warning'
+            priority='secondary'
+            color='warning'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='info'
+            priority='secondary'
+            color='info'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='note'
+            priority='secondary'
+            color='note'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='blue'
+            priority='secondary'
+            color='blue'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='red'
+            priority='secondary'
+            color='red'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='green'
+            priority='secondary'
+            color='green'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='orange'
+            priority='secondary'
+            color='orange'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='cyan'
+            priority='secondary'
+            color='cyan'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='yellow'
+            priority='secondary'
+            color='yellow'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='indigo'
+            priority='secondary'
+            color='indigo'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='purple'
+            priority='secondary'
+            color='purple'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='pink'
+            priority='secondary'
+            color='pink'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='teal'
+            priority='secondary'
+            color='teal'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='lime'
+            priority='secondary'
+            color='lime'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <h6>priority="base" and color=""</h6>
+          <mb-button
+            label='danger'
+            priority='base'
+            color='danger'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='success'
+            priority='base'
+            color='success'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='warning'
+            priority='base'
+            color='warning'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='info'
+            priority='base'
+            color='info'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='note'
+            priority='base'
+            color='note'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='blue'
+            priority='base'
+            color='blue'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='red'
+            priority='base'
+            color='red'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='green'
+            priority='base'
+            color='green'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='orange'
+            priority='base'
+            color='orange'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='cyan'
+            priority='base'
+            color='cyan'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='yellow'
+            priority='base'
+            color='yellow'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='indigo'
+            priority='base'
+            color='indigo'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='purple'
+            priority='base'
+            color='purple'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='pink'
+            priority='base'
+            color='pink'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='teal'
+            priority='base'
+            color='teal'
+            :icon-before="{name: 'icon-image'}"
+          />
+          <mb-button
+            label='lime'
+            priority='base'
+            color='lime'
+            :icon-before="{name: 'icon-image'}"
+          />
+          </section>
+          <section>
+            <h4>Buttons with icon that have 2 colors</h4>
+            <h6>priority="primary" and color=""</h6>
+            <mb-button
+              label='danger'
+              priority='primary'
+              color='danger'
+              :icon-before="{name: 'icon-alert-success-fill'}"
             />
-          <h6>priority="primary" and color=""</h6>
-          <mb-button
-            label='danger'
-            priority='primary'
-            color='danger'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='success'
-            priority='primary'
-            color='success'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='warning'
-            priority='primary'
-            color='warning'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='info'
-            priority='primary'
-            color='info'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='note'
-            priority='primary'
-            color='note'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='blue'
-            priority='primary'
-            color='blue'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='red'
-            priority='primary'
-            color='red'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='green'
-            priority='primary'
-            color='green'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='orange'
-            priority='primary'
-            color='orange'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='cyan'
-            priority='primary'
-            color='cyan'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='yellow'
-            priority='primary'
-            color='yellow'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='indigo'
-            priority='primary'
-            color='indigo'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='purple'
-            priority='primary'
-            color='purple'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='pink'
-            priority='primary'
-            color='pink'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='teal'
-            priority='primary'
-            color='teal'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='lime'
-            priority='primary'
-            color='lime'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <h6>priority="secondary" and color=""</h6>
-          <mb-button
-            label='danger'
-            priority='secondary'
-            color='danger'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='success'
-            priority='secondary'
-            color='success'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='warning'
-            priority='secondary'
-            color='warning'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='info'
-            priority='secondary'
-            color='info'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='note'
-            priority='secondary'
-            color='note'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='blue'
-            priority='secondary'
-            color='blue'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='red'
-            priority='secondary'
-            color='red'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='green'
-            priority='secondary'
-            color='green'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='orange'
-            priority='secondary'
-            color='orange'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='cyan'
-            priority='secondary'
-            color='cyan'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='yellow'
-            priority='secondary'
-            color='yellow'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='indigo'
-            priority='secondary'
-            color='indigo'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='purple'
-            priority='secondary'
-            color='purple'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='pink'
-            priority='secondary'
-            color='pink'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='teal'
-            priority='secondary'
-            color='teal'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='lime'
-            priority='secondary'
-            color='lime'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <h6>priority="base" and color=""</h6>
-          <mb-button
-            label='danger'
-            priority='base'
-            color='danger'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='success'
-            priority='base'
-            color='success'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='warning'
-            priority='base'
-            color='warning'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='info'
-            priority='base'
-            color='info'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='note'
-            priority='base'
-            color='note'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='blue'
-            priority='base'
-            color='blue'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='red'
-            priority='base'
-            color='red'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='green'
-            priority='base'
-            color='green'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='orange'
-            priority='base'
-            color='orange'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='cyan'
-            priority='base'
-            color='cyan'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='yellow'
-            priority='base'
-            color='yellow'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='indigo'
-            priority='base'
-            color='indigo'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='purple'
-            priority='base'
-            color='purple'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='pink'
-            priority='base'
-            color='pink'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='teal'
-            priority='base'
-            color='teal'
-            :icon-before="{name: 'icon-image'}"
-          />
-          <mb-button
-            label='lime'
-            priority='base'
-            color='lime'
-            :icon-before="{name: 'icon-image'}"
-          />
-        </section>
-        <section>
-          <h4>Buttons with icon that have 2 colors</h4>
-          <h6>priority="primary" and color=""</h6>
-          <mb-button
-            label='danger'
-            priority='primary'
-            color='danger'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='success'
-            priority='primary'
-            color='success'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='warning'
-            priority='primary'
-            color='warning'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='info'
-            priority='primary'
-            color='info'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='note'
-            priority='primary'
-            color='note'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='blue'
-            priority='primary'
-            color='blue'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='red'
-            priority='primary'
-            color='red'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='green'
-            priority='primary'
-            color='green'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='orange'
-            priority='primary'
-            color='orange'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='cyan'
-            priority='primary'
-            color='cyan'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='yellow'
-            priority='primary'
-            color='yellow'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='indigo'
-            priority='primary'
-            color='indigo'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='purple'
-            priority='primary'
-            color='purple'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='pink'
-            priority='primary'
-            color='pink'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='teal'
-            priority='primary'
-            color='teal'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='lime'
-            priority='primary'
-            color='lime'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <h6>priority="secondary" and color=""</h6>
-          <mb-button
-            label='danger'
-            priority='secondary'
-            color='danger'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='success'
-            priority='secondary'
-            color='success'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='warning'
-            priority='secondary'
-            color='warning'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='info'
-            priority='secondary'
-            color='info'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='note'
-            priority='secondary'
-            color='note'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='blue'
-            priority='secondary'
-            color='blue'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='red'
-            priority='secondary'
-            color='red'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='green'
-            priority='secondary'
-            color='green'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='orange'
-            priority='secondary'
-            color='orange'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='cyan'
-            priority='secondary'
-            color='cyan'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='yellow'
-            priority='secondary'
-            color='yellow'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='indigo'
-            priority='secondary'
-            color='indigo'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='purple'
-            priority='secondary'
-            color='purple'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='pink'
-            priority='secondary'
-            color='pink'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='teal'
-            priority='secondary'
-            color='teal'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='lime'
-            priority='secondary'
-            color='lime'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <h6>priority="base" and color=""</h6>
-          <mb-button
-            label='danger'
-            priority='base'
-            color='danger'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='success'
-            priority='base'
-            color='success'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='warning'
-            priority='base'
-            color='warning'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='info'
-            priority='base'
-            color='info'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='note'
-            priority='base'
-            color='note'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='blue'
-            priority='base'
-            color='blue'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='red'
-            priority='base'
-            color='red'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='green'
-            priority='base'
-            color='green'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='orange'
-            priority='base'
-            color='orange'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='cyan'
-            priority='base'
-            color='cyan'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='yellow'
-            priority='base'
-            color='yellow'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='indigo'
-            priority='base'
-            color='indigo'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='purple'
-            priority='base'
-            color='purple'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='pink'
-            priority='base'
-            color='pink'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='teal'
-            priority='base'
-            color='teal'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            label='lime'
-            priority='base'
-            color='lime'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <h6>icon without label</h6>
-          <mb-button
-            priority='primary'
-            :icon-before="{name: 'icon-alert-success-fill'}"
-          />
-          <mb-button
-            priority='primary'
-            :icon-after="{name: 'icon-alert-success-fill'}"
-          />
+            <mb-button
+              label='success'
+              priority='primary'
+              color='success'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='warning'
+              priority='primary'
+              color='warning'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='info'
+              priority='primary'
+              color='info'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='note'
+              priority='primary'
+              color='note'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='blue'
+              priority='primary'
+              color='blue'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='red'
+              priority='primary'
+              color='red'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='green'
+              priority='primary'
+              color='green'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='orange'
+              priority='primary'
+              color='orange'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='cyan'
+              priority='primary'
+              color='cyan'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='yellow'
+              priority='primary'
+              color='yellow'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='indigo'
+              priority='primary'
+              color='indigo'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='purple'
+              priority='primary'
+              color='purple'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='pink'
+              priority='primary'
+              color='pink'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='teal'
+              priority='primary'
+              color='teal'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='lime'
+              priority='primary'
+              color='lime'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <h6>priority="secondary" and color=""</h6>
+            <mb-button
+              label='danger'
+              priority='secondary'
+              color='danger'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='success'
+              priority='secondary'
+              color='success'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='warning'
+              priority='secondary'
+              color='warning'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='info'
+              priority='secondary'
+              color='info'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='note'
+              priority='secondary'
+              color='note'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='blue'
+              priority='secondary'
+              color='blue'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='red'
+              priority='secondary'
+              color='red'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='green'
+              priority='secondary'
+              color='green'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='orange'
+              priority='secondary'
+              color='orange'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='cyan'
+              priority='secondary'
+              color='cyan'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='yellow'
+              priority='secondary'
+              color='yellow'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='indigo'
+              priority='secondary'
+              color='indigo'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='purple'
+              priority='secondary'
+              color='purple'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='pink'
+              priority='secondary'
+              color='pink'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='teal'
+              priority='secondary'
+              color='teal'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='lime'
+              priority='secondary'
+              color='lime'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <h6>priority="base" and color=""</h6>
+            <mb-button
+              label='danger'
+              priority='base'
+              color='danger'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='success'
+              priority='base'
+              color='success'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='warning'
+              priority='base'
+              color='warning'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='info'
+              priority='base'
+              color='info'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='note'
+              priority='base'
+              color='note'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='blue'
+              priority='base'
+              color='blue'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='red'
+              priority='base'
+              color='red'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='green'
+              priority='base'
+              color='green'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='orange'
+              priority='base'
+              color='orange'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='cyan'
+              priority='base'
+              color='cyan'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='yellow'
+              priority='base'
+              color='yellow'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='indigo'
+              priority='base'
+              color='indigo'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='purple'
+              priority='base'
+              color='purple'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='pink'
+              priority='base'
+              color='pink'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='teal'
+              priority='base'
+              color='teal'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              label='lime'
+              priority='base'
+              color='lime'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <h6>icon without label</h6>
+            <mb-button
+              priority='primary'
+              :icon-before="{name: 'icon-alert-success-fill'}"
+            />
+            <mb-button
+              priority='primary'
+              :icon-after="{name: 'icon-alert-success-fill'}"
+            />
           </section>
         </template>
       </mb-panel>
-      <br/>
+      <br />
       <mb-panel
         id="doc-section-panel"
         title="MbPanel"
@@ -2039,7 +2037,7 @@ main {
         <template slot="content">
           <p>Panel description</p>
           <h4>How it works</h4>
-          <pre> 
+          <pre>
             <code> 
               &lt;mb-panel title="Panel title" type="card" :has-header="true" :has-footer="true" &gt;
                 &lt;template slot="header">
@@ -2055,126 +2053,126 @@ main {
             </code>
           </pre>
           <div class="mb-props-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Props</th>
-                    <th>Type</th>
-                    <th>Default</th>
-                    <th>Options</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>title</td>
-                    <td>string</td>
-                    <td>none</td>
-                    <td>none</td>
-                    <td>Adds a title to the panel</td>
-                  </tr>
-                  <tr>
-                    <td>name</td>
-                    <td>string</td>
-                    <td>none</td>
-                    <td>none</td>
-                    <td>Renders in markup the id of the panel</td>
-                  </tr>
-                  <tr>
-                    <td>type</td>
-                    <td>string</td>
-                    <td>base</td>
-                    <td>base, card</td>
-                    <td>It is used for styling the panel</td>
-                  </tr>
-                  <tr>
-                    <td>:has-header</td>
-                    <td>boolean</td>
-                    <td>true</td>
-                    <td>true, false</td>
-                    <td>Used for when you want to hide the header slot of the panel</td>
-                  </tr>
-                  <tr>
-                    <td>:has-footer</td>
-                    <td>boolean</td>
-                    <td>true</td>
-                    <td>true, false</td>
-                    <td>Used for when you want to hide the footer slot of the panel</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <h4>MbPanel type</h4>
-            <h6>Card</h6>
-            <mb-panel
-              title="Panel card"
-              type="card"
-              name="panel-title"
-              :has-header="true"
-              :has-footer="true"
-            >
-              <template slot="header">
-                Header content
-              </template>
-              <template slot="content">
-                Main content
-              </template>
-              <template slot="footer">
-                Footer content
-              </template>
-            </mb-panel>
-            <h6>Base</h6>
-            <mb-panel
-              title="Panel base"
-              type="base"
-              name="panel-title"
-              :has-header="true"
-              :has-footer="true"
-            >
-              <template slot="header">
-                Header content
-              </template>
-              <template slot="content">
-                Main content
-              </template>
-              <template slot="footer">
-                Footer content
-              </template>
-            </mb-panel>
-            <h4>MbPanel :has-header="false" </h4>
-            <mb-panel
-              type="base"
-              title="Panel Title"
-              name="panel-title-2"
-              :has-header="false"
-            >
-              <template slot="header">
-                Header content
-              </template>
-              <template slot="content">
-                Main content
-              </template>
-              <template slot="footer">
-                Footer content
-              </template>
-            </mb-panel>
-            <h4>MbPanel :has-footer="false" </h4>
-            <mb-panel
-              title="Panel Title"
-              type="base"
-              name="panel-title-2"
-              :has-footer="false"
-            >
-              <template slot="header">
-                Header content
-              </template>
-              <template slot="content">
-                Main content
-              </template>
-              <template slot="footer">
-                Footer content
-              </template>
-            </mb-panel>
+            <table>
+              <thead>
+                <tr>
+                  <th>Props</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>title</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Adds a title to the panel</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>none</td>
+                  <td>Renders in markup the id of the panel</td>
+                </tr>
+                <tr>
+                  <td>type</td>
+                  <td>string</td>
+                  <td>base</td>
+                  <td>base, card</td>
+                  <td>It is used for styling the panel</td>
+                </tr>
+                <tr>
+                  <td>:has-header</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>true, false</td>
+                  <td>Used for when you want to hide the header slot of the panel</td>
+                </tr>
+                <tr>
+                  <td>:has-footer</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>true, false</td>
+                  <td>Used for when you want to hide the footer slot of the panel</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>MbPanel type</h4>
+          <h6>Card</h6>
+          <mb-panel
+            title="Panel card"
+            type="card"
+            name="panel-title"
+            :has-header="true"
+            :has-footer="true"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-panel>
+          <h6>Base</h6>
+          <mb-panel
+            title="Panel base"
+            type="base"
+            name="panel-title"
+            :has-header="true"
+            :has-footer="true"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-panel>
+          <h4>MbPanel :has-header="false" </h4>
+          <mb-panel
+            type="base"
+            title="Panel Title"
+            name="panel-title-2"
+            :has-header="false"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-panel>
+          <h4>MbPanel :has-footer="false" </h4>
+          <mb-panel
+            title="Panel Title"
+            type="base"
+            name="panel-title-2"
+            :has-footer="false"
+          >
+            <template slot="header">
+              Header content
+            </template>
+            <template slot="content">
+              Main content
+            </template>
+            <template slot="footer">
+              Footer content
+            </template>
+          </mb-panel>
         </template>
       </mb-panel>
       </br>
@@ -2242,15 +2240,15 @@ main {
             @click="openModalS = !openModalS"
             label="Open modal size s"
           />
-           <mb-button
+          <mb-button
             @click="openModalM = !openModalM"
             label="Open modal size m"
           />
-           <mb-button
+          <mb-button
             @click="openModalL = !openModalL"
             label="Open modal size l"
           />
-           <mb-button
+          <mb-button
             @click="openModalXl = !openModalXl"
             label="Open modal size xl"
           />
@@ -2323,7 +2321,7 @@ main {
             @click="openModalHeader = !openModalHeader"
             label="Open modal"
           />
-           <mb-modal
+          <mb-modal
             name="modal-header"
             title="Modal title"
             :is-visible="openModalHeader"
@@ -2341,11 +2339,11 @@ main {
             </template>
           </mb-modal>
           <h4>MbModal :has-footer="false" </h4>
-           <mb-button
+          <mb-button
             @click="openModalFooter = !openModalFooter"
             label="Open modal"
           />
-           <mb-modal
+          <mb-modal
             name="modal-footer"
             title="Modal title"
             :is-visible="openModalFooter"
@@ -2364,7 +2362,7 @@ main {
           </mb-modal>
         </template>
       </mb-panel>
-      <br/>
+      <br />
       <mb-panel
         id="doc-section-drawer"
         title="MbDrawer"
@@ -2563,7 +2561,7 @@ main {
             @click="openDrawerFooter = true"
             label="Open drawer"
           ></mb-button>
-           <mb-drawer
+          <mb-drawer
             :is-visible.sync="openDrawerFooter"
             size="xl"
             name="mb-drawer-footer"
@@ -3571,7 +3569,10 @@ main {
             <small>icon-mini-filter</small>
           </div>
           <div class="mb-icon-container">
-            <mb-icon name="icon-mini-heart"  size="xs"/>
+            <mb-icon
+              name="icon-mini-heart"
+              size="xs"
+            />
             <small>icon-mini-heart</small>
           </div>
           <div class="mb-icon-container">

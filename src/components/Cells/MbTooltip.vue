@@ -46,13 +46,25 @@ export default {
   }
   &.mb-placement {
     &-top {
-      bottom: 100%;
+      bottom: calc(100% + 3px);
       left: 50%;
       transform: translateX(-50%);
       @include mb-border-radius(xxs);
+      .mb-tooltip-content::after {
+        content: "";
+        position: absolute;
+        @include mb-border-radius(xxs);
+        width: 10px;
+        height: 10px;
+        left: 50%;
+        bottom: 0;
+        background-color: inherit;
+        transform: rotate(45deg) translateX(-50%);
+        background: rgba($mb-color-black, $mb-opacity-xxl);
+      }
     }
     &-top-left {
-      bottom: calc(100% + 2px);
+      bottom: calc(100% + 3px);
       left: 0;
       .mb-tooltip-content::after {
         content: "";
@@ -84,19 +96,55 @@ export default {
       }
     }
     &-bottom {
-      top: 100%;
+      top: calc(100% + 2px);
       left: 50%;
       transform: translateX(-50%);
+      .mb-tooltip-content::after {
+        content: "";
+        position: absolute;
+        @include mb-border-radius(xxs);
+        width: 10px;
+        height: 10px;
+        left: 50%;
+        bottom: calc(100% - 8px);
+        background-color: inherit;
+        transform: rotate(45deg) translateX(-50%);
+        background: rgba($mb-color-black, $mb-opacity-xxl);
+      }
     }
     &-left {
       top: 50%;
       transform: translateY(-50%);
-      left: 0;
+      right: calc(100% + 2px);
+      .mb-tooltip-content::after {
+        content: "";
+        position: absolute;
+        @include mb-border-radius(xxs);
+        width: 10px;
+        height: 10px;
+        right: -2px;
+        top: 50%;
+        background-color: inherit;
+        transform: rotate(45deg) translateY(-50%);
+        background: rgba($mb-color-black, $mb-opacity-xxl);
+      }
     }
     &-right {
       top: 50%;
       transform: translateY(-50%);
-      right: 0;
+      left: calc(100% + 2px);
+      .mb-tooltip-content::after {
+        content: "";
+        position: absolute;
+        @include mb-border-radius(xxs);
+        width: 10px;
+        height: 10px;
+        left: -8px;
+        top: 50%;
+        background-color: inherit;
+        transform: rotate(45deg) translateY(-50%);
+        background: rgba($mb-color-black, $mb-opacity-xxl);
+      }
     }
   }
   &:not(.hidden) .mb-tooltip-content {
@@ -112,41 +160,4 @@ export default {
     z-index: 3;
   }
 }
-
-// /* Tooltip top arrow */
-// .mb-placement-top .mb-tooltip-content::after {
-//   margin-left: -$mb-space-xxs;
-//   left: 50%;
-//   top: 100%;
-//   border-color: rgba($mb-color-black, $mb-opacity-xxl) transparent transparent
-//     transparent;
-// }
-// /* Tooltip bottom arrow */
-// .mb-placement-bottom .mb-tooltip-content::after {
-//   margin-left: -$mb-space-xxs;
-//   bottom: 100%;
-//   left: 50%;
-//   border-color: transparent transparent rgba($mb-color-black, $mb-opacity-xxl)
-//     transparent;
-// }
-// /* Tooltip left arrow */
-// .mb-placement-left .mb-tooltip-content::after {
-//   top: 50%;
-//   margin-top: -$mb-space-xxs;
-//   left: 100%;
-//   border-color: transparent transparent transparent
-//     rgba($mb-color-black, $mb-opacity-xxl);
-// }
-// /* Tooltip right arrow */
-// .mb-placement-right .mb-tooltip-content::after {
-//   top: 50%;
-//   margin-top: -$mb-space-xxs;
-//   right: 100%;
-//   border-color: transparent rgba($mb-color-black, $mb-opacity-xxl) transparent
-//     transparent;
-// }
-// .mb-tooltip:hover .mb-tooltip-content {
-//   visibility: visible;
-//   opacity: 1;
-// }
 </style>

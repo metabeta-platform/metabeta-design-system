@@ -4,20 +4,20 @@
       <component
         :type="type != 'link' ? type : null"
         :is="componentType"
-        @click="$emit('click', $event)"
+        @click="handleClick"
         @mouseenter="mouseEnter"
         @mouseleave="mouseLeave"
         :href="type === 'link' ? href : false"
-        :class="['mb-button', `mb-type-${type}`, `mb-priority-${priority}`,`mb-color-${color}`, `mb-size-${size}`]"
+        :class="['mb-button', `mb-type-${type}`, `mb-priority-${priority}`,`mb-color-${color}`, `mb-size-${size}`, type === 'dropdown' && active ? 'active' : '']"
         :disabled="isDisabled"
       >
         <mb-icon
           :type="priority"
-          :size="iconBefore.size"
+          :size="type === 'dropdown' ? 'm' : iconBefore ? iconBefore.size : ''"
           class="mb-button-icon-left"
           :class="{'icon-only' : iconOnly}"
           v-if="!responsiveLabelOnly && iconBefore"
-          :name="type === 'action' ? 'dropdown' : iconBefore.name"
+          :name="type === 'dropdown' ?  'dropdown-up' : iconBefore.name"
         ></mb-icon>
         <span
           class="mb-button-label"
@@ -25,11 +25,11 @@
         >{{label}}</span>
         <mb-icon
           :type="priority"
-          :class="{iconOnly : 'icon-only'}"
-          :size="iconAfter.size"
+          :class="{'icon-only' : iconOnly}"
+          :size="type === 'dropdown' ? 'm' : iconAfter ? iconAfter.size : ''"
           class="mb-button-icon-right"
-          v-if="!responsiveLabelOnly && iconAfter"
-          :name="type === 'action' ? 'dropdown' : iconAfter.name"
+          v-if="(!responsiveLabelOnly && iconAfter) || type === 'dropdown'"
+          :name="type === 'dropdown' ? 'dropdown-up' : iconAfter.name"
         ></mb-icon>
       </component>
     </keep-alive>
@@ -55,6 +55,7 @@ export default {
     responsiveLabelOnly: '',
     responsiveIconOnly: '',
     TRUE_FLAG: false,
+    active: false,
   }),
   props: {
     type: {
@@ -155,6 +156,9 @@ export default {
       this.$emit('mouseenter', event);
       this.TRUE_FLAG = true;
     },
+    handleClick (event) {
+      if (this.type === 'dropdown') { this.$emit('click', event); this.active = !this.active } else { this.$emit('click', event) };
+    },
     mouseLeave () {
       this.$emit('mouseleave', event);
       this.TRUE_FLAG = false;
@@ -181,6 +185,17 @@ export default {
       @extend button;
       margin-right: $mb-space-xs;
     }
+    &.mb-type-dropdown {
+      .mb-icon {
+        @include mb-transition("smooth");
+        transform: rotateZ(0deg);
+      }
+      &.active {
+        .mb-icon {
+          transform: rotateZ(180deg);
+        }
+      }
+    }
     .mb-button-icon {
       &-left {
         margin-right: $mb-space-xs;
@@ -189,7 +204,7 @@ export default {
         }
       }
       &-right {
-        margin-right: $mb-space-xs;
+        margin-left: $mb-space-xs;
         &.icon-only {
           margin: 0;
         }
