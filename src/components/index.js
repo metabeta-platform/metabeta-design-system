@@ -48,23 +48,28 @@ const tryGet = (value) => {
 
 Vue.prototype.tryGet = tryGet;
 
+Vue.prototype.tryGet = tryGet;
+const cdnUrl =
+  "https://s3.eu-west-1.amazonaws.com/cdn.metabeta.com/static/images/";
+
 class DefaultImages {
   constructor() {
     this.images = {
       investor: {
-        icon: "http://cdn.metabeta.com/static/images/accelerator/icon.png",
-        logo: "http://cdn.metabeta.com/static/images/accelerator/logo.png",
+        icon: `${cdnUrl}investor/investor-icon.svg`,
+        logo: `${cdnUrl}investor/investor-icon.svg`,
       },
       startup: {
-        icon: "http://cdn.metabeta.com/static/images/startup/icon.png",
-        logo: "http://cdn.metabeta.com/static/images/startup/logo.png",
+        icon: `${cdnUrl}startup/startup-icon.svg`,
+        logo: `${cdnUrl}startup/startup-icon.svg`,
       },
       program: {
-        icon: "http://cdn.metabeta.com/static/images/program/icon.png",
-        logo: "http://cdn.metabeta.com/static/images/program/logo.png",
+        icon: `${cdnUrl}program/program-icon.svg`,
+        logo: `${cdnUrl}program/program-icon.svg`,
       },
       user: {
-        icon: "http://cdn.metabeta.com/static/images/user/icon.png",
+        icon: `${cdnUrl}user/user-icon.svg`,
+        logo: `${cdnUrl}user/user-icon.svg`,
       },
     };
   }
