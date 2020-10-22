@@ -93,7 +93,7 @@ pre {
 }
 
 article {
-  &.mb-long-form{
+  &.mb-long-form {
     p {
       font-size: $mb-font-size-l;
       line-height: $mb-line-height-l;
@@ -259,17 +259,20 @@ button {
     background-color: $mb-color-gray-highlight;
     border: $mb-border-thin solid $mb-color-transparent;
   }
+
   &:active {
     color: $mb-color-primary;
     background-color: $mb-color-primary-highlight;
     border: $mb-border-thin solid $mb-color-transparent;
   }
+
   &:focus {
     border: $mb-border-thin solid $mb-color-transparent;
   }
+
   &:disabled,
   &.disabled {
-    background-color: fade-out(desaturate($mb-color-gray, $mb-opacity-m),0.9);
+    background-color: fade-out(desaturate($mb-color-gray, $mb-opacity-m), 0.9);
     color: fade-out($mb-color-text-medium, $mb-opacity-l);
     border: $mb-border-thin solid $mb-color-transparent;
   }
@@ -330,12 +333,12 @@ input {
   }
 
   &[type="reset"] {
-    @extend button; 
+    @extend button;
   }
 
   &[type="submit"],
   &[type="button"] {
-    @extend button; 
+    @extend button;
   }
 
   &:focus {
@@ -701,6 +704,7 @@ input {
     }
   }
 }
+
 // end input icons
 
 

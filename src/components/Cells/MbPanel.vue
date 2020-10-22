@@ -62,9 +62,6 @@ export default {
       return !!this.$slots['footer'] && this.hasFooter;
     },
   },
-  created () {
-    console.log(this.$slots.header);
-  }
 };
 
 </script>
