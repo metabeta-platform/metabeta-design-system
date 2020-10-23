@@ -1,7 +1,6 @@
 <template>
   <i :class="['mb-icon',`mb-size-${size}`, `mb-icon-${name}` ]">
     <component
-      class="svg-fill svg-stroke"
       :height="wh"
       :width="wh"
       :viewBox="`0 0 16 16`"
@@ -66,11 +65,9 @@ export default {
   line-height: 0;
   stroke: transparent;
   fill: transparent;
-
   .svg-stroke {
     stroke: $mb-color-gray;
   }
-  #svg-fill,
   .svg-fill {
     fill: $mb-color-gray;
   }
