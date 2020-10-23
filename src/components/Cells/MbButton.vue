@@ -188,11 +188,11 @@ export default {
     &.mb-type-dropdown {
       .mb-icon {
         @include mb-transition("smooth");
-        transform: rotateZ(0deg);
+        transform: rotateZ(180deg);
       }
       &.active {
         .mb-icon {
-          transform: rotateZ(180deg);
+          transform: rotateZ(0deg);
         }
       }
     }

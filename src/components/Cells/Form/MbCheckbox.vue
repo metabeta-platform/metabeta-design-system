@@ -9,7 +9,7 @@
       :checked="checkState"
       :disabled="isDisabled"
     >
-    <mb-icon name="metabeta"> </mb-icon>
+    <mb-icon :name="checkState ? 'checkbox-on' : 'checkbox'"> </mb-icon>
     <label :for="name">{{label}}</label>
   </div>
 </template>
@@ -60,45 +60,27 @@ export default {
       }
     },
   },
+  watch: {
+    isChecked (val) {
+      this.checkState = val;
+    }
+  },
   components: {
     MbIcon: () => import('../MbIcon.vue'),
   },
   created () {
-    this.checkState = this.checked;
+    this.checkState = this.isChecked;
   },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../../assets/styles/partials/_mb_color.scss";
 @import "../../../assets/styles/partials/_mb_space.scss";
 @import "../../../assets/styles/partials/_mb_typography.scss";
 .mb-checkbox {
   display: flex;
   align-items: center;
-  svg {
-    path {
-      opacity: $mb-opacity-transparent;
-    }
-  }
-  &.mb-is-checked {
-    svg {
-      g {
-        stroke: $mb-color-primary;
-      }
-      path {
-        opacity: $mb-opacity-full;
-      }
-    }
-  }
-  &.mb-is-disabled {
-    opacity: $mb-opacity-m;
-    svg {
-      path {
-        opacity: 1;
-      }
-    }
-  }
   .mb-is-disabled {
     pointer-events: none;
     cursor: not-allowed;
