@@ -9,7 +9,7 @@
       :checked="checkState"
       :disabled="isDisabled"
     >
-    <mb-icon :name="checkState ? 'checkbox-on' : 'checkbox'"> </mb-icon>
+    <mb-icon :name="checkState ? 'icon-forms-checkbox' : 'icon-forms-checkbox-selected'"> </mb-icon>
     <label :for="name">{{label}}</label>
   </div>
 </template>
