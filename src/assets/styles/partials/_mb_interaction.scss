@@ -8141,3 +8141,29 @@
       }
     }
 }
+.mb-is-checked{
+  .mb-icon{
+    .mb-icon-checkbox-selected,
+    .mb-icon-radio-selected {
+      .svg-fill {
+        fill: $mb-color-primary;
+      }
+    } 
+  } 
+}
+.mb-is-disabled{
+  .mb-icon{
+    .mb-icon-checkbox-selected,
+    .mb-icon-radio-selected {
+      .svg-fill {
+        fill: fade-out(desaturate($mb-color-gray, $mb-opacity-m), $mb-opacity-l);
+      }
+    } 
+    .mb-icon-checkbox,
+    .mb-icon-radio{
+      .svg-fill {
+        fill: $mb-color-gray-highlight;
+      }
+    } 
+  } 
+}

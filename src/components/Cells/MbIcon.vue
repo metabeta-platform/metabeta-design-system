@@ -1,5 +1,5 @@
 <template>
-  <i :class="['mb-icon',`mb-size-${size}`, `mb-icon-${name}` ]">
+  <i :class="['mb-icon',`mb-size-${size}`]">
     <component
       :height="wh"
       :width="wh"
@@ -110,6 +110,7 @@ export default {
     .svg-fill {
       fill: $mb-color-white;
     }
-  }
+  }   
 }
+
 </style>

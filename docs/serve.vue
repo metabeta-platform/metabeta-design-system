@@ -943,75 +943,10 @@ main {
         placeholder="Url"
       >
       </mb-form-input>
-      <section id="section-checkbox">
-        <h3>MbCheckbox</h3>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon
-                name="icon-alert-warning-fill"
-                color="warning"
-              />Needs to have the Metabeta icon
-            </template>
-          </mb-alert>
-        </p>
-        <mb-checkbox
-          name="checkbox-1"
-          label="Checkbox-1"
-          :isDisabled="true"
-        ></mb-checkbox>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon
-                name="icon-alert-warning-fill"
-                color="warning"
-              />When is check and disabled I can't see the checked icon
-            </template>
-          </mb-alert>
-        </p>
-        <mb-checkbox
-          name="checkbox-2"
-          label="Checkbox-2"
-          :isDisabled="true"
-          :isChecked="true"
-        ></mb-checkbox>
-      </section>
-      <section id="section-checkbox-group">
-        <h3>MbCheckboxGroup</h3>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon
-                name="icon-alert-warning-fill"
-                color="warning"
-              />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
-            </template>
-          </mb-alert>
-        </p>
-        <div class="mb-checkbox-group mb-flow-horizontal">
-          <ul>
-            <li>
-              <mb-checkbox
-                name="checkbox-3"
-                label="Checkbox-3"
-              ></mb-checkbox>
-            </li>
-            <li>
-              <mb-checkbox
-                name="checkbox-4"
-                label="Checkbox-4"
-              ></mb-checkbox>
-            </li>
-            <li>
-              <mb-checkbox
-                name="checkbox-5"
-                label="Checkbox-5"
-              ></mb-checkbox>
-            </li>
-          </ul>
-        </div>
-      </section>
+
+
+
+
       <section id="section-radio">
         <h3>MbRadio</h3>
         <p>
@@ -1075,22 +1010,132 @@ main {
       <br />
 
       <h2>For documentation (Includes extra styling for proper layout)</h2>
+
+            <section id="section-checkbox">
+        <h3>MbCheckbox</h3>
+        <mb-checkbox
+          name="checkbox-1"
+          label="Checkbox-1"
+          :isDisabled="true"
+        ></mb-checkbox>
+        <mb-checkbox
+          name="checkbox-2"
+          label="Checkbox-2"
+          :isDisabled="true"
+          :isChecked="true"
+        ></mb-checkbox>
+      </section>
+      <section id="section-checkbox-group">
+        <h3>MbCheckboxGroup</h3>
+        <div class="mb-checkbox-group mb-flow-horizontal">
+          <ul>
+            <li>
+              <mb-checkbox
+                name="checkbox-3"
+                label="Checkbox-3"
+              ></mb-checkbox>
+            </li>
+            <li>
+              <mb-checkbox
+                name="checkbox-4"
+                label="Checkbox-4"
+              ></mb-checkbox>
+            </li>
+            <li>
+              <mb-checkbox
+                name="checkbox-5"
+                label="Checkbox-5"
+              ></mb-checkbox>
+            </li>
+          </ul>
+        </div>
+      </section>
       <mb-panel
         id="doc-section-buttons"
         type="card"
       >
         <template slot="content">
-          <p>
-            <mb-alert color="warning">
-              <template slot="content">
-                <mb-icon
-                  name="icon-alert-warning-fill"
-                  color="warning"
-                />Needs styling for mb-type-dropdown button and to update the markup
-              </template>
-            </mb-alert>
-          </p>
           <p>Buttons communicate actions that users can take.</p>
+          <div class="mb-props-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Props</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type</td>
+                  <td>string</td>
+                  <td>button</td>
+                  <td>link, button, submit, reset, dropdown</td>
+                  <td>The link type will render an anchor </td>
+                </tr>
+                <tr>
+                  <td>priority</td>
+                  <td>string</td>
+                  <td>base</td>
+                  <td>base, primary, secondary</td>
+                  <td>To set the priorities for </td>
+                </tr>
+                <tr>
+                  <td>color</td>
+                  <td>string</td>
+                  <td>none</td>
+                  <td>danger, success, warning, info, note, blue, red, green, orange, cyan, yellow, indigo, purple, pink, teal, lime</td>
+                  <td>Override the color of the cell with an utility color or a decorative color.</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>string</td>
+                  <td>m</td>
+                  <td>s, m, l</td>
+                  <td>Used for handlign the sizes of the button</td>
+                </tr>
+                <tr>
+                  <td>:tooltip</td>
+                  <td>object</td>
+                  <td>none</td>
+                  <td>tooltip-data:'', tooltip-placement:''</td>
+                  <td>Used for adding a tooltip to the button</td>
+                </tr>
+                <tr>
+                  <td>:icon-before</td>
+                  <td>object</td>
+                  <td>none</td>
+                  <td>name: 'string', size: 'string'</td>
+                  <td>Adds an icon before the label. Use the specifications that are for MbIcon</td>
+                </tr>
+                <tr>
+                  <td>:icon-after</td>
+                  <td>object</td>
+                  <td>none</td>
+                  <td>name: 'string', size: 'string'</td>
+                  <td>Adds an icon after the label. Use the specifications that are for MbIcon</td>
+                </tr>
+                <tr>
+                  <td>isDisabled</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td></td>
+                  <td>If the button is disabled or not
+                  </td>
+                </tr>
+                <tr>
+                  <td>@click</td>
+                  <td>function</td>
+                  <td>none</td>
+                  <td></td>
+                  <td>Action that dispatches on clicking button
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <h4>Type</h4>
           <mb-button
             label="link"

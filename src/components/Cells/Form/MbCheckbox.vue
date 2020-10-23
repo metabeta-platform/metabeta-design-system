@@ -1,7 +1,7 @@
 <template>
   <div
     @click="checkEvent"
-    :class="['mb-checkbox', checkState ? 'mb-is-checked' : '', checkboxDisabled ? 'mb-is-disabled' : null]"
+    :class="['mb-checkbox', checkState ? '' : 'mb-is-checked', checkboxDisabled ? 'mb-is-disabled' : null]"
   >
     <input
       type="checkbox"
@@ -9,7 +9,7 @@
       :checked="checkState"
       :disabled="isDisabled"
     >
-    <mb-icon :name="checkState ? 'icon-forms-checkbox' : 'icon-forms-checkbox-selected'"> </mb-icon>
+    <mb-icon  :name="checkState ? 'icon-forms-checkbox' : 'icon-forms-checkbox-selected'"> </mb-icon>
     <label :for="name">{{label}}</label>
   </div>
 </template>
@@ -78,15 +78,25 @@ export default {
 @import "../../../assets/styles/partials/_mb_color.scss";
 @import "../../../assets/styles/partials/_mb_space.scss";
 @import "../../../assets/styles/partials/_mb_typography.scss";
+@import "../../../assets/styles/partials/_mb_interaction.scss";
 .mb-checkbox {
   display: flex;
   align-items: center;
+  padding: $mb-space-xs 0;
   .mb-is-disabled {
     pointer-events: none;
     cursor: not-allowed;
   }
   label {
+    color: $mb-color-text-medium;
+    @include mb-font(body, normal, normal, s);
     margin: 0 0 0 $mb-space-xxs;
   }
+  &.mb-is-checked{
+    label{
+      color: $mb-color-headings;
+    }
+  }
 }
+
 </style>
