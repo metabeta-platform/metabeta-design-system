@@ -1,6 +1,7 @@
 <template>
   <i :class="['mb-icon',`mb-size-${size}`]">
     <component
+      @click="$emit('click', $event)"
       :height="wh"
       :width="wh"
       :viewBox="`0 0 16 16`"
@@ -110,7 +111,6 @@ export default {
     .svg-fill {
       fill: $mb-color-white;
     }
-  }   
+  }
 }
-
 </style>

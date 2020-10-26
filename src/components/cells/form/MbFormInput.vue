@@ -12,7 +12,7 @@
         :id="name"
         class="mb-input"
         :class="[{'has-before-icon' : iconBefore || type === 'password' || type === 'email' || type === 'url'}, {'has-after-icon' : iconAfter || type === 'password' || type === 'email' || type === 'url'}]"
-        :type="type"
+        :type="dynamicType"
         v-model="inputValue"
         :pattern="pattern"
         :placeholder="placeholder"
@@ -30,11 +30,12 @@
       ></mb-icon>
       <mb-icon
         v-if="iconAfter || type === 'password'"
-        @click="emit('icon-clicked')"
+        @click="handleAfterClick"
         class="input-icon"
         :class="{'icon-after' : iconAfter || type === 'password'}"
-        :name="iconAfter || type === 'password' ? 'view-icon' : !!iconAfter.name"
+        :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'view-icon' : 'hidden-icon' : !!iconAfter.name"
       ></mb-icon>
+      <!-- Chris please change hidden-icon to svg we want to use for not being able to see the password an eye with a cross -->
     </div>
     <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
   </mb-fieldset>
@@ -46,6 +47,7 @@ export default {
   data: () => ({
     inputValue: '',
     dynamicBefore: '',
+    dynamicType: '',
   }),
   props: {
     type: {
@@ -122,7 +124,6 @@ export default {
         this.isRequired = value;
       }
     },
-    
     inputReadonly: {
       get () {
         return this.isReadonly;
@@ -140,6 +141,17 @@ export default {
       }
     },
   },
+  methods: {
+    handleAfterClick () {
+      if (this.dynamicType === 'password') {
+        this.dynamicType = 'text';
+      }
+      else {
+        this.dynamicType = 'password';
+      }
+      this.$emit('icon-clicked');
+    },
+  },
   watch: {
     value (newValue) {
       this.$emit('changed', newValue);
@@ -148,6 +160,7 @@ export default {
   },
   created () {
     this.inputValue = this.value;
+    this.dynamicType = this.type;
     switch (this.type) {
       case 'password':
         this.dynamicBefore = 'icon-forms-password';
@@ -161,7 +174,7 @@ export default {
       default:
         if (this.iconBefore) { this.dynamicBefore = !!this.iconBefore.name };
         break;
-    }
+    };
   },
 }
 </script>
@@ -182,6 +195,7 @@ export default {
         top: 50%;
         transform: translateY(-50%);
         right: 10px;
+        cursor: pointer;
       }
     }
     .has-before-icon {
@@ -191,6 +205,7 @@ export default {
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
+        cursor: pointer;
       }
     }
   }
