@@ -35,7 +35,56 @@ export default Vue.extend({
     metricName: '',
     metricOrder: 0,
     test: 'test',
-    checkboxGroupData: [],
+    checkboxGroupData: [{
+      _id: 'i1',
+      name: 'one',
+      value: 'one',
+      checked: false,
+      label: 'one',
+    }, {
+      _id: 'i2',
+      name: 'two',
+      value: 'two',
+      disabled: true,
+      label: 'two',
+    }, {
+      _id: 'i3',
+      name: 'three',
+      value: 'three',
+      disabled: true,
+      checked: true,
+      label: 'three',
+    }, {
+      _id: 'i4',
+      name: 'four',
+      value: 'four',
+      checked: false,
+      label: 'four',
+    },],
+    radioGroupData: [{
+      _id: 'i1',
+      name: 'one',
+      value: 'one',
+      selected: false,
+      label: 'one',
+    }, {
+      _id: 'i2',
+      name: 'two',
+      value: 'two',
+      selected: true,
+      label: 'two',
+    }, {
+      _id: 'i3',
+      name: 'three',
+      value: 'three',
+      label: 'three',
+    }, {
+      _id: 'i4',
+      name: 'four',
+      value: 'four',
+      selected: false,
+      label: 'four',
+    },],
     organizations: [
       {
         _id: '1',
@@ -151,6 +200,8 @@ export default Vue.extend({
     openDrawerXL: false,
     openDrawerFooter: false,
     openDrawerHeader: false,
+    checkedArr: [],
+    selectedRadio: '',
     tabs: [
       {
         _id: 'asdgashdgksja1213a',
@@ -210,6 +261,14 @@ export default Vue.extend({
     },
   }),
   name: 'ServeDev',
+  methods: {
+    inputChanged (val) {
+      this.checkedArr = val;
+    },
+    radioChange (val) {
+      this.selectedRadio = val;
+    }
+  },
   components: {
     MbButton,
     MbChip,
@@ -974,28 +1033,11 @@ main {
             </template>
           </mb-alert>
         </p>
-        <div class="mb-radio-group mb-flow-horizontal">
-          <ul>
-            <li>
-              <mb-radio
-                label="RadioBox"
-                name="test"
-              ></mb-radio>
-            </li>
-            <li>
-              <mb-radio
-                label="RadioBox2"
-                name="test"
-              ></mb-radio>
-            </li>
-            <li>
-              <mb-radio
-                label="RadioBox3"
-                name="test"
-              ></mb-radio>
-            </li>
-          </ul>
-        </div>
+        <mb-radio-group
+          @inputChanged="radioChange"
+          :radioValues="radioGroupData"
+        > </mb-radio-group>
+        Selected radio option is <span class="danger"> {{selectedRadio}} </span>
       </section>
 
       <h2>In progress</h2>
@@ -1011,44 +1053,24 @@ main {
 
       <section id="section-checkbox">
         <h3>MbCheckboxGroup</h3>
-        <mb-checkbox-group :checkedValues="checkboxGroupData"></mb-checkbox-group>
+        <mb-checkbox-group
+          @inputChanged="inputChanged"
+          :checkedValues="checkboxGroupData"
+        ></mb-checkbox-group>
+        Checkbox group output = {{checkedArr.join(' ') || 'empty'}}
         <h3>MbCheckbox</h3>
         <mb-checkbox
           name="checkbox-1"
           label="Checkbox-1"
-          :isDisabled="true"
+          :is-disabled="true"
+          :is-checked="false"
         ></mb-checkbox>
         <mb-checkbox
           name="checkbox-2"
           label="Checkbox-2"
-          :isDisabled="true"
-          :isChecked="true"
+          :is-disabled="false"
+          :is-checked="true"
         ></mb-checkbox>
-      </section>
-      <section id="section-checkbox-group">
-        <h3>MbCheckboxGroup</h3>
-        <div class="mb-checkbox-group mb-flow-horizontal">
-          <ul>
-            <li>
-              <mb-checkbox
-                name="checkbox-3"
-                label="Checkbox-3"
-              ></mb-checkbox>
-            </li>
-            <li>
-              <mb-checkbox
-                name="checkbox-4"
-                label="Checkbox-4"
-              ></mb-checkbox>
-            </li>
-            <li>
-              <mb-checkbox
-                name="checkbox-5"
-                label="Checkbox-5"
-              ></mb-checkbox>
-            </li>
-          </ul>
-        </div>
       </section>
       <mb-panel
         id="doc-section-buttons"
