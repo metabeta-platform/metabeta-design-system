@@ -81,7 +81,6 @@ export default {
   },
   watch: {
     isVisible (val) {
-      console.log(val);
       if (val) {
         document.body.style.setProperty('overflow', 'hidden');
         this.drawerVisibility = true;

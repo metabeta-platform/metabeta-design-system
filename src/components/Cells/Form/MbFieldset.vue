@@ -1,12 +1,21 @@
 <template>
-  <fieldset class="mb-fieldset">
+  <fieldset
+    :class="flow === 'horizontal' ? 'horizontal' : 'vertical'"
+    class="mb-fieldset"
+  >
     <slot></slot>
   </fieldset>
 </template>
 
 <script>
 export default {
-  name: "MbFieldset"
+  name: "MbFieldset",
+  props: {
+    flow: {
+      type: String,
+      default: 'horizontal',
+    }
+  },
 }
 </script>
 
@@ -17,7 +26,12 @@ export default {
   appearance: none;
   margin-bottom: $mb-space-xs;
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
+  &.horizontal {
+    display: flex;
+    align-items: center;
+  }
+  &.vertical {
+    display: block;
+  }
 }
 </style>

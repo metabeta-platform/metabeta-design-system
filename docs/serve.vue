@@ -35,6 +35,7 @@ export default Vue.extend({
     metricName: '',
     metricOrder: 0,
     test: 'test',
+    checkboxGroupData: [],
     organizations: [
       {
         _id: '1',
@@ -944,9 +945,6 @@ main {
       >
       </mb-form-input>
 
-
-
-
       <section id="section-radio">
         <h3>MbRadio</h3>
         <p>
@@ -1011,7 +1009,9 @@ main {
 
       <h2>For documentation (Includes extra styling for proper layout)</h2>
 
-            <section id="section-checkbox">
+      <section id="section-checkbox">
+        <h3>MbCheckboxGroup</h3>
+        <mb-checkbox-group :checkedValues="checkboxGroupData"></mb-checkbox-group>
         <h3>MbCheckbox</h3>
         <mb-checkbox
           name="checkbox-1"
