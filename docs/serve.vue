@@ -2727,13 +2727,11 @@ main {
         type="card"
       >
         <template slot="content">
-          <p>
-            Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information.
-          </p>
-          <h4>How it works</h4>
-          <pre> <code> &lt;mb-icon name="icon-user" size="m" /&gt;</code></pre>
-          <div class="mb-props-table">
-            <table>
+          <article>
+            <p>Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information. </p>
+            <h3>Usage</h3>
+            <pre><code>&lt;mb-icon name="icon-user" size="m" /&gt;</code></pre>
+            <table class="mb-props-table">
               <thead>
                 <tr>
                   <th>Props</th>
@@ -2745,1011 +2743,332 @@ main {
               </thead>
               <tbody>
                 <tr>
-                  <td>name</td>
-                  <td>string</td>
-                  <td>none</td>
-                  <td><a>List with all icons</a></td>
+                  <td><code>name</code></td>
+                  <td>String</td>
+                  <td>Empty</td>
+                  <td><a href="#all-icons">List with all icons</a></td>
                   <td>You can use any icon name from the list</td>
                 </tr>
                 <tr>
-                  <td>size</td>
-                  <td>string</td>
-                  <td>m</td>
-                  <td>s, m, l</td>
-                  <td> - </td>
-                </tr>
-                <tr>
-                  <td>color</td>
-                  <td>string</td>
-                  <td>$mb-color-gray</td>
-                  <td>none</td>
-                  <td>The color of an icon is set by the parent</td>
+                  <td><code>size</code></td>
+                  <td>String</td>
+                  <td><code>m</code></td>
+                  <td><code>xs / s / m / l</code></td>
+                  <td>For 1rem=16px, the sizes are 12px / 16px / 24px </td>
                 </tr>
               </tbody>
             </table>
-          </div>
-          <h4>Icons with fill and stroke</h4>
-          <p>Exists a list of icons that have fill and stroke that should have different colors.</p>
-          <h6><strong>Icons that have stroke different that default color</strong></h6>
-          <p>To style them in different contexts you can use their name classes. </p>
-          <p>
-            <code>
-              <pre>
-                .mb-icon-name{
-                  .svg-stroke{
-                    stroke: $mb-color-white;
-                  }
-                }
-              </pre>
-            </code>
-          </p>
-          <p><small><strong>List of icons:</strong> .mb-icon-checkbox-selected, .mb-icon-alert-add-fill, .mb-icon-alert-danger-fill, .mb-icon-alert-delete-fill, .mb-icon-alert-error-fill, .mb-icon-alert-help-fill, .mb-icon-alert-info-fill, .mb-icon-alert-more-fill, .mb-icon-alert-remove-fill, .mb-icon-alert-success-fill, .mb-icon-alert-warning-fill, .mb-icon-mini-add,
-              .mb-icon-mini-delete, .mb-icon-mini-error, .mb-icon-mini-more, .mb-icon-mini-remove, .mb-icon-mini-success, .mb-icon-file-csv, .mb-icon-file-doc, .mb-icon-file-google-doc, .mb-icon-file-google-sheet, .mb-icon-file-google-slides, .mb-icon-file-json, .mb-icon-file-other, .mb-icon-file-pdf, .mb-icon-file-ppt, .mb-icon-file-sql, .mb-icon-file-xls,
-              .mb-icon-file-xml, .mb-icon-file-zip </small></p>
-          <p><strong> Icons that have fill different that default color</strong></p>
-          <p> To style them in different contexts you can use their name classes. </p>
-          <p>
-            <code>
-              <pre>
-                .mb-icon-name{
-                  .svg-fill{
-                    fill: $mb-color-white;
-                  }
-                }
-              </pre>
-            </code>
-          </p>
-          <p><small><strong>List of icons:</strong>.mb-icon-checkbox,.mb-icon-radio </small></p>
-          <h4>Icon sizes</h4>
-          <div class="mb-icon-container">
-            <mb-icon
-              name="icon-utility-star-fill"
-              size="xs"
-            />
-            <small>size="xs"</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon
-              name="icon-utility-star-fill"
-              size="s"
-            />
-            <small>size="s"</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon
-              name="icon-utility-star-fill"
-              size="m"
-            />
-            <small>size="m"</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon
-              name="icon-utility-star-fill"
-              size="l"
-            />
-            <small>size="l"</small>
-          </div>
-          <h4>All Icons</h4>
-          <h6>Navigation</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-admin" />
-            <small>icon-admin</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-archive" />
-            <small>icon-archive</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-billing" />
-            <small>icon-billing</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-burger-collapsed" />
-            <small>icon-burger-collapsed</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-burger" />
-            <small>icon-burger</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-calendar" />
-            <small>icon-calendar</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-contacts" />
-            <small>icon-contacts</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-conversations" />
-            <small>icon-conversations</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-dashboard" />
-            <small>icon-dashboard</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-dealflow" />
-            <small>icon-dealflow</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-filter" />
-            <small>icon-filter</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-help" />
-            <small>icon-help</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-home" />
-            <small>icon-home</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-investor" />
-            <small>icon-investor</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-logout" />
-            <small>icon-logout</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-organization-profile" />
-            <small>icon-organization-profile</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-performance" />
-            <small>icon-performance</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-program-profile" />
-            <small>icon-program-profile</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-program" />
-            <small>icon-program</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-settings" />
-            <small>icon-settings</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user-profile" />
-            <small>icon-user-profile</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-workspace" />
-            <small>icon-workspace</small>
-          </div>
-          <h6>Business</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-accounting" />
-            <small>icon-business-accounting</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-activity" />
-            <small>icon-business-activity</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-apps" />
-            <small>icon-business-apps</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-archive" />
-            <small>icon-business-archive</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-area" />
-            <small>icon-business-chart-area</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-bar" />
-            <small>icon-business-chart-bar</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-column-notepad" />
-            <small>icon-business-chart-column-notepad</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-column" />
-            <small>icon-business-chart-column</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-complex" />
-            <small>icon-business-chart-complex</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-line" />
-            <small>icon-business-chart-line</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-lines" />
-            <small>icon-business-chart-lines</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-chart-pie" />
-            <small>icon-business-chart-pie</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-design" />
-            <small>icon-business-design</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-education" />
-            <small>icon-business-education</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-idea" />
-            <small>icon-business-idea</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-inbox" />
-            <small>icon-business-inbox</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-investment" />
-            <small>icon-business-investment</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-metrics" />
-            <small>icon-business-metrics</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-money" />
-            <small>icon-business-money</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-paperwork" />
-            <small>icon-business-paperwork</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-performance" />
-            <small>icon-business-performance</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-report" />
-            <small>icon-business-report</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-site" />
-            <small>icon-business-site</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-strategy" />
-            <small>icon-business-strategy</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-target" />
-            <small>icon-business-target</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-business-work" />
-            <small>icon-business-work</small>
-          </div>
-
-          <h6>Formatting</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-attachment" />
-            <small>icon-format-attachment</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-body" />
-            <small>icon-format-body</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-close-quote" />
-            <small>icon-format-close-quote</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-code" />
-            <small>icon-format-code</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-email" />
-            <small>icon-format-email</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-eraser" />
-            <small>icon-format-eraser</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-h1" />
-            <small>icon-format-h1</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-h2" />
-            <small>icon-format-h2</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-h3" />
-            <small>icon-format-h3</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-hash" />
-            <small>icon-format-hash</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-image" />
-            <small>icon-format-image</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-line" />
-            <small>icon-format-line</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-link" />
-            <small>icon-format-link</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-ordered-list" />
-            <small>icon-format-ordered-list</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-redo" />
-            <small>icon-format-redo</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-resizer" />
-            <small>icon-format-resizer</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-table" />
-            <small>icon-format-table</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-text-bold" />
-            <small>icon-format-text-bold</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-text-italic" />
-            <small>icon-format-text-italic</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-text-strike-through" />
-            <small>icon-format-text-strike-through</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-text-underline" />
-            <small>icon-format-text-underline</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-todo" />
-            <small>icon-format-todo</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-undo" />
-            <small>icon-format-undo</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-format-unordered-list" />
-            <small>icon-format-unordered-list</small>
-          </div>
-
-          <h6>Forms</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-call" />
-            <small>icon-forms-call</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-check" />
-            <small>icon-forms-check</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-checkbox" />
-            <small>icon-forms-checkbox</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-checkbox-selected" />
-            <small>icon-forms-checkbox-selected</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-disabled" />
-            <small>icon-forms-disabled</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-edit" />
-            <small>icon-forms-edit</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-email" />
-            <small>icon-forms-email</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-formula" />
-            <small>icon-forms-formula</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-hide" />
-            <small>icon-forms-hide</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-lock" />
-            <small>icon-forms-lock</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-password" />
-            <small>icon-forms-password</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-radio" />
-            <small>icon-forms-radio</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-radio-selected" />
-            <small>icon-forms-radio-selected</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-search" />
-            <small>icon-forms-search</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-submit" />
-            <small>icon-forms-submit</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-sync" />
-            <small>icon-forms-sync</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-tags" />
-            <small>icon-forms-tags</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-time" />
-            <small>icon-forms-time</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-unlock" />
-            <small>icon-forms-unlock</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-forms-view" />
-            <small>icon-forms-view</small>
-          </div>
-          <h6>Alerts</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-add-fill" />
-            <small>icon-alert-add-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-add" />
-            <small>icon-alert-add</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-danger-fill" />
-            <small>icon-alert-danger-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-danger" />
-            <small>icon-alert-danger</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-delete-fill" />
-            <small>icon-alert-delete-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-delete" />
-            <small>icon-alert-delete</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-error-fill" />
-            <small>icon-alert-error-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-error" />
-            <small>icon-alert-error</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-help-fill" />
-            <small>icon-alert-help-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-help" />
-            <small>icon-alert-help</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-info-fill" />
-            <small>icon-alert-info-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-info" />
-            <small>icon-alert-info</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-more-fill" />
-            <small>icon-alert-more-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-more" />
-            <small>icon-alert-more</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-remove-fill" />
-            <small>icon-alert-remove-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-remove" />
-            <small>icon-alert-remove</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-success-fill" />
-            <small>icon-alert-success-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-success" />
-            <small>icon-alert-success</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-warning-fill" />
-            <small>icon-alert-warning-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-alert-warning" />
-            <small>icon-alert-warning</small>
-          </div>
-
-          <h6>Utility</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-add" />
-            <small>icon-utility-add</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-arrow-left" />
-            <small>icon-utility-arrow</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-both" />
-            <small>icon-utility-both</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-check" />
-            <small>icon-utility-check</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-close" />
-            <small>icon-utility-close</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-copy" />
-            <small>icon-utility-copy</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-custom" />
-            <small>icon-utility-custom</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-doublecheck" />
-            <small>icon-utility-doublecheck</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-download" />
-            <small>icon-utility-download</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-layout" />
-            <small>icon-utility-layout</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-love" />
-            <small>icon-utility-love</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-menu" />
-            <small>icon-utility-menu</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-more" />
-            <small>icon-utility-more</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-notification" />
-            <small>icon-utility-notification</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-pin" />
-            <small>icon-utility-pin</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-print" />
-            <small>icon-utility-print</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-previous" />
-            <small>icon-utility-previous</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-rating" />
-            <small>icon-utility-rating</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-save" />
-            <small>icon-utility-save</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star-fill" />
-            <small>icon-utility-star-fill</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-star" />
-            <small>icon-utility-star</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-select" />
-            <small>icon-utility-select</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-two-colums" />
-            <small>icon-utility-two-colums</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-utility-upload" />
-            <small>icon-utility-upload</small>
-          </div>
-          <h6>Concepts</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-block" />
-            <small>icon-concepts-block</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-blocks" />
-            <small>icon-concepts-blocks</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-briefcase" />
-            <small>icon-concepts-briefcase</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-bug" />
-            <small>icon-concepts-bug</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-chart" />
-            <small>icon-concepts-chart</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-database" />
-            <small>icon-concepts-database</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-deal" />
-            <small>icon-concepts-deal</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-experiment" />
-            <small>icon-concepts-experiment</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-goals" />
-            <small>icon-concepts-goals</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-hub" />
-            <small>icon-concepts-hub</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-idea" />
-            <small>icon-concepts-idea</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-mentor" />
-            <small>icon-concepts-mentor</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-mood" />
-            <small>icon-concepts-mood</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-tabbed" />
-            <small>icon-concepts-tabbed</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-team" />
-            <small>icon-concepts-team</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-concepts-wealth" />
-            <small>icon-concepts-wealth</small>
-          </div>
-
-          <h6>Misc</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-chat" />
-            <small>icon-misc-chat</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-chat" />
-            <small>icon-misc-chat</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-checklists" />
-            <small>icon-misc-checklists</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-document" />
-            <small>icon-misc-document</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-documents" />
-            <small>icon-misc-documents</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-flag" />
-            <small>icon-misc-flag</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-add" />
-            <small>icon-misc-folder-add</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-ban" />
-            <small>icon-misc-folder-ban</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-close" />
-            <small>icon-misc-folder-close</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-closed" />
-            <small>icon-misc-folder-closed</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-locked" />
-            <small>icon-misc-folder-locked</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-open" />
-            <small>icon-misc-folder-open</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-remove" />
-            <small>icon-misc-folder-remove</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-sync" />
-            <small>icon-misc-folder-sync</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-tree" />
-            <small>icon-misc-folder-tree</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-folder-warning" />
-            <small>icon-misc-folder-warning</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-message-square" />
-            <small>icon-misc-message-square</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-notify" />
-            <small>icon-misc-notify</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-thumbsdown" />
-            <small>icon-misc-thumbsdown</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-thumbsup" />
-            <small>icon-misc-thumbsup</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-trend-down" />
-            <small>icon-misc-trend-down</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-misc-trend-up" />
-            <small>icon-misc-trend-up</small>
-          </div>
-
-          <h6>Users</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user-add" />
-            <small>icon-user-add</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user-delete" />
-            <small>icon-user-delete</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user-group" />
-            <small>icon-user-group</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user-network" />
-            <small>icon-user-network</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user-remove" />
-            <small>icon-user-remove</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user-search" />
-            <small>icon-user-search</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user-success" />
-            <small>icon-user-success</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-user" />
-            <small>icon-user</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-users" />
-            <small>icon-users</small>
-          </div>
-          <h6>Mini icons</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-add" />
-            <small>icon-mini-add</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-arrow" />
-            <small>icon-mini-arrow</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-check" />
-            <small>icon-mini-check</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-close" />
-            <small>icon-mini-close</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-delete" />
-            <small>icon-mini-delete</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-down" />
-            <small>icon-mini-down</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-error" />
-            <small>icon-mini-error</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-arrow" />
-            <small>icon-mini-arrow</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-filter" />
-            <small>icon-mini-filter</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon
-              name="icon-mini-heart"
-              size="xs"
-            />
-            <small>icon-mini-heart</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-more" />
-            <small>icon-mini-more</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-remove" />
-            <small>icon-mini-remove</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-sort" />
-            <small>icon-mini-sort</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-sorted" />
-            <small>icon-mini-sorted</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-star" />
-            <small>icon-mini-star</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-success" />
-            <small>icon-mini-success</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-mini-up" />
-            <small>icon-mini-up</small>
-          </div>
-          <h6>Files</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-csv" />
-            <small>icon-file-csv</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-doc" />
-            <small>icon-file-doc</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-google-doc" />
-            <small>icon-file-google-doc</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-google-sheet" />
-            <small>icon-file-google-sheet</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-google-slides" />
-            <small>icon-file-google-slides</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-json" />
-            <small>icon-file-json</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-other" />
-            <small>icon-file-other</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-pdf" />
-            <small>icon-file-pdf</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-ppt" />
-            <small>icon-file-ppt</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-sql" />
-            <small>icon-file-sql</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-xls" />
-            <small>icon-file-xls</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-xml" />
-            <small>icon-file-xml</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-file-zip" />
-            <small>icon-file-zip</small>
-          </div>
-          <h6>Social</h6>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-contact-email" />
-            <small>icon-contact-email</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-contact-phone" />
-            <small>icon-contact-phone</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-contact-scheduler" />
-            <small>icon-contact-scheduler</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-contact-skype" />
-            <small>icon-contact-web</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-social-angellist" />
-            <small>icon-social-angellist</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-social-crunchbase" />
-            <small>icon-social-crunchbase</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-social-dribbble" />
-            <small>icon-social-dribbble</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-social-facebook" />
-            <small>icon-social-facebook</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-social-github" />
-            <small>icon-social-github</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-social-linkedin" />
-            <small>icon-social-linkedin</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-social-medium" />
-            <small>icon-social-medium</small>
-          </div>
-          <div class="mb-icon-container">
-            <mb-icon name="icon-social-twitter" />
-            <small>icon-social-twitter</small>
-          </div>
+            <p>Sizes are shown below:</p>
+            <ul class="mb-list-inline">
+              <li><mb-icon name="icon-utility-star-fill" size="xs" /> <code>size="xs"</code></li>
+              <li><mb-icon name="icon-utility-star-fill" size="s" /> <code>size="s"</code></li>
+              <li><mb-icon name="icon-utility-star-fill" size="m" /> <code>size="m"</code></li>
+              <li><mb-icon name="icon-utility-star-fill" size="l" /> <code>size="l"</code></li>
+            </ul>
+            <h3>Styling</h3>
+            <p>In some cases, icons will have a stroke color but also a fill color. To style them differently, you can define colors using two classes, <code>.svg-stroke</code> and <code>.svg-fill</code></p>
+            <pre><code>.mb-icon-name .svg-stroke {
+  stroke: $mb-color-white;
+}
+.mb-icon-name .svg-fill {
+  stroke: $mb-color-red;
+}</code></pre>
+            <h4>List of icons with stroke and fill</h4>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-checkbox-selected" /> icon-checkbox-selected</li> 
+              <li><mb-icon name="icon-alert-add-fill" /> icon-alert-add-fill</li>
+              <li><mb-icon name="icon-alert-danger-fill" /> icon-alert-danger-fill</li>
+              <li><mb-icon name="icon-alert-delete-fill" /> icon-alert-delete-fill</li>
+              <li><mb-icon name="icon-alert-error-fill" /> icon-alert-error-fill</li>
+              <li><mb-icon name="icon-alert-help-fill" /> icon-alert-help-fill</li>
+              <li><mb-icon name="icon-alert-info-fill" /> icon-alert-info-fill</li>
+              <li><mb-icon name="icon-alert-more-fill" /> icon-alert-more-fill</li>
+              <li><mb-icon name="icon-alert-remove-fill" /> icon-alert-remove-fill</li>
+              <li><mb-icon name="icon-alert-success-fill" /> icon-alert-success-fill</li>
+              <li><mb-icon name="icon-alert-warning-fill" /> icon-alert-warning-fill</li>
+              <li><mb-icon name="icon-mini-add" /> icon-mini-add</li>
+              <li><mb-icon name="icon-mini-delete" /> icon-mini-delete</li>
+              <li><mb-icon name="icon-mini-error" /> icon-mini-error</li>
+              <li><mb-icon name="icon-mini-more" /> icon-mini-more</li>
+              <li><mb-icon name="icon-mini-remove" /> icon-mini-remove</li>
+              <li><mb-icon name="icon-mini-success" /> icon-mini-success</li>
+              <li><mb-icon name="icon-file-csv" /> icon-file-csv</li>
+              <li><mb-icon name="icon-file-doc" /> icon-file-doc</li>
+              <li><mb-icon name="icon-file-google-doc" /> icon-file-google-doc</li>
+              <li><mb-icon name="icon-file-google-sheet" /> icon-file-google-sheet</li>
+              <li><mb-icon name="icon-file-google-slides" /> icon-file-google-slides</li>
+              <li><mb-icon name="icon-file-json" /> icon-file-json</li>
+              <li><mb-icon name="icon-file-other" /> icon-file-other</li>
+              <li><mb-icon name="icon-file-pdf" /> icon-file-pdf</li>
+              <li><mb-icon name="icon-file-ppt" /> icon-file-ppt</li>
+              <li><mb-icon name="icon-file-sql" /> icon-file-sql</li>
+              <li><mb-icon name="icon-file-xls" /> icon-file-xls</li>
+              <li><mb-icon name="icon-file-xml" /> icon-file-xml</li>
+              <li><mb-icon name="icon-file-zip" /> icon-file-zip</li>
+            </ul>
+            <h3 id="all-icons">All Icons</h3>
+            <h5>Navigation</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-admin" /> icon-admin</li>
+              <li><mb-icon name="icon-archive" /> icon-archive</li>
+              <li><mb-icon name="icon-billing" /> icon-billing</li>
+              <li><mb-icon name="icon-burger-collapsed" /> icon-burger-collapsed</li>
+              <li><mb-icon name="icon-burger" /> icon-burger</li>
+              <li><mb-icon name="icon-calendar" /> icon-calendar</li>
+              <li><mb-icon name="icon-contacts" /> icon-contacts</li>
+              <li><mb-icon name="icon-conversations" /> icon-conversations</li>
+              <li><mb-icon name="icon-dashboard" /> icon-dashboard</li>
+              <li><mb-icon name="icon-dealflow" /> icon-dealflow</li>
+              <li><mb-icon name="icon-filter" /> icon-filter</li>
+              <li><mb-icon name="icon-help" /> icon-help</li>
+              <li><mb-icon name="icon-home" /> icon-home</li>
+              <li><mb-icon name="icon-investor" /> icon-investor</li>
+              <li><mb-icon name="icon-logout" /> icon-logout</li>
+              <li><mb-icon name="icon-organization-profile" /> icon-organization-profile</li>
+              <li><mb-icon name="icon-performance" /> icon-performance</li>
+              <li><mb-icon name="icon-program-profile" /> icon-program-profile</li>
+              <li><mb-icon name="icon-program" /> icon-program</li>
+              <li><mb-icon name="icon-settings" /> icon-settings</li>
+              <li><mb-icon name="icon-user-profile" /> icon-user-profile</li>
+              <li><mb-icon name="icon-workspace" /> icon-workspace</li>
+            </ul>
+            <h5>Business</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-business-accounting" /> icon-business-accounting</li>
+              <li><mb-icon name="icon-business-activity" /> icon-business-activity</li>
+              <li><mb-icon name="icon-business-apps" /> icon-business-apps</li>
+              <li><mb-icon name="icon-business-archive" /> icon-business-archive</li>
+              <li><mb-icon name="icon-business-chart-area" /> icon-business-chart-area</li>
+              <li><mb-icon name="icon-business-chart-bar" /> icon-business-chart-bar</li>
+              <li><mb-icon name="icon-business-chart-column-notepad" /> icon-business-chart-column-notepad</li>
+              <li><mb-icon name="icon-business-chart-column" /> icon-business-chart-column</li>
+              <li><mb-icon name="icon-business-chart-complex" /> icon-business-chart-complex</li>
+              <li><mb-icon name="icon-business-chart-line" /> icon-business-chart-line</li>
+              <li><mb-icon name="icon-business-chart-lines" /> icon-business-chart-lines</li>
+              <li><mb-icon name="icon-business-chart-pie" /> icon-business-chart-pie</li>
+              <li><mb-icon name="icon-business-design" /> icon-business-design</li>
+              <li><mb-icon name="icon-business-education" /> icon-business-education</li>
+              <li><mb-icon name="icon-business-idea" /> icon-business-idea</li>
+              <li><mb-icon name="icon-business-inbox" /> icon-business-inbox</li>
+              <li><mb-icon name="icon-business-investment" /> icon-business-investment</li>
+              <li><mb-icon name="icon-business-metrics" /> icon-business-metrics</li>
+              <li><mb-icon name="icon-business-money" /> icon-business-money</li>
+              <li><mb-icon name="icon-business-paperwork" /> icon-business-paperwork</li>
+              <li><mb-icon name="icon-business-performance" /> icon-business-performance</li>
+              <li><mb-icon name="icon-business-report" /> icon-business-report</li>
+              <li><mb-icon name="icon-business-site" /> icon-business-site</li>
+              <li><mb-icon name="icon-business-strategy" /> icon-business-strategy</li>
+              <li><mb-icon name="icon-business-target" /> icon-business-target</li>
+              <li><mb-icon name="icon-business-work" /> icon-business-work</li>
+            </ul>
+            <h5>Formatting</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-format-attachment" /> icon-format-attachment</li>
+              <li><mb-icon name="icon-format-body" /> icon-format-body</li>
+              <li><mb-icon name="icon-format-close-quote" /> icon-format-close-quote</li>
+              <li><mb-icon name="icon-format-code" /> icon-format-code</li>
+              <li><mb-icon name="icon-format-email" /> icon-format-email</li>
+              <li><mb-icon name="icon-format-eraser" /> icon-format-eraser</li>
+              <li><mb-icon name="icon-format-h1" /> icon-format-h1</li>
+              <li><mb-icon name="icon-format-h2" /> icon-format-h2</li>
+              <li><mb-icon name="icon-format-h3" /> icon-format-h3</li>
+              <li><mb-icon name="icon-format-hash" /> icon-format-hash</li>
+              <li><mb-icon name="icon-format-image" /> icon-format-image</li>
+              <li><mb-icon name="icon-format-line" /> icon-format-line</li>
+              <li><mb-icon name="icon-format-link" /> icon-format-link</li>
+              <li><mb-icon name="icon-format-ordered-list" /> icon-format-ordered-list</li>
+              <li><mb-icon name="icon-format-redo" /> icon-format-redo</li>
+              <li><mb-icon name="icon-format-resizer" /> icon-format-resizer</li>
+              <li><mb-icon name="icon-format-table" /> icon-format-table</li>
+              <li><mb-icon name="icon-format-text-bold" /> icon-format-text-bold</li>
+              <li><mb-icon name="icon-format-text-italic" /> icon-format-text-italic</li>
+              <li><mb-icon name="icon-format-text-strike-through" /> icon-format-text-strike-through</li>
+              <li><mb-icon name="icon-format-text-underline" /> icon-format-text-underline</li>
+              <li><mb-icon name="icon-format-todo" /> icon-format-todo</li>
+              <li><mb-icon name="icon-format-undo" /> icon-format-undo</li>
+              <li><mb-icon name="icon-format-unordered-list" /> icon-format-unordered-list</li>
+            </ul>
+            <h5>Forms</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-forms-call" /> icon-forms-call</li>
+              <li><mb-icon name="icon-forms-check" /> icon-forms-check</li>
+              <li><mb-icon name="icon-forms-checkbox" /> icon-forms-checkbox</li>
+              <li><mb-icon name="icon-forms-checkbox-selected" /> icon-forms-checkbox-selected</li>
+              <li><mb-icon name="icon-forms-disabled" /> icon-forms-disabled</li>
+              <li><mb-icon name="icon-forms-edit" /> icon-forms-edit</li>
+              <li><mb-icon name="icon-forms-email" /> icon-forms-email</li>
+              <li><mb-icon name="icon-forms-formula" /> icon-forms-formula</li>
+              <li><mb-icon name="icon-forms-hide" /> icon-forms-hide</li>
+              <li><mb-icon name="icon-forms-lock" /> icon-forms-lock</li>
+              <li><mb-icon name="icon-forms-password" /> icon-forms-password</li>
+              <li><mb-icon name="icon-forms-radio" /> icon-forms-radio</li>
+              <li><mb-icon name="icon-forms-radio-selected" /> icon-forms-radio-selected</li>
+              <li><mb-icon name="icon-forms-search" /> icon-forms-search</li>
+              <li><mb-icon name="icon-forms-submit" /> icon-forms-submit</li>
+              <li><mb-icon name="icon-forms-sync" /> icon-forms-sync</li>
+              <li><mb-icon name="icon-forms-tags" /> icon-forms-tags</li>
+              <li><mb-icon name="icon-forms-time" /> icon-forms-time</li>
+              <li><mb-icon name="icon-forms-unlock" /> icon-forms-unlock</li>
+              <li><mb-icon name="icon-forms-view" /> icon-forms-view</li>
+            </ul>
+            <h5>Alerts</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-alert-add-fill" /> icon-alert-add-fill</li>
+              <li><mb-icon name="icon-alert-add" /> icon-alert-add</li>
+              <li><mb-icon name="icon-alert-danger-fill" /> icon-alert-danger-fill</li>
+              <li><mb-icon name="icon-alert-danger" /> icon-alert-danger</li>
+              <li><mb-icon name="icon-alert-delete-fill" /> icon-alert-delete-fill</li>
+              <li><mb-icon name="icon-alert-delete" /> icon-alert-delete</li>
+              <li><mb-icon name="icon-alert-error-fill" /> icon-alert-error-fill</li>
+              <li><mb-icon name="icon-alert-error" /> icon-alert-error</li>
+              <li><mb-icon name="icon-alert-help-fill" /> icon-alert-help-fill</li>
+              <li><mb-icon name="icon-alert-help" /> icon-alert-help</li>
+              <li><mb-icon name="icon-alert-info-fill" /> icon-alert-info-fill</li>
+              <li><mb-icon name="icon-alert-info" /> icon-alert-info</li>
+              <li><mb-icon name="icon-alert-more-fill" /> icon-alert-more-fill</li>
+              <li><mb-icon name="icon-alert-more" /> icon-alert-more</li>
+              <li><mb-icon name="icon-alert-remove-fill" /> icon-alert-remove-fill</li>
+              <li><mb-icon name="icon-alert-remove" /> icon-alert-remove</li>
+              <li><mb-icon name="icon-alert-success-fill" /> icon-alert-success-fill</li>
+              <li><mb-icon name="icon-alert-success" /> icon-alert-success</li>
+              <li><mb-icon name="icon-alert-warning-fill" /> icon-alert-warning-fill</li>
+              <li><mb-icon name="icon-alert-warning" /> icon-alert-warning</li>
+            </ul>
+            <h5>Utility</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-utility-add" /> icon-utility-add</li>
+              <li><mb-icon name="icon-utility-arrow-left" /> icon-utility-arrow</li>
+              <li><mb-icon name="icon-utility-both" /> icon-utility-both</li>
+              <li><mb-icon name="icon-utility-check" /> icon-utility-check</li>
+              <li><mb-icon name="icon-utility-close" /> icon-utility-close</li>
+              <li><mb-icon name="icon-utility-copy" /> icon-utility-copy</li>
+              <li><mb-icon name="icon-utility-custom" /> icon-utility-custom</li>
+              <li><mb-icon name="icon-utility-doublecheck" /> icon-utility-doublecheck</li>
+              <li><mb-icon name="icon-utility-download" /> icon-utility-download</li>
+              <li><mb-icon name="icon-utility-layout" /> icon-utility-layout</li>
+              <li><mb-icon name="icon-utility-love" /> icon-utility-love</li>
+              <li><mb-icon name="icon-utility-menu" /> icon-utility-menu</li>
+              <li><mb-icon name="icon-utility-more" /> icon-utility-more</li>
+              <li><mb-icon name="icon-utility-notification" /> icon-utility-notification</li>
+              <li><mb-icon name="icon-utility-pin" /> icon-utility-pin</li>
+              <li><mb-icon name="icon-utility-print" /> icon-utility-print</li>
+              <li><mb-icon name="icon-utility-previous" /> icon-utility-previous</li>
+              <li><mb-icon name="icon-utility-rating" /> icon-utility-rating</li>
+              <li><mb-icon name="icon-utility-save" /> icon-utility-save</li>
+              <li><mb-icon name="icon-utility-star-fill" /> icon-utility-star-fill</li>
+              <li><mb-icon name="icon-utility-star" /> icon-utility-star</li>
+              <li><mb-icon name="icon-utility-select" /> icon-utility-select</li>
+              <li><mb-icon name="icon-utility-two-colums" /> icon-utility-two-colums</li>
+              <li><mb-icon name="icon-utility-upload" /> icon-utility-upload</li>
+            </ul>
+            <h5>Concepts</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-concepts-block" /> icon-concepts-block</li>
+              <li><mb-icon name="icon-concepts-blocks" /> icon-concepts-blocks</li>
+              <li><mb-icon name="icon-concepts-briefcase" /> icon-concepts-briefcase</li>
+              <li><mb-icon name="icon-concepts-bug" /> icon-concepts-bug</li>
+              <li><mb-icon name="icon-concepts-chart" /> icon-concepts-chart</li>
+              <li><mb-icon name="icon-concepts-database" /> icon-concepts-database</li>
+              <li><mb-icon name="icon-concepts-deal" /> icon-concepts-deal</li>
+              <li><mb-icon name="icon-concepts-experiment" /> icon-concepts-experiment</li>
+              <li><mb-icon name="icon-concepts-goals" /> icon-concepts-goals</li>
+              <li><mb-icon name="icon-concepts-hub" /> icon-concepts-hub</li>
+              <li><mb-icon name="icon-concepts-idea" /> icon-concepts-idea</li>
+              <li><mb-icon name="icon-concepts-mentor" /> icon-concepts-mentor</li>
+              <li><mb-icon name="icon-concepts-mood" /> icon-concepts-mood</li>
+              <li><mb-icon name="icon-concepts-tabbed" /> icon-concepts-tabbed</li>
+              <li><mb-icon name="icon-concepts-team" /> icon-concepts-team</li>
+              <li><mb-icon name="icon-concepts-wealth" /> icon-concepts-wealth</li>
+            </ul>
+            <h5>Misc</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-misc-chat" /> icon-misc-chat</li>
+              <li><mb-icon name="icon-misc-chat" /> icon-misc-chat</li>
+              <li><mb-icon name="icon-misc-checklists" /> icon-misc-checklists</li>
+              <li><mb-icon name="icon-misc-document" /> icon-misc-document</li>
+              <li><mb-icon name="icon-misc-documents" /> icon-misc-documents</li>
+              <li><mb-icon name="icon-misc-flag" /> icon-misc-flag</li>
+              <li><mb-icon name="icon-misc-folder-add" /> icon-misc-folder-add</li>
+              <li><mb-icon name="icon-misc-folder-ban" /> icon-misc-folder-ban</li>
+              <li><mb-icon name="icon-misc-folder-close" /> icon-misc-folder-close</li>
+              <li><mb-icon name="icon-misc-folder-closed" /> icon-misc-folder-closed</li>
+              <li><mb-icon name="icon-misc-folder-locked" /> icon-misc-folder-locked</li>
+              <li><mb-icon name="icon-misc-folder-open" /> icon-misc-folder-open</li>
+              <li><mb-icon name="icon-misc-folder-remove" /> icon-misc-folder-remove</li>
+              <li><mb-icon name="icon-misc-folder-sync" /> icon-misc-folder-sync</li>
+              <li><mb-icon name="icon-misc-folder-tree" /> icon-misc-folder-tree</li>
+              <li><mb-icon name="icon-misc-folder-warning" /> icon-misc-folder-warning</li>
+              <li><mb-icon name="icon-misc-message-square" /> icon-misc-message-square</li>
+              <li><mb-icon name="icon-misc-notify" /> icon-misc-notify</li>
+              <li><mb-icon name="icon-misc-thumbsdown" /> icon-misc-thumbsdown</li>
+              <li><mb-icon name="icon-misc-thumbsup" /> icon-misc-thumbsup</li>
+              <li><mb-icon name="icon-misc-trend-down" /> icon-misc-trend-down</li>
+              <li><mb-icon name="icon-misc-trend-up" /> icon-misc-trend-up</li>
+            </ul>
+            <h5>Users</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-user-add" /> icon-user-add</li>
+              <li><mb-icon name="icon-user-delete" /> icon-user-delete</li>
+              <li><mb-icon name="icon-user-group" /> icon-user-group</li>
+              <li><mb-icon name="icon-user-network" /> icon-user-network</li>
+              <li><mb-icon name="icon-user-remove" /> icon-user-remove</li>
+              <li><mb-icon name="icon-user-search" /> icon-user-search</li>
+              <li><mb-icon name="icon-user-success" /> icon-user-success</li>
+              <li><mb-icon name="icon-user" /> icon-user</li>
+              <li><mb-icon name="icon-users" /> icon-users</li>
+            </ul>
+            <h5>Mini icons</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-mini-add" /> icon-mini-add</li>
+              <li><mb-icon name="icon-mini-arrow" /> icon-mini-arrow</li>
+              <li><mb-icon name="icon-mini-check" /> icon-mini-check</li>
+              <li><mb-icon name="icon-mini-close" /> icon-mini-close</li>
+              <li><mb-icon name="icon-mini-delete" /> icon-mini-delete</li>
+              <li><mb-icon name="icon-mini-down" /> icon-mini-down</li>
+              <li><mb-icon name="icon-mini-error" /> icon-mini-error</li>
+              <li><mb-icon name="icon-mini-arrow" /> icon-mini-arrow</li>
+              <li><mb-icon name="icon-mini-filter" /> icon-mini-filter</li>
+              <li><mb-icon name="icon-mini-heart" /> icon-mini-heart</li>
+              <li><mb-icon name="icon-mini-more" /> icon-mini-more</li>
+              <li><mb-icon name="icon-mini-remove" /> icon-mini-remove</li>
+              <li><mb-icon name="icon-mini-sort" /> icon-mini-sort</li>
+              <li><mb-icon name="icon-mini-sorted" /> icon-mini-sorted</li>
+              <li><mb-icon name="icon-mini-star" /> icon-mini-star</li>
+              <li><mb-icon name="icon-mini-success" /> icon-mini-success</li>
+              <li><mb-icon name="icon-mini-up" /> icon-mini-up</li>
+            </ul>
+            <h5>Files</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-file-csv" /> icon-file-csv</li>
+              <li><mb-icon name="icon-file-doc" /> icon-file-doc</li>
+              <li><mb-icon name="icon-file-google-doc" /> icon-file-google-doc</li>
+              <li><mb-icon name="icon-file-google-sheet" /> icon-file-google-sheet</li>
+              <li><mb-icon name="icon-file-google-slides" /> icon-file-google-slides</li>
+              <li><mb-icon name="icon-file-json" /> icon-file-json</li>
+              <li><mb-icon name="icon-file-other" /> icon-file-other</li>
+              <li><mb-icon name="icon-file-pdf" /> icon-file-pdf</li>
+              <li><mb-icon name="icon-file-ppt" /> icon-file-ppt</li>
+              <li><mb-icon name="icon-file-sql" /> icon-file-sql</li>
+              <li><mb-icon name="icon-file-xls" /> icon-file-xls</li>
+              <li><mb-icon name="icon-file-xml" /> icon-file-xml</li>
+              <li><mb-icon name="icon-file-zip" /> icon-file-zip</li>
+            </ul>
+            <h5>Social</h5>
+            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
+              <li><mb-icon name="icon-contact-email" /> icon-contact-email</li>
+              <li><mb-icon name="icon-contact-phone" /> icon-contact-phone</li>
+              <li><mb-icon name="icon-contact-scheduler" /> icon-contact-scheduler</li>
+              <li><mb-icon name="icon-contact-skype" /> icon-contact-web</li>
+              <li><mb-icon name="icon-social-angellist" /> icon-social-angellist</li>
+              <li><mb-icon name="icon-social-crunchbase" /> icon-social-crunchbase</li>
+              <li><mb-icon name="icon-social-dribbble" /> icon-social-dribbble</li>
+              <li><mb-icon name="icon-social-facebook" /> icon-social-facebook</li>
+              <li><mb-icon name="icon-social-github" /> icon-social-github</li>
+              <li><mb-icon name="icon-social-linkedin" /> icon-social-linkedin</li>
+              <li><mb-icon name="icon-social-medium" /> icon-social-medium</li>
+              <li><mb-icon name="icon-social-twitter" /> icon-social-twitter</li>
+            </ul>
+          </article>
         </template>
       </mb-panel>
     </main>

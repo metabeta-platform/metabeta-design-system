@@ -13,6 +13,10 @@ div {
   @include mb-text(m);
 }
 
+* {
+  @include mb-transition(smooth);
+}
+
 // nav {}
 // header {}
 // footer {}
@@ -37,7 +41,7 @@ h2 {
 
 h3 {
   @include mb-heading(l);
-  margin: $mb-space-m 0 $mb-space-s;
+  margin: $mb-space-l 0 $mb-space-s;
 }
 
 h4 {
@@ -48,22 +52,29 @@ h4 {
 h5 {
   @include mb-heading(s);
   text-transform: uppercase;
-  margin: $mb-space-s 0 $mb-space-xs;
+  margin: $mb-space-s 0 $mb-space-s;
 }
 
 h6 {
   @include mb-heading(xs);
-  margin: $mb-space-s 0 $mb-space-xxs;
+  margin: $mb-space-s 0 $mb-space-s;
 }
 
 p {
   @include mb-text(m);
-  margin: 0 0 0.5em;
+  margin: 0 0 $mb-space-m;
 }
 
 li {
   @include mb-text(m);
-  margin: 0 0 0.5em;
+  margin: 0 0 $mb-space-s;
+}
+
+ul {
+  &.mb-list-inline li {
+    display: inline-block;
+    margin: 0 $mb-space-m $mb-space-m 0;
+  }
 }
 
 // Use <blockquote cite="source"></blockquote>
@@ -74,7 +85,7 @@ blockquote {
   padding-left: $mb-space-l;
   border-left: $mb-border-thick solid $mb-color-cyan-500;
   font-style: italic;
-  margin: 0 0 0.5em;
+  margin: 0 0 $mb-space-m;
   color: $mb-color-headings;
 
   footer {
@@ -87,10 +98,33 @@ blockquote {
   }
 }
 
-pre {
-  @include mb-text(m);
-  margin: 0 0 0.5em;
+code {
+  @include mb-border-radius(xs);
+  padding: $mb-space-xxs $mb-space-xxs;
+  background-color: $mb-color-gray-100;
+  color: $mb-color-pink-500;
+  font-family: $mb-font-family-monospace;
+  font-size: 0.875em;
+  baseline-shift: 2px;
 }
+
+pre {
+  @include mb-border-radius(m);
+  @include mb-text(s);
+  margin: $mb-space-s 0 $mb-space-m;
+  padding: $mb-space-m;
+  background-color: $mb-color-gray-900;
+  color: $mb-color-gray-100;
+  font-family: $mb-font-family-monospace;
+  code { 
+    background-color: transparent;
+    color: $mb-color-gray-200;
+    padding: 0;
+    font-size: $mb-font-size-s;
+  }
+}
+
+
 
 article {
   &.mb-long-form {
@@ -145,7 +179,7 @@ article {
 
     dd {
       @include mb-text(l);
-      margin: 0 0 0.5em;
+      margin: 0 0 $mb-space-m;
     }
   }
 }
@@ -187,6 +221,7 @@ iframe {
 /* TABLES START */
 table {
   width: 100%;
+  margin-bottom: $mb-space-m;
 
   caption {}
 
@@ -203,7 +238,7 @@ table {
         text-transform: uppercase;
         text-align: left;
         color: $mb-color-text-medium;
-        padding: $mb-space-m;
+        padding: $mb-space-s $mb-space-m;
       }
     }
   }
@@ -215,7 +250,7 @@ table {
 
       td {
         text-align: left;
-        padding: $mb-space-m;
+        padding: $mb-space-s $mb-space-m;
       }
 
       &:hover {
@@ -895,12 +930,6 @@ small {
 }
 
 //span {} // Cristian: I don't think we need to add style to span;
-code {
-  @include mb-border-radius(s);
-  padding: $mb-space-xs;
-  font-family: $mb-font-family-monospace;
-  background-color: $mb-color-gray-highlight;
-}
 
 sub {
   vertical-align: sub;
