@@ -62,7 +62,7 @@ export default {
   }
   &.mb-is-disabled{
     a{
-    pointer-events:none;
+    // pointer-events:none;
     cursor: not-allowed;
     background-color: fade-out(desaturate($mb-color-gray, $mb-opacity-m),$mb-opacity-xxl);
     color: fade-out($mb-color-text-medium, $mb-opacity-l);

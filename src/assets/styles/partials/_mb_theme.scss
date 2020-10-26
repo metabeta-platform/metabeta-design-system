@@ -101,7 +101,7 @@ blockquote {
 code {
   @include mb-border-radius(xs);
   padding: $mb-space-xxs $mb-space-xxs;
-  background-color: $mb-color-gray-100;
+  background-color: $mb-color-gray-highlight;
   color: $mb-color-pink-500;
   font-family: $mb-font-family-monospace;
   font-size: 0.875em;

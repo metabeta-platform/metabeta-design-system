@@ -119,12 +119,12 @@ export default Vue.extend({
         _id: '123162387sgahdjsadgdasj',
         href: 'https://medium.com/',
         menuItemContent: 'Menu Item 1',
-        isDisabled: true
       },
       {
         _id: 'asdgashjdgksja1213a',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item 2'
+        menuItemContent: 'Menu Item 2',
+        isDisabled: true
       },
       {
         _id: 'sdsdfsd',
@@ -137,7 +137,6 @@ export default Vue.extend({
         _id: '123162387sgahdjsadgdasj',
         href: 'https://medium.com/',
         menuItemContent: 'Menu Item 4',
-        isDisabled: true
       },
       {
         _id: '123162387sgssssdjsadgdasj',
@@ -923,6 +922,7 @@ main {
         <mb-avatar
           :avatar="user"
           type="user"
+          tooltip="right"
           size="l"
         ></mb-avatar>
         <mb-avatar
@@ -2711,6 +2711,13 @@ main {
             </table>
           </div>
           <h4>MbMenu sizes</h4>
+          <mb-menu
+            title="Size M"
+            :items="items"
+            size="m"
+            flow="vertical"
+          >
+          </mb-menu>
           <mb-menu
             title="Size M"
             :items="items"

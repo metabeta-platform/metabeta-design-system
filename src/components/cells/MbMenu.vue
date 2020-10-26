@@ -50,6 +50,11 @@ export default {
 @import "../../assets/styles/partials/_mb_space.scss";
 @import "../../assets/styles/partials/_mb_typography.scss";
 .mb-menu {
+  & + .mb-menu {
+    padding-top: $mb-space-xs;
+    margin-top: $mb-space-xs;
+    border-top: $mb-border-thin solid $mb-color-border-light;
+  }
   &-title {
     padding: 0 $mb-space-xs;
     @include mb-heading(xs);
@@ -57,12 +62,15 @@ export default {
   }
   ul {
     li {
-      margin: 0;
+      margin: 0 0 1px 0;
       padding: 0;
     }
   }
   &.mb-flow {
     &-horizontal {
+      ul {
+        padding-bottom: $mb-space-xs;
+      }
       li {
         display: inline-block;
         margin-right: $mb-space-xs;
@@ -78,13 +86,16 @@ export default {
     &-m {
       .mb-menu-title {
         @include mb-heading(xs);
+        padding: $mb-space-xxs $mb-space-xs;
+        margin: 0;
         color: $mb-color-text-light;
       }
     }
     &-l {
       .mb-menu-title {
-        @include mb-heading(s);
-        padding: $mb-space-xs;
+        @include mb-heading(xs);
+        padding: $mb-space-xs $mb-space-s;
+        margin: 0;
         color: $mb-color-text-light;
       }
     }

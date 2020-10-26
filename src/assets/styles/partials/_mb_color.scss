@@ -178,7 +178,7 @@ $mb-color-gray-700             : #494f57;
 $mb-color-gray-800             : #343d40;
 $mb-color-gray-900             : #212629;
 $mb-color-gray                 : $mb-color-gray-500;
-$mb-color-gray-highlight       : rgba($mb-color-gray-900,$mb-opacity-xs);
+$mb-color-gray-highlight       : rgba($mb-color-gray-900,$mb-opacity-xxs);
 
 $mb-color-white                : #ffffff;
 $mb-color-transparent          : rgba($mb-color-white,0.0001); // Fixes bug in IE for background colors
