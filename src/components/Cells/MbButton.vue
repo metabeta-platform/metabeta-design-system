@@ -176,6 +176,7 @@ export default {
 .mb-btn-anc {
   display: inline-block;
   position: relative;
+  vertical-align: text-bottom;
   .mb-button {
     margin-right: $mb-space-xxs;
     display: flex;

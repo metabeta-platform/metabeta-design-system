@@ -8,13 +8,6 @@
       :for="name"
     >{{label}}<span class="mb-label-help">{{help}}</span></label>
     <div class="mb-input-wrapper">
-      <mb-icon
-        v-if="iconBefore || type === 'password' || type === 'email' || type === 'url'"
-        :class="{'icon-before' : iconBefore || type === 'password' || type === 'email' || type === 'url'}"
-        @click="emit('icon-clicked')"
-        class="input-icon"
-        :name="dynamicBefore"
-      ></mb-icon>
       <input
         :id="name"
         class="mb-input"
@@ -28,6 +21,13 @@
         :required="inputRequired"
         :readonly="inputReadonly"
       >
+      <mb-icon
+        v-if="iconBefore || type === 'password' || type === 'email' || type === 'url'"
+        :class="{'icon-before' : iconBefore || type === 'password' || type === 'email' || type === 'url'}"
+        @click="emit('icon-clicked')"
+        class="input-icon"
+        :name="dynamicBefore"
+      ></mb-icon>
       <mb-icon
         v-if="iconAfter || type === 'password'"
         @click="emit('icon-clicked')"
@@ -122,6 +122,7 @@ export default {
         this.isRequired = value;
       }
     },
+    
     inputReadonly: {
       get () {
         return this.isReadonly;
@@ -176,19 +177,21 @@ export default {
     box-sizing: border-box;
     .has-after-icon {
       padding-right: 50px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 10px;
+      & ~ .icon-after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+      }
     }
     .has-before-icon {
-      margin-left: 20px;
-    }
-    .input-icon {
-      position: absolute;
-      left: 4px;
-      top: 50%;
-      transform: translateY(-50%);
+      padding-left: 30px;
+      & ~ .icon-before {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
   .mb-label-help {
