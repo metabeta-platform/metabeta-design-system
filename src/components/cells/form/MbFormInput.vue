@@ -33,9 +33,8 @@
         @click="handleAfterClick"
         class="input-icon"
         :class="{'icon-after' : iconAfter || type === 'password'}"
-        :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'view-icon' : 'hidden-icon' : !!iconAfter.name"
+        :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-view' : 'icon-forms-hide' : !!iconAfter.name"
       ></mb-icon>
-      <!-- Chris please change hidden-icon to svg we want to use for not being able to see the password an eye with a cross -->
     </div>
     <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
   </mb-fieldset>
