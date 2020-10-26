@@ -1038,28 +1038,6 @@ main {
           :radioValues="radioGroupData"
         > </mb-radio-group>
         Selected radio option is <span class="danger"> {{selectedRadio}} </span>
-        <div class="mb-radio-group mb-flow-horizontal">
-          <ul>
-            <li>
-              <mb-radio
-                label="RadioBox"
-                name="test"
-              ></mb-radio>
-            </li>
-            <li>
-              <mb-radio
-                label="RadioBox2"
-                name="test"
-              ></mb-radio>
-            </li>
-            <li>
-              <mb-radio
-                label="RadioBox3"
-                name="test"
-              ></mb-radio>
-            </li>
-          </ul>
-        </div>
       </section>
 
       <h2>In progress</h2>

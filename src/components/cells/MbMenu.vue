@@ -1,34 +1,46 @@
 <template>
-<nav :class="['mb-menu', `mb-size-${size}`, `mb-flow-${flow}`]">
-  <h5 class="mb-menu-title">{{title}}</h5>
-  <ul>
-      <mb-menu-item v-for="item in items" :key="item._id" @click="$router.push({name : item.href})" :href="item.href" :menuItemContent="item.menuItemContent" :isDisabled="item.isDisabled"> 
+  <nav :class="['mb-menu', `mb-size-${size}`, `mb-flow-${flow}`]">
+    <h5 class="mb-menu-title">{{title}}</h5>
+    <ul>
+      <mb-menu-item
+        v-for="item in items"
+        :key="item._id"
+        @click="navigateIfRouterLink"
+        :href="item.href"
+        :menuItemContent="item.menuItemContent"
+        :isDisabled="item.isDisabled"
+      >
       </mb-menu-item>
-  </ul>
-</nav>
+    </ul>
+  </nav>
 </template>
 
 <script>
 export default {
   name: 'MbMenu',
   props: {
-    title:{
+    title: {
       type: [String, Number],
     },
-    size:{
+    size: {
       type: String,
       default: 'm',
     },
-    flow:{
+    flow: {
       type: String,
       default: 'vertical',
     },
-    items:{
+    items: {
       type: [Array, Object],
     }
   },
+  methods: {
+    navigateIfRouterLink (anchor) {
+      !anchor.includes('#') ? this.$router.push({ name: item.href }) : null;
+    }
+  },
   components: {
-    MbMenuItem : () => import('@/components/cells/MbMenuItem'),
+    MbMenuItem: () => import('@/components/cells/MbMenuItem'),
   },
 }
 </script>
@@ -37,40 +49,40 @@ export default {
 @import "../../assets/styles/partials/_mb_color.scss";
 @import "../../assets/styles/partials/_mb_space.scss";
 @import "../../assets/styles/partials/_mb_typography.scss";
-.mb-menu{
-  &-title{
+.mb-menu {
+  &-title {
     padding: 0 $mb-space-xs;
     @include mb-heading(xs);
     color: $mb-color-text-light;
   }
-  ul{
-    li{
-    margin:0;
-    padding:0;
+  ul {
+    li {
+      margin: 0;
+      padding: 0;
     }
   }
-  &.mb-flow{
-    &-horizontal{
-      li{
-        display:inline-block;
-        margin-right:$mb-space-xs;
+  &.mb-flow {
+    &-horizontal {
+      li {
+        display: inline-block;
+        margin-right: $mb-space-xs;
       }
     }
-    &-vertical{
-      li{
-        display:flex;
+    &-vertical {
+      li {
+        display: flex;
       }
     }
   }
-  &.mb-size{
-    &-m{
-      .mb-menu-title{
+  &.mb-size {
+    &-m {
+      .mb-menu-title {
         @include mb-heading(xs);
         color: $mb-color-text-light;
       }
     }
-    &-l{
-      .mb-menu-title{
+    &-l {
+      .mb-menu-title {
         @include mb-heading(s);
         padding: $mb-space-xs;
         color: $mb-color-text-light;
