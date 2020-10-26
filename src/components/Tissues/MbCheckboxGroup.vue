@@ -9,8 +9,9 @@
           @unchecked="uncheckedEmit"
           @checked="checkedEmit"
           :name="checkboxIndex.name"
-          :is-checked="checkedValue[i]"
+          :is-checked="checkboxIndex.checked"
           :label="checkboxIndex.label"
+          :is-disabled="!!checkboxIndex.disabled && checkboxIndex.disabled === true"
         ></mb-checkbox>
       </li>
     </ul>
@@ -39,13 +40,19 @@ export default {
       this.$emit('inputChanged', this.checkedArr);
     },
     uncheckedEmit (uncheckedInput) {
-      this.checkedArr.filter(checkedItem => this.checkedArr.includes(checkedItem));
+      console.log(uncheckedInput);
+      this.checkedArr = this.checkedArr.filter(checkedItem => checkedItem !== uncheckedInput);
+      console.log(this.checkedArr);
       this.$emit('inputChanged', this.checkedArr);
     }
   },
   components: {
     MbCheckbox: () => import('../cells/form/MbCheckbox.vue'),
   },
+  created () {
+    this.checkedArr = this.checkedValues.filter(e => e.checked === true).map(e => e.name);
+    this.$emit('inputChanged', this.checkedArr);
+  }
 }
 </script>
 

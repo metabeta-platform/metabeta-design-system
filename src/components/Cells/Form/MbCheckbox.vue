@@ -1,15 +1,16 @@
 <template>
   <div
     @click="checkEvent"
-    :class="['mb-checkbox', checkState ? '' : 'mb-is-checked', checkboxDisabled ? 'mb-is-disabled' : null]"
+    :class="['mb-checkbox', checkState ? 'mb-is-checked' : '', checkboxDisabled ? 'mb-is-disabled' : '']"
   >
     <input
       type="checkbox"
       :name="name"
       :checked="checkState"
       :disabled="isDisabled"
+      :value="name"
     >
-    <mb-icon  :name="checkState ? 'icon-forms-checkbox' : 'icon-forms-checkbox-selected'"> </mb-icon>
+    <mb-icon :name="checkState ? 'icon-forms-checkbox-selected' : 'icon-forms-checkbox'"> </mb-icon>
     <label :for="name">{{label}}</label>
   </div>
 </template>
@@ -66,7 +67,7 @@ export default {
     }
   },
   components: {
-    MbIcon: () => import('../MbIcon.vue'),
+    MbIcon: () => import('../MbIcon'),
   },
   created () {
     this.checkState = this.isChecked;
@@ -92,11 +93,10 @@ export default {
     @include mb-font(body, normal, normal, s);
     margin: 0 0 0 $mb-space-xxs;
   }
-  &.mb-is-checked{
-    label{
+  &.mb-is-checked {
+    label {
       color: $mb-color-headings;
     }
   }
 }
-
 </style>
