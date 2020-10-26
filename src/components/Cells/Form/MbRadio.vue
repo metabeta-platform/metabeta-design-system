@@ -9,6 +9,7 @@
       :checked="radioState"
       :value="name"
     >
+    <mb-icon :name="radioState ? 'icon-forms-radio-selected' : 'icon-forms-radio'"> </mb-icon>
     <label :for="name">{{label}}</label>
   </div>
 </template>
@@ -38,6 +39,9 @@ export default {
       this.$emit('inputChanged', this.name);
     },
   },
+  components: {
+    MbIcon: () => import('../MbIcon.vue')
+  },
   watch: {
     isChecked (val) {
       this.radioState = val;
@@ -49,5 +53,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.radiobox {
+  display: flex;
+  align-items: center;
+  label {
+    color: $mb-color-text-medium;
+    @include mb-font(body, normal, normal, s);
+    margin: 0 0 0 $mb-space-xxs;
+  }
+}
 </style>
