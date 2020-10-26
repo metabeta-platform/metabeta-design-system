@@ -61,6 +61,30 @@ export default Vue.extend({
       checked: false,
       label: 'four',
     },],
+    radioGroupData: [{
+      _id: 'i1',
+      name: 'one',
+      value: 'one',
+      selected: false,
+      label: 'one',
+    }, {
+      _id: 'i2',
+      name: 'two',
+      value: 'two',
+      selected: true,
+      label: 'two',
+    }, {
+      _id: 'i3',
+      name: 'three',
+      value: 'three',
+      label: 'three',
+    }, {
+      _id: 'i4',
+      name: 'four',
+      value: 'four',
+      selected: false,
+      label: 'four',
+    },],
     organizations: [
       {
         _id: '1',
@@ -177,6 +201,7 @@ export default Vue.extend({
     openDrawerFooter: false,
     openDrawerHeader: false,
     checkedArr: [],
+    selectedRadio: '',
     tabs: [
       {
         _id: 'asdgashdgksja1213a',
@@ -239,6 +264,9 @@ export default Vue.extend({
   methods: {
     inputChanged (val) {
       this.checkedArr = val;
+    },
+    radioChange (val) {
+      this.selectedRadio = val;
     }
   },
   components: {
@@ -1005,6 +1033,11 @@ main {
             </template>
           </mb-alert>
         </p>
+        <mb-radio-group
+          @inputChanged="radioChange"
+          :radioValues="radioGroupData"
+        > </mb-radio-group>
+        Selected radio option is <span class="danger"> {{selectedRadio}} </span>
         <div class="mb-radio-group mb-flow-horizontal">
           <ul>
             <li>

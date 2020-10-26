@@ -1,57 +1,65 @@
 <template>
-<div class="mb-checkbox-group">
-  <ul v-for="(checkboxIndex, i) in value" :key="checkboxIndex._id" :class="alignment">
-    <li>
-      <mb-radio @unchecked="uncheckedEmit" @checked="checkedEmit" :name="checkboxIndex.name" :is-checked="checkedValue[i]" :label="checkboxIndex.label"></mb-radio>
-    </li>
-  </ul>
-</div>
+  <div class="mb-checkbox-group">
+    <ul>
+      <li
+        v-for="(radioIndex, i) in radioValues"
+        :key="radioIndex._id"
+        :class="alignment"
+      >
+        <mb-radio
+          @inputChanged="inputChanged"
+          :name="radioIndex.name"
+          :is-checked="selectedOne === radioIndex.name"
+          :label="radioIndex.label"
+        ></mb-radio>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'MbRadioGroup',
   data: () => ({
-    checkedArr: [],
+    selectedOne: '',
   }),
   props: {
     alignment: {
       type: String,
       default: 'horizontal',
     },
-    checkedValues:{
+    radioValues: {
       type: Array,
       default: () => [],
     }
   },
   methods: {
-    checkedEmit(checkedInput){
-      this.checkedArr.push(checkedInput);
-      this.$emit('inputChanged', this.checkedArr);
+    inputChanged (checkedInput) {
+      this.selectedOne = checkedInput;
+      this.$emit('inputChanged', this.selectedOne);
     },
-    uncheckedEmit(uncheckedInput){
-      this.checkedArr.filter(checkedItem => this.checkedArr.includes(checkedItem));
-      this.$emit('inputChanged', this.checkedArr);
-    }
   },
   components: {
     MbRadio: () => import('../cells/form/MbRadio.vue'),
   },
+  created () {
+    this.selectedOne = this.radioValues.filter(e => e.selected === true).map(e => e.name).toString() || '';
+    this.$emit('inputChanged', this.selectedOne);
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/styles/partials/_mb_space.scss";
-.mb-checkbox-group{
-  .horizontal{
+.mb-checkbox-group {
+  .horizontal {
     display: flex;
     margin-right: $mb-space-m;
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
-  .vertical{
-
+  .vertical {
   }
 }
 </style>

@@ -1,6 +1,14 @@
 <template>
-  <div @click="radioEvent" class="radiobox">
-    <input type="radio" :name="name" :checked="radioState" :value="name">
+  <div
+    @click="radioEvent"
+    class="radiobox"
+  >
+    <input
+      type="radio"
+      :name="name"
+      :checked="radioState"
+      :value="name"
+    >
     <label :for="name">{{label}}</label>
   </div>
 </template>
@@ -8,37 +16,38 @@
 <script>
 export default {
   name: "MbRadio",
-  data:() => ({
-    radioState: false, 
+  data: () => ({
+    radioState: false,
   }),
   props: {
     name: {
       type: String,
       default: '',
     },
-    label:{
+    label: {
       type: String,
       default: '',
     },
-    isChecked:{
+    isChecked: {
       type: Boolean,
       default: false,
     }
   },
   methods: {
-    radioEvent() {
-      if(!this.radioState) 
-        {this.radioState = true; this.$emit('checked', this.name)}
-      else 
-        {this.radioState = false; this.$emit('unchecked', this.name)};
+    radioEvent () {
+      this.$emit('inputChanged', this.name);
     },
   },
+  watch: {
+    isChecked (val) {
+      this.radioState = val;
+    }
+  },
   created () {
-    this.radioState = this.checked;
+    this.radioState = this.isChecked;
   },
 }
 </script>
 
 <style>
-
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div :class="['mb-checkbox-group', `mb-flow-${flow}`]">
-    <ul
-      v-for="(checkboxIndex, i) in checkedValues"
-      :key="checkboxIndex._id"
-    >
-      <li>
+    <ul>
+      <li
+        v-for="(checkboxIndex, i) in checkedValues"
+        :key="checkboxIndex._id"
+      >
         <mb-checkbox
           @unchecked="uncheckedEmit"
           @checked="checkedEmit"
@@ -40,9 +40,7 @@ export default {
       this.$emit('inputChanged', this.checkedArr);
     },
     uncheckedEmit (uncheckedInput) {
-      console.log(uncheckedInput);
       this.checkedArr = this.checkedArr.filter(checkedItem => checkedItem !== uncheckedInput);
-      console.log(this.checkedArr);
       this.$emit('inputChanged', this.checkedArr);
     }
   },
