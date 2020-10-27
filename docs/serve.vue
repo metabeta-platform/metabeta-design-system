@@ -18,7 +18,7 @@ import {
   MbFooterActions,
   MbHeaderActions,
   MbIcon,
-  MbModal,
+  MbDialog,
   MbNavigationList,
   MbMenu,
   MbMenuItem,
@@ -159,7 +159,7 @@ export default Vue.extend({
       {
         _id: 'icons-doc11122',
         href: '#doc-section-icon',
-        menuItemContent: 'MbIcon [Testing]'
+        menuItemContent: 'MbIcon [Done]'
       },
       {
         _id: 'buttons-doc11122',
@@ -178,8 +178,8 @@ export default Vue.extend({
       },
       {
         _id: 'modal-doc11122',
-        href: '#doc-section-modal',
-        menuItemContent: 'MbModal [Testing]'
+        href: '#doc-section-dialog',
+        menuItemContent: 'MbDialog [Testing]'
       },
       {
         _id: 'menu-doc11122',
@@ -187,12 +187,12 @@ export default Vue.extend({
         menuItemContent: 'MbMenu [Testing]'
       }
     ],
-    openModalS: false,
-    openModalM: false,
-    openModalL: false,
-    openModalXl: false,
-    openModalFooter: false,
-    openModalHeader: false,
+    openDialogS: false,
+    openDialogM: false,
+    openDialogL: false,
+    openDialogXl: false,
+    openDialogFooter: false,
+    openDialogHeader: false,
     openDrawerS: false,
     openDrawerM: false,
     openDrawerL: false,
@@ -286,7 +286,7 @@ export default Vue.extend({
     MbFooterActions,
     MbHeaderActions,
     MbIcon,
-    MbModal,
+    MbDialog,
     MbNavigationList,
     MbMenu,
     MbMenuItem,
@@ -323,32 +323,6 @@ main {
   margin-left: 200px;
 }
 
-.mb-checkbox-group,
-.mb-radio-group {
-  ul {
-    li {
-      margin: 0;
-      padding: 0;
-    }
-  }
-  &.mb-flow {
-    &-horizontal {
-      ul {
-        li {
-          display: inline-block;
-          margin-right: $mb-space-m;
-        }
-      }
-    }
-    &-vertical {
-      ul {
-        li {
-          display: flex;
-        }
-      }
-    }
-  }
-}
 .mb-icon-container {
   display: inline-flex;
   align-items: flex-end;
@@ -373,28 +347,6 @@ main {
 
     </aside>
     <main>
-
-
-      <div>
-        <label for="cars">Choose a car:</label>
-        <select name="cars" id="cars">
-          <option style="color:red; padding:24px; text-transform:uppercase" value="0">Select car:</option>
-          <option value="1">Audi</option>
-          <option value="2">BMW</option>
-          <option value="3">Citroen</option>
-          <option value="4">Ford</option>
-          <option value="5">Honda</option>
-          <option value="6">Jaguar</option>
-          <option value="7">Land Rover</option>
-          <option value="8">Mercedes</option>
-          <option value="9">Mini</option>
-          <option value="10">Nissan</option>
-          <option value="11">Toyota</option>
-          <option value="12">Volvo</option>
-        </select>
-      </div>
-
-
       <h1>Cells</h1>
       <mb-panel
         title="Cells"
@@ -496,19 +448,19 @@ main {
                 </td>
               </tr>
               <tr>
-                <td><a href="#section-modal">MbModal</a></td>
+                <td><a href="#section-modal">MbDialog</a></td>
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
-                    :avatar="ozgur"
+                    :avatar="marius"
                     type="user"
                     size="s"
                   ></mb-avatar>
                 </td>
                 <td>
                   <mb-chip
-                    label='Waiting'
-                    color='warning'
+                    label='Testing'
+                    color='lime'
                     size="s"
                   />
                 </td>
@@ -543,8 +495,8 @@ main {
                 </td>
                 <td>
                   <mb-chip
-                    label='Testing'
-                    color='lime'
+                    label='Done'
+                    color='success'
                     size="s"
                   />
                 </td>
@@ -2267,14 +2219,29 @@ main {
       </mb-panel>
       </br>
       <mb-panel
-        id="doc-section-modal"
-        title="MbModal"
+        id="doc-section-dialog"
+        title="MbDialog"
         type="card"
       >
         <template slot="content">
-          <p>MbModal it is used to focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.</p>
+          <p>MbDialog it is used to focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.</p>
           <h4>How it works</h4>
-          <pre> <code> &lt;mb-modal name="modal-name" size="m" :has-header="true" :has-footer="true" /&gt;</code></pre>
+          <pre> <code> 
+            &lt;mb-dialog size="m" /&gt; 
+              &lt;template slot="title"&gt;
+                Title content
+              &lt;/template&gt;
+              &lt;template slot="header"&gt;
+                Header content
+              &lt;/template&gt;
+              &lt;template slot="content"&gt;
+                Main content
+              &lt;/template&gt;
+              &lt;template slot="footer"&gt;
+                Footer content
+              &lt;/template&gt;
+            &lt;/mb-dialog size="m" &gt; 
+            </code></pre>
           <div class="mb-props-table">
             <table>
               <thead>
@@ -2288,66 +2255,39 @@ main {
               </thead>
               <tbody>
                 <tr>
-                  <td>title</td>
-                  <td>string</td>
-                  <td>none</td>
-                  <td>none</td>
-                  <td>Adds a title to the modal</td>
-                </tr>
-                <tr>
-                  <td>name</td>
-                  <td>string</td>
-                  <td>none</td>
-                  <td>none</td>
-                  <td>Renders in markup the id of the modal</td>
-                </tr>
-                <tr>
                   <td>size</td>
                   <td>string</td>
                   <td>m</td>
                   <td>s, m, l, xl</td>
-                  <td>Handles the width of the modal</td>
-                </tr>
-                <tr>
-                  <td>:has-header</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td>true, false</td>
-                  <td>Used for when you want to hide the header slot of the modal</td>
-                </tr>
-                <tr>
-                  <td>:has-footer</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td>true, false</td>
-                  <td>Used for when you want to hide the footer slot of the modal</td>
+                  <td>Handles the width of the MbDialog</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <h4>MbModal sizes</h4>
+          <h4>MbDialog sizes</h4>
           <mb-button
-            @click="openModalS = !openModalS"
-            label="Open modal size s"
+            @click="openDialogS = !openDialogS"
+            label="Open dialog size s"
           />
           <mb-button
-            @click="openModalM = !openModalM"
-            label="Open modal size m"
+            @click="openDialogM = !openDialogM"
+            label="Open dialog size m"
           />
           <mb-button
-            @click="openModalL = !openModalL"
-            label="Open modal size l"
+            @click="openDialogL = !openDialogL"
+            label="Open dialog size l"
           />
           <mb-button
-            @click="openModalXl = !openModalXl"
-            label="Open modal size xl"
+            @click="openDialogXl = !openDialogXl"
+            label="Open dialog size xl"
           />
-          <mb-modal
-            name="modal-s"
-            title="Modal title"
-            :is-visible="openModalS"
+          <mb-dialog
+            :is-visible="openDialogS"
             size="s"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>   
             <template slot="header">
               Header content
             </template>
@@ -2357,13 +2297,14 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <mb-modal
-            name="modal-m"
-            title="Modal title"
-            :is-visible="openModalM"
+          </mb-dialog>
+          <mb-dialog
+            :is-visible="openDialogM"
             size="m"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2373,13 +2314,14 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <mb-modal
-            name="modal-l"
-            title="Modal title"
-            :is-visible="openModalL"
+          </mb-dialog>
+          <mb-dialog
+            :is-visible="openDialogL"
             size="l"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2389,13 +2331,14 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <mb-modal
-            name="modal-xl"
-            title="Modal title"
-            :is-visible="openModalXl"
+          </mb-dialog>
+          <mb-dialog
+            :is-visible="openDialogXl"
             size="xl"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2405,21 +2348,18 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <h4>MbModal :has-header="false"</h4>
+          </mb-dialog>
+          <h4>MbDialog without header</h4>
           <mb-button
-            @click="openModalHeader = !openModalHeader"
-            label="Open modal"
+            @click="openDialogHeader = !openDialogHeader"
+            label="Open dialog"
           />
-          <mb-modal
-            name="modal-header"
-            title="Modal title"
-            :is-visible="openModalHeader"
-            :has-header="false"
+          <mb-dialog
+            :is-visible="openDialogHeader"
             size="l"
           >
-            <template slot="header">
-              Header content
+            <template slot="title">
+              <h3>Dialog title</h3>
             </template>
             <template slot="content">
               Main content
@@ -2427,29 +2367,26 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <h4>MbModal :has-footer="false" </h4>
+          </mb-dialog>
+          <h4>MbDialog wihout footer </h4>
           <mb-button
-            @click="openModalFooter = !openModalFooter"
-            label="Open modal"
+            @click="openDialogFooter = !openDialogFooter"
+            label="Open dialog"
           />
-          <mb-modal
-            name="modal-footer"
-            title="Modal title"
-            :is-visible="openModalFooter"
-            :has-footer="false"
+          <mb-dialog
+            :is-visible="openDialogFooter"
             size="l"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
             <template slot="content">
               Main content
             </template>
-            <template slot="footer">
-              Footer content
-            </template>
-          </mb-modal>
+          </mb-dialog>
         </template>
       </mb-panel>
       <br />
@@ -2548,10 +2485,8 @@ main {
           </mb-drawer>
           <mb-drawer
             :is-visible.sync="openDrawerM"
-            size="l"
+            size="m"
             name="mb-drawer-size-m"
-            :has-header="true"
-            :has-footer="true"
           >
             <template slot="header">
               <p> Header Content </p>
