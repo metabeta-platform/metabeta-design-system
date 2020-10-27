@@ -9,7 +9,6 @@
       <nav class="mb-dialog-title">
           <slot name="title"></slot>
           <mb-button
-            class="mb-dialog-close-button"
             @click="dialogVisibility = false; $emit('on-close')"
             priority="base"
             :icon-before="{name: 'icon-close'}"
@@ -119,7 +118,7 @@ export default {
   background-color: rgba($mb-color-black, $mb-opacity-m);
   overflow: hidden;
   &.mb-is-visible {
-    display: block;
+    display: flex;
     transition: $mb-speed-slow $mb-ease-intro;
     z-index: 9999;
   }
@@ -128,8 +127,8 @@ export default {
     transition: $mb-speed-fast $mb-ease-intro;
   }
   .mb-dialog {
-    position: absolute;
-    top: 10vh;
+    position: absolute; 
+    top:10vh;
     left: 50%;
     transform: translateX(-50%);
     background-color: $mb-color-white;
@@ -137,18 +136,11 @@ export default {
     border: $mb-border-thin solid transparent;
     .mb-dialog {
       &-title{
-        padding: $mb-space-s $mb-space-m;
-        h3 {
-          display: inline-block;
-          margin: 0;
-        }
-        .mb-dialog-close-button{
-          float: right;
-          margin-top: -$mb-space-xs;
-          margin-right: -$mb-space-m;
-          .mb-button {
-            margin-right: 0;
-          }
+        padding: $mb-space-s $mb-space-xl $mb-space-s $mb-space-m;
+        .mb-button{
+          position: absolute;
+          right: $mb-space-xs;
+          top: $mb-space-xs;
         }
       }
       &-header{

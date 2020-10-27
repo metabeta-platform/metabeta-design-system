@@ -347,14 +347,13 @@ main {
 
     </aside>
     <main>
-      <h1>Cells</h1>
       <mb-panel
-        title="Cells"
         type="card"
         id="cells-table"
-        :has-header="true"
-        :has-footer="true"
       >
+        <template slot="title">
+          <h1>Cells</h1>
+        </template>
         <template slot="header">
           <mb-chip
             label='To do'
@@ -998,16 +997,6 @@ main {
       </section>
       <section id="section-radio-group">
         <h3>MbRadioGroup</h3>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon
-                name="icon-alert-warning-fill"
-                color="warning"
-              />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
-            </template>
-          </mb-alert>
-        </p>
         <mb-radio-group
           @inputChanged="radioChange"
           :radioValues="radioGroupData"
@@ -1051,6 +1040,9 @@ main {
         id="doc-section-buttons"
         type="card"
       >
+        <template slot="title">
+          <h1>Buttons</h1>
+        </template>
         <template slot="content">
           <p>Buttons communicate actions that users can take.</p>
           <div class="mb-props-table">
@@ -1324,7 +1316,12 @@ main {
             label='indigo'
             priority='secondary'
             color='indigo'
-          />
+            :tooltip="'top'"
+          >
+          <template name="tooltip">
+            dafsdfa
+            </template>
+          </mb-button>
           <mb-button
             label='purple'
             priority='secondary'
@@ -2073,9 +2070,11 @@ main {
       <br />
       <mb-panel
         id="doc-section-panel"
-        title="MbPanel"
         type="card"
       >
+        <template slot="title">
+          <h1>MbPanel</h1>
+        </template>
         <template slot="content">
           <p>Panel description</p>
           <h4>How it works</h4>
@@ -2220,9 +2219,11 @@ main {
       </br>
       <mb-panel
         id="doc-section-dialog"
-        title="MbDialog"
         type="card"
       >
+         <template slot="title">
+          <h1>MbDialog</h1>
+        </template>
         <template slot="content">
           <p>MbDialog it is used to focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.</p>
           <h4>How it works</h4>
@@ -2392,9 +2393,11 @@ main {
       <br />
       <mb-panel
         id="doc-section-drawer"
-        title="MbDrawer"
         type="card"
       >
+         <template slot="title">
+          <h1>MbDrawer</h1>
+        </template>
         <template slot="content">
           <p>MbDrawer is a panel that is typically overlaid on top of a page and slides in from the side. It contains a set of information or actions. Since the user can interact with the Drawer without leaving the current page, tasks can be achieved more efficiently within the same context.</p>
           <h4>How it works</h4>
@@ -2512,6 +2515,9 @@ main {
             :has-header="true"
             :has-footer="true"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               <p> Header Content </p>
             </template>
@@ -2553,7 +2559,7 @@ main {
               Footer
             </template>
           </mb-drawer>
-          <h4>MbDrawer :has-header="false"</h4>
+          <h4>MbDrawer without header</h4>
           <mb-button
             @click="openDrawerHeader = true"
             label="Open drawer"
@@ -2561,12 +2567,7 @@ main {
           <mb-drawer
             :is-visible.sync="openDrawerHeader"
             size="xl"
-            name="mb-drawer-footer"
-            :has-header="false"
           >
-            <template slot="header">
-              <p> Header Content </p>
-            </template>
             <template slot="content">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -2581,7 +2582,7 @@ main {
               Footer
             </template>
           </mb-drawer>
-          <h4>MbDrawer :has-footer="false"</h4>
+          <h4>MbDrawer without footer</h4>
           <mb-button
             @click="openDrawerFooter = true"
             label="Open drawer"
@@ -2589,9 +2590,6 @@ main {
           <mb-drawer
             :is-visible.sync="openDrawerFooter"
             size="xl"
-            name="mb-drawer-footer"
-            :has-header="true"
-            :has-footer="false"
           >
             <template slot="header">
               <p> Header Content </p>
@@ -2605,9 +2603,6 @@ main {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </template>
-            <template slot="footer">
-              Footer
             </template>
           </mb-drawer>
 
@@ -2616,11 +2611,11 @@ main {
       </br>
       <mb-panel
         id="doc-section-menu"
-        title="MbMenu + MbMenuItem"
         type="card"
-        :has-header="true"
-        :has-footer="true"
       >
+        <template slot="title">
+          <h3>MbMenu+MbMenuItem</h3>
+        </template>
         <template slot="content">
           <p>MbMenu offers a list of items, actions or functions that a user can access. It can be used in any type of container.</p>
           <h4>How it works</h4>

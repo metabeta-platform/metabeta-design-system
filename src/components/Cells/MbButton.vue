@@ -1,5 +1,4 @@
 <template>
-  <div class="mb-btn-anc">
     <keep-alive>
       <component
         :type="type != 'link' ? type : null"
@@ -33,7 +32,7 @@
         ></mb-icon>
       </component>
     </keep-alive>
-    <div
+    <!-- <div
       v-if="tooltip"
       class="tooltip-wrap"
     >
@@ -42,8 +41,7 @@
           <slot name="tooltip"></slot>
         </template>
       </mb-tooltip>
-    </div>
-  </div>
+    </div> -->
 </template>
 
 <script>
@@ -173,15 +171,11 @@ export default {
 @import "../../assets/styles/partials/_mb_typography.scss";
 @import "../../assets/styles/partials/_mb_color.scss";
 @import "../../assets/styles/partials/_mb_theme.scss";
-.mb-btn-anc {
-  display: inline-block;
-  position: relative;
-  vertical-align: text-bottom;
   .mb-button {
     margin-right: $mb-space-xxs;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: $mb-space-xs;
     &.mb-type-link {
       @extend button;
       margin-right: $mb-space-xs;
@@ -197,6 +191,9 @@ export default {
         }
       }
     }
+    .mb-icon{
+      margin: auto;
+    }
     .mb-button-icon {
       &-left {
         margin-right: $mb-space-xs;
@@ -211,9 +208,7 @@ export default {
         }
       }
     }
-    .mb-button-label {
-      margin: 0;
-    }
+
 
     &.mb-size {
       &-s {
@@ -233,5 +228,4 @@ export default {
       }
     }
   }
-}
 </style>
