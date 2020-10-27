@@ -2710,14 +2710,15 @@ main {
       </br>
       <mb-panel
         id="doc-section-icon"
-        title="MbIcon"
         type="card"
       >
         <template slot="content">
+          <h1>MbIcon</h1>
           <article>
             <p>Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information. </p>
             <h3>Usage</h3>
             <pre><code>&lt;mb-icon name="icon-user" size="m" /&gt;</code></pre>
+            <h3>Props</h3>
             <table class="mb-props-table">
               <thead>
                 <tr>
@@ -2745,14 +2746,14 @@ main {
                 </tr>
               </tbody>
             </table>
-            <p>Sizes are shown below:</p>
             <ul class="mb-list-inline">
+              <li>Size examples: </li>
               <li><mb-icon name="icon-utility-star-fill" size="xs" /> <code>size="xs"</code></li>
               <li><mb-icon name="icon-utility-star-fill" size="s" /> <code>size="s"</code></li>
               <li><mb-icon name="icon-utility-star-fill" size="m" /> <code>size="m"</code></li>
               <li><mb-icon name="icon-utility-star-fill" size="l" /> <code>size="l"</code></li>
             </ul>
-            <h3>Styling</h3>
+            <h3>Style</h3>
             <p>In some cases, icons will have a stroke color but also a fill color. To style them differently, you can define colors using two classes, <code>.svg-stroke</code> and <code>.svg-fill</code></p>
             <pre><code>.mb-icon-name .svg-stroke {
   stroke: $mb-color-white;
