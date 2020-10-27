@@ -357,6 +357,7 @@ main {
     margin-right: $mb-space-xs;
   }
 }
+
 </style> 
 
 <template>
@@ -372,6 +373,28 @@ main {
 
     </aside>
     <main>
+
+
+      <div>
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+          <option style="color:red; padding:24px; text-transform:uppercase" value="0">Select car:</option>
+          <option value="1">Audi</option>
+          <option value="2">BMW</option>
+          <option value="3">Citroen</option>
+          <option value="4">Ford</option>
+          <option value="5">Honda</option>
+          <option value="6">Jaguar</option>
+          <option value="7">Land Rover</option>
+          <option value="8">Mercedes</option>
+          <option value="9">Mini</option>
+          <option value="10">Nissan</option>
+          <option value="11">Toyota</option>
+          <option value="12">Volvo</option>
+        </select>
+      </div>
+
+
       <h1>Cells</h1>
       <mb-panel
         title="Cells"
@@ -2800,7 +2823,7 @@ main {
   stroke: $mb-color-white;
 }
 .mb-icon-name .svg-fill {
-  stroke: $mb-color-red;
+  fill: $mb-color-red;
 }</code></pre>
             <h4>List of icons with stroke and fill</h4>
             <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
@@ -2815,12 +2838,6 @@ main {
               <li><mb-icon name="icon-alert-remove-fill" /> icon-alert-remove-fill</li>
               <li><mb-icon name="icon-alert-success-fill" /> icon-alert-success-fill</li>
               <li><mb-icon name="icon-alert-warning-fill" /> icon-alert-warning-fill</li>
-              <li><mb-icon name="icon-mini-add" /> icon-mini-add</li>
-              <li><mb-icon name="icon-mini-delete" /> icon-mini-delete</li>
-              <li><mb-icon name="icon-mini-error" /> icon-mini-error</li>
-              <li><mb-icon name="icon-mini-more" /> icon-mini-more</li>
-              <li><mb-icon name="icon-mini-remove" /> icon-mini-remove</li>
-              <li><mb-icon name="icon-mini-success" /> icon-mini-success</li>
               <li><mb-icon name="icon-file-csv" /> icon-file-csv</li>
               <li><mb-icon name="icon-file-doc" /> icon-file-doc</li>
               <li><mb-icon name="icon-file-google-doc" /> icon-file-google-doc</li>
@@ -3045,26 +3062,6 @@ main {
               <li><mb-icon name="icon-user-success" /> icon-user-success</li>
               <li><mb-icon name="icon-user" /> icon-user</li>
               <li><mb-icon name="icon-users" /> icon-users</li>
-            </ul>
-            <h5>Mini icons</h5>
-            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
-              <li><mb-icon name="icon-mini-add" /> icon-mini-add</li>
-              <li><mb-icon name="icon-mini-arrow" /> icon-mini-arrow</li>
-              <li><mb-icon name="icon-mini-check" /> icon-mini-check</li>
-              <li><mb-icon name="icon-mini-close" /> icon-mini-close</li>
-              <li><mb-icon name="icon-mini-delete" /> icon-mini-delete</li>
-              <li><mb-icon name="icon-mini-down" /> icon-mini-down</li>
-              <li><mb-icon name="icon-mini-error" /> icon-mini-error</li>
-              <li><mb-icon name="icon-mini-arrow" /> icon-mini-arrow</li>
-              <li><mb-icon name="icon-mini-filter" /> icon-mini-filter</li>
-              <li><mb-icon name="icon-mini-heart" /> icon-mini-heart</li>
-              <li><mb-icon name="icon-mini-more" /> icon-mini-more</li>
-              <li><mb-icon name="icon-mini-remove" /> icon-mini-remove</li>
-              <li><mb-icon name="icon-mini-sort" /> icon-mini-sort</li>
-              <li><mb-icon name="icon-mini-sorted" /> icon-mini-sorted</li>
-              <li><mb-icon name="icon-mini-star" /> icon-mini-star</li>
-              <li><mb-icon name="icon-mini-success" /> icon-mini-success</li>
-              <li><mb-icon name="icon-mini-up" /> icon-mini-up</li>
             </ul>
             <h5>Files</h5>
             <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">

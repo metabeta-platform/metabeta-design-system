@@ -1,9 +1,8 @@
 <template>
   <i :class="['mb-icon',`mb-size-${size}`]">
     <component
-      @click="$emit('click', $event)"
-      :height="wh"
-      :width="wh"
+      :height="iconSize"
+      :width="iconSize"
       :viewBox="`0 0 16 16`"
       :is="iconComponent"
     />
@@ -22,7 +21,7 @@ requireComponents.keys().forEach(fileName => {
 export default {
   name: "MbIcon",
   data: () => ({
-    wh: 16,
+    iconSize: 16,
   }),
   props: {
     name: {
@@ -42,16 +41,16 @@ export default {
   created () {
     switch (this.size) {
       case 'xs':
-        this.wh = 8
+        this.iconSize = 8
         break;
       case 's':
-        this.wh = 12
+        this.iconSize = 12
         break;
       case 'm':
-        this.wh = 16
+        this.iconSize = 16
         break;
       case 'l':
-        this.wh = 24
+        this.iconSize = 24
         break;
       default:
         break;
@@ -66,6 +65,7 @@ export default {
   line-height: 0;
   stroke: transparent;
   fill: transparent;
+  vertical-align: middle;
   .svg-stroke {
     stroke: $mb-color-gray;
   }
@@ -83,12 +83,6 @@ export default {
   .mb-icon-alert-remove-fill,
   .mb-icon-alert-success-fill,
   .mb-icon-alert-warning-fill,
-  .mb-icon-mini-add,
-  .mb-icon-mini-delete,
-  .mb-icon-mini-error,
-  .mb-icon-mini-more,
-  .mb-icon-mini-remove,
-  .mb-icon-mini-success,
   .mb-icon-file-csv,
   .mb-icon-file-doc,
   .mb-icon-file-google-doc,
