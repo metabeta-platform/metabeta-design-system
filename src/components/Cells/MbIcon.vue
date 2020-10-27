@@ -51,26 +51,26 @@ export default {
   }
   &.mb-size-xs{
     svg{
-    width: 0.5rem;
-    height:0.5rem;
+    width:  8px;
+    height: 8px;
     }
   }
   &.mb-size-s{
     svg{
-      width: 0.75rem;
-      height:0.75rem;
+      width:  12px;
+      height: 12px;
     }
   }
   &.mb-size-m{
     svg{
-      width: 1rem;
-      height:1rem;
+      width: 16px;
+      height:16px;
     }
   }
   &.mb-size-l{
     svg{
-      width: 1.5rem;
-      height:1.5rem;
+      width: 24px;
+      height:24px;
     }
   }
   .mb-icon-checkbox-selected,
