@@ -1,8 +1,6 @@
 <template>
   <i :class="['mb-icon',`mb-size-${size}`]">
     <component
-      :height="iconSize"
-      :width="iconSize"
       :viewBox="`0 0 16 16`"
       :is="iconComponent"
     />
@@ -20,9 +18,6 @@ requireComponents.keys().forEach(fileName => {
 
 export default {
   name: "MbIcon",
-  data: () => ({
-    iconSize: 16,
-  }),
   props: {
     name: {
       type: String,
@@ -37,24 +32,6 @@ export default {
     iconComponent () {
       return icons[this.name]
     },
-  },
-  created () {
-    switch (this.size) {
-      case 'xs':
-        this.iconSize = 8
-        break;
-      case 's':
-        this.iconSize = 12
-        break;
-      case 'm':
-        this.iconSize = 16
-        break;
-      case 'l':
-        this.iconSize = 24
-        break;
-      default:
-        break;
-    }
   }
 }
 </script>
@@ -71,6 +48,30 @@ export default {
   }
   .svg-fill {
     fill: $mb-color-gray;
+  }
+  &.mb-size-xs{
+    svg{
+    width: 0.5rem;
+    height:0.5rem;
+    }
+  }
+  &.mb-size-s{
+    svg{
+      width: 0.75rem;
+      height:0.75rem;
+    }
+  }
+  &.mb-size-m{
+    svg{
+      width: 1rem;
+      height:1rem;
+    }
+  }
+  &.mb-size-l{
+    svg{
+      width: 1.5rem;
+      height:1.5rem;
+    }
   }
   .mb-icon-checkbox-selected,
   .mb-icon-alert-add-fill,
