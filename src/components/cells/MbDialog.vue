@@ -6,22 +6,20 @@
     <article
       :class="['mb-dialog', `mb-size-${size}`]"
     >
-      <header class="mb-dialog-header">
-        <header class="mb-header-title-bar">
+      <nav class="mb-dialog-title">
           <slot name="title"></slot>
           <mb-button
-            class="mb-header-close"
+            class="mb-dialog-close-button"
             @click="dialogVisibility = false; $emit('on-close')"
             priority="base"
             :icon-before="{name: 'icon-close'}"
           ></mb-button>
-        </header>
-        <section
-          class="mb-header-content"
+      </nav>
+      <header 
+         class="mb-dialog-header"
           v-if="hasHeader"
-        >
+      >
           <slot name="header"></slot>
-        </section>
       </header>
       <section
         class="mb-dialog-content"
@@ -54,23 +52,20 @@ export default {
       type: Boolean,
       default: false,
     },
-    hasTitle: {
-      type: Boolean,
-      default: true,
-    }
+
   },
   computed: {
     hasTitle () {
-      return !!this.$slots['title'] || !!this.$defaultSlots['title'];
+      return !!this.$slots['title'];
     },
     hasHeader () {
-      return !!this.$slots['header'] || !!this.$defaultSlots['header'];
+      return !!this.$slots['header'];
     },
     hasContent () {
-      return !!this.$slots['content'] || !!this.$defaultSlots['content'];
+      return !!this.$slots['content'];
     },
     hasFooter () {
-      return !!this.$slots['footer'] || !!this.$defaultSlots['footer'];
+      return !!this.$slots['footer'];
     },
    
   },
@@ -141,27 +136,23 @@ export default {
     @include mb-border-radius(m);
     border: $mb-border-thin solid transparent;
     .mb-dialog {
-      &-header {
-        .mb-header {
-          &-title-bar {
-            padding: $mb-space-s $mb-space-m;
-            h3 {
-              display: inline-block;
-              margin: 0;
-            }
-            .mb-header-close {
-              float: right;
-              margin-top: -$mb-space-xs;
-              margin-right: -$mb-space-m;
-              .mb-button {
-                margin-right: 0;
-              }
-            }
-          }
-          &-content {
-            padding: $mb-space-s $mb-space-m;
+      &-title{
+        padding: $mb-space-s $mb-space-m;
+        h3 {
+          display: inline-block;
+          margin: 0;
+        }
+        .mb-dialog-close-button{
+          float: right;
+          margin-top: -$mb-space-xs;
+          margin-right: -$mb-space-m;
+          .mb-button {
+            margin-right: 0;
           }
         }
+      }
+      &-header{
+        padding: $mb-space-s $mb-space-m;
       }
       &-content {
         padding: $mb-space-s $mb-space-m;
