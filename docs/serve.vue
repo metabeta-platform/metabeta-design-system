@@ -6,7 +6,7 @@ import {
   MbAlert,
   MbCheckbox,
   MbFieldset,
-  MbFormInput,
+  MbTextInput,
   MbRadio,
   MbApp,
   MbOrganization,
@@ -294,7 +294,7 @@ export default Vue.extend({
     MbAlert,
     MbCheckbox,
     MbFieldset,
-    MbFormInput,
+    MbTextInput,
     MbRadio,
     MbApp,
     MbOrganization,
@@ -522,7 +522,7 @@ main {
                 </td>
               </tr>
               <tr>
-                <td>MbFormInput</td>
+                <td>MbTextInput</td>
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
@@ -952,7 +952,7 @@ main {
           size="xl"
         ></mb-avatar>
       </section>
-      <h3>MbFormInput</h3>
+      <h3>MbTextInput</h3>
       <p></p>
 
       <mb-form-input

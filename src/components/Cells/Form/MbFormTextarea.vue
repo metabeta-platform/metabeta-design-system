@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: "MbFormInput",
+  name: "MbTextInput",
   data: () => ({
     inputValue: '',
     dynamicBefore: '',
