@@ -1,17 +1,34 @@
 <template>
-  <div class="mb-modal" :class="[dialogVisibility ? 'mb-is-visible' : 'mb-is-hidden']" >
-    <article :class="['mb-dialog', `mb-size-${size}`]" >
+  <div
+    v-if="dialogVisibility"
+    @click.self="dialogVisibility = !dialogVisibility"
+    class="mb-modal"
+    :class="[dialogVisibility ? 'mb-is-visible' : 'mb-is-hidden']"
+  >
+    <article :class="['mb-dialog', `mb-size-${size}`]">
       <nav class="mb-dialog-title">
         <slot name="title"></slot>
-        <mb-button @click="dialogVisibility = false; $emit('on-close')" :icon-before="{name: 'icon-close'}" ></mb-button>
+        <mb-button
+          @click="dialogVisibility = false; $emit('on-close')"
+          :icon-before="{name: 'icon-close'}"
+        ></mb-button>
       </nav>
-      <header class="mb-dialog-header" v-if="hasHeader">
+      <header
+        class="mb-dialog-header"
+        v-if="hasHeader"
+      >
         <slot name="header"></slot>
       </header>
-      <section class="mb-dialog-content" v-if="hasContent">
+      <section
+        class="mb-dialog-content"
+        v-if="hasContent"
+      >
         <slot name="content"> </slot>
       </section>
-      <footer class="mb-dialog-footer" v-if="hasFooter">
+      <footer
+        class="mb-dialog-footer"
+        v-if="hasFooter"
+      >
         <slot name="footer"></slot>
       </footer>
     </article>
@@ -48,7 +65,7 @@ export default {
     hasFooter () {
       return !!this.$slots['footer'];
     },
-   
+
   },
   watch: {
     isVisible (val) {
@@ -108,28 +125,34 @@ export default {
     display: none;
   }
   .mb-dialog {
-    position: absolute; 
+    position: absolute;
     top: 50vh;
     left: 50vw;
-    transform: translate(-50%,-70%);
+    transform: translate(-50%, -70%);
     background-color: $mb-color-white;
     @include mb-border-radius(l);
     border: $mb-border-thin solid transparent;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     .mb-dialog {
       max-width: 95vw;
-      &-title{
+      &-title {
         padding: $mb-space-s $mb-space-xl $mb-space-s $mb-space-m;
-        > h1, > h2, >h3, >h4, >h5, >h6, >p {
+        > h1,
+        > h2,
+        > h3,
+        > h4,
+        > h5,
+        > h6,
+        > p {
           margin: 0 $mb-space-m 0 0;
         }
-        .mb-button{
+        .mb-button {
           position: absolute;
           right: $mb-space-xs;
           top: $mb-space-xs;
         }
       }
-      &-header{
+      &-header {
         padding: $mb-space-s $mb-space-m;
       }
       &-content {
