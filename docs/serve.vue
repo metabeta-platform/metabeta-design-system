@@ -27,6 +27,7 @@ import {
   MbCheckboxGroup,
   MbRadioGroup,
   MbFormSelect,
+  MbTextarea,
 } from '../src/components/index';
 
 export default Vue.extend({
@@ -295,6 +296,7 @@ export default Vue.extend({
     MbCheckbox,
     MbFieldset,
     MbTextInput,
+    MbTextarea,
     MbRadio,
     MbApp,
     MbOrganization,
