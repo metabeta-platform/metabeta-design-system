@@ -39,6 +39,7 @@ export default {
   position: absolute;
   display: inline-block;
   width: 100%;
+  max-width: 16rem;
   @include mb-elevation(10);
   &.hidden {
     visibility: hidden;
@@ -155,7 +156,7 @@ export default {
     color: $mb-color-white;
     text-align: center;
     @include mb-border-radius(s);
-    @include mb-font(body, s, normal, normal);
+    @include mb-font(body, xs, normal, normal);
     padding: $mb-space-xxs $mb-space-xs;
     z-index: 3;
   }
