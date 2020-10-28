@@ -3,7 +3,18 @@
     :class="flow === 'horizontal' ? 'mb-flow-horizontal' : 'mb-flow-vertical'"
     class="mb-fieldset"
   >
-    <slot></slot>
+    <div
+      v-if="hasHeader"
+      class="mb-fieldset legend"
+    >
+      <slot name="legend"> </slot>
+    </div>
+    <div
+      v-if="hasContent"
+      class="mb-fieldset-content"
+    >
+      <slot name="content"></slot>
+    </div>
   </fieldset>
 </template>
 
@@ -16,6 +27,14 @@ export default {
       default: 'horizontal',
     }
   },
+  computed: {
+    hasContent () {
+      return !!this.$slots['content'] || !!this.$defaultSlots['content'];
+    },
+    hasHeader () {
+      return !!this.$slots['legend'] || !!this.$defaultSlots['legend'];
+    },
+  }
 }
 </script>
 

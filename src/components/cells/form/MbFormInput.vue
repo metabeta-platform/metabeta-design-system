@@ -3,40 +3,44 @@
     flow="'vertical'"
     :class="['mb-form-input', `mb-size-${size}`, inputRequired ? 'mb-is-required' : null, inputDisabled ? 'mb-is-disabled' : null, inputReadonly ? 'mb-is-readonly' : null ]"
   >
-    <label
-      class="mb-label-input"
-      :for="name"
-    >{{label}}<span class="mb-label-help">{{help}}</span></label>
-    <div class="mb-input-wrapper">
-      <input
-        :id="name"
-        class="mb-input"
-        :class="[{'mb-form-icon-before' : iconBefore || type === 'password' || type === 'email'  ||  type === 'phone'  || type === 'url'}, {'mb-form-icon-after' : iconAfter || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'}]"
-        :type="dynamicType"
-        v-model="inputValue"
-        :pattern="pattern"
-        :placeholder="placeholder"
-        :value="value"
-        :disabled="inputDisabled"
-        :required="inputRequired"
-        :readonly="inputReadonly"
-      >
-      <mb-icon
-        v-if="iconBefore || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'"
-        :class="{'icon-before' : iconBefore || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'}"
-        @click="emit('icon-clicked')"
-        class="input-icon"
-        :name="dynamicBefore"
-      ></mb-icon>
-      <mb-icon
-        v-if="iconAfter || type === 'password'"
-        @click="handleAfterClick"
-        class="input-icon"
-        :class="{'icon-after' : iconAfter || type === 'password'}"
-        :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-hide' : 'icon-forms-view' : !!iconAfter.name"
-      ></mb-icon>
-    </div>
-    <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
+    <template slot="legend">
+      <label
+        class="mb-label-input"
+        :for="name"
+      >{{label}}<span class="mb-label-help">{{help}}</span></label>
+    </template>
+    <template slot="content">
+      <div class="mb-input-wrapper">
+        <input
+          :id="name"
+          class="mb-input"
+          :class="[{'mb-form-icon-before' : iconBefore || type === 'password' || type === 'email'  ||  type === 'phone'  || type === 'url'}, {'mb-form-icon-after' : iconAfter || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'}]"
+          :type="dynamicType"
+          v-model="inputValue"
+          :pattern="pattern"
+          :placeholder="placeholder"
+          :value="value"
+          :disabled="inputDisabled"
+          :required="inputRequired"
+          :readonly="inputReadonly"
+        >
+        <mb-icon
+          v-if="iconBefore || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'"
+          :class="{'icon-before' : iconBefore || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'}"
+          @click="emit('icon-clicked')"
+          class="input-icon"
+          :name="dynamicBefore"
+        ></mb-icon>
+        <mb-icon
+          v-if="iconAfter || type === 'password'"
+          @click="handleAfterClick"
+          class="input-icon"
+          :class="{'icon-after' : iconAfter || type === 'password'}"
+          :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-hide' : 'icon-forms-view' : !!iconAfter.name"
+        ></mb-icon>
+      </div>
+      <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
+    </template>
   </mb-fieldset>
 </template>
 
@@ -215,12 +219,11 @@ export default {
     @include mb-caption(xs);
     display: block;
     color: $mb-color-text-light;
-  
   }
   .mb-form-input-hint {
     @include mb-caption(xs);
     padding: $mb-space-xxs 0;
-    margin:0;
+    margin: 0;
     color: $mb-color-text-light;
     &.mb-error {
       &-danger {
