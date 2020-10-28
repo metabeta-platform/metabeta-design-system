@@ -5,7 +5,7 @@
       <mb-menu-item
         v-for="item in items"
         :key="item._id"
-        @click="navigateIfRouterLink"
+        @click="navigateIfRouterLink(item.href)"
         :href="item.href"
         :menuItemContent="item.menuItemContent"
         :isDisabled="item.isDisabled"
