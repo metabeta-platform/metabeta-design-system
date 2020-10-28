@@ -1,35 +1,17 @@
 <template>
-  <div
-    class="mb-backdrop"
-    :class="[dialogVisibility ? 'mb-is-visible' : 'mb-is-hidden']"
-  >
-    <article
-      :class="['mb-dialog', `mb-size-${size}`]"
-    >
+  <div class="mb-modal" :class="[dialogVisibility ? 'mb-is-visible' : 'mb-is-hidden']" >
+    <article :class="['mb-dialog', `mb-size-${size}`]" >
       <nav class="mb-dialog-title">
-          <slot name="title"></slot>
-          <mb-button
-            @click="dialogVisibility = false; $emit('on-close')"
-            priority="base"
-            :icon-before="{name: 'icon-close'}"
-          ></mb-button>
+        <slot name="title"></slot>
+        <mb-button @click="dialogVisibility = false; $emit('on-close')" :icon-before="{name: 'icon-close'}" ></mb-button>
       </nav>
-      <header 
-         class="mb-dialog-header"
-          v-if="hasHeader"
-      >
-          <slot name="header"></slot>
+      <header class="mb-dialog-header" v-if="hasHeader">
+        <slot name="header"></slot>
       </header>
-      <section
-        class="mb-dialog-content"
-        v-if="hasContent"
-      >
+      <section class="mb-dialog-content" v-if="hasContent">
         <slot name="content"> </slot>
       </section>
-      <footer
-        class="mb-dialog-footer"
-        v-if="hasFooter"
-      >
+      <footer class="mb-dialog-footer" v-if="hasFooter">
         <slot name="footer"></slot>
       </footer>
     </article>
@@ -105,7 +87,7 @@ export default {
 @import "../../assets/styles/partials/_mb_motion.scss";
 @import "../../assets/styles/partials/_mb_color.scss";
 @import "../../assets/styles/partials/_mb_typography.scss";
-.mb-backdrop {
+.mb-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -115,28 +97,32 @@ export default {
   height: 100vh;
   max-width: 100vw;
   max-height: 100vh;
-  background-color: rgba($mb-color-black, $mb-opacity-m);
+  background-color: rgba($mb-color-black, $mb-opacity-l);
   overflow: hidden;
+  transition: none;
   &.mb-is-visible {
     display: flex;
-    transition: $mb-speed-slow $mb-ease-intro;
     z-index: 9999;
   }
   &.mb-is-hidden {
     display: none;
-    transition: $mb-speed-fast $mb-ease-intro;
   }
   .mb-dialog {
     position: absolute; 
-    top:10vh;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-70%);
     background-color: $mb-color-white;
-    @include mb-border-radius(m);
+    @include mb-border-radius(l);
     border: $mb-border-thin solid transparent;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     .mb-dialog {
+      max-width: 95vw;
       &-title{
         padding: $mb-space-s $mb-space-xl $mb-space-s $mb-space-m;
+        > h1, > h2, >h3, >h4, >h5, >h6, >p {
+          margin: 0 $mb-space-m 0 0;
+        }
         .mb-button{
           position: absolute;
           right: $mb-space-xs;
@@ -149,27 +135,22 @@ export default {
       &-content {
         padding: $mb-space-s $mb-space-m;
       }
-
       &-footer {
         padding: $mb-space-s $mb-space-m;
       }
     }
     &.mb-size {
       &-xl {
-        @include mb-shadow();
         width: 95vw;
       }
       &-l {
-        @include mb-shadow();
-        width: 66.66vw;
+        width: $mb-space-m * 64;
       }
       &-m {
-        @include mb-shadow();
-        width: 50vw;
+        width: $mb-space-m * 48;
       }
       &-s {
-        @include mb-shadow();
-        width: 33.33vw;
+        width: $mb-space-m * 24;
       }
     }
   }
