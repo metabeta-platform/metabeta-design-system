@@ -4,7 +4,7 @@ import camelCase from "lodash/camelCase";
 /* eslint-disable import/prefer-default-export */
 export { default as MbRadioGroup } from "@/components/tissues/MbRadioGroup.vue";
 export { default as MbCheckboxGroup } from "@/components/tissues/MbCheckboxGroup.vue";
-
+export { default as MbFormSelect } from "@/components/cells/form/MbFormSelect.vue";
 export { default as MbApp } from "@/components/cells/page/MbApp.vue";
 export { default as MbOrganization } from "@/components/cells/page/MbOrganization.vue";
 export { default as MbTopbar } from "@/components/cells/page/MbTopbar.vue";
