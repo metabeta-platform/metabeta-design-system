@@ -13,9 +13,11 @@
     </div>
     <ul class="mb-options">
       <li
+        v-for="option in options"
+        :key="option.id"
         :class="{'active' : option.name === selectedInput}"
         @click="select(option.name)"
-      > option.name </li>
+      > {{option.name}} </li>
     </ul>
   </div>
 </template>

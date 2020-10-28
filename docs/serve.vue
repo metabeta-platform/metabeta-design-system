@@ -155,7 +155,7 @@ export default Vue.extend({
         href: 'https://medium.com/',
         isSelected: true,
         menuItemContent: 'Menu Item 6'
-       
+
       },
     ],
     sideNavItems: [
@@ -352,7 +352,6 @@ main {
     margin-right: $mb-space-xs;
   }
 }
-
 </style> 
 
 <template>
@@ -1014,7 +1013,7 @@ main {
           @inputChanged="radioChange"
           :radioValues="radioGroupData"
         > </mb-radio-group>
-   
+
       </section>
       <section id="section-radio-group">
         <h3>MbRadioGroup</h3>
@@ -1023,7 +1022,7 @@ main {
           :radioValues="radioGroupData"
           flow="vertical"
         > </mb-radio-group>
-             Selected radio option is <span class="danger"> {{selectedRadio}} </span>
+        Selected radio option is <span class="danger"> {{selectedRadio}} </span>
       </section>
 
       <h2>In progress</h2>
@@ -1340,8 +1339,8 @@ main {
             color='indigo'
             :tooltip="'top'"
           >
-          <template name="tooltip">
-            dafsdfa
+            <template name="tooltip">
+              dafsdfa
             </template>
           </mb-button>
           <mb-button
@@ -2139,9 +2138,7 @@ main {
           </div>
           <h4>MbPanel type</h4>
           <h6>Card</h6>
-          <mb-panel
-            type="card"
-          >
+          <mb-panel type="card">
             <template slot="title">
               <h3>Title content</h3>
             </template>
@@ -2156,9 +2153,7 @@ main {
             </template>
           </mb-panel>
           <h6>Base</h6>
-          <mb-panel
-            type="base"
-          >
+          <mb-panel type="base">
             <template slot="title">
               <h3>Title content</h3>
             </template>
@@ -2173,9 +2168,7 @@ main {
             </template>
           </mb-panel>
           <h4>MbPanel without header </h4>
-          <mb-panel
-            type="base"
-          >
+          <mb-panel type="base">
             <template slot="title">
               <h3>Title content</h3>
             </template>
@@ -2190,11 +2183,9 @@ main {
             </template>
           </mb-panel>
           <h4>MbPanel without footer</h4>
-          <mb-panel
-            type="base"
-          >
+          <mb-panel type="base">
             <template slot="title">
-             <h3>Title content</h3>
+              <h3>Title content</h3>
             </template>
             <template slot="header">
               Header content
@@ -2213,7 +2204,7 @@ main {
         id="doc-section-dialog"
         type="card"
       >
-         <template slot="title">
+        <template slot="title">
           <h1>MbDialog</h1>
         </template>
         <template slot="content">
@@ -2280,7 +2271,7 @@ main {
           >
             <template slot="title">
               <h3>Dialog title</h3>
-            </template>   
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2387,7 +2378,7 @@ main {
         id="doc-section-drawer"
         type="card"
       >
-         <template slot="title">
+        <template slot="title">
           <h1>MbDrawer</h1>
         </template>
         <template slot="content">
@@ -2735,10 +2726,30 @@ main {
             </table>
             <ul class="mb-list-inline">
               <li>Size examples: </li>
-              <li><mb-icon name="icon-utility-star-fill" size="xs" /> <code>size="xs"</code></li>
-              <li><mb-icon name="icon-utility-star-fill" size="s" /> <code>size="s"</code></li>
-              <li><mb-icon name="icon-utility-star-fill" size="m" /> <code>size="m"</code></li>
-              <li><mb-icon name="icon-utility-star-fill" size="l" /> <code>size="l"</code></li>
+              <li>
+                <mb-icon
+                  name="icon-utility-star-fill"
+                  size="xs"
+                /> <code>size="xs"</code>
+              </li>
+              <li>
+                <mb-icon
+                  name="icon-utility-star-fill"
+                  size="s"
+                /> <code>size="s"</code>
+              </li>
+              <li>
+                <mb-icon
+                  name="icon-utility-star-fill"
+                  size="m"
+                /> <code>size="m"</code>
+              </li>
+              <li>
+                <mb-icon
+                  name="icon-utility-star-fill"
+                  size="l"
+                /> <code>size="l"</code>
+              </li>
             </ul>
             <h3>Style</h3>
             <p>In some cases, icons will have a stroke color but also a fill color. To style them differently, you can define colors using two classes, <code>.svg-stroke</code> and <code>.svg-fill</code></p>
@@ -2750,30 +2761,78 @@ main {
 }</code></pre>
             <h4>List of icons with stroke and fill</h4>
             <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
-              <li><mb-icon name="icon-checkbox-selected" /> icon-checkbox-selected</li> 
-              <li><mb-icon name="icon-alert-add-fill" /> icon-alert-add-fill</li>
-              <li><mb-icon name="icon-alert-danger-fill" /> icon-alert-danger-fill</li>
-              <li><mb-icon name="icon-alert-delete-fill" /> icon-alert-delete-fill</li>
-              <li><mb-icon name="icon-alert-error-fill" /> icon-alert-error-fill</li>
-              <li><mb-icon name="icon-alert-help-fill" /> icon-alert-help-fill</li>
-              <li><mb-icon name="icon-alert-info-fill" /> icon-alert-info-fill</li>
-              <li><mb-icon name="icon-alert-more-fill" /> icon-alert-more-fill</li>
-              <li><mb-icon name="icon-alert-remove-fill" /> icon-alert-remove-fill</li>
-              <li><mb-icon name="icon-alert-success-fill" /> icon-alert-success-fill</li>
-              <li><mb-icon name="icon-alert-warning-fill" /> icon-alert-warning-fill</li>
-              <li><mb-icon name="icon-file-csv" /> icon-file-csv</li>
-              <li><mb-icon name="icon-file-doc" /> icon-file-doc</li>
-              <li><mb-icon name="icon-file-google-doc" /> icon-file-google-doc</li>
-              <li><mb-icon name="icon-file-google-sheet" /> icon-file-google-sheet</li>
-              <li><mb-icon name="icon-file-google-slides" /> icon-file-google-slides</li>
-              <li><mb-icon name="icon-file-json" /> icon-file-json</li>
-              <li><mb-icon name="icon-file-other" /> icon-file-other</li>
-              <li><mb-icon name="icon-file-pdf" /> icon-file-pdf</li>
-              <li><mb-icon name="icon-file-ppt" /> icon-file-ppt</li>
-              <li><mb-icon name="icon-file-sql" /> icon-file-sql</li>
-              <li><mb-icon name="icon-file-xls" /> icon-file-xls</li>
-              <li><mb-icon name="icon-file-xml" /> icon-file-xml</li>
-              <li><mb-icon name="icon-file-zip" /> icon-file-zip</li>
+              <li>
+                <mb-icon name="icon-checkbox-selected" /> icon-checkbox-selected
+              </li>
+              <li>
+                <mb-icon name="icon-alert-add-fill" /> icon-alert-add-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-danger-fill" /> icon-alert-danger-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-delete-fill" /> icon-alert-delete-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-error-fill" /> icon-alert-error-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-help-fill" /> icon-alert-help-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-info-fill" /> icon-alert-info-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-more-fill" /> icon-alert-more-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-remove-fill" /> icon-alert-remove-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-success-fill" /> icon-alert-success-fill
+              </li>
+              <li>
+                <mb-icon name="icon-alert-warning-fill" /> icon-alert-warning-fill
+              </li>
+              <li>
+                <mb-icon name="icon-file-csv" /> icon-file-csv
+              </li>
+              <li>
+                <mb-icon name="icon-file-doc" /> icon-file-doc
+              </li>
+              <li>
+                <mb-icon name="icon-file-google-doc" /> icon-file-google-doc
+              </li>
+              <li>
+                <mb-icon name="icon-file-google-sheet" /> icon-file-google-sheet
+              </li>
+              <li>
+                <mb-icon name="icon-file-google-slides" /> icon-file-google-slides
+              </li>
+              <li>
+                <mb-icon name="icon-file-json" /> icon-file-json
+              </li>
+              <li>
+                <mb-icon name="icon-file-other" /> icon-file-other
+              </li>
+              <li>
+                <mb-icon name="icon-file-pdf" /> icon-file-pdf
+              </li>
+              <li>
+                <mb-icon name="icon-file-ppt" /> icon-file-ppt
+              </li>
+              <li>
+                <mb-icon name="icon-file-sql" /> icon-file-sql
+              </li>
+              <li>
+                <mb-icon name="icon-file-xls" /> icon-file-xls
+              </li>
+              <li>
+                <mb-icon name="icon-file-xml" /> icon-file-xml
+              </li>
+              <li>
+                <mb-icon name="icon-file-zip" /> icon-file-zip
+              </li>
             </ul>
             <h3 id="all-icons">All Icons</h3>
             <h5>Navigation</h5>
