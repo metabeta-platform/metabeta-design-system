@@ -1,6 +1,5 @@
 <template>
-  <div :class="['mb-checkbox-group', `mb-flow-${flow}`]">
-    <ul>
+    <ul :class="['mb-checkbox-group', `mb-flow-${flow}`]">
       <li
         v-for="(checkboxIndex, i) in checkedValues"
         :key="checkboxIndex._id"
@@ -15,7 +14,6 @@
         ></mb-checkbox>
       </li>
     </ul>
-  </div>
 </template>
 
 <script>
@@ -57,27 +55,21 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/styles/partials/_mb_space.scss";
 .mb-checkbox-group {
-  ul {
     li {
       margin: 0;
       padding: 0;
     }
-  }
   &.mb-flow {
     &-horizontal {
-      ul {
         li {
           display: inline-block;
           margin-right: $mb-space-xs;
         }
-      }
     }
     &-vertical {
-      ul {
         li {
           display: flex;
         }
-      }
     }
   }
 }

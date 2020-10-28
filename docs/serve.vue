@@ -129,7 +129,7 @@ export default Vue.extend({
       {
         _id: 'sdsdfsd',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item 3'
+        menuItemContent: 'Menu Item 3',
       }
     ],
     menuItems: [
@@ -152,7 +152,9 @@ export default Vue.extend({
       {
         _id: 'sdsdfsd',
         href: 'https://medium.com/',
+        isSelected: true,
         menuItemContent: 'Menu Item 6'
+       
       },
     ],
     sideNavItems: [
@@ -976,20 +978,10 @@ main {
         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
         placeholder="Url"
       >
-      </mb-form-input>
+      </mb-form-input>f
 
       <section id="section-radio">
         <h3>MbRadio</h3>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon
-                name="icon-alert-warning-fill"
-                color="warning"
-              />Label and the radiobox should be aligned
-            </template>
-          </mb-alert>
-        </p>
         <mb-radio
           label="Radio label"
           name="test1"
@@ -1001,7 +993,16 @@ main {
           @inputChanged="radioChange"
           :radioValues="radioGroupData"
         > </mb-radio-group>
-        Selected radio option is <span class="danger"> {{selectedRadio}} </span>
+   
+      </section>
+      <section id="section-radio-group">
+        <h3>MbRadioGroup</h3>
+        <mb-radio-group
+          @inputChanged="radioChange"
+          :radioValues="radioGroupData"
+          flow="vertical"
+        > </mb-radio-group>
+             Selected radio option is <span class="danger"> {{selectedRadio}} </span>
       </section>
 
       <h2>In progress</h2>

@@ -85,7 +85,6 @@ export default {
   align-items: center;
   padding: $mb-space-xs 0;
   .mb-is-disabled {
-    pointer-events: none;
     cursor: not-allowed;
   }
   label {

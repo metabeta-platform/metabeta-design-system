@@ -1,10 +1,8 @@
 <template>
-  <div class="mb-checkbox-group">
-    <ul>
+  <ul :class="['mb-radio-group', `mb-flow-${flow}`]">
       <li
         v-for="(radioIndex, i) in radioValues"
         :key="radioIndex._id"
-        :class="alignment"
       >
         <mb-radio
           @inputChanged="inputChanged"
@@ -14,7 +12,6 @@
         ></mb-radio>
       </li>
     </ul>
-  </div>
 </template>
 
 <script>
@@ -24,7 +21,7 @@ export default {
     selectedOne: '',
   }),
   props: {
-    alignment: {
+    flow: {
       type: String,
       default: 'horizontal',
     },
@@ -51,15 +48,23 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/styles/partials/_mb_space.scss";
-.mb-checkbox-group {
-  .horizontal {
-    display: flex;
-    margin-right: $mb-space-m;
-    &:last-child {
-      margin-right: 0;
+.mb-radio-group {
+    li {
+      margin: 0;
+      padding: 0;
     }
-  }
-  .vertical {
+  &.mb-flow {
+    &-horizontal {
+        li {
+          display: inline-block;
+          margin-right: $mb-space-xs;
+        }
+    }
+    &-vertical {
+        li {
+          display: flex;
+        }
+    }
   }
 }
 </style>

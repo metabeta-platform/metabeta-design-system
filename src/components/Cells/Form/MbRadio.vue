@@ -1,7 +1,7 @@
 <template>
   <div
     @click="radioEvent"
-    class="radiobox"
+    class="mb-radio"
   >
     <input
       type="radio"
@@ -54,9 +54,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.radiobox {
+.mb-radio{
   display: flex;
   align-items: center;
+  padding: $mb-space-xs 0;
   label {
     color: $mb-color-text-medium;
     @include mb-font(body, normal, normal, s);
