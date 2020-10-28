@@ -24,7 +24,6 @@ export { default as MbAlert } from "@/components/cells/MbAlert.vue";
 export { default as MbMenuItem } from "@/components/cells/MbMenuItem.vue";
 export { default as MbCheckbox } from "@/components/cells/form/MbCheckbox.vue";
 export { default as MbFieldset } from "@/components/cells/form/MbFieldset.vue";
-export { default as MbInput } from "@/components/cells/form/MbInput.vue";
 export { default as MbTextInput } from "@/components/cells/form/MbTextInput.vue";
 export { default as MbRadio } from "@/components/cells/form/MbRadio.vue";
 export { default as MbIcon } from "@/components/cells/MbIcon.vue";

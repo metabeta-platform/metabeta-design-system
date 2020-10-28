@@ -953,53 +953,6 @@ main {
         ></mb-avatar>
       </section>
       <h3>MbTextInput</h3>
-      <p></p>
-
-      <mb-form-input
-        type="text"
-        label="Label for input"
-        help="Help for label"
-        name="input-test"
-        placeholder="input-placeholder"
-        :is-required="true"
-        :is-disabled="true"
-        error="danger"
-        hint="This is a form field - hint"
-      >
-      </mb-form-input>
-      <mb-form-input
-        type="password"
-        label="Label for password"
-        name="input-password"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-        placeholder="Password"
-      >
-      </mb-form-input>
-      <mb-form-input
-        type="email"
-        label="Label for email"
-        name="input-email"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-        placeholder="Email"
-      >
-      </mb-form-input>
-      <mb-form-input
-        type="phone"
-        label="Label for phone"
-        name="input-phone"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-        placeholder="Phone"
-      >
-      </mb-form-input>
-      <mb-form-input
-        type="url"
-        label="Label for url"
-        name="input-url"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-        placeholder="Url"
-      >
-      </mb-form-input>f
-
       <section id="section-radio">
         <h3>MbRadio</h3>
         <mb-radio
