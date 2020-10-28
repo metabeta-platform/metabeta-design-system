@@ -1,10 +1,15 @@
 <template>
   <nav :class="['mb-menu', `mb-size-${size}`, `mb-flow-${flow}`]">
-    <h5 class="mb-menu-title">{{title}}</h5>
+    <h5
+      v-if="title"
+      class="mb-menu-title"
+    >{{title}}</h5>
     <ul>
       <mb-menu-item
         v-for="item in items"
+        :menu-item-selected="item.selected"
         :key="item._id"
+        :icon="item.icon"
         @click="navigateIfRouterLink(item.href)"
         :href="item.href"
         :menuItemContent="item.menuItemContent"
@@ -32,6 +37,10 @@ export default {
     },
     items: {
       type: [Array, Object],
+    },
+    menuItemSelected: {
+      type: Boolean,
+      default: false,
     }
   },
   methods: {

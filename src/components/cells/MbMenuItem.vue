@@ -1,11 +1,17 @@
 <template>
-   <li  :class="['mb-menu-item', menuItemDisabled ? 'mb-is-disabled' : null, menuItemSelected ? 'mb-is-selected' : null]">
-      <a :href="href"
+  <li :class="['mb-menu-item', menuItemDisabled ? 'mb-is-disabled' : null, menuItemSelected ? 'mb-is-selected' : null]">
+    <mb-icon
+      v-if="icon"
+      :name="icon.name"
+      :size="icon.size"
+    ></mb-icon>
+    <a
+      :href="href"
       @click="$emit('click', $event)"
-      >
-        {{menuItemContent}}
-      </a>
-    </li>
+    >
+      {{menuItemContent}}
+    </a>
+  </li>
 </template>
 
 <script>
@@ -15,6 +21,10 @@ export default {
     menuItemContent: {
       type: String,
       default: '',
+    },
+    icon: {
+      type: Object,
+      default: () => { },
     },
     href: {
       type: String,
@@ -29,23 +39,26 @@ export default {
       default: false,
     },
   },
-   computed:{
-    menuItemDisabled:{
-      get(){
+  computed: {
+    menuItemDisabled: {
+      get () {
         return this.isDisabled;
       },
-      set(value){
+      set (value) {
         this.isDisabled = value;
       }
     },
-     menuItemSelected:{
-      get(){
+    menuItemSelected: {
+      get () {
         return this.isSelected;
       },
-      set(value){
+      set (value) {
         this.isSelected = value;
       }
     }
+  },
+  components: {
+    MbIcon: () => import('./MbIcon'),
   },
 }
 </script>
@@ -53,61 +66,63 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/styles/partials/_mb_space.scss";
 @import "../../assets/styles/partials/_mb_typography.scss";
-.mb-menu-item{
-  a{
-    width:100%;
+.mb-menu-item {
+  a {
+    width: 100%;
     padding: $mb-space-xs;
     @include mb-border-radius(s);
     color: $mb-color-text-medium;
     outline: none;
     @include mb-font(body, s, normal, normal);
     @include mb-wrap-text(false);
-    &:hover{
+    &:hover {
       color: $mb-color-headings;
       background-color: $mb-color-gray-highlight;
     }
-     &:active{
+    &:active {
       background-color: $mb-color-primary-highlight;
       color: $mb-color-primary;
     }
   }
-  &.mb-is-disabled{
-    a{
-    cursor: not-allowed;
-    background-color: fade-out(desaturate($mb-color-gray, $mb-opacity-m),$mb-opacity-xxl);
-    color: fade-out($mb-color-text-medium, $mb-opacity-l);
+  &.mb-is-disabled {
+    a {
+      cursor: not-allowed;
+      background-color: fade-out(
+        desaturate($mb-color-gray, $mb-opacity-m),
+        $mb-opacity-xxl
+      );
+      color: fade-out($mb-color-text-medium, $mb-opacity-l);
     }
   }
-  &.mb-is-selected{
-    a{
-    background-color: $mb-color-primary-highlight;
-    color: $mb-color-primary;
+  &.mb-is-selected {
+    a {
+      background-color: $mb-color-primary-highlight;
+      color: $mb-color-primary;
     }
   }
 }
-.mb-menu{
-  &.mb-size{
-    &-m{
-      .mb-menu-item{
-        a{
-         @include mb-font(body, s, normal, normal);
+.mb-menu {
+  &.mb-size {
+    &-m {
+      .mb-menu-item {
+        a {
+          @include mb-font(body, s, normal, normal);
         }
       }
     }
-    &-l{
-      .mb-menu-item{
-      a{
-        @include mb-font(body, m, normal, normal);
-        padding: $mb-space-xs $mb-space-s;
+    &-l {
+      .mb-menu-item {
+        a {
+          @include mb-font(body, m, normal, normal);
+          padding: $mb-space-xs $mb-space-s;
+        }
       }
-    }
     }
   }
 }
-.mb-is-colllapsed{
-  .mb-menu{
-    .mb-menu-item{
-      
+.mb-is-colllapsed {
+  .mb-menu {
+    .mb-menu-item {
     }
   }
 }
