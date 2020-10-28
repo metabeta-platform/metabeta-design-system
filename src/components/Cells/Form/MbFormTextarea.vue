@@ -3,40 +3,47 @@
     flow="'vertical'"
     :class="['mb-form-input', `mb-size-${size}`, inputRequired ? 'mb-is-required' : null, inputDisabled ? 'mb-is-disabled' : null, inputReadonly ? 'mb-is-readonly' : null ]"
   >
-    <label
-      class="mb-label-input"
-      :for="name"
-    >{{label}}<span class="mb-label-help">{{help}}</span></label>
-    <div class="mb-input-wrapper">
-      <input
-        :id="name"
-        class="mb-input"
-        :class="[{'has-before-icon' : iconBefore || type === 'password' || type === 'email' || type === 'url'}, {'has-after-icon' : iconAfter || type === 'password' || type === 'email' || type === 'url'}]"
-        :type="dynamicType"
-        v-model="inputValue"
-        :pattern="pattern"
-        :placeholder="placeholder"
-        :value="value"
-        :disabled="inputDisabled"
-        :required="inputRequired"
-        :readonly="inputReadonly"
-      >
-      <mb-icon
-        v-if="iconBefore || type === 'password' || type === 'email' || type === 'url'"
-        :class="{'icon-before' : iconBefore || type === 'password' || type === 'email' || type === 'url'}"
-        @click="emit('icon-clicked')"
-        class="input-icon"
-        :name="dynamicBefore"
-      ></mb-icon>
-      <mb-icon
-        v-if="iconAfter || type === 'password'"
-        @click="handleAfterClick"
-        class="input-icon"
-        :class="{'icon-after' : iconAfter || type === 'password'}"
-        :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-view' : 'icon-forms-hide' : !!iconAfter.name"
-      ></mb-icon>
-    </div>
-    <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
+    <template slot="legend">
+      <label
+        class="mb-label-input"
+        :for="name"
+      >{{label}}<span class="mb-label-help">{{help}}</span></label>
+    </template>
+    <template slot="content">
+      <div class="mb-input-wrapper">
+        <input
+          :id="name"
+          class="mb-input"
+          :class="[{'has-before-icon' : iconBefore || type === 'password' || type === 'email' || type === 'url'}, {'has-after-icon' : iconAfter || type === 'password' || type === 'email' || type === 'url'}]"
+          :type="dynamicType"
+          v-model="inputValue"
+          :pattern="pattern"
+          :placeholder="placeholder"
+          :value="value"
+          :disabled="inputDisabled"
+          :required="inputRequired"
+          :readonly="inputReadonly"
+        >
+        <mb-icon
+          v-if="iconBefore || type === 'password' || type === 'email' || type === 'url'"
+          :class="{'icon-before' : iconBefore || type === 'password' || type === 'email' || type === 'url'}"
+          @click="emit('icon-clicked')"
+          class="input-icon"
+          :name="dynamicBefore"
+        ></mb-icon>
+        <mb-icon
+          v-if="iconAfter || type === 'password'"
+          @click="handleAfterClick"
+          class="input-icon"
+          :class="{'icon-after' : iconAfter || type === 'password'}"
+          :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-view' : 'icon-forms-hide' : !!iconAfter.name"
+        ></mb-icon>
+      </div>
+      <div class="mb-hint-wrapper">
+        <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
+        <mb-icon name="help"></mb-icon>
+      </div>
+    </template>
   </mb-fieldset>
 </template>
 
@@ -178,56 +185,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../../../assets/styles/partials/_mb_space.scss";
-@import "../../../assets/styles/partials/_mb_color.scss";
-@import "../../../assets/styles/partials/_mb_typography.scss";
-.mb-form-input {
-  .mb-input-wrapper {
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-    .has-after-icon {
-      padding-right: 50px;
-      & ~ .icon-after {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 10px;
-        cursor: pointer;
-      }
-    }
-    .has-before-icon {
-      padding-left: 30px;
-      & ~ .icon-before {
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-      }
-    }
-  }
-  .mb-label-help {
-    @include mb-caption(xs);
-    display: block;
-    color: $mb-color-text-light;
-  }
-  .mb-form-input-hint {
-    @include mb-caption(xs);
-    padding: $mb-space-xxs 0;
-    color: $mb-color-text-light;
-    &.mb-error {
-      &-danger {
-        color: $mb-color-danger;
-      }
-      &-success {
-        color: $mb-color-success;
-      }
-      &-warning {
-        color: $mb-color-warning;
-      }
-    }
-  }
-}
-</style>
+<style lang="scss"></style>

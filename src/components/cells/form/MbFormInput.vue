@@ -39,7 +39,10 @@
           :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-hide' : 'icon-forms-view' : !!iconAfter.name"
         ></mb-icon>
       </div>
-      <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
+      <div class="mb-hint-wrapper">
+        <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
+        <mb-icon name="help"></mb-icon>
+      </div>
     </template>
   </mb-fieldset>
 </template>
@@ -185,57 +188,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../../../assets/styles/partials/_mb_space.scss";
-@import "../../../assets/styles/partials/_mb_color.scss";
-@import "../../../assets/styles/partials/_mb_typography.scss";
-.mb-form-input {
-  .mb-input-wrapper {
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-    .mb-form-icon-after {
-      padding-right: $mb-space-xxl;
-      & ~ .icon-after {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: $mb-space-s;
-        cursor: pointer;
-      }
-    }
-    .mb-form-icon-before {
-      padding-left: $mb-space-xl;
-      & ~ .icon-before {
-        position: absolute;
-        left: $mb-space-s;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-      }
-    }
-  }
-  .mb-label-help {
-    @include mb-caption(xs);
-    display: block;
-    color: $mb-color-text-light;
-  }
-  .mb-form-input-hint {
-    @include mb-caption(xs);
-    padding: $mb-space-xxs 0;
-    margin: 0;
-    color: $mb-color-text-light;
-    &.mb-error {
-      &-danger {
-        color: $mb-color-danger;
-      }
-      &-success {
-        color: $mb-color-success;
-      }
-      &-warning {
-        color: $mb-color-warning;
-      }
-    }
-  }
-}
-</style>
+<style lang="scss"></style>

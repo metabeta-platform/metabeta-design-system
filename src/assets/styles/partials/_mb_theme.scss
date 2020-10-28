@@ -116,7 +116,8 @@ pre {
   background-color: $mb-color-gray-900;
   color: $mb-color-gray-100;
   font-family: $mb-font-family-monospace;
-  code { 
+
+  code {
     background-color: transparent;
     color: $mb-color-gray-200;
     padding: 0;
@@ -124,7 +125,70 @@ pre {
   }
 }
 
+.mb-form-input {
+  .mb-input-wrapper {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 
+    .has-after-icon {
+      padding-right: 50px;
+
+      &~.icon-after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .has-before-icon {
+      padding-left: 30px;
+
+      &~.icon-before {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .mb-hint-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .mb-label-help {
+    @include mb-caption(xs);
+    display: block;
+    color: $mb-color-text-light;
+  }
+
+  .mb-form-input-hint {
+    @include mb-caption(xs);
+    padding: $mb-space-xxs 0;
+    color: $mb-color-text-light;
+
+    &.mb-error {
+      &-danger {
+        color: $mb-color-danger;
+      }
+
+      &-success {
+        color: $mb-color-success;
+      }
+
+      &-warning {
+        color: $mb-color-warning;
+      }
+    }
+  }
+}
 
 article {
   &.mb-long-form {
