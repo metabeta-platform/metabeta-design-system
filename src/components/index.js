@@ -28,7 +28,7 @@ export { default as MbTextInput } from "@/components/cells/form/MbTextInput.vue"
 export { default as MbRadio } from "@/components/cells/form/MbRadio.vue";
 export { default as MbIcon } from "@/components/cells/MbIcon.vue";
 export { default as MbAvatar } from "@/components/cells/MbAvatar.vue";
-export { default as MbTextarea } from "@/components/cells/form/Textarea.vue";
+export { default as MbTextarea } from "@/components/cells/form/MbTextarea.vue";
 
 const tryGet = (value) => {
   try {
