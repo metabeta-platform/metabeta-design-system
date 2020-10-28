@@ -18,7 +18,7 @@ import {
   MbFooterActions,
   MbHeaderActions,
   MbIcon,
-  MbModal,
+  MbDialog,
   MbNavigationList,
   MbMenu,
   MbMenuItem,
@@ -130,7 +130,7 @@ export default Vue.extend({
       {
         _id: 'sdsdfsd',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item 3'
+        menuItemContent: 'Menu Item 3',
       }
     ],
     menuItems: [
@@ -153,14 +153,16 @@ export default Vue.extend({
       {
         _id: 'sdsdfsd',
         href: 'https://medium.com/',
+        isSelected: true,
         menuItemContent: 'Menu Item 6'
+       
       },
     ],
     sideNavItems: [
       {
         _id: 'icons-doc11122',
         href: '#doc-section-icon',
-        menuItemContent: 'MbIcon [Testing]'
+        menuItemContent: 'MbIcon [Done]'
       },
       {
         _id: 'buttons-doc11122',
@@ -179,8 +181,8 @@ export default Vue.extend({
       },
       {
         _id: 'modal-doc11122',
-        href: '#doc-section-modal',
-        menuItemContent: 'MbModal [Testing]'
+        href: '#doc-section-dialog',
+        menuItemContent: 'MbDialog [Testing]'
       },
       {
         _id: 'menu-doc11122',
@@ -188,12 +190,12 @@ export default Vue.extend({
         menuItemContent: 'MbMenu [Testing]'
       }
     ],
-    openModalS: false,
-    openModalM: false,
-    openModalL: false,
-    openModalXl: false,
-    openModalFooter: false,
-    openModalHeader: false,
+    openDialogS: false,
+    openDialogM: false,
+    openDialogL: false,
+    openDialogXl: false,
+    openDialogFooter: false,
+    openDialogHeader: false,
     openDrawerS: false,
     openDrawerM: false,
     openDrawerL: false,
@@ -304,7 +306,7 @@ export default Vue.extend({
     MbFooterActions,
     MbHeaderActions,
     MbIcon,
-    MbModal,
+    MbDialog,
     MbNavigationList,
     MbMenu,
     MbMenuItem,
@@ -342,32 +344,6 @@ main {
   margin-left: 200px;
 }
 
-.mb-checkbox-group,
-.mb-radio-group {
-  ul {
-    li {
-      margin: 0;
-      padding: 0;
-    }
-  }
-  &.mb-flow {
-    &-horizontal {
-      ul {
-        li {
-          display: inline-block;
-          margin-right: $mb-space-m;
-        }
-      }
-    }
-    &-vertical {
-      ul {
-        li {
-          display: flex;
-        }
-      }
-    }
-  }
-}
 .mb-icon-container {
   display: inline-flex;
   align-items: flex-end;
@@ -376,6 +352,7 @@ main {
     margin-right: $mb-space-xs;
   }
 }
+
 </style> 
 
 <template>
@@ -391,15 +368,14 @@ main {
 
     </aside>
     <main>
-      <mb-form-select :options="selectOptions"> </mb-form-select>
       <h1>Cells</h1>
       <mb-panel
-        title="Cells"
         type="card"
         id="cells-table"
-        :has-header="true"
-        :has-footer="true"
       >
+        <template slot="title">
+          <h1>Cells</h1>
+        </template>
         <template slot="header">
           <mb-chip
             label='To do'
@@ -493,19 +469,19 @@ main {
                 </td>
               </tr>
               <tr>
-                <td><a href="#section-modal">MbModal</a></td>
+                <td><a href="#section-modal">MbDialog</a></td>
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
-                    :avatar="ozgur"
+                    :avatar="marius"
                     type="user"
                     size="s"
                   ></mb-avatar>
                 </td>
                 <td>
                   <mb-chip
-                    label='Waiting'
-                    color='warning'
+                    label='Testing'
+                    color='lime'
                     size="s"
                   />
                 </td>
@@ -540,8 +516,8 @@ main {
                 </td>
                 <td>
                   <mb-chip
-                    label='Testing'
-                    color='lime'
+                    label='Done'
+                    color='success'
                     size="s"
                   />
                 </td>
@@ -903,7 +879,8 @@ main {
           </mb-alert>
         </template>
       </mb-panel>
-
+      <h2>MB Form Select with Data</h2>
+      <mb-form-select :options="selectOptions"> </mb-form-select>
       <h2>Pre testing - Needs small fixez</h2>
       <section id="section-avatar">
         <h3>MbAvatar</h3>
@@ -1022,20 +999,10 @@ main {
         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
         placeholder="Url"
       >
-      </mb-form-input>
+      </mb-form-input>f
 
       <section id="section-radio">
         <h3>MbRadio</h3>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon
-                name="icon-alert-warning-fill"
-                color="warning"
-              />Label and the radiobox should be aligned
-            </template>
-          </mb-alert>
-        </p>
         <mb-radio
           label="Radio label"
           name="test1"
@@ -1043,21 +1010,20 @@ main {
       </section>
       <section id="section-radio-group">
         <h3>MbRadioGroup</h3>
-        <p>
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon
-                name="icon-alert-warning-fill"
-                color="warning"
-              />Cristian added only the markup and classes to check the styles, but need to be tested with real that if the component works
-            </template>
-          </mb-alert>
-        </p>
         <mb-radio-group
           @inputChanged="radioChange"
           :radioValues="radioGroupData"
         > </mb-radio-group>
-        Selected radio option is <span class="danger"> {{selectedRadio}} </span>
+   
+      </section>
+      <section id="section-radio-group">
+        <h3>MbRadioGroup</h3>
+        <mb-radio-group
+          @inputChanged="radioChange"
+          :radioValues="radioGroupData"
+          flow="vertical"
+        > </mb-radio-group>
+             Selected radio option is <span class="danger"> {{selectedRadio}} </span>
       </section>
 
       <h2>In progress</h2>
@@ -1096,6 +1062,9 @@ main {
         id="doc-section-buttons"
         type="card"
       >
+        <template slot="title">
+          <h1>Buttons</h1>
+        </template>
         <template slot="content">
           <p>Buttons communicate actions that users can take.</p>
           <div class="mb-props-table">
@@ -1369,7 +1338,12 @@ main {
             label='indigo'
             priority='secondary'
             color='indigo'
-          />
+            :tooltip="'top'"
+          >
+          <template name="tooltip">
+            dafsdfa
+            </template>
+          </mb-button>
           <mb-button
             label='purple'
             priority='secondary'
@@ -2118,11 +2092,13 @@ main {
       <br />
       <mb-panel
         id="doc-section-panel"
-        title="MbPanel"
         type="card"
       >
+        <template slot="title">
+          <h1>MbPanel</h1>
+        </template>
         <template slot="content">
-          <p>Panel description</p>
+          <p>MbPanel component creates a container with 4 slots (title, header, content, footer)</p>
           <h4>How it works</h4>
           <pre>
             <code> 
@@ -2152,39 +2128,11 @@ main {
               </thead>
               <tbody>
                 <tr>
-                  <td>title</td>
-                  <td>string</td>
-                  <td>none</td>
-                  <td>none</td>
-                  <td>Adds a title to the panel</td>
-                </tr>
-                <tr>
-                  <td>name</td>
-                  <td>string</td>
-                  <td>none</td>
-                  <td>none</td>
-                  <td>Renders in markup the id of the panel</td>
-                </tr>
-                <tr>
                   <td>type</td>
                   <td>string</td>
                   <td>base</td>
                   <td>base, card</td>
                   <td>It is used for styling the panel</td>
-                </tr>
-                <tr>
-                  <td>:has-header</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td>true, false</td>
-                  <td>Used for when you want to hide the header slot of the panel</td>
-                </tr>
-                <tr>
-                  <td>:has-footer</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td>true, false</td>
-                  <td>Used for when you want to hide the footer slot of the panel</td>
                 </tr>
               </tbody>
             </table>
@@ -2192,12 +2140,11 @@ main {
           <h4>MbPanel type</h4>
           <h6>Card</h6>
           <mb-panel
-            title="Panel card"
             type="card"
-            name="panel-title"
-            :has-header="true"
-            :has-footer="true"
           >
+            <template slot="title">
+              <h3>Title content</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2210,12 +2157,11 @@ main {
           </mb-panel>
           <h6>Base</h6>
           <mb-panel
-            title="Panel base"
             type="base"
-            name="panel-title"
-            :has-header="true"
-            :has-footer="true"
           >
+            <template slot="title">
+              <h3>Title content</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2226,13 +2172,13 @@ main {
               Footer content
             </template>
           </mb-panel>
-          <h4>MbPanel :has-header="false" </h4>
+          <h4>MbPanel without header </h4>
           <mb-panel
             type="base"
-            title="Panel Title"
-            name="panel-title-2"
-            :has-header="false"
           >
+            <template slot="title">
+              <h3>Title content</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2243,13 +2189,13 @@ main {
               Footer content
             </template>
           </mb-panel>
-          <h4>MbPanel :has-footer="false" </h4>
+          <h4>MbPanel without footer</h4>
           <mb-panel
-            title="Panel Title"
             type="base"
-            name="panel-title-2"
-            :has-footer="false"
           >
+            <template slot="title">
+             <h3>Title content</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2264,14 +2210,31 @@ main {
       </mb-panel>
       </br>
       <mb-panel
-        id="doc-section-modal"
-        title="MbModal"
+        id="doc-section-dialog"
         type="card"
       >
+         <template slot="title">
+          <h1>MbDialog</h1>
+        </template>
         <template slot="content">
-          <p>MbModal it is used to focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.</p>
+          <p>MbDialog it is used to focus the user’s attention exclusively on one task or piece of information via a window that sits on top of the page content.</p>
           <h4>How it works</h4>
-          <pre> <code> &lt;mb-modal name="modal-name" size="m" :has-header="true" :has-footer="true" /&gt;</code></pre>
+          <pre> <code> 
+            &lt;mb-dialog size="m" /&gt; 
+              &lt;template slot="title"&gt;
+                Title content
+              &lt;/template&gt;
+              &lt;template slot="header"&gt;
+                Header content
+              &lt;/template&gt;
+              &lt;template slot="content"&gt;
+                Main content
+              &lt;/template&gt;
+              &lt;template slot="footer"&gt;
+                Footer content
+              &lt;/template&gt;
+            &lt;/mb-dialog size="m" &gt; 
+            </code></pre>
           <div class="mb-props-table">
             <table>
               <thead>
@@ -2285,66 +2248,39 @@ main {
               </thead>
               <tbody>
                 <tr>
-                  <td>title</td>
-                  <td>string</td>
-                  <td>none</td>
-                  <td>none</td>
-                  <td>Adds a title to the modal</td>
-                </tr>
-                <tr>
-                  <td>name</td>
-                  <td>string</td>
-                  <td>none</td>
-                  <td>none</td>
-                  <td>Renders in markup the id of the modal</td>
-                </tr>
-                <tr>
                   <td>size</td>
                   <td>string</td>
                   <td>m</td>
                   <td>s, m, l, xl</td>
-                  <td>Handles the width of the modal</td>
-                </tr>
-                <tr>
-                  <td>:has-header</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td>true, false</td>
-                  <td>Used for when you want to hide the header slot of the modal</td>
-                </tr>
-                <tr>
-                  <td>:has-footer</td>
-                  <td>boolean</td>
-                  <td>true</td>
-                  <td>true, false</td>
-                  <td>Used for when you want to hide the footer slot of the modal</td>
+                  <td>Handles the width of the MbDialog</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <h4>MbModal sizes</h4>
+          <h4>MbDialog sizes</h4>
           <mb-button
-            @click="openModalS = !openModalS"
-            label="Open modal size s"
+            @click="openDialogS = !openDialogS"
+            label="Open dialog size s"
           />
           <mb-button
-            @click="openModalM = !openModalM"
-            label="Open modal size m"
+            @click="openDialogM = !openDialogM"
+            label="Open dialog size m"
           />
           <mb-button
-            @click="openModalL = !openModalL"
-            label="Open modal size l"
+            @click="openDialogL = !openDialogL"
+            label="Open dialog size l"
           />
           <mb-button
-            @click="openModalXl = !openModalXl"
-            label="Open modal size xl"
+            @click="openDialogXl = !openDialogXl"
+            label="Open dialog size xl"
           />
-          <mb-modal
-            name="modal-s"
-            title="Modal title"
-            :is-visible="openModalS"
+          <mb-dialog
+            :is-visible="openDialogS"
             size="s"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>   
             <template slot="header">
               Header content
             </template>
@@ -2354,13 +2290,14 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <mb-modal
-            name="modal-m"
-            title="Modal title"
-            :is-visible="openModalM"
+          </mb-dialog>
+          <mb-dialog
+            :is-visible="openDialogM"
             size="m"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2370,13 +2307,14 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <mb-modal
-            name="modal-l"
-            title="Modal title"
-            :is-visible="openModalL"
+          </mb-dialog>
+          <mb-dialog
+            :is-visible="openDialogL"
             size="l"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2386,13 +2324,14 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <mb-modal
-            name="modal-xl"
-            title="Modal title"
-            :is-visible="openModalXl"
+          </mb-dialog>
+          <mb-dialog
+            :is-visible="openDialogXl"
             size="xl"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
@@ -2402,21 +2341,18 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <h4>MbModal :has-header="false"</h4>
+          </mb-dialog>
+          <h4>MbDialog without header</h4>
           <mb-button
-            @click="openModalHeader = !openModalHeader"
-            label="Open modal"
+            @click="openDialogHeader = !openDialogHeader"
+            label="Open dialog"
           />
-          <mb-modal
-            name="modal-header"
-            title="Modal title"
-            :is-visible="openModalHeader"
-            :has-header="false"
+          <mb-dialog
+            :is-visible="openDialogHeader"
             size="l"
           >
-            <template slot="header">
-              Header content
+            <template slot="title">
+              <h3>Dialog title</h3>
             </template>
             <template slot="content">
               Main content
@@ -2424,37 +2360,36 @@ main {
             <template slot="footer">
               Footer content
             </template>
-          </mb-modal>
-          <h4>MbModal :has-footer="false" </h4>
+          </mb-dialog>
+          <h4>MbDialog wihout footer </h4>
           <mb-button
-            @click="openModalFooter = !openModalFooter"
-            label="Open modal"
+            @click="openDialogFooter = !openDialogFooter"
+            label="Open dialog"
           />
-          <mb-modal
-            name="modal-footer"
-            title="Modal title"
-            :is-visible="openModalFooter"
-            :has-footer="false"
+          <mb-dialog
+            :is-visible="openDialogFooter"
             size="l"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               Header content
             </template>
             <template slot="content">
               Main content
             </template>
-            <template slot="footer">
-              Footer content
-            </template>
-          </mb-modal>
+          </mb-dialog>
         </template>
       </mb-panel>
       <br />
       <mb-panel
         id="doc-section-drawer"
-        title="MbDrawer"
         type="card"
       >
+         <template slot="title">
+          <h1>MbDrawer</h1>
+        </template>
         <template slot="content">
           <p>MbDrawer is a panel that is typically overlaid on top of a page and slides in from the side. It contains a set of information or actions. Since the user can interact with the Drawer without leaving the current page, tasks can be achieved more efficiently within the same context.</p>
           <h4>How it works</h4>
@@ -2545,10 +2480,8 @@ main {
           </mb-drawer>
           <mb-drawer
             :is-visible.sync="openDrawerM"
-            size="l"
+            size="m"
             name="mb-drawer-size-m"
-            :has-header="true"
-            :has-footer="true"
           >
             <template slot="header">
               <p> Header Content </p>
@@ -2574,6 +2507,9 @@ main {
             :has-header="true"
             :has-footer="true"
           >
+            <template slot="title">
+              <h3>Dialog title</h3>
+            </template>
             <template slot="header">
               <p> Header Content </p>
             </template>
@@ -2615,7 +2551,7 @@ main {
               Footer
             </template>
           </mb-drawer>
-          <h4>MbDrawer :has-header="false"</h4>
+          <h4>MbDrawer without header</h4>
           <mb-button
             @click="openDrawerHeader = true"
             label="Open drawer"
@@ -2623,12 +2559,7 @@ main {
           <mb-drawer
             :is-visible.sync="openDrawerHeader"
             size="xl"
-            name="mb-drawer-footer"
-            :has-header="false"
           >
-            <template slot="header">
-              <p> Header Content </p>
-            </template>
             <template slot="content">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -2643,7 +2574,7 @@ main {
               Footer
             </template>
           </mb-drawer>
-          <h4>MbDrawer :has-footer="false"</h4>
+          <h4>MbDrawer without footer</h4>
           <mb-button
             @click="openDrawerFooter = true"
             label="Open drawer"
@@ -2651,9 +2582,6 @@ main {
           <mb-drawer
             :is-visible.sync="openDrawerFooter"
             size="xl"
-            name="mb-drawer-footer"
-            :has-header="true"
-            :has-footer="false"
           >
             <template slot="header">
               <p> Header Content </p>
@@ -2667,9 +2595,6 @@ main {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </template>
-            <template slot="footer">
-              Footer
             </template>
           </mb-drawer>
 
@@ -2678,11 +2603,11 @@ main {
       </br>
       <mb-panel
         id="doc-section-menu"
-        title="MbMenu + MbMenuItem"
         type="card"
-        :has-header="true"
-        :has-footer="true"
       >
+        <template slot="title">
+          <h3>MbMenu+MbMenuItem</h3>
+        </template>
         <template slot="content">
           <p>MbMenu offers a list of items, actions or functions that a user can access. It can be used in any type of container.</p>
           <h4>How it works</h4>
@@ -2772,14 +2697,15 @@ main {
       </br>
       <mb-panel
         id="doc-section-icon"
-        title="MbIcon"
         type="card"
       >
         <template slot="content">
+          <h1>MbIcon</h1>
           <article>
             <p>Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information. </p>
             <h3>Usage</h3>
             <pre><code>&lt;mb-icon name="icon-user" size="m" /&gt;</code></pre>
+            <h3>Props</h3>
             <table class="mb-props-table">
               <thead>
                 <tr>
@@ -2807,133 +2733,47 @@ main {
                 </tr>
               </tbody>
             </table>
-            <p>Sizes are shown below:</p>
             <ul class="mb-list-inline">
-              <li>
-                <mb-icon
-                  name="icon-utility-star-fill"
-                  size="xs"
-                /> <code>size="xs"</code>
-              </li>
-              <li>
-                <mb-icon
-                  name="icon-utility-star-fill"
-                  size="s"
-                /> <code>size="s"</code>
-              </li>
-              <li>
-                <mb-icon
-                  name="icon-utility-star-fill"
-                  size="m"
-                /> <code>size="m"</code>
-              </li>
-              <li>
-                <mb-icon
-                  name="icon-utility-star-fill"
-                  size="l"
-                /> <code>size="l"</code>
-              </li>
+              <li>Size examples: </li>
+              <li><mb-icon name="icon-utility-star-fill" size="xs" /> <code>size="xs"</code></li>
+              <li><mb-icon name="icon-utility-star-fill" size="s" /> <code>size="s"</code></li>
+              <li><mb-icon name="icon-utility-star-fill" size="m" /> <code>size="m"</code></li>
+              <li><mb-icon name="icon-utility-star-fill" size="l" /> <code>size="l"</code></li>
             </ul>
-            <h3>Styling</h3>
+            <h3>Style</h3>
             <p>In some cases, icons will have a stroke color but also a fill color. To style them differently, you can define colors using two classes, <code>.svg-stroke</code> and <code>.svg-fill</code></p>
             <pre><code>.mb-icon-name .svg-stroke {
   stroke: $mb-color-white;
 }
 .mb-icon-name .svg-fill {
-  stroke: $mb-color-red;
+  fill: $mb-color-red;
 }</code></pre>
             <h4>List of icons with stroke and fill</h4>
             <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
-              <li>
-                <mb-icon name="icon-checkbox-selected" /> icon-checkbox-selected
-              </li>
-              <li>
-                <mb-icon name="icon-alert-add-fill" /> icon-alert-add-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-danger-fill" /> icon-alert-danger-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-delete-fill" /> icon-alert-delete-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-error-fill" /> icon-alert-error-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-help-fill" /> icon-alert-help-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-info-fill" /> icon-alert-info-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-more-fill" /> icon-alert-more-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-remove-fill" /> icon-alert-remove-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-success-fill" /> icon-alert-success-fill
-              </li>
-              <li>
-                <mb-icon name="icon-alert-warning-fill" /> icon-alert-warning-fill
-              </li>
-              <li>
-                <mb-icon name="icon-mini-add" /> icon-mini-add
-              </li>
-              <li>
-                <mb-icon name="icon-mini-delete" /> icon-mini-delete
-              </li>
-              <li>
-                <mb-icon name="icon-mini-error" /> icon-mini-error
-              </li>
-              <li>
-                <mb-icon name="icon-mini-more" /> icon-mini-more
-              </li>
-              <li>
-                <mb-icon name="icon-mini-remove" /> icon-mini-remove
-              </li>
-              <li>
-                <mb-icon name="icon-mini-success" /> icon-mini-success
-              </li>
-              <li>
-                <mb-icon name="icon-file-csv" /> icon-file-csv
-              </li>
-              <li>
-                <mb-icon name="icon-file-doc" /> icon-file-doc
-              </li>
-              <li>
-                <mb-icon name="icon-file-google-doc" /> icon-file-google-doc
-              </li>
-              <li>
-                <mb-icon name="icon-file-google-sheet" /> icon-file-google-sheet
-              </li>
-              <li>
-                <mb-icon name="icon-file-google-slides" /> icon-file-google-slides
-              </li>
-              <li>
-                <mb-icon name="icon-file-json" /> icon-file-json
-              </li>
-              <li>
-                <mb-icon name="icon-file-other" /> icon-file-other
-              </li>
-              <li>
-                <mb-icon name="icon-file-pdf" /> icon-file-pdf
-              </li>
-              <li>
-                <mb-icon name="icon-file-ppt" /> icon-file-ppt
-              </li>
-              <li>
-                <mb-icon name="icon-file-sql" /> icon-file-sql
-              </li>
-              <li>
-                <mb-icon name="icon-file-xls" /> icon-file-xls
-              </li>
-              <li>
-                <mb-icon name="icon-file-xml" /> icon-file-xml
-              </li>
-              <li>
-                <mb-icon name="icon-file-zip" /> icon-file-zip
-              </li>
+              <li><mb-icon name="icon-checkbox-selected" /> icon-checkbox-selected</li> 
+              <li><mb-icon name="icon-alert-add-fill" /> icon-alert-add-fill</li>
+              <li><mb-icon name="icon-alert-danger-fill" /> icon-alert-danger-fill</li>
+              <li><mb-icon name="icon-alert-delete-fill" /> icon-alert-delete-fill</li>
+              <li><mb-icon name="icon-alert-error-fill" /> icon-alert-error-fill</li>
+              <li><mb-icon name="icon-alert-help-fill" /> icon-alert-help-fill</li>
+              <li><mb-icon name="icon-alert-info-fill" /> icon-alert-info-fill</li>
+              <li><mb-icon name="icon-alert-more-fill" /> icon-alert-more-fill</li>
+              <li><mb-icon name="icon-alert-remove-fill" /> icon-alert-remove-fill</li>
+              <li><mb-icon name="icon-alert-success-fill" /> icon-alert-success-fill</li>
+              <li><mb-icon name="icon-alert-warning-fill" /> icon-alert-warning-fill</li>
+              <li><mb-icon name="icon-file-csv" /> icon-file-csv</li>
+              <li><mb-icon name="icon-file-doc" /> icon-file-doc</li>
+              <li><mb-icon name="icon-file-google-doc" /> icon-file-google-doc</li>
+              <li><mb-icon name="icon-file-google-sheet" /> icon-file-google-sheet</li>
+              <li><mb-icon name="icon-file-google-slides" /> icon-file-google-slides</li>
+              <li><mb-icon name="icon-file-json" /> icon-file-json</li>
+              <li><mb-icon name="icon-file-other" /> icon-file-other</li>
+              <li><mb-icon name="icon-file-pdf" /> icon-file-pdf</li>
+              <li><mb-icon name="icon-file-ppt" /> icon-file-ppt</li>
+              <li><mb-icon name="icon-file-sql" /> icon-file-sql</li>
+              <li><mb-icon name="icon-file-xls" /> icon-file-xls</li>
+              <li><mb-icon name="icon-file-xml" /> icon-file-xml</li>
+              <li><mb-icon name="icon-file-zip" /> icon-file-zip</li>
             </ul>
             <h3 id="all-icons">All Icons</h3>
             <h5>Navigation</h5>
@@ -3510,60 +3350,6 @@ main {
               </li>
               <li>
                 <mb-icon name="icon-users" /> icon-users
-              </li>
-            </ul>
-            <h5>Mini icons</h5>
-            <ul style="column-count: 4; column-gap: 2rem; margin-bottom: 1rem;">
-              <li>
-                <mb-icon name="icon-mini-add" /> icon-mini-add
-              </li>
-              <li>
-                <mb-icon name="icon-mini-arrow" /> icon-mini-arrow
-              </li>
-              <li>
-                <mb-icon name="icon-mini-check" /> icon-mini-check
-              </li>
-              <li>
-                <mb-icon name="icon-mini-close" /> icon-mini-close
-              </li>
-              <li>
-                <mb-icon name="icon-mini-delete" /> icon-mini-delete
-              </li>
-              <li>
-                <mb-icon name="icon-mini-down" /> icon-mini-down
-              </li>
-              <li>
-                <mb-icon name="icon-mini-error" /> icon-mini-error
-              </li>
-              <li>
-                <mb-icon name="icon-mini-arrow" /> icon-mini-arrow
-              </li>
-              <li>
-                <mb-icon name="icon-mini-filter" /> icon-mini-filter
-              </li>
-              <li>
-                <mb-icon name="icon-mini-heart" /> icon-mini-heart
-              </li>
-              <li>
-                <mb-icon name="icon-mini-more" /> icon-mini-more
-              </li>
-              <li>
-                <mb-icon name="icon-mini-remove" /> icon-mini-remove
-              </li>
-              <li>
-                <mb-icon name="icon-mini-sort" /> icon-mini-sort
-              </li>
-              <li>
-                <mb-icon name="icon-mini-sorted" /> icon-mini-sorted
-              </li>
-              <li>
-                <mb-icon name="icon-mini-star" /> icon-mini-star
-              </li>
-              <li>
-                <mb-icon name="icon-mini-success" /> icon-mini-success
-              </li>
-              <li>
-                <mb-icon name="icon-mini-up" /> icon-mini-up
               </li>
             </ul>
             <h5>Files</h5>

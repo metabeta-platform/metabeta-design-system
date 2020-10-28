@@ -11,7 +11,7 @@
       <input
         :id="name"
         class="mb-input"
-        :class="[{'has-before-icon' : iconBefore || type === 'password' || type === 'email' || type === 'url'}, {'has-after-icon' : iconAfter || type === 'password' || type === 'email' || type === 'url'}]"
+        :class="[{'mb-form-icon-before' : iconBefore || type === 'password' || type === 'email'  ||  type === 'phone'  || type === 'url'}, {'mb-form-icon-after' : iconAfter || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'}]"
         :type="dynamicType"
         v-model="inputValue"
         :pattern="pattern"
@@ -22,8 +22,8 @@
         :readonly="inputReadonly"
       >
       <mb-icon
-        v-if="iconBefore || type === 'password' || type === 'email' || type === 'url'"
-        :class="{'icon-before' : iconBefore || type === 'password' || type === 'email' || type === 'url'}"
+        v-if="iconBefore || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'"
+        :class="{'icon-before' : iconBefore || type === 'password' || type === 'email' ||  type === 'phone'  || type === 'url'}"
         @click="emit('icon-clicked')"
         class="input-icon"
         :name="dynamicBefore"
@@ -33,7 +33,7 @@
         @click="handleAfterClick"
         class="input-icon"
         :class="{'icon-after' : iconAfter || type === 'password'}"
-        :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-view' : 'icon-forms-hide' : !!iconAfter.name"
+        :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-hide' : 'icon-forms-view' : !!iconAfter.name"
       ></mb-icon>
     </div>
     <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
@@ -167,6 +167,9 @@ export default {
       case 'email':
         this.dynamicBefore = 'icon-forms-email';
         break;
+      case 'phone':
+        this.dynamicBefore = 'icon-forms-call';
+        break;
       case 'url':
         this.dynamicBefore = 'icon-format-link';
         break;
@@ -187,21 +190,21 @@ export default {
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    .has-after-icon {
-      padding-right: 50px;
+    .mb-form-icon-after {
+      padding-right: $mb-space-xxl;
       & ~ .icon-after {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 10px;
+        right: $mb-space-s;
         cursor: pointer;
       }
     }
-    .has-before-icon {
-      padding-left: 30px;
+    .mb-form-icon-before {
+      padding-left: $mb-space-xl;
       & ~ .icon-before {
         position: absolute;
-        left: 10px;
+        left: $mb-space-s;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
@@ -212,10 +215,12 @@ export default {
     @include mb-caption(xs);
     display: block;
     color: $mb-color-text-light;
+  
   }
   .mb-form-input-hint {
     @include mb-caption(xs);
     padding: $mb-space-xxs 0;
+    margin:0;
     color: $mb-color-text-light;
     &.mb-error {
       &-danger {

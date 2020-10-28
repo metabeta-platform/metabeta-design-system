@@ -1,5 +1,5 @@
 <template>
-   <li  :class="['mb-menu-item', menuItemDisabled ? 'mb-is-disabled' : null]">
+   <li  :class="['mb-menu-item', menuItemDisabled ? 'mb-is-disabled' : null, menuItemSelected ? 'mb-is-selected' : null]">
       <a :href="href"
       @click="$emit('click', $event)"
       >
@@ -24,7 +24,10 @@ export default {
       type: Boolean,
       default: false,
     },
-
+    isSelected: {
+      type: Boolean,
+      default: false,
+    },
   },
    computed:{
     menuItemDisabled:{
@@ -33,6 +36,14 @@ export default {
       },
       set(value){
         this.isDisabled = value;
+      }
+    },
+     menuItemSelected:{
+      get(){
+        return this.isSelected;
+      },
+      set(value){
+        this.isSelected = value;
       }
     }
   },
@@ -62,10 +73,15 @@ export default {
   }
   &.mb-is-disabled{
     a{
-    // pointer-events:none;
     cursor: not-allowed;
     background-color: fade-out(desaturate($mb-color-gray, $mb-opacity-m),$mb-opacity-xxl);
     color: fade-out($mb-color-text-medium, $mb-opacity-l);
+    }
+  }
+  &.mb-is-selected{
+    a{
+    background-color: $mb-color-primary-highlight;
+    color: $mb-color-primary;
     }
   }
 }
@@ -85,6 +101,13 @@ export default {
         padding: $mb-space-xs $mb-space-s;
       }
     }
+    }
+  }
+}
+.mb-is-colllapsed{
+  .mb-menu{
+    .mb-menu-item{
+      
     }
   }
 }

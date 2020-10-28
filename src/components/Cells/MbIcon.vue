@@ -1,9 +1,6 @@
 <template>
   <i :class="['mb-icon',`mb-size-${size}`]">
     <component
-      @click="$emit('click', $event)"
-      :height="wh"
-      :width="wh"
       :viewBox="`0 0 16 16`"
       :is="iconComponent"
     />
@@ -21,9 +18,6 @@ requireComponents.keys().forEach(fileName => {
 
 export default {
   name: "MbIcon",
-  data: () => ({
-    wh: 16,
-  }),
   props: {
     name: {
       type: String,
@@ -38,24 +32,6 @@ export default {
     iconComponent () {
       return icons[this.name]
     },
-  },
-  created () {
-    switch (this.size) {
-      case 'xs':
-        this.wh = 8
-        break;
-      case 's':
-        this.wh = 12
-        break;
-      case 'm':
-        this.wh = 16
-        break;
-      case 'l':
-        this.wh = 24
-        break;
-      default:
-        break;
-    }
   }
 }
 </script>
@@ -66,11 +42,36 @@ export default {
   line-height: 0;
   stroke: transparent;
   fill: transparent;
+  vertical-align: middle;
   .svg-stroke {
     stroke: $mb-color-gray;
   }
   .svg-fill {
     fill: $mb-color-gray;
+  }
+  &.mb-size-xs{
+    svg{
+    width:  8px;
+    height: 8px;
+    }
+  }
+  &.mb-size-s{
+    svg{
+      width:  12px;
+      height: 12px;
+    }
+  }
+  &.mb-size-m{
+    svg{
+      width: 16px;
+      height:16px;
+    }
+  }
+  &.mb-size-l{
+    svg{
+      width: 24px;
+      height:24px;
+    }
   }
   .mb-icon-checkbox-selected,
   .mb-icon-alert-add-fill,
@@ -83,12 +84,6 @@ export default {
   .mb-icon-alert-remove-fill,
   .mb-icon-alert-success-fill,
   .mb-icon-alert-warning-fill,
-  .mb-icon-mini-add,
-  .mb-icon-mini-delete,
-  .mb-icon-mini-error,
-  .mb-icon-mini-more,
-  .mb-icon-mini-remove,
-  .mb-icon-mini-success,
   .mb-icon-file-csv,
   .mb-icon-file-doc,
   .mb-icon-file-google-doc,

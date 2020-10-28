@@ -1,6 +1,6 @@
 <template>
   <fieldset
-    :class="flow === 'horizontal' ? 'horizontal' : 'vertical'"
+    :class="flow === 'horizontal' ? 'mb-flow-horizontal' : 'mb-flow-vertical'"
     class="mb-fieldset"
   >
     <slot></slot>
@@ -24,13 +24,12 @@ export default {
 .mb-fieldset {
   position: relative;
   appearance: none;
-  margin-bottom: $mb-space-xs;
   box-sizing: border-box;
-  &.horizontal {
+  &.mb-flow-horizontal {
     display: flex;
     align-items: center;
   }
-  &.vertical {
+  &.mb-flow-vertical {
     display: block;
   }
 }

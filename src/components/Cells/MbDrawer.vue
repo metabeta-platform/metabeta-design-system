@@ -7,20 +7,19 @@
       :id="name"
       :class="['mb-drawer', `mb-size-${size}`]"
     >
-      <header class="mb-drawer-header">
-        <header class="mb-header-title-bar">
-          <mb-button
-            @click="drawerVisibility = false; $emit('on-close')"
-            :icon-before="{name: 'icon-close'}"
-            priority="base"
-          ></mb-button>
-        </header>
-        <section
-          class="mb-header-content"
-          v-if="hasHeader && hasHeaderSlot"
+      <nav class="mb-drawer-title">
+        <mb-button
+          @click="drawerVisibility = false; $emit('on-close')"
+          :icon-before="{name: 'icon-close'}"
+          priority="base"
+        ></mb-button>
+        <slot name="title"></slot>
+      </nav>
+      <header 
+        class="mb-drawer-header"
+        v-if="hasHeader"
         >
-          <slot name="header"></slot>
-        </section>
+        <slot name="header"></slot>
       </header>
       <section
         class="mb-drawer-content"
@@ -30,7 +29,7 @@
       </section>
       <footer
         class="mb-drawer-footer"
-        v-if="hasFooter && hasFooterSlot"
+        v-if="hasFooter"
       >
         <slot name="footer"></slot>
       </footer>
@@ -57,14 +56,6 @@ export default {
     name: {
       type: String,
       default: '',
-    },
-    hasFooter: {
-      type: Boolean,
-      default: true,
-    },
-    hasHeader: {
-      type: Boolean,
-      default: true,
     },
     contentId: {
       type: [String, Number],
@@ -95,14 +86,17 @@ export default {
     }
   },
   computed: {
+    hasTitle () {
+      return !!this.$slots['title'];
+    },
     hasContent () {
-      return !!this.$slots['content'] || !!this.$defaultSlots['content'];
+      return !!this.$slots['content'];
     },
-    hasHeaderSlot () {
-      return !!this.$slots['header'] || !!this.$defaultSlots['header'];
+    hasHeader () {
+      return !!this.$slots['header'];
     },
-    hasFooterSlot () {
-      return !!this.$slots['footer'] || !!this.$defaultSlots['footer'];
+    hasFooter () {
+      return !!this.$slots['footer'];
     },
 
   },
@@ -167,19 +161,16 @@ export default {
     width: 75vw;
     height: 100vh;
     z-index: 3;
-    .mb-drawer-header {
+    .mb-drawer-title{
+      display: flex;
+      width: 100%;
+      padding: $mb-space-xxs;
+      vertical-align: middle;
+    }
+    .mb-drawer-header{
       overflow: hidden;
       border-bottom: $mb-border-thin solid $mb-color-border-light;
-      .mb-header-content {
-        padding: $mb-space-s $mb-space-m;
-      }
-      .mb-header-title-bar {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        justify-self: flex-start;
-        padding: $mb-space-xxs;
-      }
+      padding: $mb-space-s $mb-space-m;
     }
     .mb-drawer-content {
       max-height: 90vh;

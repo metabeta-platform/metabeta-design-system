@@ -9,7 +9,7 @@ export { default as MbApp } from "@/components/cells/page/MbApp.vue";
 export { default as MbOrganization } from "@/components/cells/page/MbOrganization.vue";
 export { default as MbTopbar } from "@/components/cells/page/MbTopbar.vue";
 export { default as MbTabs } from "@/components/cells/page/MbTabs.vue";
-export { default as MbModal } from "@/components/cells/MbModal.vue";
+export { default as MbDialog } from "@/components/cells/MbDialog.vue";
 export { default as MbDrawer } from "@/components/cells/MbDrawer.vue";
 export { default as MbButton } from "@/components/cells/MbButton.vue";
 export { default as MbFooterActions } from "@/components/cells/MbFooterActions.vue";
