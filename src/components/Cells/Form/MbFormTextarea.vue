@@ -39,6 +39,7 @@
           :name="iconAfter || type === 'password' ? dynamicType === 'text' ? 'icon-forms-view' : 'icon-forms-hide' : !!iconAfter.name"
         ></mb-icon>
       </div>
+      <p> <small> Characters left: {{count}} </small> </p>
       <div class="mb-hint-wrapper">
         <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
         <mb-icon name="help"></mb-icon>
@@ -54,6 +55,7 @@ export default {
     inputValue: '',
     dynamicBefore: '',
     dynamicType: '',
+    count: '',
   }),
   props: {
     type: {
@@ -161,6 +163,7 @@ export default {
   watch: {
     value (newValue) {
       this.$emit('changed', newValue);
+      this.count = 500 - newValue.split('').length;
       this.inputValue = newValue;
     },
   },
