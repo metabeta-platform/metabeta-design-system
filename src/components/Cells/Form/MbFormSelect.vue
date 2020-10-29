@@ -11,7 +11,6 @@
         <div
           @click="active = !active"
           class="mb-selected-input"
-          :class="priority"
         >
           <span>{{selectedInput !== '' ? selectedInput : placeholder}}</span>
           <mb-icon name="dropdown-up"></mb-icon>
@@ -117,11 +116,24 @@ export default {
     @include mb-transition("smooth");
     transform: rotateZ(180deg);
   }
+  &.active {
+    .mb-icon {
+      transform: rotateZ(0deg);
+    }
+    .mb-options {
+      max-height: none;
+      padding: $mb-space-s $mb-space-s;
+    }
+  }
   .mb-options {
     margin: $mb-space-xs 0 0;
     background-color: $mb-color-white;
     @include mb-border-radius(s);
     @include mb-shadow(l);
+    transition: padding $mb-speed-fast $mb-ease-intro;
+    max-height: 0px;
+    padding: 0 $mb-space-s;
+    overflow: hidden;
     li {
       position: relative;
       @include mb-caption(s);
@@ -147,28 +159,16 @@ export default {
       }
     }
   }
-  .mb-options {
-    transition: padding $mb-speed-fast $mb-ease-intro;
-    max-height: 0px;
-    padding: 0;
-    overflow: hidden;
-  }
-  &.active {
-    .mb-icon {
-      transform: rotateZ(0deg);
-    }
-    .mb-options {
-      max-height: none;
-      padding: $mb-space-s $mb-space-s;
-    }
-  }
   .mb-selected-input {
-    display: inline-block;
+    display: flex;
     align-items: center;
     background-color: $mb-color-white;
     padding: $mb-space-xs $mb-space-s;
     cursor: pointer;
     @include mb-border-radius(s);
+    .mb-icon {
+      margin: 0 0 0 $mb-space-s;
+    }
   }
 }
 </style>
