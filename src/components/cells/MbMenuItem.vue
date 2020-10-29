@@ -1,5 +1,5 @@
 <template>
-  <li :class="['mb-menu-item', menuItemDisabled ? 'mb-is-disabled' : null, menuItemSelected ? 'mb-is-selected' : null]">
+  <li :class="['mb-menu-item', isDisabled ? 'mb-is-disabled' : null, isSelected ? 'mb-is-selected' : null]">
     <mb-icon
       v-if="icon"
       :name="icon.name"
@@ -9,7 +9,7 @@
       :href="href"
       @click="$emit('click', $event)"
     >
-      {{menuItemContent}}
+      {{content}}
     </a>
   </li>
 </template>
@@ -18,7 +18,7 @@
 export default {
   name: 'MbMenuItem',
   props: {
-    menuItemContent: {
+    content: {
       type: String,
       default: '',
     },
@@ -40,7 +40,7 @@ export default {
     },
   },
   computed: {
-    menuItemDisabled: {
+    isDisabled: {
       get () {
         return this.isDisabled;
       },
@@ -48,7 +48,7 @@ export default {
         this.isDisabled = value;
       }
     },
-    menuItemSelected: {
+    isSelected: {
       get () {
         return this.isSelected;
       },

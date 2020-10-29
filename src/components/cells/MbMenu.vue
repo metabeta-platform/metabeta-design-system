@@ -7,12 +7,12 @@
     <ul>
       <mb-menu-item
         v-for="item in items"
-        :menu-item-selected="item.selected"
+        :is-selected="item.selected"
         :key="item._id"
         :icon="item.icon"
         @click="navigateIfRouterLink(item.href)"
         :href="item.href"
-        :menuItemContent="item.menuItemContent"
+        :content="item.content"
         :isDisabled="item.isDisabled"
       >
       </mb-menu-item>
@@ -38,7 +38,7 @@ export default {
     items: {
       type: [Array, Object],
     },
-    menuItemSelected: {
+    isSelected: {
       type: Boolean,
       default: false,
     }

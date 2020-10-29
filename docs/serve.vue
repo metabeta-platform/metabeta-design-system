@@ -120,42 +120,42 @@ export default Vue.extend({
       {
         _id: '123162387sgahdjsadgdasj',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item 1',
+        content: 'Menu Item 1',
       },
       {
         _id: 'asdgashjdgksja1213a',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item 2',
+        content: 'Menu Item 2',
         isDisabled: true
       },
       {
         _id: 'sdsdfsd',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item 3',
+        content: 'Menu Item 3',
       }
     ],
     menuItems: [
       {
         _id: '123162387sgahdjsadgdasj',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item 4',
+        content: 'Menu Item 4',
       },
       {
         _id: '123162387sgssssdjsadgdasj',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item New',
+        content: 'Menu Item New',
         isDisabled: true
       },
       {
         _id: 'asdgashjdgksja1213a',
         href: 'https://medium.com/',
-        menuItemContent: 'Menu Item 5'
+        content: 'Menu Item 5'
       },
       {
         _id: 'sdsdfsd',
         href: 'https://medium.com/',
         isSelected: true,
-        menuItemContent: 'Menu Item 6'
+        content: 'Menu Item 6'
 
       },
     ],
@@ -163,32 +163,32 @@ export default Vue.extend({
       {
         _id: 'icons-doc11122',
         href: '#doc-section-icon',
-        menuItemContent: 'MbIcon [Done]'
+        content: 'MbIcon [Done]'
       },
       {
         _id: 'buttons-doc11122',
         href: '#doc-section-buttons',
-        menuItemContent: 'MbButton [Waiting]'
+        content: 'MbButton [Waiting]'
       },
       {
         _id: 'panels-doc11122',
         href: '#doc-section-panels',
-        menuItemContent: 'MbPanel [Testing]'
+        content: 'MbPanel [Testing]'
       },
       {
         _id: 'drawer-doc11122',
         href: '#doc-section-drawer',
-        menuItemContent: 'MbDrawer [Testing]'
+        content: 'MbDrawer [Testing]'
       },
       {
         _id: 'modal-doc11122',
         href: '#doc-section-dialog',
-        menuItemContent: 'MbDialog [Testing]'
+        content: 'MbDialog [Testing]'
       },
       {
         _id: 'menu-doc11122',
         href: '#doc-section-menu',
-        menuItemContent: 'MbMenu [Testing]'
+        content: 'MbMenu [Testing]'
       }
     ],
     openDialogS: false,
@@ -2580,7 +2580,7 @@ main {
                   <td>:items</td>
                   <td>array</td>
                   <td>none</td>
-                  <td>_id: 'string', href: 'string', menuItemContent: 'string', isDisabled: boolean</td>
+                  <td>_id: 'string', href: 'string', content: 'string', isDisabled: boolean</td>
                   <td>Used for defigning the MbMenuItem, that includes the list of items and actions displayed in MbMenu</td>
                 </tr>
               </tbody>
