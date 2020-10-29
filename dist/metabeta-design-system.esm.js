@@ -758,7 +758,6 @@ var script$6 = {
   computed: {
     modalVisibility: {
       get() {
-        console.log(this.isVisible);
         return this.isVisible;
       },
 

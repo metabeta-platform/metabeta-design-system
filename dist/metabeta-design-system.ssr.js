@@ -781,7 +781,6 @@ var script$6 = {
   computed: {
     modalVisibility: {
       get: function get() {
-        console.log(this.isVisible);
         return this.isVisible;
       },
       set: function set(value) {

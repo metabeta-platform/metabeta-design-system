@@ -78,7 +78,6 @@ export default {
       }
     },
     dialogVisibility (val) {
-      console.log(val);
       this.$emit('update:isVisible', this.dialogVisibility);
     }
   },
