@@ -122,7 +122,7 @@ export default {
     }
     .mb-options {
       max-height: none;
-      padding: $mb-space-s $mb-space-s;
+      padding: $mb-space-xs $mb-space-xs;
     }
   }
   .mb-options {
@@ -132,7 +132,7 @@ export default {
     @include mb-shadow(l);
     transition: padding $mb-speed-fast $mb-ease-intro;
     max-height: 0px;
-    padding: 0 $mb-space-s;
+    padding: 0 $mb-space-xs;
     overflow: hidden;
     li {
       position: relative;
