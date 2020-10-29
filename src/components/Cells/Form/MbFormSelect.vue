@@ -1,25 +1,39 @@
 <template>
-  <div
-    class="mb-form-select"
-    :class="{'active' : active}"
-  >
-    <div
-      @click="active = !active"
-      class="mb-selected-input"
-      :class="priority"
-    >
-      <span>{{selectedInput !== '' ? selectedInput : placeholder}}</span>
-      <mb-icon name="dropdown-up"></mb-icon>
-    </div>
-    <ul class="mb-options">
-      <li
-        v-for="option in options"
-        :key="option.id"
-        :class="{'active' : option.name === selectedInput}"
-        @click="select(option.name)"
-      > {{option.name}} </li>
-    </ul>
-  </div>
+  <mb-fieldset>
+    <template slot="legend">
+      <label
+        v-if="label"
+        :for="`select${name}`"
+      ></label>
+    </template>
+    <template slot="content">
+      <div
+        class="mb-form-select"
+        :class="[{'active' : active}, `mb-size-${size}`]"
+      >
+        <div
+          @click="active = !active"
+          class="mb-selected-input"
+          :class="priority"
+        >
+          <span>{{selectedInput !== '' ? selectedInput : placeholder}}</span>
+          <mb-icon name="dropdown-up"></mb-icon>
+        </div>
+        <ul class="mb-options">
+          <li
+            v-for="option in options"
+            :key="option.id"
+            :class="[{'active' : option.name === selectedInput}, option.disabled ? 'disabled' : '']"
+            @click="select(option.name)"
+          > {{option.name}} </li>
+        </ul>
+      </div>
+      <div class="mb-hint-wrapper">
+        <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
+        <mb-icon name="help"></mb-icon>
+      </div>
+    </template>
+  </mb-fieldset>
 </template>
 
 <script>
@@ -38,14 +52,38 @@ export default {
       type: String,
       default: 'Please select',
     },
-    preselected: {
+    value: {
       type: String,
       default: ''
     },
     priority: {
       type: String,
       default: '',
-    }
+    },
+    name: {
+      type: String,
+      default: '',
+    },
+    label: {
+      type: String,
+      default: '',
+    },
+    size: {
+      type: String,
+      default: 'l'
+    },
+    isRequired: {
+      type: Boolean,
+      default: false,
+    },
+    isDisabled: {
+      type: Boolean,
+      default: false,
+    },
+    isReadonly: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     select (option) {
@@ -55,10 +93,12 @@ export default {
     }
   },
   created () {
-    this.preselected = this.selectedInput;
+    this.value = this.selectedInput;
   },
   components: {
-    MbIcon: () => import('../MbIcon')
+    MbIcon: () => import('../MbIcon'),
+    MbFieldset: () => import('../form/MbFieldset'),
+    MbPopover: () => import('../MbTooltip'),
   }
 }
 </script>
