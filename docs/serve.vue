@@ -2205,23 +2205,23 @@ main {
           </div>
           <h4>MbDialog sizes</h4>
           <mb-button
-            @click="openDialogS = !openDialogS"
+            @click="openDialogS = true"
             label="Open dialog size s"
           />
           <mb-button
-            @click="openDialogM = !openDialogM"
+            @click="openDialogM = true"
             label="Open dialog size m"
           />
           <mb-button
-            @click="openDialogL = !openDialogL"
+            @click="openDialogL = true"
             label="Open dialog size l"
           />
           <mb-button
-            @click="openDialogXl = !openDialogXl"
+            @click="openDialogXl = true"
             label="Open dialog size xl"
           />
           <mb-dialog
-            :is-visible="openDialogS"
+            :is-visible.sync="openDialogS"
             size="s"
           >
             <template slot="title">
@@ -2238,7 +2238,7 @@ main {
             </template>
           </mb-dialog>
           <mb-dialog
-            :is-visible="openDialogM"
+            :is-visible.sync="openDialogM"
             size="m"
           >
             <template slot="title">
@@ -2255,7 +2255,7 @@ main {
             </template>
           </mb-dialog>
           <mb-dialog
-            :is-visible="openDialogL"
+            :is-visible.sync="openDialogL"
             size="l"
           >
             <template slot="title">
@@ -2272,7 +2272,7 @@ main {
             </template>
           </mb-dialog>
           <mb-dialog
-            :is-visible="openDialogXl"
+            :is-visible.sync="openDialogXl"
             size="xl"
           >
             <template slot="title">
@@ -2294,7 +2294,7 @@ main {
             label="Open dialog"
           />
           <mb-dialog
-            :is-visible="openDialogHeader"
+            :is-visible.sync="openDialogHeader"
             size="l"
           >
             <template slot="title">
@@ -2313,7 +2313,7 @@ main {
             label="Open dialog"
           />
           <mb-dialog
-            :is-visible="openDialogFooter"
+            :is-visible.sync="openDialogFooter"
             size="l"
           >
             <template slot="title">
