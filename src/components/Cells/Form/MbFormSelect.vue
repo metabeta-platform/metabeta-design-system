@@ -1,10 +1,7 @@
 <template>
   <mb-fieldset>
     <template slot="legend">
-      <label
-        v-if="label"
-        :for="`select${name}`"
-      ></label>
+      <label :for="`select${name}`">{{label}}</label>
     </template>
     <template slot="content">
       <div
@@ -28,7 +25,10 @@
           > {{option.name}} </li>
         </ul>
       </div>
-      <div class="mb-hint-wrapper">
+      <div
+        v-if="hint"
+        class="mb-hint-wrapper"
+      >
         <p :class="['mb-form-input-hint', `mb-error-${error}`]">{{hint}}</p>
         <mb-icon name="help"></mb-icon>
       </div>
@@ -76,6 +76,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    hint: {
+      type: String,
+      default: '',
+    },
     isDisabled: {
       type: Boolean,
       default: false,
@@ -84,6 +88,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    error: {
+      type: Boolean,
+      default: false,
+    }
   },
   methods: {
     select (option) {
