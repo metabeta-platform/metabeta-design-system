@@ -2045,7 +2045,7 @@ main {
       </mb-panel>
       <br />
       <mb-panel
-        id="doc-section-panel"
+        id="section-panel"
         type="card"
       >
         <template slot="title">
@@ -2053,22 +2053,22 @@ main {
         </template>
         <template slot="content">
           <p>MbPanel component creates a container with 4 slots (title, header, content, footer)</p>
-          <h4>How it works</h4>
-          <pre>
-            <code> 
-              &lt;mb-panel title="Panel title" type="card" :has-header="true" :has-footer="true" &gt;
-                &lt;template slot="header">
-                  Any type of content
-                &lt;/template&gt;
-                &lt;template slot="content">
-                  Any type of content
-                &lt;/template&gt;
-                &lt;template slot="footer">
-                  Any type of content
-                &lt;/template&gt;
-              &lt;/mb-panel&gt;
-            </code>
-          </pre>
+          <h3>Usage</h3>
+          <pre><code>&lt;mb-panel type="card"" &gt;
+  &lt;template slot="title">
+    Any type of content
+  &lt;/template&gt;
+  &lt;template slot="header">
+    Any type of content
+  &lt;/template&gt;
+  &lt;template slot="content">
+    Any type of content
+  &lt;/template&gt;
+  &lt;template slot="footer">
+    Any type of content
+  &lt;/template&gt;
+&lt;/mb-panel&gt;</code></pre>
+          <h3>Props</h3>
           <div class="mb-props-table">
             <table>
               <thead>
@@ -2082,17 +2082,17 @@ main {
               </thead>
               <tbody>
                 <tr>
-                  <td>type</td>
-                  <td>string</td>
-                  <td>base</td>
-                  <td>base, card</td>
-                  <td>It is used for styling the panel</td>
+                  <td><code>type</code></td>
+                  <td>String</td>
+                  <td><code>base</code></td>
+                  <td><code>base | card | well</code></td>
+                  <td>Used to define the panel type.</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <h4>MbPanel type</h4>
-          <h6>Card</h6>
+          <h3>MbPanel types</h3>
+          <h4>Card</h4>
           <mb-panel type="card">
             <template slot="title">
               <h3>Title content</h3>
@@ -2107,7 +2107,7 @@ main {
               Footer content
             </template>
           </mb-panel>
-          <h6>Base</h6>
+          <h4>Base</h4>
           <mb-panel type="base">
             <template slot="title">
               <h3>Title content</h3>
@@ -2122,23 +2122,8 @@ main {
               Footer content
             </template>
           </mb-panel>
-          <h4>MbPanel without header </h4>
-          <mb-panel type="base">
-            <template slot="title">
-              <h3>Title content</h3>
-            </template>
-            <template slot="header">
-              Header content
-            </template>
-            <template slot="content">
-              Main content
-            </template>
-            <template slot="footer">
-              Footer content
-            </template>
-          </mb-panel>
-          <h4>MbPanel without footer</h4>
-          <mb-panel type="base">
+          <h4>Well</h4>
+          <mb-panel type="well">
             <template slot="title">
               <h3>Title content</h3>
             </template>
