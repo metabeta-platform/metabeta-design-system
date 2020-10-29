@@ -1,19 +1,18 @@
 <template>
-  <nav :class="['mb-menu', `mb-size-${size}`, `mb-flow-${flow}`]">
+  <nav :class="['mb-menu', `mb-size-${size}`]">
     <h5
       v-if="title"
       class="mb-menu-title"
     >{{title}}</h5>
-    <ul>
+    <ul class="mb-menu-section">
       <mb-menu-item
         v-for="item in items"
-        :is-selected="item.selected"
         :key="item._id"
-        :icon="item.icon"
-        @click="navigateIfRouterLink(item.href)"
-        :href="item.href"
         :content="item.content"
-        :isDisabled="item.isDisabled"
+        :is-selected="item.selected"
+        :is-disabled="item.isDisabled"
+        :href="item.href"
+        @click="navigateIfRouterLink(item.href)"
       >
         <template slot="content">
           <slot :name="item._id"> </slot>
@@ -34,10 +33,6 @@ export default {
       type: String,
       default: 'm',
     },
-    flow: {
-      type: String,
-      default: 'vertical',
-    },
     items: {
       type: [Array, Object],
     },
@@ -48,7 +43,7 @@ export default {
   },
   methods: {
     navigateIfRouterLink (anchor) {
-      !anchor.includes('#') ? this.$router.push({ name: item.href }) : null;
+      !anchor.includes('#') ? this.$router.push({ name: anchor }) : null;
     }
   },
   components: {

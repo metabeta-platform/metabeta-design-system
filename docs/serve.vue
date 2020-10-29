@@ -416,7 +416,6 @@ main {
         title="Cells"
         :items="sideNavItems"
         size="m"
-        flow="vertical"
       >
       </mb-menu>
 

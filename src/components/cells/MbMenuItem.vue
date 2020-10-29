@@ -1,21 +1,18 @@
 <template>
-  <li :class="['mb-menu-item', isDisabled ? 'mb-is-disabled' : null, isSelected ? 'mb-is-selected' : null]">
-    <mb-icon
-      v-if="icon"
-      :name="icon.name"
-      :size="icon.size"
-    ></mb-icon>
+  <li :class="['mb-menu-item', isDisabled ? 'mb-is-disabled' : '', isSelected ? 'mb-is-selected' : '']">
+    <a
+      v-if="!hasContent && typeof(content) === 'string'"
+      :href="href"
+      @click="!isDisabled ? $emit('click', $event) : null"
+    >
+      {{content}}
+    </a>
     <a
       :href="href"
-      @click="$emit('click', $event)"
+      @click="!isDisabled ? $emit('click', $event) : null"
+      v-else
     >
-
-      <div v-if="!hasContent && typeof(content) === 'string'">
-        {{content}}
-      </div>
-      <div v-else>
-        <slot name="content"></slot>
-      </div>
+      <slot name="content"></slot>
     </a>
   </li>
 </template>
@@ -27,10 +24,6 @@ export default {
     content: {
       type: [String, Object],
       default: '',
-    },
-    icon: {
-      type: Object,
-      default: () => { },
     },
     href: {
       type: String,
@@ -44,9 +37,6 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  components: {
-    MbIcon: () => import('./MbIcon'),
   },
   computed: {
     hasContent () {
