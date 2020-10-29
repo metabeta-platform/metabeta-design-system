@@ -208,17 +208,17 @@ export default Vue.extend({
     selectOptions: [
       {
         _id: 'asdgashdgksja1213a',
-        name: 'Tab 1',
+        name: 'Option 1',
         url: '#tab1'
       },
       {
         _id: 'saafsaxzcsadd',
-        name: 'Tab 1',
+        name: 'Option 2',
         url: '#tab1'
       },
       {
         _id: 'ssasdasdd123',
-        name: 'Tab 1',
+        name: 'Option 3',
         url: '#tab1'
       },
     ],
