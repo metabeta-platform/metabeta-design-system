@@ -2,8 +2,7 @@
   <div
     v-if="dialogVisibility"
     @click.self="dialogVisibility = !dialogVisibility"
-    class="mb-modal"
-    :class="[dialogVisibility ? 'mb-is-visible' : 'mb-is-hidden']"
+    :class="[dialogVisibility ? 'mb-is-visible mb-modal' : 'mb-is-hidden']"
   >
     <article :class="['mb-dialog', `mb-size-${size}`]">
       <nav class="mb-dialog-title">
@@ -78,7 +77,8 @@ export default {
         this.dialogVisibility = false;
       }
     },
-    modalVisibility (val) {
+    dialogVisibility (val) {
+      console.log(val);
       this.$emit('update:isVisible', this.dialogVisibility);
     }
   },
