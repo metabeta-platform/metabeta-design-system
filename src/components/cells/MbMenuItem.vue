@@ -9,7 +9,13 @@
       :href="href"
       @click="$emit('click', $event)"
     >
-      {{content}}
+
+      <div v-if="!hasContent && typeof(content) === 'string'">
+        {{content}}
+      </div>
+      <div v-else>
+        <slot name="content"></slot>
+      </div>
     </a>
   </li>
 </template>
@@ -19,7 +25,7 @@ export default {
   name: 'MbMenuItem',
   props: {
     content: {
-      type: String,
+      type: [String, Object],
       default: '',
     },
     icon: {
@@ -39,26 +45,13 @@ export default {
       default: false,
     },
   },
-  computed: {
-    isDisabled: {
-      get () {
-        return this.isDisabled;
-      },
-      set (value) {
-        this.isDisabled = value;
-      }
-    },
-    isSelected: {
-      get () {
-        return this.isSelected;
-      },
-      set (value) {
-        this.isSelected = value;
-      }
-    }
-  },
   components: {
     MbIcon: () => import('./MbIcon'),
+  },
+  computed: {
+    hasContent () {
+      return !!this.$slots.content || !!this.$slots.content
+    }
   },
 }
 </script>

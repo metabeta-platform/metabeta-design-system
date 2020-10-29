@@ -161,34 +161,87 @@ export default Vue.extend({
     ],
     sideNavItems: [
       {
-        _id: 'icons-doc11122',
+        _id: 'icons-doc191122',
         href: '#doc-section-icon',
         content: 'MbIcon [Done]'
       },
       {
-        _id: 'buttons-doc11122',
+        _id: 'buttons-doc181122',
         href: '#doc-section-buttons',
         content: 'MbButton [Waiting]'
       },
       {
-        _id: 'panels-doc11122',
+        _id: 'panels-doc171122',
         href: '#doc-section-panels',
         content: 'MbPanel [Testing]'
       },
       {
-        _id: 'drawer-doc11122',
+        _id: 'drawer-doc161122',
         href: '#doc-section-drawer',
         content: 'MbDrawer [Testing]'
       },
       {
-        _id: 'modal-doc11122',
+        _id: 'modal-doc151122',
         href: '#doc-section-dialog',
         content: 'MbDialog [Testing]'
       },
       {
-        _id: 'menu-doc11122',
+        _id: 'menu-doc141122',
         href: '#doc-section-menu',
         content: 'MbMenu [Testing]'
+      }
+    ],
+    menuWithSlots: [
+      {
+        _id: 'icons-doc21122',
+        href: '#doc-section-icon',
+        content: {
+          title: 'title',
+          description: 'description',
+        }
+      },
+      {
+        _id: 'buttons-doc31222',
+        href: '#doc-section-buttons',
+        content: {
+          title: 'title2',
+          description: 'description2',
+        }
+      },
+      {
+        _id: 'panels-doc41322',
+        href: '#doc-section-panels',
+        content: {
+          title: 'title3',
+          description: 'description3',
+        }
+      },
+      {
+        _id: 'drawer-doc51422',
+        href: '#doc-section-drawer',
+        content: 'MbDrawer [Testing]'
+      },
+      {
+        _id: 'modal-doc65122',
+        href: '#doc-section-dialog',
+        content: {
+          title: 'title4',
+          description: 'description4',
+        }
+      },
+      {
+        _id: 'menu-doc71122',
+        href: '#doc-section-menu',
+        content: {
+          title: 'title5',
+          description: 'Alright so I(Oz) can actually make it support all components as long as they come as a JSON format let me know if this will be necessary',
+        }
+      },
+      {
+        _id: 'custom',
+        href: '',
+        custom: true,
+        content: '',
       }
     ],
     openDialogS: false,
@@ -3435,6 +3488,30 @@ main {
           </article>
         </template>
       </mb-panel>
+      <h5>Menu With Slots</h5>
+      <mb-menu
+        title="Cells"
+        :items="menuWithSlots"
+        size="m"
+        flow="vertical"
+      >
+        <template v-for="navItems in menuWithSlots">
+          <template :slot="navItems._id">
+            <div
+              class="for-loop-content"
+              :key="navItems._id"
+              v-if="!navItems.custom"
+            >
+              <h3>{{navItems.content.title}}</h3>
+              <small>{{navItems.content.description}}</small>
+            </div>
+          </template>
+        </template>
+        <template slot="custom">
+          This is the usage of custom Menu slot
+          <mb-icon name="next"></mb-icon>
+        </template>
+      </mb-menu>
     </main>
   </div>
 </template>

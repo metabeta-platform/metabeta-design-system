@@ -15,6 +15,9 @@
         :content="item.content"
         :isDisabled="item.isDisabled"
       >
+        <template slot="content">
+          <slot :name="item._id"> </slot>
+        </template>
       </mb-menu-item>
     </ul>
   </nav>
