@@ -34,7 +34,7 @@
       class="mb-menu-section"
     >
       <mb-menu-item
-        v-for="item in section.items"
+        v-for="item in items"
         :key="item._id"
         :content="item.content"
         :is-selected="item.selected"
