@@ -2602,7 +2602,35 @@ main {
               </tr>
             </tbody>
           </table>
-          <h4>MbMenu sizes</h4>
+          <h3>Examples</h3>
+          <mb-menu
+            title="Menu section title example"
+            :items="menuWithSlots"
+            size="m"
+          >
+            <template v-for="navItems in menuWithSlots">
+              <template :slot="navItems._id">
+                <div
+                  class="for-loop-content"
+                  :key="navItems._id"
+                  v-if="!navItems.custom"
+                >
+                  <h3>{{navItems.content.title}}</h3>
+                  <p>{{navItems.content.description}}</p>
+                </div>
+              </template>
+            </template> 
+            <template slot="custom">
+              This is the usage of custom Menu slot
+              <mb-icon name="next"></mb-icon>
+            </template>
+          </mb-menu>
+
+
+
+
+
+
           <mb-menu
             title="Size M"
             :items="items"
@@ -2650,7 +2678,6 @@ main {
           <h1>MbIcon</h1>
         </template>
         <template slot="content">
-          <h1>MbIcon</h1>
           <article>
             <p>Icons are visual symbols used to represent ideas, objects, or actions. Are designed to be simple, modern, friendly, and sometimes quirky. Each icon is reduced to its minimal form, expressing essential characteristics. They communicate messages at a glance, afford interactivity, and draw attention to important information. </p>
             <h3>Usage</h3>
@@ -3454,30 +3481,6 @@ main {
           </article>
         </template>
       </mb-panel>
-      <h5>Menu With Slots</h5>
-      <mb-menu
-        title="Cells"
-        :items="menuWithSlots"
-        size="m"
-        flow="vertical"
-      >
-        <template v-for="navItems in menuWithSlots">
-          <template :slot="navItems._id">
-            <div
-              class="for-loop-content"
-              :key="navItems._id"
-              v-if="!navItems.custom"
-            >
-              <h3>{{navItems.content.title}}</h3>
-              <small>{{navItems.content.description}}</small>
-            </div>
-          </template>
-        </template>
-        <template slot="custom">
-          This is the usage of custom Menu slot
-          <mb-icon name="next"></mb-icon>
-        </template>
-      </mb-menu>
     </main>
   </div>
 </template>

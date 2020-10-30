@@ -109,22 +109,20 @@ code {
 }
 
 pre {
-  @include mb-border-radius(m);
-  @include mb-text(s);
   margin: $mb-space-s 0 $mb-space-m;
   padding: $mb-space-m;
-  background-color: $mb-color-gray-900;
-  color: $mb-color-gray-100;
+  background-color: $mb-color-indigo-900;
+  @include mb-border-radius(m);
+  @include mb-text(s);
   font-family: $mb-font-family-monospace;
-
+  color: $mb-color-pink-100;
   code {
     background-color: transparent;
-    color: $mb-color-gray-200;
+    color: $mb-color-pink-100;
     padding: 0;
     font-size: $mb-font-size-s;
   }
 }
-
 .mb-form-input {
   .mb-input-wrapper {
     position: relative;

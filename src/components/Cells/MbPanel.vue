@@ -58,7 +58,7 @@ export default {
     background-color: $mb-color-white;
     @include mb-border-radius(l);
     border: $mb-border-thin solid transparent;
-    @include mb-shadow(2);
+    @include mb-shadow(1);
   }
   &.mb-type-well {
     background-color: $mb-color-gray-100;
