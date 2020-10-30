@@ -1,12 +1,40 @@
 <template>
   <nav :class="['mb-menu', `mb-size-${size}`]">
+    <section
+      v-if="sections"
+      v-for="(section,i) in sections"
+      :class="`nav-section-${i}`"
+    >
+      <h5
+        v-if="title"
+        class="mb-menu-title"
+      >{{title}}</h5>
+      <ul class="mb-menu-section">
+        <mb-menu-item
+          v-for="item in section.items"
+          :key="item._id"
+          :content="item.content"
+          :is-selected="item.selected"
+          :is-disabled="item.isDisabled"
+          :href="item.href"
+          @click="navigateIfRouterLink(item.href)"
+        >
+          <template slot="content">
+            <slot :name="item._id"> </slot>
+          </template>
+        </mb-menu-item>
+      </ul>
+    </section>
     <h5
-      v-if="title"
+      v-if="title && !sections"
       class="mb-menu-title"
     >{{title}}</h5>
-    <ul class="mb-menu-section">
+    <ul
+      v-if="!sections"
+      class="mb-menu-section"
+    >
       <mb-menu-item
-        v-for="item in items"
+        v-for="item in section.items"
         :key="item._id"
         :content="item.content"
         :is-selected="item.selected"
