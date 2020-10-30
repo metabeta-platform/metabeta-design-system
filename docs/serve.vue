@@ -162,39 +162,39 @@ export default Vue.extend({
     sideNavItems: [
       {
         _id: 'icons-doc191122',
-        href: '#doc-section-icon',
+        href: '#section-icon',
         content: 'MbIcon [Done]'
       },
       {
         _id: 'buttons-doc181122',
-        href: '#doc-section-buttons',
+        href: '#section-buttons',
         content: 'MbButton [Waiting]'
       },
       {
         _id: 'panels-doc171122',
-        href: '#doc-section-panels',
+        href: '#section-panels',
         content: 'MbPanel [Testing]'
       },
       {
         _id: 'drawer-doc161122',
-        href: '#doc-section-drawer',
+        href: '#section-drawer',
         content: 'MbDrawer [Testing]'
       },
       {
         _id: 'modal-doc151122',
-        href: '#doc-section-dialog',
+        href: '#section-dialog',
         content: 'MbDialog [Testing]'
       },
       {
         _id: 'menu-doc141122',
-        href: '#doc-section-menu',
+        href: '#section-menu',
         content: 'MbMenu [Testing]'
       }
     ],
     menuWithSlots: [
       {
         _id: 'icons-doc21122',
-        href: '#doc-section-icon',
+        href: '#section-icon',
         content: {
           title: 'title',
           description: 'description',
@@ -202,7 +202,7 @@ export default Vue.extend({
       },
       {
         _id: 'buttons-doc31222',
-        href: '#doc-section-buttons',
+        href: '#section-buttons',
         content: {
           title: 'title2',
           description: 'description2',
@@ -210,7 +210,7 @@ export default Vue.extend({
       },
       {
         _id: 'panels-doc41322',
-        href: '#doc-section-panels',
+        href: '#section-panels',
         content: {
           title: 'title3',
           description: 'description3',
@@ -218,12 +218,12 @@ export default Vue.extend({
       },
       {
         _id: 'drawer-doc51422',
-        href: '#doc-section-drawer',
+        href: '#section-drawer',
         content: 'MbDrawer [Testing]'
       },
       {
         _id: 'modal-doc65122',
-        href: '#doc-section-dialog',
+        href: '#section-dialog',
         content: {
           title: 'title4',
           description: 'description4',
@@ -231,7 +231,7 @@ export default Vue.extend({
       },
       {
         _id: 'menu-doc71122',
-        href: '#doc-section-menu',
+        href: '#section-menu',
         content: {
           title: 'title5',
           description: 'Alright so I(Oz) can actually make it support all components as long as they come as a JSON format let me know if this will be necessary',
@@ -421,40 +421,23 @@ main {
 
     </aside>
     <main>
-      <h1>Cells</h1>
       <mb-panel
         type="card"
-        id="cells-table"
+        id="section-cells"
       >
         <template slot="title">
           <h1>Cells</h1>
         </template>
         <template slot="header">
-          <mb-chip
-            label='To do'
-            color='base'
-            size="s"
-          />
-          <mb-chip
-            label='Doing'
-            color='info'
-            size="s"
-          />
-          <mb-chip
-            label='Waiting'
-            color='warning'
-            size="s"
-          />
-          <mb-chip
-            label='Testing'
-            color='lime'
-            size="s"
-          />
-          <mb-chip
-            label='Done'
-            color='success'
-            size="s"
-          />
+          <mb-alert color="warning">
+            <template slot="content">
+              <mb-icon
+                size="m"
+                name="icon-alert-warning-fill"
+                color="warning"
+              /> This should be updated!<br/> immediately!
+            </template>
+          </mb-alert>
         </template>
         <template slot="content">
           <table>
@@ -558,7 +541,7 @@ main {
                 </td>
               </tr>
               <tr>
-                <td><a href="#doc-section-icon">MbIcon</a></td>
+                <td><a href="#section-icon">MbIcon</a></td>
                 <td>1.0.0</td>
                 <td>
                   <mb-avatar
@@ -920,17 +903,7 @@ main {
             </tbody>
           </table>
         </template>
-        <template slot="footer">
-          <mb-alert color="warning">
-            <template slot="content">
-              <mb-icon
-                size="s"
-                name="icon-alert-warning-fill"
-                color="warning"
-              /> This should be maintained updated!
-            </template>
-          </mb-alert>
-        </template>
+
       </mb-panel>
       <h2>MB Form Select with Data</h2>
       <mb-form-select :options="selectOptions"> </mb-form-select>
@@ -1065,7 +1038,7 @@ main {
         ></mb-checkbox>
       </section>
       <mb-panel
-        id="doc-section-buttons"
+        id="section-buttons"
         type="card"
       >
         <template slot="title">
@@ -2193,7 +2166,7 @@ main {
       </mb-panel>
       </br>
       <mb-panel
-        id="doc-section-dialog"
+        id="section-dialog"
         type="card"
       >
         <template slot="title">
@@ -2367,7 +2340,7 @@ main {
       </mb-panel>
       <br />
       <mb-panel
-        id="doc-section-drawer"
+        id="section-drawer"
         type="card"
       >
         <template slot="title">
@@ -2585,59 +2558,50 @@ main {
       </mb-panel>
       </br>
       <mb-panel
-        id="doc-section-menu"
+        id="section-menu"
         type="card"
       >
         <template slot="title">
-          <h3>MbMenu+MbMenuItem</h3>
+          <h1>MbMenu & MbMenuItem</h1>
         </template>
         <template slot="content">
           <p>MbMenu offers a list of items, actions or functions that a user can access. It can be used in any type of container.</p>
-          <h4>How it works</h4>
-          <pre> <code> &lt;mb-menu title="Menu title" :items="MenuItems" size="m" flow="vertical" /&gt;</code></pre>
-          <div class="mb-props-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Props</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Options</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>title</td>
-                  <td>string</td>
-                  <td>none</td>
-                  <td>none</td>
-                  <td>Is the title that will be displayed in menu heading</td>
-                </tr>
-                <tr>
-                  <td>size</td>
-                  <td>string</td>
-                  <td>m</td>
-                  <td>m, l</td>
-                  <td>Use for handlign the sizes of the menu items</td>
-                </tr>
-                <tr>
-                  <td>flow</td>
-                  <td>string</td>
-                  <td>vertical</td>
-                  <td>vertical, horizontal</td>
-                  <td>You can use for vertical or horizontal displaying of the items</td>
-                </tr>
-                <tr>
-                  <td>:items</td>
-                  <td>array</td>
-                  <td>none</td>
-                  <td>_id: 'string', href: 'string', content: 'string', isDisabled: boolean</td>
-                  <td>Used for defigning the MbMenuItem, that includes the list of items and actions displayed in MbMenu</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h3>Usage</h3>
+          <pre><code>&lt;mb-menu :items="MenuItems" size="m" flow="vertical" /&gt;</code></pre>
+          <table class="mb-props-table">
+            <thead>
+              <tr>
+                <th>Props</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Options</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>size</code></td>
+                <td>String</td>
+                <td><code>m</code></td>
+                <td><code>m | l</code></td>
+                <td>Size of menu items (<code>l</code> is used for main nav.</td>
+              </tr>
+              <tr>
+                <td><code>:sections</code></td>
+                <td>Array</td>
+                <td>n/a</td>
+                <td>n/a</td>
+                <td>Displays the sections, section headings, and menu items.</td>
+              </tr>
+              <tr>
+                <td><code>:items</code></td>
+                <td>Array</td>
+                <td>n/a</td>
+                <td>_id: 'string', href: 'string', content: 'string', isDisabled: boolean</td>
+                <td>Used for defigning the MbMenuItem, that includes the list of items and actions displayed in MbMenu</td>
+              </tr>
+            </tbody>
+          </table>
           <h4>MbMenu sizes</h4>
           <mb-menu
             title="Size M"
@@ -2677,11 +2641,14 @@ main {
           </mb-menu>
         </template>
       </mb-panel>
-      </br>
+
       <mb-panel
-        id="doc-section-icon"
+        id="section-icon"
         type="card"
       >
+        <template slot="title">
+          <h1>MbIcon</h1>
+        </template>
         <template slot="content">
           <h1>MbIcon</h1>
           <article>
