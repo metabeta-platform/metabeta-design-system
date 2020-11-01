@@ -923,7 +923,7 @@ main {
         <mb-avatar
           :avatar="noUrl"
           only-image
-          tooltip="right"
+          tooltip="top"
           type="user"
           size="l"
         ></mb-avatar>
