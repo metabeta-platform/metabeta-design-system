@@ -1,15 +1,12 @@
 <template>
-  <div
+  <footer
+    :class="`mb-tooltip mb-placement-${placement} ${show ? '' : 'hidden'}`"
     @mouseenter="show = true"
     @mouseleave="show = false"
-    :class="`mb-tooltip mb-placement-${placement} ${show ? '' : 'hidden'}`"
   >
-    <div class="mb-tooltip-content">
-      <slot name="content"></slot>
-    </div>
-  </div>
+    <slot name="content"></slot>
+  </footer>
 </template>
-
 
 <script>
 export default {
@@ -36,34 +33,39 @@ export default {
 @import "../../assets/styles/partials/_mb_space.scss";
 @import "../../assets/styles/partials/_mb_typography.scss";
 .mb-tooltip {
+  width: 200%;
+  max-width: 24rem;
   position: absolute;
-  display: inline-block;
-  width: 100%;
-  max-width: 16rem;
-  @include mb-elevation(10);
+  bottom: calc(100% + .5rem);
+  left: -50%;
+  @include mb-elevation(32);
+  @include mb-border-radius(s);
+  padding: $mb-space-xs;
+  background-color: rgba($mb-color-black, $mb-opacity-xl);
+  color: white !important;
+  font-size: $mb-font-size-xs;
+  line-height: $mb-line-height-xs;
+  text-align: center;
+  opacity: 1;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: calc(50%);
+    bottom: -.25rem;
+    border-bottom: .25rem solid rgba($mb-color-black, $mb-opacity-xl);
+    border-right: .25rem solid rgba($mb-color-black, $mb-opacity-xl);
+    border-top: .25rem solid transparent;
+    border-left: .25rem solid transparent;
+    transform: rotate(45deg) translateX(-50%) translateY(50%);
+  }
   &.hidden {
     visibility: hidden;
     display: none;
+    opacity: 0;
   }
   &.mb-placement {
-    &-top {
-      bottom: calc(100% + 3px);
-      left: 50%;
-      transform: translateX(-50%);
-      @include mb-border-radius(xxs);
-      .mb-tooltip-content::after {
-        content: "";
-        position: absolute;
-        @include mb-border-radius(xxs);
-        width: 10px;
-        height: 10px;
-        left: 50%;
-        bottom: 0;
-        background-color: inherit;
-        transform: rotate(45deg) translateX(-50%);
-        background: rgba($mb-color-black, $mb-opacity-xxl);
-      }
-    }
     &-top-left {
       bottom: calc(100% + 3px);
       left: 0;
@@ -73,7 +75,6 @@ export default {
         width: 10px;
         height: 10px;
         left: 4px;
-        @include mb-border-radius(xxs);
         background-color: inherit;
         transform: rotate(45deg);
         bottom: -$mb-space-xxs;
@@ -148,17 +149,17 @@ export default {
       }
     }
   }
-  &:not(.hidden) .mb-tooltip-content {
-    position: relative;
-    max-width: 300px;
-    min-width: 250px;
-    background: rgba($mb-color-black, $mb-opacity-xxl);
-    color: $mb-color-white;
-    text-align: center;
-    @include mb-border-radius(s);
-    @include mb-font(body, xs, normal, normal);
-    padding: $mb-space-xxs $mb-space-xs;
-    z-index: 3;
-  }
+  // &:not(.hidden) .mb-tooltip-content {
+  //   position: relative;
+  //   max-width: 300px;
+  //   min-width: 250px;
+  //   background: rgba($mb-color-black, $mb-opacity-xxl);
+  //   color: $mb-color-white;
+  //   text-align: center;
+  //   @include mb-border-radius(s);
+  //   @include mb-font(body, xs, normal, normal);
+  //   padding: $mb-space-xxs $mb-space-xs;
+  //   z-index: 3;
+  // }
 }
 </style>

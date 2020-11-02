@@ -1,14 +1,14 @@
 /* OPACITY START */
 
-$mb-opacity-transparent        : 0;
-$mb-opacity-xxs                : 0.02;
-$mb-opacity-xs                 : 0.04;
-$mb-opacity-s                  : 0.08;
-$mb-opacity-m                  : 0.48;
-$mb-opacity-l                  : 0.64;
-$mb-opacity-xl                 : 0.80;
-$mb-opacity-xxl                : 0.90;
-$mb-opacity-full               : 1;
+$mb-opacity-transparent        : 0.00;
+$mb-opacity-xxs                : 0.04;
+$mb-opacity-xs                 : 0.08;
+$mb-opacity-s                  : 0.16;
+$mb-opacity-m                  : 0.24;
+$mb-opacity-l                  : 0.48;
+$mb-opacity-xl                 : 0.72;
+$mb-opacity-xxl                : 0.88;
+$mb-opacity-full               : 1.00;
 
 /* OPACITY END */
 
@@ -26,7 +26,7 @@ $mb-color-blue-900             : #0e2a56;
 $mb-color-blue                 : $mb-color-blue-500;
 $mb-color-blue-light           : $mb-color-blue-400;
 $mb-color-blue-dark            : $mb-color-blue-600;
-$mb-color-blue-highlight       : rgba($mb-color-blue,$mb-opacity-xs);
+$mb-color-blue-highlight       : rgba($mb-color-blue,$mb-opacity-xxs);
 
 $mb-color-indigo-100           : #c2acf6;
 $mb-color-indigo-200           : #a689f2;
@@ -40,7 +40,7 @@ $mb-color-indigo-900           : #1f0e54;
 $mb-color-indigo               : $mb-color-indigo-500;
 $mb-color-indigo-light         : $mb-color-indigo-400;
 $mb-color-indigo-dark          : $mb-color-indigo-600;
-$mb-color-indigo-highlight     : rgba($mb-color-indigo,$mb-opacity-xs);
+$mb-color-indigo-highlight     : rgba($mb-color-indigo,$mb-opacity-xxs);
 
 $mb-color-purple-100           : #c6bee7;
 $mb-color-purple-200           : #af9fdb;
@@ -54,7 +54,7 @@ $mb-color-purple-900           : #241c42;
 $mb-color-purple               : $mb-color-purple-500;
 $mb-color-purple-light         : $mb-color-purple-400;
 $mb-color-purple-dark          : $mb-color-purple-600;
-$mb-color-purple-highlight     : rgba($mb-color-purple,$mb-opacity-xs);
+$mb-color-purple-highlight     : rgba($mb-color-purple,$mb-opacity-xxs);
 
 $mb-color-pink-100             : #e6bad3;
 $mb-color-pink-200             : #df9bbe;
@@ -68,7 +68,7 @@ $mb-color-pink-900             : #46192f;
 $mb-color-pink                 : $mb-color-pink-500;
 $mb-color-pink-light           : $mb-color-pink-400;
 $mb-color-pink-dark            : $mb-color-pink-600;
-$mb-color-pink-highlight       : rgba($mb-color-pink,$mb-opacity-xs);
+$mb-color-pink-highlight       : rgba($mb-color-pink,$mb-opacity-xxs);
 
 $mb-color-red-100              : #e9b9be;
 $mb-color-red-200              : #e19a9f;
@@ -82,7 +82,7 @@ $mb-color-red-900              : #481a1d;
 $mb-color-red                  : $mb-color-red-500;
 $mb-color-red-light            : $mb-color-red-400;
 $mb-color-red-dark             : $mb-color-red-600;
-$mb-color-red-highlight        : rgba($mb-color-red,$mb-opacity-xs);
+$mb-color-red-highlight        : rgba($mb-color-red,$mb-opacity-xxs);
 
 $mb-color-orange-100           : #f6d4b0;
 $mb-color-orange-200           : #f3bf8c;
@@ -96,7 +96,7 @@ $mb-color-orange-900           : #543011;
 $mb-color-orange               : $mb-color-orange-500; 
 $mb-color-orange-light         : $mb-color-orange-400;
 $mb-color-orange-dark          : $mb-color-orange-600;
-$mb-color-orange-highlight     : rgba($mb-color-orange,$mb-opacity-xs);
+$mb-color-orange-highlight     : rgba($mb-color-orange,$mb-opacity-xxs);
 
 $mb-color-yellow-100           : #faeaae;
 $mb-color-yellow-200           : #fadf8d;
@@ -110,7 +110,7 @@ $mb-color-yellow-900           : #574614;
 $mb-color-yellow               : $mb-color-yellow-500;
 $mb-color-yellow-light         : $mb-color-yellow-400;
 $mb-color-yellow-dark          : $mb-color-yellow-600;
-$mb-color-yellow-highlight     : rgba($mb-color-yellow,$mb-opacity-xs);
+$mb-color-yellow-highlight     : rgba($mb-color-yellow,$mb-opacity-xxs);
 
 $mb-color-lime-100             : #f0f4c3;
 $mb-color-lime-200             : #e6ee9c;
@@ -124,7 +124,7 @@ $mb-color-lime-900             : #827717;
 $mb-color-lime                 : $mb-color-lime-500;
 $mb-color-lime-light           : $mb-color-lime-400;
 $mb-color-lime-dark            : $mb-color-lime-600;
-$mb-color-lime-highlight       : rgba($mb-color-lime,$mb-opacity-xs);
+$mb-color-lime-highlight       : rgba($mb-color-lime,$mb-opacity-xxs);
 
 $mb-color-green-100            : #badfbf;
 $mb-color-green-200            : #9bd9a3;
@@ -138,7 +138,7 @@ $mb-color-green-900            : #1a3c1f;
 $mb-color-green                : $mb-color-green-500;
 $mb-color-green-light          : $mb-color-green-400;
 $mb-color-green-dark           : $mb-color-green-600;
-$mb-color-green-highlight      : rgba($mb-color-green,$mb-opacity-xs);
+$mb-color-green-highlight      : rgba($mb-color-green,$mb-opacity-xxs);
 
 $mb-color-teal-100             : #baebdb;
 $mb-color-teal-200             : #9ce1cb;
@@ -152,7 +152,7 @@ $mb-color-teal-900             : #1e4738;
 $mb-color-teal                 : $mb-color-teal-500;
 $mb-color-teal-light           : $mb-color-teal-400;
 $mb-color-teal-dark            : $mb-color-teal-600;
-$mb-color-teal-highlight       : rgba($mb-color-teal,$mb-opacity-xs);
+$mb-color-teal-highlight       : rgba($mb-color-teal,$mb-opacity-xxs);
 
 $mb-color-cyan-100             : #b3dee4;
 $mb-color-cyan-200             : #94ceda;
@@ -166,7 +166,7 @@ $mb-color-cyan-900             : #163c40;
 $mb-color-cyan                 : $mb-color-cyan-500;
 $mb-color-cyan-light           : $mb-color-cyan-400;
 $mb-color-cyan-dark            : $mb-color-cyan-600;
-$mb-color-cyan-highlight       : rgba($mb-color-cyan,$mb-opacity-xs);
+$mb-color-cyan-highlight       : rgba($mb-color-cyan,$mb-opacity-xxs);
 
 $mb-color-gray-100             : #f6fafb;
 $mb-color-gray-200             : #e8ecef;

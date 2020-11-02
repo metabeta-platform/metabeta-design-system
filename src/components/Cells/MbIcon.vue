@@ -42,7 +42,7 @@ export default {
   line-height: 0;
   stroke: transparent;
   fill: transparent;
-  vertical-align: middle;
+  vertical-align: -3px;
   .svg-stroke {
     stroke: $mb-color-gray;
   }

@@ -24,26 +24,18 @@
         {{avatar.description}}
       </p>
     </div>
-    <div v-if="onlyImage">
-      <mb-tooltip
-        :placement="tooltip"
-        :is-visible="TRUE_FLAG"
-      >
-        <template slot="content">
-          <div class="tooltip">
-            <p class="mb-label">
-              {{avatar.name}}
-            </p>
-            <p
-              class="mb-caption"
-              v-if="avatar.description"
-            >
-              {{avatar.description}}
-            </p>
-          </div>
-        </template>
-      </mb-tooltip>
-    </div>
+    <mb-tooltip
+     v-if="onlyImage"
+      :placement="tooltip"
+      :is-visible="TRUE_FLAG"
+    >
+      <template slot="content">
+        <span>{{avatar.name}}</span>
+        <span v-if="avatar.description">
+          {{avatar.description}}
+        </span>
+      </template>
+    </mb-tooltip>
   </div>
 </template>
 

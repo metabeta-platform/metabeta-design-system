@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   @include mb-heading(l);
-  margin: $mb-space-l 0 $mb-space-s;
+  margin: $mb-space-m 0 $mb-space-s;
 }
 
 h4 {
@@ -61,12 +61,12 @@ h6 {
 }
 
 p {
-  @include mb-text(m);
+  @include mb-text(s);
   margin: 0 0 $mb-space-m;
 }
 
 li {
-  @include mb-text(m);
+  @include mb-text(s);
   margin: 0 0 $mb-space-s;
 }
 
@@ -109,22 +109,20 @@ code {
 }
 
 pre {
-  @include mb-border-radius(m);
-  @include mb-text(s);
   margin: $mb-space-s 0 $mb-space-m;
   padding: $mb-space-m;
-  background-color: $mb-color-gray-900;
-  color: $mb-color-gray-100;
+  background-color: $mb-color-indigo-900;
+  @include mb-border-radius(m);
+  @include mb-text(s);
   font-family: $mb-font-family-monospace;
-
+  color: $mb-color-pink-100;
   code {
     background-color: transparent;
-    color: $mb-color-gray-200;
+    color: $mb-color-pink-100;
     padding: 0;
     font-size: $mb-font-size-s;
   }
 }
-
 .mb-form-input {
   .mb-input-wrapper {
     position: relative;
@@ -286,22 +284,19 @@ iframe {
 table {
   width: 100%;
   margin-bottom: $mb-space-m;
-
+  @include mb-text(s);
   caption {}
-
   colgroup {
     col {}
   }
-
   thead {
     tr {
       border-bottom: $mb-border-thin solid $mb-color-border-dark;
-
       th {
-        @include mb-heading(s);
+        @include mb-heading(xs);
         text-transform: uppercase;
         text-align: left;
-        color: $mb-color-text-medium;
+        color: $mb-color-text-dark;
         padding: $mb-space-s $mb-space-m;
       }
     }
