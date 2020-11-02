@@ -1,7 +1,7 @@
 <template>
   <section
     class="mb-tab"
-    :class="'active' : activeIndex"
+    :class="{'active' : activeIndex}"
   >
     <slot />
   </section>

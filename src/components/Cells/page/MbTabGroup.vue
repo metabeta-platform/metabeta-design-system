@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/styles/partials/_mb_space.scss";
+@import "../../../assets/styles/partials/_mb_space.scss";
 .mb-tabs {
   width: 100%;
   .mb-tab-options {
