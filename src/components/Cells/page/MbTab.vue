@@ -1,5 +1,8 @@
 <template>
-  <section :class="`mb-tab-${activeIndex}`">
+  <section
+    class="mb-tab"
+    :class="'active' : activeIndex"
+  >
     <slot />
   </section>
 </template>

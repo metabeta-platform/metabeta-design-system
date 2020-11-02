@@ -13,6 +13,9 @@
 <script>
 export default {
   name: "MbTabGroup",
+  data: () => ({
+    activeIndex: 0,
+  }),
   props: {
     activeIndex: {
       type: [Number, String],
@@ -22,7 +25,7 @@ export default {
   methods: {
     tabChange (i) {
       this.activeIndex = i;
-      this.$emit('tab-changed');
+      this.$emit('tab-changed', i);
     }
   },
 }

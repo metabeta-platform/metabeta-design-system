@@ -8,8 +8,8 @@ export { default as MbFormSelect } from "@/components/cells/form/MbFormSelect.vu
 export { default as MbApp } from "@/components/cells/page/MbApp.vue";
 export { default as MbOrganization } from "@/components/cells/page/MbOrganization.vue";
 export { default as MbTopbar } from "@/components/cells/page/MbTopbar.vue";
-// export { default as MbTab } from "@/components/cells/page/MbTab.vue";
-// export { default as MbTabGroup } from "@/components/cells/page/MbTabGroup.vue";
+export { default as MbTab } from "@/components/cells/page/MbTab.vue";
+export { default as MbTabGroup } from "@/components/cells/page/MbTabGroup.vue";
 export { default as MbDialog } from "@/components/cells/MbDialog.vue";
 export { default as MbDrawer } from "@/components/cells/MbDrawer.vue";
 export { default as MbButton } from "@/components/cells/MbButton.vue";
