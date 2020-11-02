@@ -49,7 +49,7 @@
     </ul>
   </nav>
 </template>
-
+<!-- Icon example -->
 <script>
 export default {
   name: 'MbMenu',
